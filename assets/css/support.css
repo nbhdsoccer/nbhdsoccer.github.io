@@ -1,0 +1,820 @@
+/* SUPPORT.CSS - Community-Focused Support Page Styles */
+/* Chicago Neighborhood Soccer - Neighbor-to-Neighbor Support */
+
+/* Page Header - Community Warmth */
+.page-header {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.9) 0%, rgba(202, 138, 4, 0.8) 100%), 
+                url('../assets/gallery_slideshow/aboutus_2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #374151;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(234, 179, 8, 0.3) 80%);
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.nonprofit-badge {
+    display: inline-block;
+    background: rgba(55, 65, 81, 0.15);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(55, 65, 81, 0.3);
+    backdrop-filter: blur(10px);
+    font-family: 'Open Sans', sans-serif;
+    color: #374151;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.support-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.community-mission {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Gratitude Section */
+.gratitude-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.gratitude-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gratitude-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.gratitude-message {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+}
+
+.gratitude-message h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.gratitude-message p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Impact Transparency */
+.impact-transparency {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+}
+
+.transparency-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.transparency-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.transparency-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1.2rem;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #16a34a;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.transparency-breakdown {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.breakdown-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.breakdown-header h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.breakdown-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+}
+
+.breakdown-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.breakdown-item {
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid #f3f4f6;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.breakdown-item:hover {
+    border-color: #16a34a;
+    transform: translateY(-3px);
+}
+
+.breakdown-percentage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 0.5rem;
+}
+
+.breakdown-category {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.breakdown-description {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Ways to Help - Three Column Focus */
+.ways-to-help {
+    background: white;
+    padding: 100px 0;
+}
+
+.ways-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ways-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ways-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.support-card {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.support-card:hover {
+    border-color: #16a34a;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.support-card.featured {
+    border-color: #16a34a;
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+    transform: scale(1.02);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #16a34a;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.support-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.support-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.support-card p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Volunteer Card Specific */
+.volunteer-opportunities {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.volunteer-opportunities h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #16a34a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.volunteer-opportunities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.volunteer-opportunities li {
+    margin: 0.8rem 0;
+    padding-left: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.volunteer-opportunities strong {
+    color: #374151;
+}
+
+/* Monthly Card Specific */
+.monthly-levels {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.monthly-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #16a34a;
+}
+
+.level-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #16a34a;
+    font-size: 1.1rem;
+}
+
+.level-impact {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+/* One-Time Card Specific */
+.oneTime-options {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.donation-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #f97316;
+}
+
+.amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #f97316;
+    font-size: 1.1rem;
+}
+
+.impact {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.support-cta {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.support-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
+    color: white;
+}
+
+.support-cta.secondary {
+    background: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.support-cta.secondary:hover {
+    background: #16a34a;
+    color: white;
+}
+
+.support-cta.tertiary {
+    background: #6b7280;
+    color: white;
+}
+
+.support-cta.tertiary:hover {
+    background: #4b5563;
+    color: white;
+}
+
+.support-note {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Transform Community Section */
+.transform-community {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    color: white;
+    padding: 100px 0;
+}
+
+.transform-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.transform-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.transform-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transform-intro {
+    margin: 3rem 0;
+}
+
+.transform-philosophy {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.transform-philosophy h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.transform-philosophy p {
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.transform-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.transform-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.transform-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.transform-card.featured {
+    border-color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.transform-amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.transform-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.transform-impact h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #16a34a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.transform-impact ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.transform-impact li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+}
+
+.transform-impact li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.transform-cta {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #374151;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.transform-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+    color: #374151;
+}
+
+.transform-cta.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.transform-cta.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.custom-giving {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.custom-giving h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.custom-giving p {
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Community Conversation Section */
+.community-conversation {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.conversation-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.conversation-message {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin: 2rem auto;
+    max-width: 700px;
+    border-left: 5px solid #16a34a;
+}
+
+.conversation-message h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #16a34a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.conversation-message p {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.contact-options {
+    margin: 2rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+}
+
+.contact-icon {
+    color: #16a34a;
+    font-size: 1.3rem;
+}
+
+.contact-item a {
+    color: #16a34a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.conversation-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .support-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .transform-levels {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .breakdown-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .conversation-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .payment-options {
+        gap: 0.5rem;
+    }
+    
+    .monthly-level,
+    .donation-level {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .volunteer-opportunities {
+        text-align: center;
+    }
+    
+    .support-card.featured {
+        transform: none;
+    }
+}

@@ -13,814 +13,13 @@
     
     <!-- Link to shared styles -->
     <link rel="stylesheet" href="../assets/css/shared-styles.css">
-
-    <style>
-        /* Memorial Tournament - Celebratory but Respectful Design */
-        .page-header {
-            background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(16, 185, 129, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%), 
-                        url('../assets/gallery_slideshow/tournament.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .page-header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 30%, rgba(55, 65, 81, 0.6) 80%);
-        }
-        
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .memorial-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .page-header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            line-height: 1.1;
-        }
-        
-        .memorial-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.5rem;
-            color: #f3f4f6;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        
-        .tournament-details-header {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            color: #e5e7eb;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-        
-        .memorial-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .memorial-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
-            background: linear-gradient(135deg, #059669 0%, #047857 100%);
-            color: white;
-        }
-
-        /* 2024 Tournament Story Video Section */
-        .tournament-story-section {
-            background: white;
-            padding: 100px 0;
-        }
-        
-        .story-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .story-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .story-header p {
-            font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
-        .video-story-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin: 3rem 0;
-        }
-        
-        .video-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            background: #000;
-        }
-        
-        .video-container iframe {
-            width: 100%;
-            height: 350px;
-            border: none;
-        }
-        
-        .video-caption {
-            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .video-caption h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .video-caption p {
-            font-family: 'Open Sans', sans-serif;
-            opacity: 0.9;
-            margin: 0;
-        }
-        
-        .story-content {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            border-left: 5px solid #10b981;
-        }
-        
-        .story-content h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #10b981;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        
-        .story-content p {
-            font-family: 'Open Sans', sans-serif;
-            color: #4b5563;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Memorial Quote - Enhanced Respectful Styling */
-        .memorial-quote-section {
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .memorial-quote-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-8.837-7.163-16-16-16s-16 7.163-16 16 7.163 16 16 16 16-7.163 16-16zm-16-12c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12z'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .memorial-quote {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        
-        .quote-icon {
-            font-size: 3rem;
-            color: #10b981;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-        
-        .memorial-quote p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.4rem;
-            line-height: 1.8;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: #f9fafb;
-        }
-        
-        .quote-attribution {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            color: #d1d5db;
-            font-weight: 500;
-        }
-
-        /* Tournament Memories Gallery */
-        .memories-gallery-section {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 80px 0;
-        }
-        
-        .gallery-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .gallery-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .gallery-header p {
-            font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .memorial-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 2rem 1.5rem 1.5rem;
-            transform: translateY(100%);
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        .gallery-overlay h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .gallery-overlay p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin: 0;
-        }
-        
-        /* David's Legacy Section */
-        .legacy-section {
-            background: white;
-            padding: 100px 0;
-        }
-        
-        .legacy-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .legacy-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .legacy-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
-        .david-story {
-            max-width: 900px;
-            margin: 0 auto 3rem;
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-left: 5px solid #10b981;
-        }
-        
-        .david-story h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #10b981;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .david-story p {
-            font-family: 'Open Sans', sans-serif;
-            color: #4b5563;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .legacy-impact {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .impact-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            border: 1px solid #f3f4f6;
-            transition: all 0.3s ease;
-        }
-        
-        .impact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-            border-color: #10b981;
-        }
-        
-        .impact-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-        }
-        
-        .impact-card h4 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        /* Community Gathering Details */
-        .gathering-details {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 80px 0;
-        }
-        
-        .gathering-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .gathering-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .tournament-details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .detail-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 2px solid #e5e7eb;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        
-        .detail-card:hover {
-            border-color: #10b981;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        
-        .detail-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-        }
-        
-        .detail-card h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        /* Memorial Registration - Join the Memorial */
-        .memorial-registration {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .registration-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .registration-header h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .registration-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .contribution-philosophy {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem auto;
-            max-width: 700px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .contribution-philosophy p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0;
-            font-style: italic;
-        }
-        
-        .registration-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .registration-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .registration-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        
-        .registration-type {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .contribution-amount {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            text-align: center;
-            margin: 1rem 0;
-            color: #fbbf24;
-        }
-        
-        .contribution-includes {
-            text-align: left;
-            margin: 1.5rem 0;
-        }
-        
-        .contribution-includes ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .contribution-includes li {
-            margin: 0.8rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .contribution-includes li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        /* Registration Form - Memorial Participation */
-        .registration-form {
-            max-width: 700px;
-            margin: 3rem auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .form-header h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            color: white;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #10b981;
-            background: white;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .memorial-submit {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #374151;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 25px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        
-        .memorial-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
-        }
-        
-        /* Community Impact Emphasis */
-        .community-impact {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 80px 0;
-        }
-        
-        .impact-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .impact-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .benavidez-family-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            margin: 3rem auto;
-            max-width: 800px;
-            text-align: center;
-            border-left: 5px solid #10b981;
-        }
-        
-        .family-involvement h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #10b981;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        
-        .family-involvement p {
-            font-family: 'Open Sans', sans-serif;
-            color: #4b5563;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.8rem;
-            }
-            
-            .video-story-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .video-container iframe {
-                height: 250px;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .registration-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .tournament-details-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .legacy-impact {
-                grid-template-columns: 1fr;
-            }
-            
-            .memorial-gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/benavidez-tournament.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="brand-section">
-                <a href="../index.html" class="logo">NBHD Soccer</a>
-                <span class="tagline">From Pickup to Purpose—Stronger Together</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about/about.html">Our Story</a></li>
-                <li class="dropdown">
-                    <a href="../index.html#programs">Our Programs</a>
-                    <div class="dropdown-content">
-                        <a href="../programs/rec_77.html">REC 77 - School Programs</a>
-                        <a href="../index.html#programs">Youth Development</a>
-                        <a href="../programs/womens.html">Women's Soccer</a>
-                        <a href="../index.html#programs">Community Building</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="../index.html#events">Community Events</a>
-                    <div class="dropdown-content">
-                        <a href="../events/benavidez-tournament.html">🏆 Benavidez Tournament</a>
-                        <a href="../programs/womens.html#tournament">🏆 Women's Tournament</a>
-                        <a href="../index.html#events">All Events</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="../support/support.html">Support</a>
-                    <div class="dropdown-content">
-                        <a href="../support/support.html">Support Our Community</a>
-                        <a href="../support/sponsors.html">Sponsorships</a>
-                        <a href="../support/support.html#donate">Major Giving</a>
-                    </div>
-                </li>
-                <li><a href="../index.html#contact">Connect</a></li>
-            </ul>
-            <a href="#memorial-registration" class="cta-button">Honor Through Action</a>
-        </nav>
-    </header>
+    <div id="header-container">
+        <!-- Header will be loaded here -->
+    </div>   
+    <script src="../js/header-loader.js"></script>
 
     <section class="page-header">
         <div class="container">
@@ -843,15 +42,15 @@
             
             <div class="video-story-container">
                 <div class="video-container">
-                    <!-- Replace with your actual 2024 tournament video -->
-                    <iframe src="https://www.youtube.com/embed/YOUR_2024_VIDEO_ID" 
-                            title="2024 David Benavidez Memorial Tournament"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
+                    <!-- Tournament Introduction Video -->
+                    <video controls>
+                        <source src="../assets/benavidez/what_you_can_expect_operations.mp4" type="video/mp4">
+                        <!-- Fallback message for unsupported video format -->
+                        <p>Your browser doesn't support HTML5 video. The tournament introduction video shows the energy and community spirit of our annual memorial.</p>
+                    </video>
                     <div class="video-caption">
-                        <h4>2024 Tournament Highlights</h4>
-                        <p>Witness the community spirit and healing that defines our annual memorial</p>
+                        <h4>2024 Tournament Experience</h4>
+                        <p>See what you can expect when you join our memorial tournament - community, competition, and healing</p>
                     </div>
                 </div>
                 
@@ -862,6 +61,108 @@
                     <p>The tournament brings together teams from across Chicago's South and West sides, the Benavidez family, and community partners who believe in David's vision of using soccer as a force for good in our neighborhoods.</p>
                     
                     <p>Through six years of this memorial, we've seen how collective healing and community action can transform tragedy into hope, creating lasting impact that honors David's memory while serving our neighbors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tournament-highlights">
+        <div class="container">
+            <div class="highlights-header">
+                <h2>Tournament Action Highlights</h2>
+                <p>Experience the excitement and skill of our 2024 memorial tournament</p>
+                <p style="font-size: 1.1rem; color: #10b981; font-weight: 600; margin-top: 1rem;">Playing for a cause brings out serious ballers - witness the level of competition when community and skill unite</p>
+            </div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-video">
+                    <video controls>
+                        <source src="../assets/benavidez/goal_finals.mp4" type="video/mp4">
+                        <p>Exciting goal from the tournament finals</p>
+                    </video>
+                    <div class="highlight-caption">
+                        <h4>Championship Goals</h4>
+                        <p>Spectacular moments from the tournament finals that had everyone on their feet</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-video">
+                    <video controls>
+                        <source src="../assets/benavidez/nice_play.mp4" type="video/mp4">
+                        <p>Beautiful team play and skill demonstration</p>
+                    </video>
+                    <div class="highlight-caption">
+                        <h4>Competitive and Fun</h4>
+                        <p>Serious players bringing their A-game while supporting an important community cause</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-video">
+                    <video controls>
+                        <source src="../assets/benavidez/raise_trophy.mp4" type="video/mp4">
+                        <p>Champions celebrating their victory</p>
+                    </video>
+                    <div class="highlight-caption">
+                        <h4>Victory Celebration</h4>
+                        <p>The joy and pride of our tournament champions honoring David's legacy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tournament-results-section">
+        <div class="container">
+            <div class="results-header">
+                <h2>2024 Tournament Champions</h2>
+                <p>Celebrating the teams that embodied David's spirit of excellence and community</p>
+            </div>
+            
+            <div class="champions-gallery">
+                <div class="champion-card first-place">
+                    <!-- Note: HEIC format needs conversion to web-compatible format (JPG/PNG) -->
+                    <img src="../assets/benavidez/first_place.jpg" alt="First Place Champions" class="champion-image" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding: 2rem; text-align: center; background: #f3f4f6;">
+                        <p>🏆 First Place Team Photo</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">(Image format conversion needed)</p>
+                    </div>
+                    <div class="champion-info">
+                        <div class="trophy-icon gold">🏆</div>
+                        <h4>Tournament Champions</h4>
+                        <p class="place first">1st Place</p>
+                        <p>Demonstrating exceptional skill, teamwork, and the community spirit that David embodied in everything he did.</p>
+                    </div>
+                </div>
+                
+                <div class="champion-card second-place">
+                    <img src="../assets/benavidez/second_place.jpg" alt="Second Place Team" class="champion-image"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding: 2rem; text-align: center; background: #f3f4f6;">
+                        <p>🥈 Second Place Team Photo</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">(Image format conversion needed)</p>
+                    </div>
+                    <div class="champion-info">
+                        <div class="trophy-icon silver">🥈</div>
+                        <h4>Tournament Runners-Up</h4>
+                        <p class="place second">2nd Place</p>
+                        <p>Outstanding performance and sportsmanship throughout the tournament, showing true dedication to the memorial's values.</p>
+                    </div>
+                </div>
+                
+                <div class="champion-card third-place">
+                    <img src="../assets/benavidez/third_place.jpg" alt="Third Place Team" class="champion-image"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding: 2rem; text-align: center; background: #f3f4f6;">
+                        <p>🥉 Third Place Team Photo</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">(Image format conversion needed)</p>
+                    </div>
+                    <div class="champion-info">
+                        <div class="trophy-icon bronze">🥉</div>
+                        <h4>Third Place Finishers</h4>
+                        <p class="place third">3rd Place</p>
+                        <p>Exemplifying the competitive spirit and camaraderie that makes our memorial tournament a celebration of community.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -885,7 +186,7 @@
             </div>
             
             <div class="memorial-gallery">
-                <!-- Replace these placeholder images with your actual tournament photos -->
+                <!-- Tournament Action Photos -->
                 <div class="gallery-item">
                     <img src="../assets/gallery_slideshow/tournament.jpg" alt="Tournament action shot">
                     <div class="gallery-overlay">
@@ -895,23 +196,35 @@
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="../assets/memorial_gallery/benavidez_family_ceremony.jpg" alt="Benavidez family at ceremony">
+                    <img src="../assets/benavidez/IMG_0441.jpg" alt="Tournament participant action" 
+                         onerror="this.src='../assets/gallery_slideshow/tournament.jpg'">
                     <div class="gallery-overlay">
-                        <h4>Family Partnership</h4>
-                        <p>The Benavidez family sharing David's story and presenting awards</p>
+                        <h4>Player in Action</h4>
+                        <p>The skill and determination shown throughout the tournament</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="../assets/memorial_gallery/community_gathering.jpg" alt="Community gathering">
+                    <img src="../assets/benavidez/IMG_0443.jpg" alt="Tournament teamwork moment"
+                         onerror="this.src='../assets/gallery_slideshow/tournament.jpg'">
                     <div class="gallery-overlay">
-                        <h4>Memorial Ceremony</h4>
-                        <p>Our community coming together to honor David's legacy of service</p>
+                        <h4>Teamwork & Strategy</h4>
+                        <p>Players working together embodying David's collaborative spirit</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="../assets/memorial_gallery/youth_participants.jpg" alt="Youth playing in tournament">
+                    <img src="../assets/benavidez/IMG_0446.jpg" alt="Tournament community gathering"
+                         onerror="this.src='../assets/gallery_slideshow/tournament.jpg'">
+                    <div class="gallery-overlay">
+                        <h4>Community Gathering</h4>
+                        <p>Neighbors coming together for the memorial ceremony and celebration</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="../assets/benavidez/IMG_0447.jpg" alt="Youth tournament participants"
+                         onerror="this.src='../assets/gallery_slideshow/tournament.jpg'">
                     <div class="gallery-overlay">
                         <h4>Next Generation</h4>
                         <p>Young players learning about service and community through soccer</p>
@@ -919,15 +232,7 @@
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="../assets/memorial_gallery/volunteers.jpg" alt="Tournament volunteers">
-                    <div class="gallery-overlay">
-                        <h4>Community Volunteers</h4>
-                        <p>Neighbors working together to make the memorial tournament possible</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../assets/memorial_gallery/champions.jpg" alt="Tournament champions">
+                    <img src="../assets/gallery_slideshow/tournament.jpg" alt="Tournament champions celebration">
                     <div class="gallery-overlay">
                         <h4>Champions of Service</h4>
                         <p>Celebrating winners who embody David's spirit of community building</p>

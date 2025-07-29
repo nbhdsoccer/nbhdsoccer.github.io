@@ -1,5 +1,5 @@
-/* SHARED STYLES FOR CHICAGO NEIGHBORHOOD SOCCER */
-/* Community-focused, grassroots design system */
+/* SHARED STYLES FOR CHICAGO NEIGHBORHOOD SOCCER - NONPROFIT EDITION */
+/* Community-focused, grassroots design system with enhanced nonprofit identity */
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
@@ -24,18 +24,25 @@ body {
     padding: 0 20px;
 }
 
-/* COMMUNITY COLOR SYSTEM */
+/* ENHANCED NONPROFIT COLOR SYSTEM */
 :root {
-    /* Primary Colors - Grassroots Community */
-    --primary-charcoal: #374151;
-    /* --primary-green: rgba(2, 157, 234, 0.8);#00a5fe; */
-    --primary-green: #16a34a;
+    /* Primary Colors - Nonprofit Trust & Growth */
+    --primary-green: #22c55e;
+    --primary-green-dark: #16a34a;
+    --primary-green-darker: #15803d;
     --primary-orange: #f97316;
+    --primary-charcoal: #374151;
     
-    /* Secondary Colors - Chicago Heritage */
+    /* Chicago Identity Colors */
+    --chicago-blue: #0ea5e9;
+    --chicago-blue-dark: #0284c7;
     --chicago-red: #dc2626;
+    --chicago-flag-blue: #00a5fe;
+    
+    /* Accent Colors - Community Energy */
+    --accent-orange: #f97316;
+    --accent-orange-dark: #ea580c;
     --heritage-gold: #eab308;
-    --community-blue: #3b82f6;
     
     /* Neutral Colors - Warm & Welcoming */
     --warm-gray-50: #f9fafb;
@@ -48,17 +55,18 @@ body {
     --warm-gray-700: #374151;
     --warm-gray-800: #1f2937;
     
-    /* Accent Colors - Community Energy */
+    /* Success & Status Colors */
     --success-green: #059669;
     --warning-orange: #d97706;
     --info-blue: #0284c7;
+    --error-red: #dc2626;
     
     /* Typography Scale */
     --font-family-heading: 'Poppins', sans-serif;
     --font-family-body: 'Open Sans', sans-serif;
 }
 
-/* HEADER STYLES - Community-focused design */
+/* ENHANCED HEADER STYLES - Nonprofit Identity */
 header {
     background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-600) 100%);
     color: white;
@@ -67,7 +75,7 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 20px rgba(55, 65, 81, 0.15);
-    border-bottom: 3px solid var(--primary-green);
+    border-bottom: 3px solid #22c55e;
 }
 
 nav {
@@ -78,7 +86,7 @@ nav {
     gap: 1rem;
 }
 
-/* Brand Section with Community Identity */
+/* Enhanced Brand Section with Nonprofit Identity */
 .brand-section {
     display: flex;
     flex-direction: column;
@@ -87,11 +95,11 @@ nav {
 
 .logo {
     font-family: var(--font-family-heading);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
     transition: all 0.3s ease;
 }
 
@@ -102,19 +110,19 @@ nav {
 
 .tagline {
     font-family: var(--font-family-body);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--warm-gray-200);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    opacity: 0.9;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    opacity: 0.95;
 }
 
 /* Navigation Links - Community-friendly */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -127,6 +135,7 @@ nav {
     transition: all 0.3s ease;
     padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -135,7 +144,7 @@ nav {
     transform: translateY(-1px);
 }
 
-/* Dropdown Menu - Warm & Welcoming */
+/* Enhanced Dropdown Menu - Nonprofit Style */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -145,9 +154,9 @@ nav {
     display: none;
     position: absolute;
     background: white;
-    min-width: 220px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-radius: 10px;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 12px;
     z-index: 1;
     top: 100%;
     left: 0;
@@ -157,19 +166,20 @@ nav {
 
 .dropdown-content a {
     color: var(--primary-charcoal) !important;
-    padding: 12px 18px;
+    padding: 14px 20px;
     text-decoration: none;
     display: block;
     font-weight: 500;
     transition: all 0.3s ease;
     border-bottom: none;
+    font-size: 0.95rem;
 }
 
 .dropdown-content a:hover {
-    background: linear-gradient(135deg, var(--primary-green), var(--success-green));
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
     color: white !important;
     transform: none;
-    padding-left: 22px;
+    padding-left: 25px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -179,19 +189,20 @@ nav {
 
 .dropdown > a::after {
     content: " ▼";
-    font-size: 0.8em;
+    font-size: 0.75em;
     opacity: 0.7;
     transition: transform 0.3s ease;
+    margin-left: 0.5rem;
 }
 
 .dropdown:hover > a::after {
     transform: rotate(180deg);
 }
 
-/* CTA Button - Community Action */
+/* Enhanced CTA Button - Nonprofit Action */
 .cta-button {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
-    padding: 12px 24px;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    padding: 12px 25px;
     border-radius: 25px;
     text-decoration: none;
     color: white;
@@ -199,20 +210,20 @@ nav {
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
     border: none;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
-    background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
 }
 
-/* SHARED BUTTON SYSTEM - Community-focused */
+/* ENHANCED BUTTON SYSTEM - Nonprofit Focused */
 .btn-primary, .btn-secondary, .btn-tertiary {
     padding: 15px 30px;
-    border-radius: 25px;
+    border-radius: 30px;
     text-decoration: none;
     font-family: var(--font-family-heading);
     font-weight: 600;
@@ -225,28 +236,29 @@ nav {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
-    background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
+    color: #22c55e;
+    border: 2px solid #22c55e;
 }
 
 .btn-secondary:hover {
-    background: var(--primary-green);
+    background: #22c55e;
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
 }
 
 .btn-tertiary {
@@ -261,11 +273,24 @@ nav {
     transform: translateY(-2px);
 }
 
-/* PAGE HEADERS - Context-specific styling */
+/* Chicago Colors for Special Elements */
+.btn-chicago-blue {
+    background: linear-gradient(135deg, var(--chicago-blue) 0%, var(--chicago-blue-dark) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.btn-chicago-blue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+    background: linear-gradient(135deg, var(--chicago-blue-dark) 0%, #0369a1 100%);
+}
+
+/* PAGE HEADERS - Enhanced Nonprofit Styling */
 .page-header {
     background: linear-gradient(135deg, var(--warm-gray-50) 0%, var(--warm-gray-100) 100%);
     color: var(--primary-charcoal);
-    padding: 80px 0;
+    padding: 100px 0;
     text-align: center;
     border-bottom: 1px solid var(--warm-gray-200);
 }
@@ -288,8 +313,8 @@ nav {
 }
 
 /* Page-specific header variations */
-.page-header.homepage {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
+.page-header.nonprofit {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
     color: white;
 }
 
@@ -299,7 +324,7 @@ nav {
 }
 
 .page-header.programs {
-    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--warning-orange) 100%);
+    background: linear-gradient(135deg, var(--chicago-blue) 0%, var(--chicago-blue-dark) 100%);
     color: white;
 }
 
@@ -313,9 +338,9 @@ nav {
     color: var(--primary-charcoal);
 }
 
-/* CONTENT SECTIONS - Community warmth */
+/* CONTENT SECTIONS - Enhanced Community Warmth */
 .content-section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .content-section.gray {
@@ -330,7 +355,7 @@ nav {
 .section h2 {
     font-family: var(--font-family-heading);
     color: var(--primary-charcoal);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
@@ -351,79 +376,203 @@ nav {
     color: var(--warm-gray-600);
 }
 
-/* CARDS & COMPONENTS - Community feel */
+/* ENHANCED CARDS & COMPONENTS - Nonprofit Feel */
 .card {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     border: 1px solid var(--warm-gray-200);
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* EVENTS STYLING */
+/* ENHANCED EVENTS STYLING */
 .events-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .event-card {
     background: white;
-    padding: 1.5rem;
-    border-radius: 15px;
+    padding: 2rem;
+    border-radius: 20px;
     border-left: 5px solid var(--primary-green);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
 .event-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .event-date {
     color: var(--primary-green);
     font-family: var(--font-family-heading);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .event-card h4 {
     font-family: var(--font-family-heading);
     color: var(--primary-charcoal);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* Gallery Enhancements */
+.gallery-slideshow {
+    position: relative;
+    max-width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.gallery-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.gallery-image.active {
+    opacity: 1;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(55, 65, 81, 0.9));
+    color: white;
+    padding: 40px 30px 25px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-image.active .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-caption h3 {
+    font-family: var(--font-family-heading);
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-/* FOOTER - Community-focused design */
+.gallery-caption p {
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.gallery-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--warm-gray-300);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    background: var(--primary-green);
+    transform: scale(1.3);
+}
+
+/* Program Cards */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+}
+
+.program-card {
+    border: 1px solid var(--warm-gray-200);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.program-header {
+    padding: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-600) 100%);
+    color: white;
+}
+
+.program-header h3 {
+    font-family: var(--font-family-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.program-body {
+    padding: 2.5rem;
+}
+
+.program-body p {
+    font-family: var(--font-family-body);
+    color: var(--warm-gray-600);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ENHANCED FOOTER - Nonprofit Identity */
 footer {
     background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-800) 100%);
     color: var(--warm-gray-200);
-    padding: 60px 0 40px 0;
+    padding: 80px 0 40px 0;
     border-top: 3px solid var(--primary-green);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 2rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
 }
 
 .footer-section h4 {
     font-family: var(--font-family-heading);
     margin-bottom: 1.5rem;
     color: var(--primary-green);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -434,20 +583,22 @@ footer {
     margin-bottom: 0.8rem;
     font-family: var(--font-family-body);
     transition: all 0.3s ease;
-    padding: 0.2rem 0;
+    padding: 0.3rem 0;
+    font-size: 1rem;
 }
 
 .footer-section a:hover {
     color: white;
-    padding-left: 0.5rem;
+    padding-left: 0.8rem;
     border-left: 3px solid var(--primary-green);
+    transform: translateX(3px);
 }
 
 /* ANIMATIONS */
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
     to {
         opacity: 1;
@@ -458,11 +609,37 @@ footer {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+        transform: scale(1.02);
+    }
+    100% { 
+        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -475,26 +652,137 @@ footer {
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
 
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
 
-/* RESPONSIVE DESIGN - Community accessibility */
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+.p-5 { padding: 3rem; }
+
+/* Color Utility Classes */
+.text-primary { color: var(--primary-green); }
+.text-chicago-blue { color: var(--chicago-blue); }
+.text-orange { color: var(--accent-orange); }
+.text-charcoal { color: var(--primary-charcoal); }
+
+.bg-primary { background-color: var(--primary-green); }
+.bg-chicago-blue { background-color: var(--chicago-blue); }
+.bg-orange { background-color: var(--accent-orange); }
+.bg-gray-50 { background-color: var(--warm-gray-50); }
+
+/* Nonprofit Specific Classes */
+.nonprofit-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.community-impact-stat {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid var(--warm-gray-200);
+    transition: all 0.3s ease;
+}
+
+.community-impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.impact-number {
+    font-family: var(--font-family-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.impact-label {
+    font-family: var(--font-family-body);
+    color: var(--warm-gray-600);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Form Enhancements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    color: var(--primary-charcoal);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--warm-gray-200);
+    border-radius: 10px;
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* RESPONSIVE DESIGN - Enhanced Mobile Experience */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 25px;
+    }
+    
+    .programs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Simplified mobile - can add hamburger menu later */
     }
     
     .brand-section {
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     .tagline {
-        display: none; /* Hide on mobile for cleaner look */
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
     }
     
     .page-header h1 {
@@ -506,17 +794,30 @@ footer {
     }
     
     .section h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .btn-primary, .btn-secondary, .btn-tertiary {
         width: 100%;
         margin-bottom: 1rem;
+        padding: 16px 25px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .gallery-slideshow {
+        height: 400px;
+    }
+    
+    .events-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -536,6 +837,18 @@ footer {
     .content-section {
         padding: 40px 0;
     }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 0.75rem;
+    }
+    
+    .gallery-slideshow {
+        height: 300px;
+    }
 }
 
 /* PRINT STYLES */
@@ -543,4 +856,32 @@ footer {
     header, footer { display: none; }
     .content-section { padding: 20px 0; }
     a { color: var(--primary-charcoal); }
+    .btn-primary, .btn-secondary, .btn-tertiary {
+        background: white !important;
+        color: var(--primary-charcoal) !important;
+        border: 1px solid var(--primary-charcoal) !important;
+    }
+}
+
+/* HIGH CONTRAST MODE SUPPORT */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-green: #15803d;
+        --primary-charcoal: #000000;
+        --warm-gray-600: #333333;
+    }
+}
+
+/* REDUCED MOTION SUPPORT */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* DARK MODE SUPPORT (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Future dark mode styles can go here */
 }

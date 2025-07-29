@@ -1,0 +1,965 @@
+/* David Benavidez Memorial Tournament Styles */
+
+/* Memorial Tournament - Celebratory but Respectful Design */
+.page-header {
+    background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(16, 185, 129, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%), 
+                url('../gallery_slideshow/tournament.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(55, 65, 81, 0.6) 80%);
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.memorial-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.1;
+}
+
+.memorial-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #f3f4f6;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.tournament-details-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.memorial-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.memorial-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+}
+
+/* Tournament Story Video Section */
+.tournament-story-section {
+    background: white;
+    padding: 100px 0;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.story-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.story-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.video-story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border: none;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
+.video-caption {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.video-caption h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.video-caption p {
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.story-content {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    border-left: 5px solid #10b981;
+}
+
+.story-content h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #10b981;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Tournament Highlights Section */
+.tournament-highlights {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+}
+
+.highlights-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.highlights-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.highlight-video {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.highlight-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.highlight-video video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.highlight-caption {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.highlight-caption h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-caption p {
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Memorial Quote - Enhanced Respectful Styling */
+.memorial-quote-section {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.memorial-quote-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-8.837-7.163-16-16-16s-16 7.163-16 16 7.163 16 16 16 16-7.163 16-16zm-16-12c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.memorial-quote {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #10b981;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.memorial-quote p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #f9fafb;
+}
+
+.quote-attribution {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #d1d5db;
+    font-weight: 500;
+}
+
+/* Tournament Results & Champions Gallery */
+.tournament-results-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.champions-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.champion-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #e5e7eb;
+}
+
+.champion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-color: #10b981;
+}
+
+.champion-card.first-place {
+    border-color: #fbbf24;
+}
+
+.champion-card.second-place {
+    border-color: #9ca3af;
+}
+
+.champion-card.third-place {
+    border-color: #cd7c2f;
+}
+
+.champion-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.champion-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.champion-info h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.champion-info .place {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.champion-info .place.first {
+    color: #fbbf24;
+}
+
+.champion-info .place.second {
+    color: #9ca3af;
+}
+
+.champion-info .place.third {
+    color: #cd7c2f;
+}
+
+.champion-info p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Tournament Memories Gallery */
+.memories-gallery-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.gallery-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.memorial-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* David's Legacy Section */
+.legacy-section {
+    background: white;
+    padding: 100px 0;
+}
+
+.legacy-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.legacy-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.legacy-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #6b7280;
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.david-story {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 5px solid #10b981;
+}
+
+.david-story h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #10b981;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.david-story p {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.legacy-impact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.impact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-color: #10b981;
+}
+
+.impact-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.impact-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Community Gathering Details */
+.gathering-details {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+}
+
+.gathering-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gathering-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tournament-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.detail-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.detail-card:hover {
+    border-color: #10b981;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.detail-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.detail-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Memorial Registration - Join the Memorial */
+.memorial-registration {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 100px 0;
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.registration-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.registration-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contribution-philosophy {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contribution-philosophy p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    font-style: italic;
+}
+
+.registration-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.registration-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.registration-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.registration-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contribution-amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+    color: #fbbf24;
+}
+
+.contribution-includes {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.contribution-includes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contribution-includes li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contribution-includes li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Registration Form - Memorial Participation */
+.registration-form {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    background: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.memorial-submit {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #374151;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.memorial-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+/* Community Impact Emphasis */
+.community-impact {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 80px 0;
+}
+
+.impact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.impact-header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #374151;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.benavidez-family-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin: 3rem auto;
+    max-width: 800px;
+    text-align: center;
+    border-left: 5px solid #10b981;
+}
+
+.family-involvement h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #10b981;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.family-involvement p {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Trophy and Award Icons */
+.trophy-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.trophy-icon.gold {
+    color: #fbbf24;
+}
+
+.trophy-icon.silver {
+    color: #9ca3af;
+}
+
+.trophy-icon.bronze {
+    color: #cd7c2f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .video-story-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .video-container iframe,
+    .video-container video {
+        height: 250px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .registration-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .tournament-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legacy-impact {
+        grid-template-columns: 1fr;
+    }
+    
+    .memorial-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .champions-gallery {
+        grid-template-columns: 1fr;
+    }
+}
