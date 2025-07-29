@@ -709,3 +709,136 @@
         font-size: 0.95rem;
     }
 }
+
+/* Youth Programming Hero Section */
+.youth-programming-hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 80px 0;
+    border-bottom: 3px solid #22c55e;
+}
+
+.youth-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.youth-program-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.youth-program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.youth-program-card.featured {
+    border: 3px solid #22c55e;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.youth-program-card.featured::before {
+    content: "FLAGSHIP PROGRAM";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #22c55e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.youth-program-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.youth-program-card p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.program-features li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.program-features li::before {
+    content: "✓";
+    color: #22c55e;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.youth-program-card .btn-primary,
+.youth-program-card .btn-secondary {
+    margin-top: 1.5rem;
+}
+
+/* Featured program card enhancements */
+.program-card.featured {
+    border: 3px solid #22c55e;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    position: relative;
+}
+
+.program-card.featured::before {
+    content: "FLAGSHIP PROGRAM";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #22c55e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .youth-programming-hero {
+        padding: 60px 0;
+    }
+    
+    .youth-programs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .youth-program-card {
+        padding: 1.5rem;
+    }
+    
+    .youth-program-card h3 {
+        font-size: 1.2rem;
+    }
+}
