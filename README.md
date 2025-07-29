@@ -2,7 +2,7 @@
 
 **From Pickup to Purpose—Stronger Together**
 
-🌐 **Live Website:** https://yourusername.github.io/chicago-neighborhood-soccer
+🌐 **Live Website:** https://nbhdsoccer.github.io
 
 ## 🏘️ About Us
 
