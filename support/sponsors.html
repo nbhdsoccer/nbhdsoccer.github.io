@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Partnerships & Sponsorships | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Partner with Chicago Neighborhood Soccer to strengthen South & West Side communities through soccer. Authentic sponsorship opportunities that create real neighborhood impact.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to shared styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
+    <style>
+        /* Community Partnership Design - Warm & Welcoming */
+        .page-header {
+            background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(22, 163, 74, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%), 
+                        url('../assets/gallery_slideshow/tournament.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(55, 65, 81, 0.6) 80%);
+        }
+        
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .partnership-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .page-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .partnership-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.4rem;
+            color: #f3f4f6;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .partnership-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.3);
+        }
+        
+        .partnership-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4);
+            color: white;
+        }
+        
+        /* Community Value Proposition */
+        .value-prop {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .value-prop h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .value-prop > p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .value-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: white;
+            color: #16a34a;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        
+        .value-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .value-card p {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Partnership Packages - Community Focused */
+        .sponsorship-packages {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .packages-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .packages-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .packages-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .package-card {
+            background: white;
+            border: 3px solid #f3f4f6;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .package-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .package-card.featured {
+            border-color: #16a34a;
+            background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+            transform: scale(1.02);
+        }
+        
+        .package-card.featured::before {
+            content: "COMMUNITY FAVORITE";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #16a34a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .package-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .package-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #16a34a;
+            margin: 1rem 0;
+        }
+        
+        .package-description {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .package-features {
+            text-align: left;
+            margin: 2rem 0;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .package-features li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            color: #4b5563;
+        }
+        
+        .package-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .package-cta {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .package-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
+            color: white;
+        }
+        
+        .package-cta.secondary {
+            background: transparent;
+            color: #16a34a;
+            border: 2px solid #16a34a;
+        }
+        
+        .package-cta.secondary:hover {
+            background: #16a34a;
+            color: white;
+        }
+        
+        /* Beyond Sponsorship - Partnership Opportunities */
+        .custom-partnerships {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 80px 0;
+        }
+        
+        .partnerships-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .partnerships-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .partnership-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+        }
+        
+        .partnership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .partnership-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #16a34a;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .partnership-card p {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Community Impact & ROI */
+        .roi-section {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .roi-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .roi-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .roi-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .roi-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .roi-stat:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+        
+        .roi-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #16a34a;
+        }
+        
+        .roi-label {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.9;
+        }
+        
+        .partnership-impact {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .partnership-impact h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .impact-item h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #fbbf24;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .impact-item p {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Current Partners - Community Family */
+        .current-sponsors {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .sponsors-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .sponsors-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .sponsor-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: center;
+        }
+        
+        .sponsor-logo {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 15px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #374151;
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+            text-align: center;
+        }
+        
+        .sponsor-logo:hover {
+            transform: translateY(-5px);
+            border-color: #16a34a;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .partner-testimonial {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem auto;
+            max-width: 800px;
+            border-left: 5px solid #16a34a;
+        }
+        
+        .partner-testimonial h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #16a34a;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-testimonial blockquote {
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-testimonial p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #374151;
+            margin: 0;
+        }
+        
+        /* Call to Action - Community Focused */
+        .cta-section {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #f97316;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+            color: #f97316;
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-info h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-details {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .package-card.featured {
+                transform: none;
+            }
+            
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .roi-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .partnership-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="brand-section">
+                <a href="../index.html" class="logo">NBHD Soccer</a>
+                <span class="tagline">From Pickup to Purpose—Stronger Together</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/about.html">Our Story</a></li>
+                <li class="dropdown">
+                    <a href="../index.html#programs">Our Programs</a>
+                    <div class="dropdown-content">
+                        <a href="../programs/rec_77.html">REC 77 - School Programs</a>
+                        <a href="../index.html#programs">Youth Development</a>
+                        <a href="../programs/womens.html">Women's Soccer</a>
+                        <a href="../index.html#programs">Community Building</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../index.html#events">Community Events</a>
+                    <div class="dropdown-content">
+                        <a href="../events/benavidez-tournament.html">🏆 Benavidez Tournament</a>
+                        <a href="../programs/womens.html#tournament">🏆 Women's Tournament</a>
+                        <a href="../index.html#events">All Events</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../support/support.html">Support</a>
+                    <div class="dropdown-content">
+                        <a href="../support/support.html">Support Our Community</a>
+                        <a href="../support/sponsors.html">Sponsorships</a>
+                        <a href="../support/support.html#donate">Major Giving</a>
+                    </div>
+                </li>
+                <li><a href="../index.html#contact">Connect</a></li>
+            </ul>
+            <a href="mailto:nbhdsoccer@gmail.com?subject=Community Partnership Interest" class="cta-button">Partner With Us</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="partnership-badge">Building Stronger Communities Together</div>
+                <h1>Community Partnerships</h1>
+                <p class="partnership-subtitle">Join us in creating authentic neighborhood impact through soccer. Real partnerships that strengthen our South & West Side communities.</p>
+                <a href="#packages" class="partnership-cta">Explore Partnership Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-partnerships">
+        <div class="container">
+            <div class="partnerships-header">
+                <h2>Beyond Sponsorship: True Community Partnership</h2>
+                <p style="font-size: 1.2rem; color: #6b7280; text-align: center; max-width: 700px; margin: 0 auto;">Multiple ways to strengthen our neighborhoods together</p>
+            </div>
+            
+            <div class="partnership-grid">
+                <div class="partnership-card">
+                    <h3>🏢 Corporate Team Building</h3>
+                    <p>Engage your employees with custom soccer events, volunteer opportunities, and community service projects that build team cohesion while supporting neighborhood youth development.</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Corporate Team Building Partnership" class="package-cta secondary" style="margin-top: 1rem; display: inline-block;">Plan Team Building</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <h3>🎯 Product & Service Partnerships</h3>
+                    <p>Sports equipment, healthy food, fitness services, educational resources - partner with us to provide goods and services that directly benefit our South & West Side communities.</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Product Partnership" class="package-cta secondary" style="margin-top: 1rem; display: inline-block;">Explore Product Partnerships</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <h3>🏟️ Venue & Space Partnerships</h3>
+                    <p>Provide field space, indoor facilities, or event venues. We'll create custom activation opportunities that showcase your space while serving our community.</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Venue Partnership" class="package-cta secondary" style="margin-top: 1rem; display: inline-block;">Offer Your Space</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <h3>💡 Community Impact Campaigns</h3>
+                    <p>Co-create campaigns that authentically connect your brand values with neighborhood development while driving meaningful social impact in our communities.</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Impact Campaign Partnership" class="package-cta secondary" style="margin-top: 1rem; display: inline-block;">Co-Create Impact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="roi-section">
+        <div class="container">
+            <div class="roi-header">
+                <h2>Your Partnership Impact</h2>
+                <p class="roi-subtitle">See the measurable community transformation your partnership creates</p>
+            </div>
+            
+            <div class="roi-stats">
+                <div class="roi-stat">
+                    <span class="roi-number">6,500+</span>
+                    <span class="roi-label">Community Members Reached</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">400</span>
+                    <span class="roi-label">Weekly Active Participants</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">100+</span>
+                    <span class="roi-label">Annual Community Events</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">12</span>
+                    <span class="roi-label">CPS Schools We Serve</span>
+                </div>
+            </div>
+            
+            <div class="partnership-impact">
+                <h3>Partnership Value Beyond Numbers</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <h4>Brand Alignment</h4>
+                        <p>Associate with authentic community development and youth empowerment in Chicago's historic neighborhoods</p>
+                    </div>
+                    <div class="impact-item">
+                        <h4>Employee Engagement</h4>
+                        <p>Meaningful volunteer opportunities that build company culture while strengthening communities</p>
+                    </div>
+                    <div class="impact-item">
+                        <h4>Community Access</h4>
+                        <p>Authentic connection with diverse, engaged communities across Chicago's South & West sides</p>
+                    </div>
+                    <div class="impact-item">
+                        <h4>Social Impact</h4>
+                        <p>Measurable community development metrics for comprehensive CSR and impact reporting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="current-sponsors">
+        <div class="container">
+            <div class="sponsors-header">
+                <h2>Join Our Growing Community Family</h2>
+                <p class="sponsors-subtitle">Organizations that share our vision for stronger, more connected neighborhoods</p>
+            </div>
+            
+            <div class="sponsor-logos">
+                <div class="sponsor-logo">
+                    <span>Chicago Red Stars<br><small style="font-weight: normal; opacity: 0.7;">Official Community Partner</small></span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Rauner Family YMCA<br><small style="font-weight: normal; opacity: 0.7;">Venue & Program Partner</small></span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Boys & Girls Club<br><small style="font-weight: normal; opacity: 0.7;">Youth Development Partner</small></span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Organization<br><small style="font-weight: normal; opacity: 0.7;">Partner Here</small></span>
+                </div>
+            </div>
+            
+            <div class="partner-testimonial">
+                <h3>What Our Community Partners Say</h3>
+                <blockquote>
+                    "Partnering with Chicago Neighborhood Soccer has allowed us to authentically connect with communities in a meaningful way. Their grassroots approach and proven track record made the partnership decision easy. We see real impact in the neighborhoods we both serve."
+                </blockquote>
+                <p>- Community Partner Organization</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-header">
+                <h2>Ready to Strengthen Our Community?</h2>
+                <p class="cta-subtitle">Let's create a partnership that drives real neighborhood change while achieving your community impact goals.</p>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="mailto:nbhdsoccer@gmail.com?subject=Partnership Conversation Request" class="cta-button">Schedule a Conversation</a>
+                <a href="mailto:nbhdsoccer@gmail.com?subject=Custom Partnership Request" class="cta-button">Request Custom Partnership</a>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Connect With Our Partnership Team</h3>
+                <div class="contact-details">
+                    <p><strong>Email:</strong> nbhdsoccer@gmail.com</p>
+                    <p><strong>Subject Line:</strong> "Community Partnership Inquiry"</p>
+                    <p><strong>Response Time:</strong> Within 24 hours with custom partnership options</p>
+                    <p style="margin-top: 1.5rem; font-style: italic;">We'll work together to create a partnership that strengthens our community while meeting your goals and budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Partnership Opportunities</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Neighborhood Supporter">Neighborhood Supporter - $500</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Community Champion">Community Champion - $1,500</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Tournament Partner">Tournament Partner - $3,000</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Legacy Builder">Legacy Builder - $5,000+</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Partnership Types</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Corporate Team Building">Corporate Team Building</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Product Partnership">Product/Service Partnerships</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Venue Partnership">Venue Partnerships</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Impact Campaign">Community Impact Campaigns</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Community Programs</h4>
+                    <a href="../programs/rec_77.html">REC 77 School Programs</a>
+                    <a href="../index.html#programs">Youth Development</a>
+                    <a href="../index.html#programs">Women's Soccer</a>
+                    <a href="../events/benavidez-tournament.html">Memorial Tournament</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Partnership Team</h4>
+                    <p>Email: nbhdsoccer@gmail.com</p>
+                    <p>Subject: "Partnership Inquiry"</p>
+                    <a href="../support/support.html">Individual Support</a>
+                    <a href="../about/about.html">Learn Our Community Story</a>
+                </div>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
+            <div style="text-align: center;">
+                <p style="font-family: 'Open Sans', sans-serif;">&copy; 2025 Chicago Neighborhood Soccer. Building stronger communities one partnership at a time.</p>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: #16a34a; font-weight: 600; margin-top: 0.5rem;">🏘️ South & West Side Neighborhoods | 🤝 Community-Driven Partnerships | ⚽ From Pickup to Purpose</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scroll behavior for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.package-card, .value-card, .partnership-card, .roi-stat').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                
+                dropdown.addEventListener('mouseenter', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Track partnership engagement for analytics
+        document.querySelectorAll('a[href*="mailto"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const subject = this.href.includes('subject=') ? 
+                    this.href.split('subject=')[1].split('&')[0] : 'General Partnership';
+                console.log('Partnership inquiry initiated:', decodeURIComponent(subject));
+            });
+        });
+
+        // Enhanced hover effects for package cards
+        document.querySelectorAll('.package-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('featured')) {
+                    this.style.transform = 'translateY(-8px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('featured')) {
+                    this.style.transform = 'translateY(-5px)';
+                }
+            });
+        });
+
+        // Add subtle animation to sponsor logos
+        document.querySelectorAll('.sponsor-logo').forEach((logo, index) => {
+            logo.style.animationDelay = `${index * 0.1}s`;
+            logo.style.animation = 'fadeInUp 0.6s ease forwards';
+        });
+
+        // Add CSS animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html><section class="value-prop">
+        <div class="container">
+            <h2>Why Partner With Our Community?</h2>
+            <p>Your partnership doesn't just support soccer—it builds the fabric of our neighborhoods</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">🏘️</div>
+                    <h3>Authentic Neighborhood Impact</h3>
+                    <p>10+ years of proven community building with deep roots in Chicago's South & West sides. Your support creates real, measurable change in our neighborhoods.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h3>Growing Community Reach</h3>
+                    <p>6,500+ community members, 400 weekly participants, 100+ annual events. Connect with engaged, diverse audiences who value authentic partnerships.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>True Community Partnership</h3>
+                    <p>We co-create meaningful engagement opportunities that align with your values and our community needs. Partnership, not just sponsorship.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌟</div>
+                    <h3>Neighbor-Led Leadership</h3>
+                    <p>Locally-run by community members with deep neighborhood roots and a decade-long track record of consistent delivery and trust-building.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsorship-packages" id="packages">
+        <div class="container">
+            <div class="packages-header">
+                <h2>Community Partnership Levels</h2>
+                <p class="packages-subtitle">Choose the partnership level that aligns with your values and community impact goals</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Neighborhood Supporter</h3>
+                    <div class="package-price">$500</div>
+                    <p class="package-description">Perfect for local businesses wanting to strengthen their neighborhood</p>
+                    
+                    <ul class="package-features">
+                        <li>Logo recognition at community events</li>
+                        <li>Social media appreciation posts</li>
+                        <li>Newsletter mentions (6,500+ neighbors)</li>
+                        <li>Community event attendance invitation</li>
+                        <li>Quarterly neighborhood impact report</li>
+                    </ul>
+                    
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Neighborhood Supporter Partnership" class="package-cta">Support Our Neighborhood</a>
+                </div>
+                
+                <div class="package-card featured">
+                    <h3>Community Champion</h3>
+                    <div class="package-price">$1,500</div>
+                    <p class="package-description">Sponsor a complete school program and transform young lives</p>
+                    
+                    <ul class="package-features">
+                        <li>Named REC 77 school program sponsorship</li>
+                        <li>Logo on all program materials</li>
+                        <li>Speaking opportunity at championship event</li>
+                        <li>Employee volunteer opportunities</li>
+                        <li>Custom community engagement campaign</li>
+                        <li>Detailed program impact report</li>
+                        <li>Website recognition (1 year)</li>
+                    </ul>
+                    
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Community Champion Partnership" class="package-cta">Champion Our Community</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3>Tournament Title Partner</h3>
+                    <div class="package-price">$3,000</div>
+                    <p class="package-description">Headline our signature community events and memorial tournaments</p>
+                    
+                    <ul class="package-features">
+                        <li>Title partnership of major tournament</li>
+                        <li>Premier logo placement on all materials</li>
+                        <li>On-site community activation space</li>
+                        <li>Awards presentation opportunity</li>
+                        <li>Live stream and video recognition</li>
+                        <li>Custom hospitality for your team</li>
+                        <li>Year-round community recognition</li>
+                        <li>Team building event for employees</li>
+                    </ul>
+                    
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Tournament Title Partnership" class="package-cta secondary">Claim Your Tournament</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3>Legacy Builder</h3>
+                    <div class="package-price">$5,000+</div>
+                    <p class="package-description">Multi-year partnership with transformational community impact</p>
+                    
+                    <ul class="package-features">
+                        <li>Custom partnership co-development</li>
+                        <li>Community advisory opportunities</li>
+                        <li>Named facility or program legacy rights</li>
+                        <li>Executive employee engagement programs</li>
+                        <li>Corporate community team building events</li>
+                        <li>Leadership networking opportunities</li>
+                        <li>Comprehensive impact reporting</li>
+                        <li>Priority access to new community initiatives</li>
+                    </ul>
+                    
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Legacy Builder Partnership" class="package-cta">Build Your Legacy</a>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,546 @@
+/* SHARED STYLES FOR CHICAGO NEIGHBORHOOD SOCCER */
+/* Community-focused, grassroots design system */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #374151;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* COMMUNITY COLOR SYSTEM */
+:root {
+    /* Primary Colors - Grassroots Community */
+    --primary-charcoal: #374151;
+    /* --primary-green: rgba(2, 157, 234, 0.8);#00a5fe; */
+    --primary-green: #16a34a;
+    --primary-orange: #f97316;
+    
+    /* Secondary Colors - Chicago Heritage */
+    --chicago-red: #dc2626;
+    --heritage-gold: #eab308;
+    --community-blue: #3b82f6;
+    
+    /* Neutral Colors - Warm & Welcoming */
+    --warm-gray-50: #f9fafb;
+    --warm-gray-100: #f3f4f6;
+    --warm-gray-200: #e5e7eb;
+    --warm-gray-300: #d1d5db;
+    --warm-gray-400: #9ca3af;
+    --warm-gray-500: #6b7280;
+    --warm-gray-600: #4b5563;
+    --warm-gray-700: #374151;
+    --warm-gray-800: #1f2937;
+    
+    /* Accent Colors - Community Energy */
+    --success-green: #059669;
+    --warning-orange: #d97706;
+    --info-blue: #0284c7;
+    
+    /* Typography Scale */
+    --font-family-heading: 'Poppins', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+}
+
+/* HEADER STYLES - Community-focused design */
+header {
+    background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-600) 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(55, 65, 81, 0.15);
+    border-bottom: 3px solid var(--primary-green);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Brand Section with Community Identity */
+.brand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--primary-green);
+    transform: translateY(-1px);
+}
+
+.tagline {
+    font-family: var(--font-family-body);
+    font-size: 0.8rem;
+    color: var(--warm-gray-200);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Navigation Links - Community-friendly */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+    transform: translateY(-1px);
+}
+
+/* Dropdown Menu - Warm & Welcoming */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border: 1px solid var(--warm-gray-200);
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: var(--primary-charcoal) !important;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(135deg, var(--primary-green), var(--success-green));
+    color: white !important;
+    transform: none;
+    padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+.dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* CTA Button - Community Action */
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+    background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%);
+}
+
+/* SHARED BUTTON SYSTEM - Community-focused */
+.btn-primary, .btn-secondary, .btn-tertiary {
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+    background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+}
+
+.btn-tertiary {
+    background: var(--warm-gray-100);
+    color: var(--primary-charcoal);
+    border: 2px solid var(--warm-gray-300);
+}
+
+.btn-tertiary:hover {
+    background: var(--warm-gray-200);
+    border-color: var(--warm-gray-400);
+    transform: translateY(-2px);
+}
+
+/* PAGE HEADERS - Context-specific styling */
+.page-header {
+    background: linear-gradient(135deg, var(--warm-gray-50) 0%, var(--warm-gray-100) 100%);
+    color: var(--primary-charcoal);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--warm-gray-200);
+}
+
+.page-header h1 {
+    font-family: var(--font-family-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-charcoal);
+}
+
+.page-header .subtitle {
+    font-family: var(--font-family-body);
+    font-size: 1.4rem;
+    color: var(--warm-gray-600);
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+}
+
+/* Page-specific header variations */
+.page-header.homepage {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--success-green) 100%);
+    color: white;
+}
+
+.page-header.about {
+    background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-600) 100%);
+    color: white;
+}
+
+.page-header.programs {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--warning-orange) 100%);
+    color: white;
+}
+
+.page-header.events {
+    background: linear-gradient(135deg, var(--chicago-red) 0%, #b91c1c 100%);
+    color: white;
+}
+
+.page-header.support {
+    background: linear-gradient(135deg, var(--heritage-gold) 0%, #ca8a04 100%);
+    color: var(--primary-charcoal);
+}
+
+/* CONTENT SECTIONS - Community warmth */
+.content-section {
+    padding: 80px 0;
+}
+
+.content-section.gray {
+    background: linear-gradient(135deg, var(--warm-gray-50) 0%, var(--warm-gray-100) 100%);
+}
+
+.content-section.dark {
+    background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-700) 100%);
+    color: white;
+}
+
+.section h2 {
+    font-family: var(--font-family-heading);
+    color: var(--primary-charcoal);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section h3 {
+    font-family: var(--font-family-heading);
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+}
+
+.section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--warm-gray-600);
+}
+
+/* CARDS & COMPONENTS - Community feel */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid var(--warm-gray-200);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* EVENTS STYLING */
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-green);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.event-date {
+    color: var(--primary-green);
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.event-card h4 {
+    font-family: var(--font-family-heading);
+    color: var(--primary-charcoal);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER - Community-focused design */
+footer {
+    background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-800) 100%);
+    color: var(--warm-gray-200);
+    padding: 60px 0 40px 0;
+    border-top: 3px solid var(--primary-green);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-family: var(--font-family-heading);
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-section a {
+    color: var(--warm-gray-300);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-family-body);
+    transition: all 0.3s ease;
+    padding: 0.2rem 0;
+}
+
+.footer-section a:hover {
+    color: white;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--primary-green);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* UTILITY CLASSES */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+/* RESPONSIVE DESIGN - Community accessibility */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplified mobile - can add hamburger menu later */
+    }
+    
+    .brand-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .tagline {
+        display: none; /* Hide on mobile for cleaner look */
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-tertiary {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+}
+
+/* PRINT STYLES */
+@media print {
+    header, footer { display: none; }
+    .content-section { padding: 20px 0; }
+    a { color: var(--primary-charcoal); }
+}

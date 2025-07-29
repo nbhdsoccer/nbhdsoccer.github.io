@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REC 77 - Community Partnership Program | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="REC 77 brings customized sports leagues directly to CPS schools through authentic community partnerships. Co-development that works for your students and your neighborhood.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to shared styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
+    <style>
+        /* Page-specific styles for partnership-focused design */
+        .page-header {
+            background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(22, 163, 74, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .partnership-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .program-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.4rem;
+            color: #f3f4f6;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .partnership-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .partnership-element {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .partnership-element:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .partnership-connector {
+            color: #16a34a;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        /* Who We Are - Neighbor Credentials */
+        .neighbor-credentials {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 80px 0;
+        }
+        
+        .credentials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .credentials-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .neighbor-highlight {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .credential-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .credential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .credential-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .credential-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Partnership Approach */
+        .partnership-approach {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .approach-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .approach-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .collaboration-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .input-section, .experience-section {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .input-section:hover, .experience-section:hover {
+            border-color: #16a34a;
+            transform: translateY(-3px);
+        }
+        
+        .input-section {
+            border-left: 5px solid #f97316;
+        }
+        
+        .experience-section {
+            border-left: 5px solid #16a34a;
+        }
+        
+        .collaboration-plus {
+            font-size: 3rem;
+            color: #16a34a;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .collaboration-result {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .collaboration-result h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Community Investment - Not Transaction */
+        .investment-section {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 80px 0;
+        }
+        
+        .investment-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .investment-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .investment-philosophy {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+            font-size: 1.2rem;
+        }
+        
+        .program-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .option-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .option-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .option-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .option-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        
+        .option-duration {
+            color: #16a34a;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .option-investment {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+        .investment-amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .investment-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Building Together Conversation */
+        .conversation-section {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .conversation-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .conversation-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .conversation-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #16a34a;
+        }
+        
+        .benefit-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background: rgba(22, 163, 74, 0.15);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem auto;
+            max-width: 800px;
+            border: 1px solid rgba(22, 163, 74, 0.3);
+        }
+        
+        .contact-info {
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-icon {
+            color: #16a34a;
+            font-size: 1.3rem;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .partnership-visual {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .partnership-connector {
+                transform: rotate(90deg);
+            }
+            
+            .collaboration-visual {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .collaboration-plus {
+                transform: rotate(90deg);
+                font-size: 2rem;
+            }
+            
+            .program-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .conversation-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="brand-section">
+                <a href="../index.html" class="logo">NBHD Soccer</a>
+                <span class="tagline">From Pickup to Purpose—Stronger Together</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/about.html">Our Story</a></li>
+                <li class="dropdown">
+                    <a href="../index.html#programs">Our Programs</a>
+                    <div class="dropdown-content">
+                        <a href="../programs/rec_77.html">REC 77 - School Programs</a>
+                        <a href="../index.html#programs">Youth Development</a>
+                        <a href="../programs/womens.html">Women's Soccer</a>
+                        <a href="../index.html#programs">Community Building</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../index.html#events">Community Events</a>
+                    <div class="dropdown-content">
+                        <a href="../events/benavidez-tournament.html">🏆 Benavidez Tournament</a>
+                        <a href="../programs/womens.html#tournament">🏆 Women's Tournament</a>
+                        <a href="../index.html#events">All Events</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../support/support.html">Support</a>
+                    <div class="dropdown-content">
+                        <a href="../support/support.html">Support Our Community</a>
+                        <a href="../support/sponsors.html">Sponsorships</a>
+                        <a href="../support/support.html#donate">Major Giving</a>
+                    </div>
+                </li>
+                <li><a href="../index.html#contact">Connect</a></li>
+            </ul>
+            <a href="mailto:nbhdsoccer@gmail.com?subject=REC 77 Partnership Conversation" class="cta-button">Start the Conversation</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="partnership-badge">Community Partnership Program</div>
+                <h1>REC 77</h1>
+                <p class="program-tagline">Sports Programming Built With You, Not For You</p>
+                
+                <div class="partnership-visual">
+                    <div class="partnership-element">Your School</div>
+                    <div class="partnership-connector">+</div>
+                    <div class="partnership-element">Our Experience</div>
+                    <div class="partnership-connector">=</div>
+                    <div class="partnership-element">Student Success</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neighbor-credentials">
+        <div class="container">
+            <div class="credentials-header">
+                <h2>Your Neighbors, Not Vendors</h2>
+                <p style="font-size: 1.2rem; color: #6b7280; max-width: 700px; margin: 0 auto;">We're Chicago Neighborhood Soccer - locals who've been organizing games in South and West Side neighborhoods for 10+ years. We grew up here, still live here, and have built a 6,500+ member community through trust and consistency.</p>
+            </div>
+            
+            <div class="neighbor-highlight">
+                "REC 77 represents our commitment to all 77 neighborhoods in Chicago - starting with the ones we call home. We're not outsiders parachuting in - we're neighbors who know how to make sports work in our communities."
+            </div>
+            
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">🏘️</div>
+                    <h3>Local Roots</h3>
+                    <p>These are the neighborhoods we grew up in. We understand the community, the challenges, and what actually works for kids and families here.</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">⚽</div>
+                    <h3>Proven Track Record</h3>
+                    <p>6,500+ people choose to play with us because we consistently deliver quality experiences. Our reputation is built through word-of-mouth, not marketing.</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🤝</div>
+                    <h3>Partnership Mindset</h3>
+                    <p>Every school is different; we adapt to what works for your students, your space, and your reality. Flexible programs, not rigid packages.</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">💙</div>
+                    <h2>Community Investment</h2>
+                    <p>We know budgets are tight. We're here to build long-term partnerships and find solutions that work for your school's financial reality.</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">📅</div>
+                    <h3>Reliable Presence</h3>
+                    <p>10+ years of showing up consistently. We're not going anywhere - we're committed to being part of the community long-term.</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🎯</div>
+                    <h3>Honest Approach</h3>
+                    <p>We're new to CPS as an official vendor, but we're not new to organizing sports or working with kids in these communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnership-approach">
+        <div class="container">
+            <div class="approach-header">
+                <h2>Co-Development Partnership</h2>
+                <p style="font-size: 1.2rem; color: #6b7280; text-align: center; max-width: 700px; margin: 0 auto;">Instead of selling you a pre-packaged program, we co-develop something that actually fits your school and serves your students.</p>
+            </div>
+            
+            <div class="collaboration-visual">
+                <div class="input-section">
+                    <h3 style="color: #f97316; font-family: 'Poppins', sans-serif; text-align: center; margin-bottom: 1rem;">Your Input</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #f97316;">•</span>
+                            What sports work in your space?
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #f97316;">•</span>
+                            What does your schedule look like?
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #f97316;">•</span>
+                            What do your kids actually want to play?
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #f97316;">•</span>
+                            What's your real budget situation?
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="collaboration-plus">+</div>
+                
+                <div class="experience-section">
+                    <h3 style="color: #16a34a; font-family: 'Poppins', sans-serif; text-align: center; margin-bottom: 1rem;">Our Experience</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">•</span>
+                            10+ years organizing successful sports programs
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">•</span>
+                            Equipment, coaching, and referee management
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">•</span>
+                            Fair team balancing (no blowouts, everyone competes)
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">•</span>
+                            Event management that actually shows up
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="collaboration-result">
+                <h3>Together: We Build Something That Works</h3>
+                <p style="margin: 0; font-size: 1.1rem; opacity: 0.9;">A program designed for your students and your reality, not a one-size-fits-all package.</p>
+            </div>
+            
+            <div style="text-align: center; margin: 3rem 0;">
+                <p style="font-size: 1.3rem; color: #374151; font-weight: 600; font-family: 'Poppins', sans-serif;">What Principals Tell Us They Need:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div style="text-align: left;">
+                        <span style="color: #16a34a; font-weight: bold;">✓</span> Programs that actually engage kids (not just check boxes)
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #16a34a; font-weight: bold;">✓</span> Vendors who understand budget constraints
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #16a34a; font-weight: bold;">✓</span> People who show up and do what they say
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #16a34a; font-weight: bold;">✓</span> Activities that build school community
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #16a34a; font-weight: bold;">✓</span> Partners, not just service providers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conversation-section">
+        <div class="container">
+            <div class="conversation-header">
+                <h2>Building Together Conversation</h2>
+                <p class="conversation-subtitle">No pitch, no pressure. Just a chance to explore how we can work together to serve your students.</p>
+            </div>
+            
+            <div class="conversation-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">👂</div>
+                    <div class="benefit-title">Listen First</div>
+                    <p>Hear what your students actually need and what challenges you're facing</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-title">Mutual Fit</div>
+                    <p>See if we're a good partnership match for each other's goals and values</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-title">Real Numbers</div>
+                    <p>Talk honest budget numbers that work for your school's financial reality</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">📋</div>
+                    <div class="benefit-title">Custom Solutions</div>
+                    <p>Explore program options designed specifically for your space and schedule</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: white;">Start the Conversation</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">15-minute conversation. We're here to listen and explore how we can support your students together.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:nbhdsoccer@gmail.com?subject=REC 77 Partnership Conversation" style="color: white; text-decoration: none;">nbhdsoccer@gmail.com</a>
+                    </div>
+                    <!-- <div class="contact-item">
+                        <span class="contact-icon">👨‍🎓</span>
+                        Andre Daniel Paredes, PhD, Co-Founder
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        Cell: 619-829-6127
+                    </div> -->
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=REC 77 Partnership Conversation - Let's Talk" class="btn-primary" style="font-size: 1.1rem; padding: 15px 30px;">Let's Talk</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-style: italic; opacity: 0.8; font-size: 1.1rem;">
+                    "We're here, we care, and we're not going anywhere."
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="investment-section">
+        <div class="container">
+            <div class="investment-header"></div>
+                <h2>Community Investment, Not Transaction</h2>
+                <p style="font-size: 1.2rem; color: #6b7280; text-align: center; max-width: 700px; margin: 0 auto;">We work with your budget to find solutions that make sense for your school and your students.</p>
+            </div>
+            
+            <div class="investment-philosophy">
+                <p style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 600;">"We work with your budget - period."</p>
+            </div>
+            
+            <div class="program-options">
+                <div class="option-card">
+                    <div class="option-header">
+                        <div class="option-title">Starter Program</div>
+                        <div class="option-duration">4 Weeks</div>
+                    </div>
+                    
+                    <div class="option-investment">
+                        <div class="investment-amount">$4,500</div>
+                        <div class="investment-note">Community Investment</div>
+                    </div>
+                    
+                    <ul style="list-style: none; padding: 0; text-align: left;">
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Professional coaches and referees
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            All equipment and setup
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Team balancing and organization
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Championship celebration
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        <div class="option-title">Full Experience</div>
+                        <div class="option-duration">8 Weeks</div>
+                    </div>
+                    
+                    <div class="option-investment">
+                        <div class="investment-amount">$9,500</div>
+                        <div class="investment-note">Complete Partnership</div>
+                    </div>
+                    
+                    <ul style="list-style: none; padding: 0; text-align: left;">
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Everything in Starter Program
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Video highlights and student spotlights
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Extended community building activities
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Optional parent/faculty games
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        <div class="option-title">Custom Partnership</div>
+                        <div class="option-duration">Flexible Duration</div>
+                    </div>
+                    
+                    <div class="option-investment">
+                        <div class="investment-amount">Let's Talk</div>
+                        <div class="investment-note">Built Together</div>
+                    </div>
+                    
+                    <ul style="list-style: none; padding: 0; text-align: left;">
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Tailored to your school's needs
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Flexible sports options
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Budget-friendly solutions
+                        </li>
+                        <li style="margin: 0.8rem 0; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #16a34a;">✓</span>
+                            Long-term partnership potential
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Build Together</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=REC 77 Partnership">Start Conversation</a>
+                    <a href="../about/about.html">Our Community Story</a>
+                    <a href="../index.html#programs">Our Approach</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Co-development partnerships for schools</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Community Solutions</h4>
+                    <a href="../index.html#programs">Youth Sports Programs</a>
+                    <a href="../index.html#programs">Community Building</a>
+                    <a href="../events/benavidez-tournament.html">School Fundraising Events</a>
+                    <a href="../index.html#programs">Equipment & Coaching</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Local Partners</h4>
+                    <a href="../index.html#programs">Chicago Park District</a>
+                    <a href="../index.html#programs">Boys & Girls Club</a>
+                    <a href="../events/benavidez-tournament.html">Rauner Family YMCA</a>
+                    <a href="../about/about.html">South & West Side Communities</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Start Conversation</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
+                    <a href="tel:619-829-6127">Andre: 619-829-6127</a>
+                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">See Us in Action</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Neighbors serving neighborhoods</p>
+                </div>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
+            <p style="font-family: 'Open Sans', sans-serif;">&copy; 2025 Chicago Neighborhood Soccer. Building partnerships that work for students and communities.</p>
+        </div>
+    </footer>
+
+        <script>
+            // Add smooth scroll behavior for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add intersection observer for animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for scroll animations
+            document.querySelectorAll('.credential-card, .option-card, .benefit-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Enhanced hover effects for partnership elements
+            document.querySelectorAll('.partnership-element').forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-3px) scale(1)';
+                });
+            });
+
+            // Dropdown menu functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                
+                dropdowns.forEach(dropdown => {
+                    const dropdownContent = dropdown.querySelector('.dropdown-content');
+                    
+                    dropdown.addEventListener('mouseenter', function() {
+                        if (dropdownContent) {
+                            dropdownContent.style.display = 'block';
+                        }
+                    });
+                    
+                    dropdown.addEventListener('mouseleave', function() {
+                        if (dropdownContent) {
+                            dropdownContent.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Add dynamic email subject line based on program interest
+            document.querySelectorAll('a[href*="mailto"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    // Track which section the user clicked from for analytics
+                    console.log('Partnership inquiry initiated from REC 77 page');
+                });
+            });
+        </script>
+    </body>
+    </html>
