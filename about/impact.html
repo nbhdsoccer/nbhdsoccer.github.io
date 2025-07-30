@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Impact & Transparency | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="See the authentic impact of Chicago Neighborhood Soccer's nonprofit work: community development metrics, financial transparency, and our commitment to South & West Side programming.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
+    <style>
+        /* Impact Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, rgba(22, 163, 74, 0.9) 0%, rgba(21, 128, 61, 0.8) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .page-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(22, 163, 74, 0.4) 80%);
+        }
+        
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .impact-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .impact-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            color: #f3f4f6;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #16a34a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Impact Overview Section */
+        .impact-overview {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .impact-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .impact-stat-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid #16a34a;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.1);
+        }
+        
+        .impact-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
+        }
+        
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #16a34a;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-family: 'Open Sans', sans-serif;
+            color: #374151;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-description {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Program Impact Section */
+        .program-impact {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 80px 0;
+        }
+        
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .program-impact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .program-impact-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .program-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .program-impact-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .impact-metrics {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.8rem 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .metric-label {
+            color: #6b7280;
+        }
+        
+        .metric-value {
+            color: #16a34a;
+            font-weight: 700;
+        }
+        
+        /* Community Stories Section */
+        .community-stories {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .story-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .story-quote {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .story-attribution {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #fbbf24;
+        }
+        
+        /* Financial Transparency Section */
+        .financial-transparency {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .transparency-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .transparency-card {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 5px solid #16a34a;
+        }
+        
+        .transparency-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #16a34a;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .transparency-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .transparency-list li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        
+        .transparency-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Future Goals Section */
+        .future-goals {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 80px 0;
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .goal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #16a34a;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.1);
+        }
+        
+        .goal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .goal-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .goal-card p {
+            font-family: 'Open Sans', sans-serif;
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .impact-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container">
+        <!-- Header will be loaded here -->
+    </div>   
+    <script src="../js/header-loader.js"></script>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="about.html">Our Story</a> / <span>Community Impact</span>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="impact-badge">Growing Community Impact</div>
+                <h1>Our Community Impact</h1>
+                <p class="impact-subtitle">Building authentic neighborhood connections through soccer programming on Chicago's South & West sides</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Overview -->
+    <section class="impact-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Growing Community Impact</h2>
+                <p class="section-subtitle">Authentic progress from grassroots organizing to community development programming</p>
+            </div>
+            
+            <div class="impact-stats-grid">
+                <div class="impact-stat-card">
+                    <span class="stat-number">6,500+</span>
+                    <div class="stat-label">Community Members</div>
+                    <div class="stat-description">Neighbors who participate in our programs across Chicago's South & West Side communities</div>
+                </div>
+                
+                <div class="impact-stat-card">
+                    <span class="stat-number">300-400</span>
+                    <div class="stat-label">Weekly Participants</div>
+                    <div class="stat-description">Regular community engagement in our pickup games and programming</div>
+                </div>
+                
+                <div class="impact-stat-card">
+                    <span class="stat-number">150+</span>
+                    <div class="stat-label">Youth Served</div>
+                    <div class="stat-description">Children engaged through REC 77, YMCA partnerships, and Boys & Girls Club programming</div>
+                </div>
+                
+                <div class="impact-stat-card">
+                    <span class="stat-number">10</span>
+                    <div class="stat-label">Local Artists Supported</div>
+                    <div class="stat-description">$1,000 contributed back to South & West Side artists through our community art gala</div>
+                </div>
+                
+                <div class="impact-stat-card">
+                    <span class="stat-number">5</span>
+                    <div class="stat-label">Benavidez Tournaments</div>
+                    <div class="stat-description">Memorial tournaments honoring community healing while supporting local health causes</div>
+                </div>
+                
+                <div class="impact-stat-card">
+                    <span class="stat-number">10+</span>
+                    <div class="stat-label">Years Building Community</div>
+                    <div class="stat-description">Decade-long commitment to neighborhood development through authentic relationship building</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Impact -->
+    <section class="program-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Program-Specific Impact</h2>
+                <p class="section-subtitle">Measurable outcomes from our community development initiatives</p>
+            </div>
+            
+            <div class="program-grid">
+                <div class="program-impact-card">
+                    <div class="program-icon">🏫</div>
+                    <h4>Youth Initiatives</h4>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-label">REC 77 Programs:</span>
+                            <span class="metric-value">2 schools</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">YMCA Partnership:</span>
+                            <span class="metric-value">Active</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Boys & Girls Club:</span>
+                            <span class="metric-value">Sessions</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Youth Served:</span>
+                            <span class="metric-value">150+</span>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; font-family: 'Open Sans', sans-serif;">Bringing structured sports programming to children through school partnerships and community collaborations.</p>
+                </div>
+                
+                <div class="program-impact-card">
+                    <div class="program-icon">👩</div>
+                    <h4>Women's Program</h4>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-label">Weekly Attendance:</span>
+                            <span class="metric-value">20-40</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Tournament Coming:</span>
+                            <span class="metric-value">2025</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Community Leaders:</span>
+                            <span class="metric-value">Nicole & Natalie</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Program Growth:</span>
+                            <span class="metric-value">Expanding</span>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; font-family: 'Open Sans', sans-serif;">Creating safe, supportive spaces for women while building community leadership through volunteer coordination.</p>
+                </div>
+                
+                <div class="program-impact-card">
+                    <div class="program-icon">🤝</div>
+                    <h4>Community Engagement</h4>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-label">Art Gala:</span>
+                            <span class="metric-value">$1,000 to artists</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Memorial Tournaments:</span>
+                            <span class="metric-value">5 completed</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Community Tournaments:</span>
+                            <span class="metric-value">5 with 4 groups</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Neighborhoods:</span>
+                            <span class="metric-value">South & West Side</span>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; font-family: 'Open Sans', sans-serif;">Building bridges between communities through events that celebrate local culture and support neighborhood causes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stories -->
+    <section class="community-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Community Voices</h2>
+                <p class="section-subtitle" style="color: #e5e7eb;">What neighbors and partners say about our work</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-quote">"NBHD Soccer's commitment to community mirrors everything we strive for. They understand what authentic neighborhood development looks like."</div>
+                    <div class="story-attribution">— Director at Youth Organization Partner</div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-quote">"The memorial tournament honors David's memory in the most beautiful way - by bringing people together and supporting causes that matter to our community."</div>
+                    <div class="story-attribution">— Benavidez Family Member</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Transparency -->
+    <section class="financial-transparency">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparency & Accountability</h2>
+                <p class="section-subtitle">Our commitment to openness about how community investments create neighborhood impact</p>
+            </div>
+            
+            <div class="transparency-grid">
+                <div class="transparency-card">
+                    <h3>Our Accountability Commitment</h3>
+                    <ul class="transparency-list">
+                        <li><strong>100% Volunteer-Powered:</strong> No executive salaries, unpaid board of directors</li>
+                        <li><strong>Community Input:</strong> Major decisions discussed at open community meetings</li>
+                        <li><strong>Financial Openness:</strong> Reports available to community members and supporters</li>
+                        <li><strong>Impact Measurement:</strong> Regular updates with specific metrics and outcomes</li>
+                        <li><strong>External Validation:</strong> Partnerships with established organizations verify our work</li>
+                        <li><strong>Transparent Governance:</strong> Board decisions shared with community</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Goals -->
+    <section class="future-goals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Next Steps</h2>
+                <p class="section-subtitle">Where we're growing as an organization and community</p>
+            </div>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">🏫</div>
+                    <h4>Expand School Programs</h4>
+                    <p>Grow REC 77 from 2 to 5 CPS schools, serving more students with in-house sports programming.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">👩</div>
+                    <h4>Women's Tournament Launch</h4>
+                    <p>Complete our first annual women's tournament and continue growing female participation.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">🎨</div>
+                    <h4>Artist Support Expansion</h4>
+                    <p>Double our artist support to $2,000 annually through community art programming.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">🏘️</div>
+                    <h4>New Neighborhood Programming</h4>
+                    <p>Establish regular programming in 2-3 additional South and West Side communities.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">💚</div>
+                    <h4>Community Health Impact</h4>
+                    <p>Continue memorial tournament tradition supporting local health initiatives.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">📊</div>
+                    <h4>Impact Documentation</h4>
+                    <p>Develop comprehensive reporting systems to better track and share our community impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Reports Section -->
+    <section style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%); color: white; padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem;">Want More Details?</h2>
+                <p style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; opacity: 0.9;">We're committed to transparency about our community work. While we're still developing formal annual reports, we're happy to share detailed information about our programs, finances, and impact with community members, potential partners, and supporters.</p>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; backdrop-filter: blur(10px);">
+                    <h3 style="font-family: 'Poppins', sans-serif; margin-bottom: 1rem;">Request Information</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 1rem;">We can provide detailed breakdowns of program outcomes, financial transparency documents, and community impact metrics.</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Impact Report Request" style="background: #16a34a; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600;">Request Impact Information</a>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <p style="font-style: italic; opacity: 0.8;">Our board of directors is always available to discuss our impact, challenges, and vision for community development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Impact</h4>
+                    <a href="#impact-overview">Community Stats</a>
+                    <a href="#program-impact">Program Outcomes</a>
+                    <a href="#community-stories">Community Voices</a>
+                    <a href="#future-goals">Our Next Steps</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <a href="../programs/rec_77.html">REC 77 School Programs</a>
+                    <a href="../programs/womens.html">Women's Soccer</a>
+                    <a href="../events/benavidez-tournament.html">Memorial Tournament</a>
+                    <a href="../index.html#programs">Community Pickup</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Transparency</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Impact Report Request">Request Reports</a>
+                    <a href="#financial-transparency">Our Accountability</a>
+                    <a href="../about/about.html">Board of Directors</a>
+                    <a href="../support/support.html">Support Our Work</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
+                    <a href="https://www.instagram.com/nbhdsoccer/" target="_blank">@nbhdsoccer</a>
+                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">Join a Game</a>
+                    <a href="../support/partnerships.html">Partner With Us</a>
+                </div>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
+            <p style="font-family: 'Open Sans', sans-serif; text-align: center;">&copy; 2025 Chicago Neighborhood Soccer | Growing Community Impact | Illinois Nonprofit Corporation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.impact-stat-card, .program-impact-card, .story-card, .goal-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                
+                dropdown.addEventListener('mouseenter', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Track report requests for analytics
+        document.querySelectorAll('a[href*="mailto"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.href.includes('Impact Report Request')) {
+                    console.log('Impact report requested');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

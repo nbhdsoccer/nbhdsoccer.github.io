@@ -607,13 +607,13 @@
     letter-spacing: 0.5px;
 }
 
-.event-type.tournament {
+.event-type.featured {
     background: #f97316;
     color: white;
 }
 
 .event-type.youth {
-    background: #22c55e;
+    background: #fad901;
     color: white;
 }
 
@@ -622,7 +622,7 @@
     color: white;
 }
 
-.event-type.fundraiser {
+.event-type.building {
     background: #3b82f6;
     color: white;
 }
@@ -741,17 +741,6 @@
     text-align: center;
 }
 
-/* Mobile responsiveness for button groups */
-@media (max-width: 768px) {
-    .event-button-group {
-        gap: 0.75rem;
-    }
-    
-    .btn-event {
-        padding: 10px 18px;
-        font-size: 0.9rem;
-    }
-}
 
 /* Programs Section */
 .programs-section {
@@ -795,7 +784,7 @@
 
 .program-status {
     position: absolute;
-    top: -12px;
+    top: -2px;
     right: 20px;
     background: #22c55e;
     color: white;
@@ -1184,5 +1173,14 @@
     .youth-program-card h3 {
         font-size: 1.2rem;
     }
+    .event-button-group {
+        gap: 0.75rem;
+    }
+    
+    .btn-event {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
 }
 

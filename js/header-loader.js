@@ -18,6 +18,16 @@ const pageConfigs = {
         ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
         rootPath: '../'
     },
+    '/about/impact.html': {
+        ctaText: 'Support Our Mission',
+        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
+        rootPath: '../'
+    },
+    '/about/leadership.html': {
+        ctaText: 'Support Our Mission',
+        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
+        rootPath: '../'
+    },
     
     // Partners pages
     '/partners/partners.html': {

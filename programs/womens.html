@@ -3,758 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's Soccer Program | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="Join Chicago's premier women's soccer community. Weekly games, annual tournament, and a supportive space for women to play and connect in our neighborhoods.">
+    <title>Women's Soccer Community | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Join Chicago's premier women's soccer community. Weekly games, leadership development, and authentic neighborhood connections through soccer on the South & West sides.">
+    <meta name="keywords" content="Chicago women's soccer, South Side women's sports, West Side community soccer, women's leadership development, Chicago nonprofit soccer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.github.io/programs/womens.html">
+    <meta property="og:title" content="Women's Soccer Community | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Safe spaces, strong community, and soccer excellence. Join women from across Chicago's neighborhoods every Wednesday evening.">
+    <meta property="og:image" content="https://nbhdsoccer.github.io/assets/gallery_slideshow/womens.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nbhdsoccer.github.io/programs/womens.html">
+    <meta property="twitter:title" content="Women's Soccer Community | Chicago Neighborhood Soccer">
+    <meta property="twitter:description" content="Community-led women's soccer programming creating authentic connections and leadership opportunities.">
+    <meta property="twitter:image" content="https://nbhdsoccer.github.io/assets/gallery_slideshow/womens.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(55, 65, 81, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .brand-section {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-        }
-
-        .tagline {
-            font-size: 0.8rem;
-            color: #d1d5db;
-            font-style: italic;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #16a34a;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #374151;
-            min-width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: white;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-        }
-
-        /* Women's Program - Empowering & Welcoming Design */
-        .page-header {
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.9) 0%, rgba(239, 68, 68, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%), 
-                        linear-gradient(45deg, #dc2626, #ef4444);
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px;
-        }
-        
-        .page-header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 30%, rgba(220, 38, 38, 0.6) 80%);
-        }
-        
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .womens-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .page-header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .womens-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.4rem;
-            color: #f3f4f6;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .womens-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
-            margin-right: 1rem;
-        }
-        
-        .womens-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
-            color: white;
-        }
-        
-        .secondary-cta {
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .secondary-cta:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
-
-        /* Community Leadership Section */
-        .leadership-section {
-            background: white;
-            padding: 80px 0;
-        }
-        
-        .leadership-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .leadership-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .leadership-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .leaders-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .leader-card {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 2px solid #e5e7eb;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        
-        .leader-card:hover {
-            border-color: #dc2626;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-        }
-        
-        .leader-avatar {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .leader-card h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .leader-role {
-            color: #dc2626;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .volunteer-highlight {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 3rem auto;
-            max-width: 700px;
-        }
-        
-        .volunteer-highlight h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* Program Overview */
-        .program-overview {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 80px 0;
-        }
-        
-        .overview-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .overview-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .program-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            border: 1px solid #f3f4f6;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-            border-color: #dc2626;
-        }
-        
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-        }
-        
-        .feature-card h4 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* Community Announcement Section */
-        .announcement-section {
-            background: white;
-            padding: 80px 0;
-        }
-        
-        .announcement-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .announcement-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .announcement-card {
-            max-width: 800px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            border-left: 5px solid #dc2626;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-        
-        .announcement-title {
-            font-family: 'Poppins', sans-serif;
-            color: #dc2626;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .announcement-date {
-            text-align: center;
-            font-style: italic;
-            color: #6b7280;
-            margin-bottom: 2rem;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .announcement-content {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
-            color: #4b5563;
-        }
-        
-        .announcement-content h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 1.5rem 0 1rem;
-        }
-        
-        .announcement-content blockquote {
-            background: rgba(220, 38, 38, 0.1);
-            border-left: 4px solid #dc2626;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: #dc2626;
-            font-weight: 600;
-        }
-        
-        .shoutout-box {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            text-align: center;
-            font-style: italic;
-        }
-
-        /* Tournament Section */
-        .tournament-section {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: white;
-            padding: 100px 0;
-        }
-        
-        .tournament-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .tournament-header h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .tournament-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .tournament-details {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .coming-soon {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #fbbf24;
-        }
-        
-        .tournament-info {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #dc2626;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
-        }
-
-        /* Registration Section */
-        .registration-section {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 80px 0;
-        }
-        
-        .registration-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .registration-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .registration-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-left: 5px solid #dc2626;
-        }
-        
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .form-header h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            color: #374151;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #dc2626;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .womens-submit {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 25px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        
-        .womens-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #16a34a;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.8rem;
-            }
-            
-            .leaders-showcase {
-                grid-template-columns: 1fr;
-            }
-            
-            .program-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .womens-cta {
-                margin-bottom: 1rem;
-                margin-right: 0;
-                display: block;
-                text-align: center;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Link to shared styles and womens-specific styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/womens.css">
+    
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsProgram",
+      "name": "Women's Soccer Community",
+      "description": "Community-led women's soccer programming creating authentic connections and leadership opportunities on Chicago's South & West sides",
+      "provider": {
+        "@type": "NonprofitOrganization",
+        "name": "Chicago Neighborhood Soccer",
+        "url": "https://nbhdsoccer.github.io"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Chicago South & West Sides"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Women"
+      }
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="brand-section">
-                <a href="../index.html" class="logo">NBHD Soccer</a>
-                <span class="tagline">From Pickup to Purpose—Stronger Together</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about/about.html">Our Story</a></li>
-                <li class="dropdown">
-                    <a href="../index.html#programs">Our Programs</a>
-                    <div class="dropdown-content">
-                        <a href="../programs/rec_77.html">REC 77 - School Programs</a>
-                        <a href="../index.html#programs">Youth Development</a>
-                        <a href="../programs/womens.html">Women's Soccer</a>
-                        <a href="../index.html#programs">Community Building</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="../index.html#events">Community Events</a>
-                    <div class="dropdown-content">
-                        <a href="../events/benavidez-tournament.html">🏆 Benavidez Tournament</a>
-                        <a href="../programs/womens.html#tournament">🏆 Women's Tournament</a>
-                        <a href="../index.html#events">All Events</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="../support/support.html">Support</a>
-                    <div class="dropdown-content">
-                        <a href="../support/support.html">Support Our Community</a>
-                        <a href="../support/sponsors.html">Sponsorships</a>
-                        <a href="../support/support.html#donate">Major Giving</a>
-                    </div>
-                </li>
-                <li><a href="../index.html#contact">Connect</a></li>
-            </ul>
-            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">Join Our Community</a>
-        </nav>
-    </header>
+    <div id="header-container">
+        <!-- Header will be loaded here -->
+    </div>   
+    <script src="../js/header-loader.js"></script>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="../index.html#programs">Programs</a> / <span>Women's Soccer</span>
+        </div>
+    </nav>
 
     <section class="page-header">
         <div class="container">
             <div class="page-header-content">
-                <div class="womens-badge">Safe Space • Strong Community • Soccer Excellence</div>
-                <h1>Women's Soccer</h1>
-                <p class="womens-subtitle">Every Wednesday evening, women from across Chicago's neighborhoods come together for soccer, community, and connection.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="https://www.meetup.com/nbhdsoccer/events/" class="womens-cta">Join Women's Wednesday</a>
-                    <a href="#tournament" class="womens-cta secondary-cta">Tournament Info</a>
+                <div class="program-badge">Safe Spaces • Strong Community • Soccer Excellence</div>
+                <h1>Women's Soccer Community</h1>
+                <p class="program-subtitle">Every Wednesday evening, women from across Chicago's neighborhoods come together for soccer, community, and authentic connection.</p>
+                <div class="header-actions">
+                    <a href="https://www.meetup.com/nbhdsoccer/events/" class="btn-primary">Join Women's Wednesday</a>
+                    <a href="#tournament" class="btn-secondary">Tournament Info</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="leadership-section">
+    <section class="community-leadership">
         <div class="container">
-            <div class="leadership-header">
+            <div class="section-header">
                 <h2>Community-Led Excellence</h2>
-                <p class="leadership-subtitle">Our Women's Soccer program is volunteer-powered and neighbor-led, creating authentic community connections through sport</p>
+                <p class="section-subtitle">Our Women's Soccer program is volunteer-powered and neighbor-led, creating authentic community connections through sport</p>
             </div>
             
             <div class="leaders-showcase">
@@ -762,61 +96,122 @@
                     <div class="leader-avatar">N</div>
                     <h3>Nicole</h3>
                     <div class="leader-role">Women's Program Co-Leader</div>
-                    <p style="color: #6b7280; font-family: 'Open Sans', sans-serif;">Community volunteer dedicated to creating safe, welcoming soccer experiences for women across our neighborhoods.</p>
+                    <p>Community volunteer dedicated to creating safe, welcoming soccer experiences for women across our neighborhoods.</p>
                 </div>
                 
                 <div class="leader-card">
                     <div class="leader-avatar">N</div>
                     <h3>Natalie</h3>
                     <div class="leader-role">Women's Program Co-Leader</div>
-                    <p style="color: #6b7280; font-family: 'Open Sans', sans-serif;">Passionate about building inclusive soccer communities where every woman feels empowered to play and grow.</p>
+                    <p>Passionate about building inclusive soccer communities where every woman feels empowered to play and grow.</p>
                 </div>
             </div>
             
             <div class="volunteer-highlight">
-                <h3>Volunteer-Powered Program</h3>
-                <p style="margin: 0; font-family: 'Open Sans', sans-serif;">Our Women's Soccer program is built and led by community volunteers who believe in the power of neighbors supporting neighbors. Nicole and Natalie donate their time because they're passionate about creating spaces where women can thrive through soccer.</p>
+                <h3>Volunteer-Powered Programming</h3>
+                <p>Our Women's Soccer program is built and led by community volunteers who believe in the power of neighbors supporting neighbors. Nicole and Natalie donate their time because they're passionate about creating spaces where women can thrive through soccer.</p>
             </div>
         </div>
     </section>
 
-    <section class="program-overview">
+    <section class="program-story">
         <div class="container">
-            <div class="overview-header">
-                <h2>What Makes Our Program Special</h2>
-                <p style="font-size: 1.2rem; color: #6b7280; text-align: center; max-width: 700px; margin: 0 auto;">A message from our community leadership celebrating the success and continuation of Women's Wednesday</p>
+            <div class="section-header">
+                <h2>Community Growth Story</h2>
+                <p class="section-subtitle">A message from our community leadership celebrating the success and evolution of Women's Wednesday</p>
             </div>
             
-            <div class="announcement-card">
-                <h1 class="announcement-title">Hello, Women's Wednesday!</h1>
-                <div class="announcement-date">February 2023 - Community Growth Announcement</div>
+            <div class="story-content">
+                <div class="story-card">
+                    <div class="story-header">
+                        <h3>Hello, Women's Wednesday!</h3>
+                        <p class="story-date">Community Growth Announcement - February 2023</p>
+                    </div>
+                    
+                    <div class="story-body">
+                        <div class="story-section">
+                            <h4>First and foremost</h4>
+                            <p>Thank you for coming out and kicking it with us. We are ecstatic about having you all join the Chicago Neighborhood Soccer community; this is for everyone! Everyone makes a difference, and the entire community is better for having you join it.</p>
+                            
+                            <div class="impact-highlight">
+                                <p><strong>In these past 12 months, we have grown over 1,000 new members on meetup! Almost 20% of that has been women!</strong></p>
+                            </div>
+                            
+                            <div class="community-shoutout">
+                                <p><strong>Special shout out to Community Leaders Shelby Ponder and Nicole Hack for working with us to make this happen</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="story-section">
+                            <h4>Building Something Sustainable</h4>
+                            <p>We plan on doing more for women's pickup soccer! To do that, we need to start charging enough to cover basic facility fees. <strong>We were happy to put a couple grand of our own money, and take that risk, to subsidize an opportunity for women to come out and play pickup soccer for the first two months.</strong></p>
+                            
+                            <p>Now that two months have passed, it's clear that this <strong>Women's Wednesday launch has been a great success!</strong></p>
+                            
+                            <div class="success-callout">
+                                <p>We are excited to say Women's Pick-up soccer is here to stay.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="story-section">
+                            <h4>Community-Driven Leadership</h4>
+                            <p>Our goal is to be community-driven. This means we want to include you, support you, and collaborate with you more.</p>
+                            
+                            <p><strong>Want to be an NBHD Community Leader?</strong> Everyone is invited to be a leader in our volunteer-powered community.</p>
+                        </div>
+                        
+                        <div class="story-signature">
+                            <p><strong>Sincerely,</strong></p>
+                            <p><strong>Chicago Neighborhood Soccer Community Leadership Team</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Makes Our Program Special</h2>
+                <p class="section-subtitle">Building authentic community connections through consistent, welcoming soccer programming</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏘️</div>
+                    <h4>Neighborhood Connections</h4>
+                    <p>Women from across South & West Side communities building lasting friendships through weekly soccer and shared experiences.</p>
+                </div>
                 
-                <div class="announcement-content">
-                    <h3>First and foremost</h3>
-                    <p>Thank you for coming out and kicking it with us. We are ecstatic about having you all join the Chicago Neighborhood Soccer community; this is for everyone! Everyone makes a difference, and the entire community is better for having you join it.</p>
-                    
-                    <p><strong>In these past 12 months, we have grown over 1,000 new members on meetup! Almost 20% of that has been women!</strong></p>
-                    
-                    <div class="shoutout-box">
-                        <strong>Special shout out to Community Leaders Shelby Ponder and Nicole Hack for working with us to make this happen</strong>
-                    </div>
-                    
-                    <h3>Second</h3>
-                    <p>We plan on doing more for women's pickup soccer! To do that, we need to start charging enough to cover basic facility fees. <strong>We were happy to put a couple grand of our own money, and take that risk, to subsidize an opportunity for women to come out and play pickup soccer for the first two months.</strong> Now that two months have passed, it's clear that this <strong>Women's Wednesday launch has been a great success!</strong></p>
-                    
-                    <blockquote>
-                        We are excited to say Women's Pick-up soccer is here to stay.
-                    </blockquote>
-                    
-                    <h3>Lastly</h3>
-                    <p>Our goal is to be community-driven. This means we want to include you, support you, and collaborate with you more.</p>
-                    
-                    <p><strong>Want to be an NBHD Community Leader?</strong> Everyone is invited to be a leader in our volunteer-powered community.</p>
-                    
-                    <div style="text-align: center; margin-top: 2rem; font-style: italic;">
-                        <p><strong>Sincerely,</strong></p>
-                        <p><strong>Chicago Neighborhood Soccer Community Leadership Team</strong></p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h4>Leadership Development</h4>
+                    <p>Volunteer leadership opportunities that build community organizing skills extending beyond sports into neighborhood development.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h4>Safe & Supportive Space</h4>
+                    <p>Programming designed by women, for women, creating environments where everyone feels welcome regardless of experience level.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚽</div>
+                    <h4>Consistent Programming</h4>
+                    <p>Reliable Wednesday evening games that have become a cornerstone of community connection and healthy living.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👶</div>
+                    <h4>Family-Friendly Approach</h4>
+                    <p>Understanding real-life needs with childcare considerations and family-supportive scheduling and logistics.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h4>Community Impact</h4>
+                    <p>Beyond soccer - building leadership capacity that strengthens neighborhoods and creates positive change.</p>
                 </div>
             </div>
         </div>
@@ -824,23 +219,37 @@
 
     <section class="tournament-section" id="tournament">
         <div class="container">
-            <div class="tournament-header">
+            <div class="section-header">
                 <h2>Women's Tournament 2025</h2>
-                <p class="tournament-subtitle">Our inaugural women's tournament celebrating the strength and spirit of our community</p>
+                <p class="section-subtitle">Our inaugural women's tournament celebrating the strength and spirit of our community</p>
             </div>
             
-            <div class="tournament-details">
-                <div class="coming-soon">🏆 More Details Coming Soon</div>
-                <div class="tournament-info">
-                    <p>We're excited to announce that we're planning our first annual Women's Tournament for 2025! This will be a celebration of our amazing community of women soccer players from across Chicago's neighborhoods.</p>
+            <div class="tournament-content">
+                <div class="tournament-details">
+                    <div class="coming-soon-badge">🏆 More Details Coming Soon</div>
                     
-                    <p>The tournament will feature teams from our Women's Wednesday community and beyond, creating a supportive, competitive environment where women can showcase their skills and celebrate their love of the beautiful game.</p>
+                    <div class="tournament-info">
+                        <p>We're excited to announce that we're planning our first annual Women's Tournament for 2025! This will be a celebration of our amazing community of women soccer players from across Chicago's neighborhoods.</p>
+                        
+                        <p>The tournament will feature teams from our Women's Wednesday community and beyond, creating a supportive, competitive environment where women can showcase their skills and celebrate their love of the beautiful game.</p>
+                        
+                        <div class="tournament-highlights">
+                            <h4>What to Expect:</h4>
+                            <ul>
+                                <li>Teams from Women's Wednesday community</li>
+                                <li>Supportive, competitive environment</li>
+                                <li>Celebration of women's soccer excellence</li>
+                                <li>Community building through sport</li>
+                                <li>Awards and recognition ceremony</li>
+                            </ul>
+                        </div>
+                        
+                        <p><strong>Stay tuned for tournament format, dates, registration details, and more information coming in the next few months!</strong></p>
+                    </div>
                     
-                    <p><strong>Stay tuned for tournament format, dates, registration details, and more information coming in the next few months!</strong></p>
-                </div>
-                
-                <div style="margin-top: 2rem;">
-                    <a href="#registration" class="btn-secondary">Get Tournament Updates</a>
+                    <div class="tournament-actions">
+                        <a href="#registration" class="btn-primary">Get Tournament Updates</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -848,18 +257,18 @@
 
     <section class="registration-section" id="registration">
         <div class="container">
-            <div class="registration-header">
+            <div class="section-header">
                 <h2>Join Our Women's Community</h2>
-                <p style="font-size: 1.2rem; color: #6b7280; text-align: center; max-width: 700px; margin: 0 auto;">Register your interest for Women's Wednesday games and tournament updates</p>
+                <p class="section-subtitle">Register your interest for Women's Wednesday games and tournament updates</p>
             </div>
             
-            <div class="registration-form">
-                <div class="form-header">
+            <div class="registration-form-container">
+                <div class="form-intro">
                     <h3>Women's Soccer Registration</h3>
-                    <p style="color: #6b7280; margin: 0;">Join our supportive soccer community</p>
+                    <p>Join our supportive soccer community where neighbors connect through sport</p>
                 </div>
                 
-                <form id="womensRegistration" onsubmit="handleWomensRegistration(event)">
+                <form id="womensRegistration" onsubmit="handleWomensRegistration(event)" class="registration-form">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
@@ -901,22 +310,26 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="interests">What interests you most? (Check all that apply)</label>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem;">
-                            <label style="display: flex; align-items: center; font-weight: normal;">
-                                <input type="checkbox" name="interests" value="weekly-games" style="margin-right: 0.5rem; width: auto;">
+                        <label>What interests you most? (Check all that apply)</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="interests" value="weekly-games">
+                                <span class="checkmark"></span>
                                 Weekly Wednesday Games
                             </label>
-                            <label style="display: flex; align-items: center; font-weight: normal;">
-                                <input type="checkbox" name="interests" value="tournament" style="margin-right: 0.5rem; width: auto;">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="interests" value="tournament">
+                                <span class="checkmark"></span>
                                 Women's Tournament 2025
                             </label>
-                            <label style="display: flex; align-items: center; font-weight: normal;">
-                                <input type="checkbox" name="interests" value="community-events" style="margin-right: 0.5rem; width: auto;">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="interests" value="community-events">
+                                <span class="checkmark"></span>
                                 Community Events
                             </label>
-                            <label style="display: flex; align-items: center; font-weight: normal;">
-                                <input type="checkbox" name="interests" value="volunteering" style="margin-right: 0.5rem; width: auto;">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="interests" value="volunteering">
+                                <span class="checkmark"></span>
                                 Volunteering/Leadership
                             </label>
                         </div>
@@ -927,11 +340,11 @@
                         <textarea id="message" name="message" rows="3" placeholder="What brings you to our women's soccer community? Any questions or special interests?"></textarea>
                     </div>
                     
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button type="submit" class="womens-submit">
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary btn-submit">
                             Join Our Women's Community
                         </button>
-                        <p style="font-size: 0.9rem; margin-top: 1rem; color: #6b7280;">We'll contact you with game details and tournament updates!</p>
+                        <p class="form-note">We'll contact you with game details and tournament updates!</p>
                     </div>
                 </form>
             </div>
@@ -968,13 +381,13 @@
                     <a href="https://www.instagram.com/nbhdsoccer/" target="_blank">Follow @nbhdsoccer</a>
                     <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">RSVP on Meetup</a>
                     <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Women's Program Leaders: Nicole & Natalie</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Program Leaders: Nicole & Natalie</p>
                 </div>
             </div>
             <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
             <div style="text-align: center;">
                 <p style="font-family: 'Open Sans', sans-serif;">&copy; 2025 Chicago Neighborhood Soccer. Building inclusive communities through women's soccer.</p>
-                <p style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: #dc2626; font-weight: 600; margin-top: 0.5rem;">👩‍⚽ Safe Space • 🤝 Strong Community • ⚽ Soccer Excellence</p>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: #16a34a; font-weight: 600; margin-top: 0.5rem;">🏘️ Safe Spaces • 🤝 Strong Community • ⚽ Soccer Excellence</p>
             </div>
         </div>
     </footer>
@@ -1047,32 +460,11 @@
         }, observerOptions);
 
         // Observe elements for scroll animations
-        document.querySelectorAll('.leader-card, .feature-card').forEach(el => {
+        document.querySelectorAll('.leader-card, .feature-card, .story-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
-        });
-
-        // Dropdown menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdowns = document.querySelectorAll('.dropdown');
-            
-            dropdowns.forEach(dropdown => {
-                const dropdownContent = dropdown.querySelector('.dropdown-content');
-                
-                dropdown.addEventListener('mouseenter', function() {
-                    if (dropdownContent) {
-                        dropdownContent.style.display = 'block';
-                    }
-                });
-                
-                dropdown.addEventListener('mouseleave', function() {
-                    if (dropdownContent) {
-                        dropdownContent.style.display = 'none';
-                    }
-                });
-            });
         });
 
         // Load women's registration data (for admin viewing)
