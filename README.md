@@ -98,7 +98,7 @@ This website is built with:
 ## 📄 Legal
 
 **Status:** Illinois Not-For-Profit Corporation  
-**EIN:** [Your EIN]  
+**EIN:** - 
 **501(c)(3):** Status pending
 
 ---
