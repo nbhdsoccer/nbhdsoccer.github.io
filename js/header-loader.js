@@ -2,12 +2,12 @@
 const pageConfigs = {
     // Root level pages
     '/index.html': {
-        ctaText: 'Join Our Community',
+        ctaText: 'Weekly Games',
         ctaHref: 'https://www.meetup.com/nbhdsoccer/events/',
         rootPath: ''
     },
     '/': {
-        ctaText: 'Join Our Community', 
+        ctaText: 'Weekly Games', 
         ctaHref: 'https://www.meetup.com/nbhdsoccer/events/',
         rootPath: ''
     },
@@ -15,17 +15,17 @@ const pageConfigs = {
     // About pages
     '/about/about.html': {
         ctaText: 'Support Our Mission',
-        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
+        ctaHref: '../support/support.html',
         rootPath: '../'
     },
     '/about/impact.html': {
         ctaText: 'Support Our Mission',
-        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
+        ctaHref: '../support/support.html',
         rootPath: '../'
     },
     '/about/leadership.html': {
         ctaText: 'Support Our Mission',
-        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Mission Support',
+        ctaHref: '../support/support.html',
         rootPath: '../'
     },
     
@@ -42,11 +42,7 @@ const pageConfigs = {
         ctaHref: '#donate',
         rootPath: '../'
     },
-    '/support/sponsors.html': {
-        ctaText: 'Become a Sponsor',
-        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Sponsorship Inquiry',
-        rootPath: '../'
-    },
+
     
     // Programs pages
     '/programs/rec_77.html': {
@@ -56,7 +52,7 @@ const pageConfigs = {
     },
     '/programs/womens.html': {
         ctaText: 'Join Women\'s Soccer',
-        ctaHref: 'mailto:nbhdsoccer@gmail.com?subject=Women\'s Soccer Interest',
+        ctaHref: 'https://www.meetup.com/nbhdsoccer/events/',
         rootPath: '../'
     },
     
@@ -70,6 +66,11 @@ const pageConfigs = {
         ctaText: '⚽ Join Pickup Soccer in Chicago',
         ctaHref: 'https://www.meetup.com/nbhdsoccer/events/',
         rootPath: '../'
+    },
+    '/events/benavidez-tournament.html': {
+        ctaText: 'Honor David\'s Legacy',
+        ctaHref: '#memorial-registration',
+        rootPath: '../'
     }
 };
 
@@ -77,27 +78,51 @@ async function loadHeader() {
     try {
         // Get current page path
         let currentPath = window.location.pathname;
+        console.log('Current path:', currentPath);
         
         // Calculate root path based on folder depth
         const pathSegments = currentPath.split('/').filter(segment => segment !== '');
         const depth = pathSegments.length - 1;
         const rootPath = depth > 0 ? '../'.repeat(depth) : '';
+        console.log('Calculated root path:', rootPath);
         
         // Get page config or use default
         let config = pageConfigs[currentPath];
+        
+        // If no exact match, try to find a partial match
         if (!config) {
+            for (const [path, pageConfig] of Object.entries(pageConfigs)) {
+                if (currentPath.endsWith(path)) {
+                    config = pageConfig;
+                    console.log('Found partial match for path:', path);
+                    break;
+                }
+            }
+        }
+        
+        if (!config) {
+            console.log('No specific config found, using default');
             // Default config for pages not specifically defined
             config = {
                 ctaText: 'Join Our Community',
                 ctaHref: 'https://www.meetup.com/nbhdsoccer/events/',
                 rootPath: rootPath
             };
+        } else {
+            console.log('Using config:', config);
         }
         
         // Fetch header HTML
-        const headerPath = `${rootPath}components/header.html`;
+        const headerPath = `${config.rootPath}components/header.html`;
+        console.log('Fetching header from:', headerPath);
         const response = await fetch(headerPath);
+        
+        if (!response.ok) {
+            throw new Error(`Failed to fetch header: ${response.status} ${response.statusText}`);
+        }
+        
         let headerHTML = await response.text();
+        console.log('Header HTML length:', headerHTML.length);
         
         // Replace placeholders
         headerHTML = headerHTML.replace(/\{\{ROOT_PATH\}\}/g, config.rootPath);
@@ -108,6 +133,9 @@ async function loadHeader() {
         const headerContainer = document.getElementById('header-container');
         if (headerContainer) {
             headerContainer.innerHTML = headerHTML;
+            console.log('Header loaded successfully');
+        } else {
+            console.error('Header container not found');
         }
         
     } catch (error) {
