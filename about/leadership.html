@@ -18,109 +18,10 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/about-section.css">
     
     <style>
-        /* Leadership Page Specific Styles */
-        .page-header {
-            background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(22, 163, 74, 0.8) 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .page-header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 30%, rgba(55, 65, 81, 0.4) 80%);
-        }
-        
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .leadership-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        
-        .page-header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .leadership-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.3rem;
-            color: #f3f4f6;
-            margin-bottom: 1rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb {
-            background: #f8fafc;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .breadcrumb a {
-            color: #16a34a;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Board of Directors Section */
-        .board-section {
-            background: white;
-            padding: 100px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-header h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #374151;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
+        /* Leadership Page Specific Styles - Extending base about-section.css */
         .board-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -142,12 +43,12 @@
         .board-member:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            border-color: #16a34a;
+            border-color: var(--about-primary);
         }
         
         .board-member.cofounder {
-            border-color: #16a34a;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: var(--about-primary);
+            background: linear-gradient(135deg, var(--about-green-50) 0%, var(--about-green-100) 100%);
         }
         
         .board-member.cofounder::before {
@@ -156,7 +57,7 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #16a34a;
+            background: var(--about-primary);
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
@@ -168,7 +69,7 @@
         .member-avatar {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            background: linear-gradient(135deg, var(--about-primary) 0%, #15803d 100%);
             border-radius: 50%;
             margin: 0 auto 2rem;
             display: flex;
@@ -183,14 +84,14 @@
         
         .member-name {
             font-family: 'Poppins', sans-serif;
-            color: #374151;
+            color: var(--about-gray-700);
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
         
         .member-title {
-            color: #16a34a;
+            color: var(--about-primary);
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             font-size: 1rem;
@@ -201,15 +102,9 @@
         
         .member-bio {
             font-family: 'Open Sans', sans-serif;
-            color: #4b5563;
+            color: var(--about-gray-600);
             line-height: 1.7;
             font-size: 1rem;
-        }
-        
-        /* Community Leadership Section */
-        .community-leadership {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            padding: 100px 0;
         }
         
         .leadership-grid {
@@ -231,13 +126,13 @@
         .leadership-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-            border-color: #16a34a;
+            border-color: var(--about-primary);
         }
         
         .leadership-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            background: linear-gradient(135deg, var(--about-accent) 0%, #ea580c 100%);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
             display: flex;
@@ -249,7 +144,7 @@
         
         .leadership-card h4 {
             font-family: 'Poppins', sans-serif;
-            color: #374151;
+            color: var(--about-gray-700);
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
@@ -258,19 +153,9 @@
         
         .leadership-card p {
             font-family: 'Open Sans', sans-serif;
-            color: #6b7280;
+            color: var(--about-gray-600);
             line-height: 1.6;
             margin-bottom: 1rem;
-        }
-        
-        .leadership-card strong {
-            color: #374151;
-        }
-        
-        /* Governance Section */
-        .governance-section {
-            background: white;
-            padding: 100px 0;
         }
         
         .governance-grid {
@@ -281,11 +166,11 @@
         }
         
         .governance-card {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            background: linear-gradient(135deg, var(--about-gray-50) 0%, var(--about-gray-100) 100%);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            border-left: 4px solid #16a34a;
+            border-left: 4px solid var(--about-primary);
             transition: all 0.3s ease;
         }
         
@@ -296,7 +181,7 @@
         
         .governance-card h4 {
             font-family: 'Poppins', sans-serif;
-            color: #16a34a;
+            color: var(--about-primary);
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
@@ -304,115 +189,13 @@
         
         .governance-card p {
             font-family: 'Open Sans', sans-serif;
-            color: #4b5563;
+            color: var(--about-gray-600);
             line-height: 1.6;
             margin: 0;
         }
         
-        /* Volunteer Philosophy */
-        .volunteer-philosophy {
-            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .philosophy-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .philosophy-content h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: white;
-        }
-        
-        .philosophy-quote {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2rem 0;
-        }
-        
-        .philosophy-quote p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.3rem;
-            line-height: 1.7;
-            font-style: italic;
-            margin: 0;
-            opacity: 0.95;
-        }
-        
-        /* Join Leadership CTA */
-        .join-leadership {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .join-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .join-content h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .join-content p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .leadership-cta {
-            background: white;
-            color: #16a34a;
-            padding: 15px 35px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-right: 1rem;
-        }
-        
-        .leadership-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-            color: #16a34a;
-        }
-        
-        .leadership-cta.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .leadership-cta.secondary:hover {
-            background: white;
-            color: #16a34a;
-        }
-        
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.5rem;
-            }
-            
             .board-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -435,16 +218,6 @@
             .governance-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .philosophy-quote {
-                padding: 2rem;
-            }
-            
-            .leadership-cta {
-                display: block;
-                margin: 0.5rem auto;
-                text-align: center;
-            }
         }
     </style>
 </head>
@@ -466,103 +239,179 @@
     <section class="page-header">
         <div class="container">
             <div class="page-header-content">
-                <div class="leadership-badge">Transparent Nonprofit Governance</div>
+                <div class="page-badge">Transparent Nonprofit Governance</div>
                 <h1>Board of Directors & Leadership</h1>
-                <p class="leadership-subtitle">Community-led governance dedicated to authentic neighborhood development and transparent nonprofit operations across Chicago's South & West sides</p>
+                <p class="page-subtitle">Community-led governance dedicated to authentic neighborhood development and transparent nonprofit operations across Chicago's South & West sides</p>
             </div>
         </div>
     </section>
 
-    <!-- Board of Directors -->
-    <section class="board-section">
+    <!-- Board of Directors & Community Directors -->
+    <section class="board-section" style="background: white; padding: 100px 0;">
         <div class="container">
             <div class="section-header">
-                <h2>Board of Directors</h2>
-                <p class="section-subtitle">Co-founders with 10+ years of community organizing experience, now leading our nonprofit's mission of neighborhood development through soccer programming</p>
+                <h2>Board of Directors & Community Directors</h2>
+                <p class="section-subtitle">Co-founders and Community Directors with 10+ years of leadership experience. Our Community Directors take initiative, lead programs, and drive strategic community development initiatives across Chicago's neighborhoods</p>
             </div>
             
-            <div class="board-grid">
-                <div class="board-member cofounder">
-                    <div class="member-avatar">AD</div>
-                    <h3 class="member-name">Andre Daniel</h3>
+            <div class="board-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="board-member cofounder" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">AD</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Andre</h3>
                     <div class="member-title">Co-Founder & Board Member</div>
-                    <p class="member-bio">Community organizer with 10+ years building neighborhood connections through soccer. Brings academic background in community development and grassroots organizing experience. PhD holder with deep understanding of nonprofit governance and community-led development strategies.</p>
+                    <p class="member-bio" style="font-size: 0.9rem;">Community organizer with 10+ years building neighborhood connections through soccer. PhD holder with expertise in community development and nonprofit governance.</p>
                 </div>
                 
-                <div class="board-member cofounder">
-                    <div class="member-avatar">DM</div>
-                    <h3 class="member-name">Diego Moreno</h3>
+                <div class="board-member cofounder" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">DM</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Diego Moreno</h3>
                     <div class="member-title">Co-Founder & Board Member</div>
-                    <p class="member-bio">South Side resident and longtime community leader. Instrumental in growing our organization from neighborhood pickup games to citywide community development programming. Passionate advocate for authentic neighborhood empowerment and sustainable community partnerships.</p>
+                    <p class="member-bio" style="font-size: 0.9rem;">South Side resident and longtime community leader. Instrumental in growing our organization from neighborhood pickup games to citywide programming.</p>
                 </div>
                 
-                <div class="board-member cofounder">
-                    <div class="member-avatar">JD</div>
-                    <h3 class="member-name">Julian Da Silva</h3>
+                <div class="board-member cofounder" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">JD</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Julian Da Silva</h3>
                     <div class="member-title">Co-Founder & Board Member</div>
-                    <p class="member-bio">Experienced in community programming and youth development. Focuses on creating inclusive spaces and sustainable community partnerships. Dedicated to ensuring our nonprofit programming serves the authentic needs of South & West Side neighborhoods.</p>
+                    <p class="member-bio" style="font-size: 0.9rem;">Experienced in community programming and youth development. Focuses on creating inclusive spaces and sustainable community partnerships.</p>
                 </div>
                 
-                <div class="board-member cofounder">
-                    <div class="member-avatar">JD</div>
-                    <h3 class="member-name">Jordan Da Silva</h3>
+                <div class="board-member cofounder" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">JD</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Jordan Da Silva</h3>
                     <div class="member-title">Co-Founder & Board Member</div>
-                    <p class="member-bio">Dedicated to neighborhood empowerment and authentic community building. Brings operational expertise and commitment to neighbor-led programming. Ensures our nonprofit maintains its grassroots values while scaling impact across Chicago communities.</p>
+                    <p class="member-bio" style="font-size: 0.9rem;">Dedicated to neighborhood empowerment and authentic community building. Brings operational expertise and commitment to neighbor-led programming.</p>
+                </div>
+                
+                <div class="board-member" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">AA</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Alex Alvizo</h3>
+                    <div class="member-title">Community Director</div>
+                    <p class="member-bio" style="font-size: 0.9rem;">Strategic program leader who takes initiative in organizing and directing nonprofit programs across neighborhoods.</p>
+                </div>
+                
+                <div class="board-member" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">MB</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Marcos Beltran</h3>
+                    <div class="member-title">Community Director</div>
+                    <p class="member-bio" style="font-size: 0.9rem;">Strategic program leader who directs weekly operations and manages community development initiatives.</p>
+                </div>
+                
+                <div class="board-member" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">MW</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Michael Wang</h3>
+                    <div class="member-title">Community Director</div>
+                    <p class="member-bio" style="font-size: 0.9rem;">Strategic Program leader who spearheaded suburban pickup programming and leads inclusive community development initiatives.</p>
+                </div>
+                
+                <div class="board-member" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">NH</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Nicole</h3>
+                    <div class="member-title">Community Director</div>
+                    <p class="member-bio" style="font-size: 0.9rem;">Strategic leader directing women's programming and creating empowering community spaces for female soccer players.</p>
+                </div>
+                
+                <div class="board-member" style="padding: 2rem;">
+                    <div class="member-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">NH</div>
+                    <h3 class="member-name" style="font-size: 1.3rem;">Natalie</h3>
+                    <div class="member-title">Community Director</div>
+                    <p class="member-bio" style="font-size: 0.9rem;">Dedicated community leader focused on building inclusive women's soccer programming and neighborhood connections.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Leadership Team -->
-    <section class="community-leadership" id="community-leaders">
+    <!-- Hall of Fame -->
+    <section class="hall-of-fame" style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%); color: white; padding: 100px 0;">
         <div class="container">
             <div class="section-header">
-                <h2>Community Leadership Team</h2>
-                <p class="section-subtitle">15+ dedicated volunteers who make our nonprofit programming possible. These are neighbors who donate their time because they believe in community development through soccer.</p>
+                <h2 style="color: white;">Community Hall of Fame</h2>
+                <p class="section-subtitle" style="color: #e5e7eb;">Honoring those who have made lasting impact on our community</p>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); position: relative;">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--about-primary); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">CO-FOUNDER</div>
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);">DB</div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">David Benavidez</h3>
+                    <p style="font-family: 'Open Sans', sans-serif; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; opacity: 0.9;">Co-founder of NBHD Soccer whose vision and leadership helped establish our organization's commitment to authentic community development. The annual David Benavidez Memorial Tournament honors his legacy while supporting local health initiatives.</p>
+                    <a href="../events/benavidez-tournament.html" style="background: var(--about-accent); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; transition: all 0.3s ease;">Learn More About David's Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Structure -->
+    <section class="organizational-structure" id="organizational-structure" style="background: linear-gradient(135deg, var(--about-gray-50) 0%, var(--about-gray-100) 100%); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We're Organized</h2>
+                <p class="section-subtitle">A lean, effective structure that maximizes community impact while maintaining authentic neighborhood connections</p>
             </div>
             
             <div class="leadership-grid">
                 <div class="leadership-card">
-                    <div class="leadership-icon">⚽</div>
-                    <h4>Program Leadership</h4>
-                    <p><strong>Alex Alvizo, Marcos Beltran, Michael Wang</strong> - Dedicated community leaders who help organize and support our nonprofit programs across neighborhoods. They coordinate weekly programming, manage equipment, and ensure quality experiences for all participants.</p>
+                    <div class="leadership-icon">🏛️</div>
+                    <h4>Board of Directors</h4>
+                    <p><strong>Strategic Governance:</strong> Four co-founders who provide organizational oversight, set strategic direction, and ensure accountability to our community mission. All positions are unpaid and volunteer-based.</p>
                 </div>
                 
                 <div class="leadership-card">
-                    <div class="leadership-icon">👩</div>
-                    <h4>Women's Program Leaders</h4>
-                    <p><strong>Nicole & Natalie</strong> - Volunteer co-leaders of our Women's Soccer program, creating safe and empowering spaces for women in our communities. They organize weekly programming and annual tournaments while building leadership opportunities.</p>
+                    <div class="leadership-icon">⭐</div>
+                    <h4>Community Directors</h4>
+                    <p><strong>Program Leadership:</strong> Experienced leaders who take initiative in directing specific programs and community development initiatives. They drive strategy and manage day-to-day operations across our programming.</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <div class="leadership-icon">🙋</div>
+                    <h4>Program Volunteers</h4>
+                    <p><strong>Community Support:</strong> Dedicated neighbors who contribute their time and skills to specific programs. This includes event coordinators, youth programming assistants, and community outreach supporters.</p>
                 </div>
                 
                 <div class="leadership-card">
                     <div class="leadership-icon">🤝</div>
-                    <h4>Event Coordination Team</h4>
-                    <p>Dedicated volunteers who organize our annual David Benavidez Memorial Tournament, community art galas, and fundraising events. They ensure 100% of proceeds support local health initiatives and community development causes.</p>
+                    <h4>Community Partners</h4>
+                    <p><strong>Strategic Alliances:</strong> Established organizations like CPS schools, YMCA, Boys & Girls Club, and local nonprofits who collaborate with us to amplify community impact.</p>
                 </div>
-                
-                <div class="leadership-card">
-                    <div class="leadership-icon">🏫</div>
-                    <h4>Youth Programming Coordinators</h4>
-                    <p>Community members who support our REC 77 school partnerships and youth development initiatives. They work directly with CPS schools, Boys & Girls Club, and YMCA partners to create meaningful opportunities for underserved youth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="impact-summary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leadership Impact</h2>
+                <p class="section-subtitle">Results of community-led nonprofit governance and volunteer-powered operations</p>
+            </div>
+            
+            <div class="impact-stats-grid">
+                <div class="impact-stat">
+                    <span class="impact-stat-number">15+</span>
+                    <span class="impact-stat-label">Volunteer Leaders</span>
                 </div>
-                
-                <div class="leadership-card">
-                    <div class="leadership-icon">📢</div>
-                    <h4>Community Outreach Team</h4>
-                    <p>Volunteers who manage our social media, Discord community, and Meetup coordination. They ensure our programming remains accessible and welcoming to all neighbors across Chicago's South & West Side communities.</p>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">100%</span>
+                    <span class="impact-stat-label">Volunteer Board</span>
                 </div>
-                
-                <div class="leadership-card">
-                    <div class="leadership-icon">🎨</div>
-                    <h4>Community Art & Culture Leaders</h4>
-                    <p>Neighbors who organize our art galas, cultural events, and creative community initiatives. They ensure our nonprofit supports local artists while building bridges between diverse communities through creative expression.</p>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">10+</span>
+                    <span class="impact-stat-label">Years Experience</span>
                 </div>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">0</span>
+                    <span class="impact-stat-label">Executive Salaries</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="impact.html" class="cta-button">View Full Transparency Report</a>
             </div>
         </div>
     </section>
 
     <!-- Nonprofit Governance -->
-    <section class="governance-section">
+    <section class="governance-section" style="background: white; padding: 100px 0;">
         <div class="container">
             <div class="section-header">
                 <h2>Organizational Governance & Transparency</h2>
@@ -604,12 +453,12 @@
     </section>
 
     <!-- Volunteer Philosophy -->
-    <section class="volunteer-philosophy">
+    <section class="quote-section">
         <div class="container">
-            <div class="philosophy-content">
+            <div class="quote-content">
                 <h2>Why We're All Volunteers</h2>
-                <div class="philosophy-quote">
-                    <p>"We believe the best community development comes from neighbors who care about their neighborhoods, not people collecting paychecks. Every hour our leadership team donates goes directly to strengthening our communities because this work matters to us personally - we live here, our families are here, and we're building something for all of us together."</p>
+                <div class="quote-box">
+                    <p class="quote-text">"We believe the best community development comes from neighbors who care about their neighborhoods, not people collecting paychecks. Every hour our leadership team donates goes directly to strengthening our communities because this work matters to us personally - we live here, our families are here, and we're building something for all of us together."</p>
                 </div>
                 <p style="font-family: 'Open Sans', sans-serif; font-size: 1.1rem; opacity: 0.9; margin-top: 2rem;">This isn't just about keeping costs low - it's about authentic community leadership. When neighbors lead neighbors, the work stays true to what our communities actually need.</p>
             </div>
@@ -617,16 +466,16 @@
     </section>
 
     <!-- Join Leadership CTA -->
-    <section class="join-leadership">
+    <section class="cta-section">
         <div class="container">
-            <div class="join-content">
+            <div class="cta-content">
                 <h2>Join Our Community Leadership</h2>
                 <p>We're always looking for neighbors who want to make a difference in our communities. Whether you have 2 hours a month or 10 hours a week, there's a meaningful way to contribute to our nonprofit's mission.</p>
                 <p>From organizing events to supporting youth programming to helping with administrative tasks - your skills and passion can help strengthen our neighborhoods.</p>
                 
                 <div style="margin-top: 2rem;">
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Leadership Interest" class="leadership-cta">Volunteer With Us</a>
-                    <a href="../support/support.html" class="leadership-cta secondary">Support Our Work</a>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Leadership Interest" class="cta-button">Volunteer With Us</a>
+                    <a href="../support/support.html" class="cta-button secondary">Support Our Work</a>
                 </div>
             </div>
         </div>

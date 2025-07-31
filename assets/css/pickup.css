@@ -7,8 +7,82 @@
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     color: white;
-    padding: 120px 0;
+    padding: 80px 0;
     text-align: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.pickup-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.1;
+}
+
+.pickup-hero .hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #f3f4f6;
+    margin: 1rem 0;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.pickup-hero .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.pickup-hero .hero-stat-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.9rem 1.3rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.pickup-hero .hero-stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.pickup-hero .hero-stat-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.pickup-hero .hero-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pickup-hero .hero-cta-buttons .btn-primary {
+    font-size: 1.1rem;
+    padding: 16px 28px;
+}
+
+.pickup-hero .hero-cta-buttons .btn-secondary {
+    font-size: 1rem;
+    padding: 14px 24px;
+}
+
+.pickup-hero .hero-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 .search-keywords {
@@ -136,7 +210,39 @@
 /* Responsive design */
 @media (max-width: 768px) {
     .pickup-hero {
-        padding: 80px 0;
+        padding: 60px 0;
+        min-height: 40vh;
+    }
+    
+    .pickup-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pickup-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .pickup-hero .hero-stats {
+        gap: 1rem;
+    }
+    
+    .pickup-hero .hero-stat-card {
+        padding: 0.7rem 1rem;
+    }
+    
+    .pickup-hero .hero-stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .pickup-hero .hero-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pickup-hero .hero-cta-buttons .btn-primary,
+    .pickup-hero .hero-cta-buttons .btn-secondary {
+        width: 100%;
+        max-width: 280px;
     }
     
     .search-keywords {
@@ -157,6 +263,25 @@
     
     .neighborhoods-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .pickup-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .pickup-hero .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .pickup-hero .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pickup-hero .hero-stat-card {
+        width: 200px;
     }
 }
 
