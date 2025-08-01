@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBHD Soccer Social Media Graphic</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .social-graphic {
+            width: 930px;
+            height: 344px;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.75) 0%, rgba(29, 78, 216, 0.75) 100%), 
+                        url('assets/gallery_slideshow/pickup_simple_skyline.JPG');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            border: 3px solid #1e3a8a;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .logo-top {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: url('../assets/nbhd_simple_logo_2025-07.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 3px solid white;
+            border-radius: 50%;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .center-content {
+            padding: 25px 35px;
+            max-width: 400px;
+            margin-top: 70px;
+        }
+        
+        .main-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin: 0 0 0.3rem 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            letter-spacing: -1px;
+            color: white;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            color: #fbbf24;
+            font-style: italic;
+        }
+        
+        .nonprofit-info {
+            font-size: 0.8rem;
+            margin: 0 0 0.8rem 0;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            opacity: 0.95;
+            color: white;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .contact-link {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="social-graphic">
+        <div class="logo-top"></div>
+        
+        <div class="center-content">
+            <h1 class="main-title">NBHD SOCCER</h1>
+            <p class="tagline">"Pickup to Purpose - Stronger Together"</p>
+            <p class="nonprofit-info">Illinois Nonprofit Corporation • 501(c)(3) Pending</p>
+            
+            <div class="contact-links">
+                <div class="contact-link">@nbhdsoccer</div>
+                <div class="contact-link">nbhdsoccer.org</div>
+                <div class="contact-link">meetup.com/nbhdsoccer</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Instructions for user
+        setTimeout(() => {
+            console.log("📸 To save this image:");
+            console.log("1. Right-click on the image");
+            console.log("2. Select 'Save as image' or take a screenshot");
+            console.log("3. Use for Facebook groups, Instagram, etc.");
+            console.log("4. Dimensions: 1200x630px (perfect for Facebook)");
+        }, 1000);
+    </script>
+</body>
+</html>
