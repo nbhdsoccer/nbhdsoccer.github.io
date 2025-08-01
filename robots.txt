@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nbhdsoccer.org/sitemap.xml
+
+# Important pages for crawling
+Allow: /programs/
+Allow: /events/
+Allow: /support/
+Allow: /about/
+
+# Crawl delay (optional - helps prevent overwhelming your server)
+Crawl-delay: 1
