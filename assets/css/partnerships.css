@@ -4,7 +4,7 @@
 /* Page Header - Professional & Trustworthy */
 .page-header {
     background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(22, 163, 74, 0.8) 50%, rgba(249, 115, 22, 0.7) 100%), 
-                url('../assets/gallery_slideshow/tournament.jpg');
+                url('../hero/support_our_community.jpg');
     background-size: cover;
     background-position: center;
     color: white;
