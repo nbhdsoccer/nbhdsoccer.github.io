@@ -7,11 +7,15 @@ Sitemap: https://nbhdsoccer.org/sitemap.xml
 # Important pages for crawling - High Priority
 Allow: /programs/rec_77.html
 Allow: /programs/
+Allow: /events/pickup.html
+Allow: /events/benavidez-tournament.html
 Allow: /events/
 Allow: /support/
 Allow: /about/
 Allow: /about/about.html
 Allow: /about/impact.html
+Allow: /connect/
+Allow: /connect/connect.html
 
 # Crawl delay (optional - helps prevent overwhelming your server)
 Crawl-delay: 1

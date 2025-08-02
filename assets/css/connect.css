@@ -5,7 +5,7 @@
     background-color: #f8fafc;
     padding: 1rem 0;
     border-bottom: 1px solid #e2e8f0;
-    margin-top: 80px; /* Account for sticky header */
+    margin-top: 10px; /* Reduced from 80px to match other pages */
 }
 
 .breadcrumb .container {
@@ -374,7 +374,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .breadcrumb {
-        margin-top: 70px; /* Smaller header on mobile */
+        margin-top: 10px; /* Reduced from 70px to match mobile spacing */
     }
     
     .connect-hero .hero-content h1 {

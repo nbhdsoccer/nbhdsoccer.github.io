@@ -70,7 +70,15 @@
     
     <url>
         <loc>https://nbhdsoccer.org/support/partnerships.html</loc>
-        <lastmod>2025-07-31</lastmod>
+        <lastmod>2025-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Connect Page -->
+    <url>
+        <loc>https://nbhdsoccer.org/connect/connect.html</loc>
+        <lastmod>2025-08-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
