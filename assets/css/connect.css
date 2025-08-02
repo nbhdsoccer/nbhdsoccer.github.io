@@ -1,0 +1,473 @@
+/* Connect Page Specific Styles */
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    background-color: #f8fafc;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-top: 80px; /* Account for sticky header */
+}
+
+.breadcrumb .container {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.breadcrumb a {
+    color: #16a34a;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.connect-hero {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.connect-hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.connect-hero .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats .stat {
+    text-align: center;
+}
+
+.hero-stats .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.hero-stats .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Connection Options */
+.connection-options {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.connection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Connection Cards */
+.connection-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.connection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.connection-card.featured {
+    border: 2px solid #16a34a;
+    background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.connection-card.urgent {
+    border: 2px solid #dc2626;
+    background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.connection-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #16a34a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.connection-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Connection Details */
+.connection-details {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.detail-item {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item strong {
+    color: #374151;
+    font-weight: 600;
+}
+
+/* Contact Methods */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.contact-methods .btn-primary,
+.contact-methods .btn-secondary {
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.contact-methods .btn-primary {
+    background-color: #16a34a;
+    color: white;
+}
+
+.contact-methods .btn-primary:hover {
+    background-color: #15803d;
+    transform: translateY(-1px);
+}
+
+.contact-methods .btn-secondary {
+    background-color: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.contact-methods .btn-secondary:hover {
+    background-color: #16a34a;
+    color: white;
+}
+
+.urgent-btn {
+    background-color: #dc2626 !important;
+}
+
+.urgent-btn:hover {
+    background-color: #b91c1c !important;
+}
+
+/* Personal Touch Section */
+.personal-touch {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+}
+
+.personal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.personal-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.personal-message {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.personal-message p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.signature {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.signature p {
+    margin-bottom: 0.5rem;
+}
+
+.signature em {
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Quick Facts Section */
+.quick-facts {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.quick-facts h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fact-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.fact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.fact-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fact-item p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 3rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f9fafb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-section a {
+    display: block;
+    color: #d1d5db;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #16a34a;
+}
+
+.footer-section p {
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin-top: 70px; /* Smaller header on mobile */
+    }
+    
+    .connect-hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .connect-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+    }
+    
+    .hero-stats .stat-number {
+        font-size: 2rem;
+    }
+    
+    .connection-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .connection-card {
+        padding: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .personal-content h2 {
+        font-size: 2rem;
+    }
+    
+    .personal-message {
+        padding: 1.5rem;
+    }
+    
+    .personal-message p {
+        font-size: 1rem;
+    }
+    
+    .quick-facts h2 {
+        font-size: 2rem;
+    }
+    
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .connect-hero {
+        padding: 3rem 0;
+    }
+    
+    .connect-hero .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .connection-options {
+        padding: 3rem 0;
+    }
+    
+    .personal-touch {
+        padding: 3rem 0;
+    }
+    
+    .quick-facts {
+        padding: 3rem 0;
+    }
+}
+
+/* Animation classes for scroll effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
