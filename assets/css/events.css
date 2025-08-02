@@ -1,0 +1,625 @@
+/* Events Page Styles */
+
+/* ===== BREADCRUMB NAVIGATION ===== */
+.breadcrumb-container {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-link {
+    color: #16a34a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+    color: #15803d;
+}
+
+.breadcrumb-separator {
+    color: #9ca3af;
+    margin: 0 0.5rem;
+    font-weight: 500;
+}
+
+.breadcrumb-current {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* ===== EVENTS HERO SECTION ===== */
+.events-hero {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.85) 0%, rgba(21, 128, 61, 0.8) 100%), 
+                url('/assets/hero/teens_city_play_daytime.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.events-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(22, 163, 74, 0.3) 70%);
+}
+
+.events-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.events-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.events-hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    color: #f3f4f6;
+}
+
+.events-quick-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.quick-nav-btn {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.quick-nav-btn:hover,
+.quick-nav-btn.active {
+    background: white;
+    color: #16a34a;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.event-card.featured {
+    border: 2px solid #16a34a;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.event-badge {
+    position: absolute;
+    top: -10px;
+    left: 2rem;
+    background: #16a34a;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.event-card.featured .event-badge {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.event-date {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.event-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.event-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.event-details {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #16a34a;
+}
+
+.event-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.event-detail:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.detail-value {
+    color: #6b7280;
+    text-align: right;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.event-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Recurring Programs Section */
+.recurring-programs {
+    background: #f9fafb;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.program-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.program-schedule {
+    background: #16a34a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.program-features {
+    margin: 1.5rem 0;
+}
+
+.feature {
+    color: #374151;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.program-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Annual Events Timeline */
+.annual-events {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+}
+
+.annual-events .section-title,
+.annual-events .section-subtitle {
+    color: white;
+}
+
+.annual-events-timeline {
+    margin-top: 3rem;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.annual-events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%);
+}
+
+.timeline-event {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-event:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: #16a34a;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+}
+
+.timeline-event.featured::before {
+    background: #dc2626;
+    width: 16px;
+    height: 16px;
+    top: 18px;
+}
+
+.timeline-date {
+    flex: 0 0 200px;
+    text-align: center;
+    font-weight: 600;
+    color: #16a34a;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.timeline-event:nth-child(even) .timeline-date {
+    text-align: center;
+}
+
+.timeline-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 0 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.timeline-content p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.timeline-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.timeline-status.featured {
+    background: #dc2626;
+    color: white;
+}
+
+.timeline-status.upcoming {
+    background: #16a34a;
+    color: white;
+}
+
+.timeline-status.coming-soon {
+    background: #f59e0b;
+    color: white;
+}
+
+.timeline-status.ongoing {
+    background: #3b82f6;
+    color: white;
+}
+
+.timeline-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.timeline-btn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Youth Programming Section */
+.youth-programming {
+    background: white;
+}
+
+.youth-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.youth-event-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+    border: 2px solid #16a34a;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.youth-event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(22, 163, 74, 0.2);
+}
+
+.youth-event-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.partnership-logo {
+    font-size: 2rem;
+    background: #16a34a;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.youth-event-header h3 {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.partnership-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #16a34a;
+    color: white;
+}
+
+.partnership-status.FEATURED {
+    background: #dc2626;
+}
+
+.partnership-status.DEVELOPING {
+    background: #f59e0b;
+}
+
+.youth-event-details {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #16a34a;
+}
+
+.detail-item {
+    margin-bottom: 0.8rem;
+    color: #374151;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Events CTA Section */
+.events-cta {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: #16a34a;
+    font-size: 1.1rem;
+    padding: 16px 32px;
+}
+
+.cta-buttons .btn-secondary {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    font-size: 1.1rem;
+    padding: 14px 30px;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: white;
+    color: #16a34a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .events-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.8rem 0;
+        font-size: 0.85rem;
+    }
+    
+    .events-grid,
+    .programs-grid,
+    .youth-events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-actions,
+    .program-actions,
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .annual-events-timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-event {
+        flex-direction: column !important;
+        padding-left: 60px;
+    }
+    
+    .timeline-event::before {
+        left: 30px !important;
+        transform: none !important;
+    }
+    
+    .timeline-date {
+        flex: none;
+        text-align: left;
+        padding: 0 0 1rem 0;
+    }
+    
+    .timeline-content {
+        margin: 0;
+    }
+    
+    .youth-event-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .youth-event-header h3 {
+        flex: none;
+    }
+}

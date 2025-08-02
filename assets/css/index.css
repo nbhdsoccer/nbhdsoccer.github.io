@@ -1193,4 +1193,266 @@
     }
 }
 
+/* Community Engagement Section */
+.community-engagement {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    padding: 6rem 0;
+}
+
+.engagement-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.engagement-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.engagement-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.engagement-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.engagement-stat {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.engagement-stat:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.simple-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-message {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    color: white;
+}
+
+.simple-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.simple-cta-buttons .btn-primary {
+    background: white;
+    color: #16a34a;
+    font-size: 1.1rem;
+    padding: 16px 32px;
+}
+
+.simple-cta-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    padding: 14px 30px;
+}
+
+.simple-cta-buttons .btn-secondary:hover {
+    background: white;
+    color: #16a34a;
+}
+
+.involvement-pathways {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.pathway-card {
+    background: white;
+    color: #1f2937;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.pathway-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pathway-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.pathway-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #16a34a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pathway-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.community-voice {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.voice-content blockquote {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    opacity: 0.95;
+}
+
+.voice-content cite {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.voice-actions {
+    margin-top: 2.5rem;
+}
+
+.voice-actions p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.voice-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.voice-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+.voice-buttons .btn-secondary:hover {
+    background: white;
+    color: #16a34a;
+}
+
+/* Responsive Design for Community Engagement */
+@media (max-width: 768px) {
+    .engagement-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .engagement-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .engagement-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .involvement-pathways {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .pathway-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .community-voice {
+        padding: 2rem 1.5rem;
+    }
+    
+    .voice-content blockquote {
+        font-size: 1.2rem;
+    }
+    
+    .voice-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .simple-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-message {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .engagement-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
 

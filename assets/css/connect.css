@@ -24,10 +24,29 @@
 
 /* Hero Section */
 .connect-hero {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.85) 0%, rgba(21, 128, 61, 0.8) 100%), 
+                url('/assets/gallery_slideshow/art_diego_mom.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 4rem 0;
     text-align: center;
+    position: relative;
+}
+
+.connect-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(22, 163, 74, 0.3) 70%);
+}
+
+.connect-hero .hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .connect-hero .hero-content h1 {
@@ -35,6 +54,8 @@
     font-weight: 700;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .connect-hero .hero-subtitle {
@@ -45,6 +66,8 @@
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+    color: #f3f4f6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero-stats {
