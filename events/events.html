@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="/assets/css/shared-styles.css">
     <link rel="stylesheet" href="/assets/css/events.css">
     
+    <!-- Site Configuration -->
+    <script src="/js/site-config.js"></script>
+    
     <!-- Events Page Structured Data -->
     <script type="application/ld+json">
     {
@@ -103,55 +106,9 @@
                 <p class="section-subtitle">Our signature community programs and special events</p>
             </div>
             
-            <div class="events-grid">
-                <div class="event-card featured">
-                    <div class="event-badge">FEATURED EVENT</div>
-                    <div class="event-date">September 20, 2025</div>
-                    <h3>6th Annual David Benavidez Memorial Tournament</h3>
-                    <p>Community tournament honoring David's legacy with 100% of proceeds supporting local organizations and neighborhood development initiatives. Six years of bringing the community together for health, healing, and celebration.</p>
-                    
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <span class="detail-label">Location:</span>
-                            <span class="detail-value">TBA - Chicago South Side</span>
-                        </div>
-                        <div class="event-detail">
-                            <span class="detail-label">Registration:</span>
-                            <span class="detail-value">Teams & Individual Players Welcome</span>
-                        </div>
-                        <div class="event-detail">
-                            <span class="detail-label">Beneficiaries:</span>
-                            <span class="detail-value">Local Community Organizations</span>
-                        </div>
-                    </div>
-                    
-                    <div class="event-actions">
-                        <a href="/events/benavidez-tournament.html" class="btn-primary">Learn More & Register</a>
-                        <a href="#" class="btn-secondary">Share Event</a>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-badge">ONGOING</div>
-                    <div class="event-date">Summer 2025</div>
-                    <h3>YMCA Youth Summer League</h3>
-                    <p>Free youth programming in partnership with YMCA of Metro Chicago creating opportunities for disenfranchised communities. Featured partnership developing safe spaces for youth development.</p>
-                    
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <span class="detail-label">Partner:</span>
-                            <span class="detail-value">YMCA of Metro Chicago</span>
-                        </div>
-                        <div class="event-detail">
-                            <span class="detail-label">Focus:</span>
-                            <span class="detail-value">Youth Development & Community Access</span>
-                        </div>
-                    </div>
-                    
-                    <div class="event-actions">
-                        <a href="https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/" target="_blank" class="btn-primary">Read YMCA Feature</a>
-                    </div>
-                </div>
+            <div class="events-grid" id="featured-events-grid">
+                <!-- Events will be dynamically loaded from site-config.js -->
+                <!-- To update events, edit /js/site-config.js -->
             </div>
         </div>
     </section>
@@ -471,6 +428,132 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
+        });
+            });
+    </script>
+
+    <!-- Dynamic Events Rendering -->
+    <script>
+        // Render events for the events page with more detail
+        function renderEventsPage() {
+            const eventsContainer = document.getElementById('featured-events-grid');
+            if (!eventsContainer || !window.SITE_CONFIG) return;
+            
+            eventsContainer.innerHTML = '';
+            
+            // Filter to only show truly featured events (not regular programming)
+            const featuredEvents = window.SITE_CONFIG.events.filter(event => {
+                // Check if event should be shown in featured section
+                // Priority: showInFeatured property, then featured flag, then special event types
+                if (event.hasOwnProperty('showInFeatured')) {
+                    return event.showInFeatured === true;
+                }
+                
+                // Fallback logic for events without showInFeatured property
+                return event.featured === true || 
+                       event.type === "featured" ||
+                       (event.type === "upcoming" && !isRegularProgramming(event.id));
+            });
+            
+            featuredEvents.forEach(event => {
+                const eventCard = createEventsPageCard(event);
+                eventsContainer.appendChild(eventCard);
+            });
+        }
+
+        // Helper function to identify regular programming vs special events
+        function isRegularProgramming(eventId) {
+            const regularProgramIds = [
+                "pickup-soccer", 
+                "rec77-schools", 
+                "ymca-summer"
+            ];
+            return regularProgramIds.includes(eventId);
+        }
+
+        function createEventsPageCard(event) {
+            const card = document.createElement('div');
+            card.className = `event-card${event.featured ? ' featured' : ''}`;
+            card.id = event.id;
+            
+            const badgeText = event.featured ? 'FEATURED EVENT' : event.typeLabel.toUpperCase();
+            const buttonClass = event.buttonClass ? ` ${event.buttonClass}` : '';
+            const disabledClass = event.disabled ? ' disabled' : '';
+            const targetAttr = event.external ? ' target="_blank"' : '';
+            
+            // Create event details based on event type
+            let eventDetails = '';
+            if (event.id === 'benavidez-tournament-2025') {
+                eventDetails = `
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">Rauner Family YMCA, Chicago South Side</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-label">Registration:</span>
+                            <span class="detail-value">Teams & Individual Players Welcome</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-label">Beneficiaries:</span>
+                            <span class="detail-value">Local Community Organizations</span>
+                        </div>
+                    </div>
+                `;
+            } else if (event.id === 'ymca-summer') {
+                eventDetails = `
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <span class="detail-label">Partner:</span>
+                            <span class="detail-value">YMCA of Metro Chicago</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-label">Focus:</span>
+                            <span class="detail-value">Youth Development & Community Access</span>
+                        </div>
+                    </div>
+                `;
+            } else if (event.id === 'womens-tournament') {
+                eventDetails = `
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <span class="detail-label">Format:</span>
+                            <span class="detail-value">Women's Competitive Tournament</span>
+                        </div>
+                        <div class="event-detail">
+                            <span class="detail-label">Focus:</span>
+                            <span class="detail-value">Leadership Development & Competition</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            card.innerHTML = `
+                <div class="event-badge">${badgeText}</div>
+                <div class="event-date">${event.date}</div>
+                <h3>${event.title}</h3>
+                <p>${event.description}</p>
+                
+                ${eventDetails}
+                
+                <div class="event-actions">
+                    ${event.buttonText ? `
+                        <a href="${event.buttonLink}" class="btn-primary${buttonClass}${disabledClass}"${targetAttr}>
+                            ${event.buttonText}
+                        </a>
+                    ` : ''}
+                    <a href="#" class="btn-secondary">Share Event</a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Initialize events when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                renderEventsPage();
+            }, 100);
         });
     </script>
 </body>

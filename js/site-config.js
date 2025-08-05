@@ -11,7 +11,7 @@ const SITE_CONFIG = {
       buttonText: "Learn More & Tournament Info",
       buttonLink: "events/benavidez-tournament.html",
       featured: true,
-      registrationStatus: "paused" // This can be "open", "paused", "closed"
+      registrationStatus: "open" // This can be "open", "paused", "closed"
     },
     {
       id: "pickup-soccer",
@@ -22,7 +22,8 @@ const SITE_CONFIG = {
       description: "Our foundational community organizing work building cross-neighborhood connections through accessible soccer programming and volunteer infrastructure development. All skill levels welcome.",
       buttonText: "Join Pickup Games",
       buttonLink: "events/pickup.html",
-      buttonClass: "btn-pickup"
+      buttonClass: "btn-pickup",
+      showInFeatured: false // Don't show in featured - it's in weekly programming
     },
     {
       id: "ymca-summer",
@@ -33,7 +34,8 @@ const SITE_CONFIG = {
       description: "Free youth programming in partnership with YMCA of Metro Chicago creating opportunities for disenfranchised communities. Featured partnership developing safe spaces for youth development.",
       buttonText: "Read YMCA Feature",
       buttonLink: "https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/",
-      external: true
+      external: true,
+      showInFeatured: false // Don't show in featured - it's in youth programming section
     },
     {
       id: "rec77-schools",
@@ -43,7 +45,8 @@ const SITE_CONFIG = {
       title: "REC 77: CPS After-School Programming",
       description: "Co-development partnership with Chicago Public Schools creating sustainable after-school programming for disenfranchised youth through professional soccer coaching and mentorship.",
       buttonText: "Partner With Schools",
-      buttonLink: "programs/rec_77.html"
+      buttonLink: "programs/rec_77.html",
+      showInFeatured: false // Don't show in featured - it's in youth programming section
     },
     {
       id: "cps-alumni-game",
