@@ -33,6 +33,9 @@
     <!-- Link to shared styles -->
     <link rel="stylesheet" href="../assets/css/shared-styles.css">
     <link rel="stylesheet" href="../assets/css/benavidez-tournament.css">
+    
+    <!-- Site Configuration -->
+    <script src="../js/site-config.js"></script>
 </head>
 <body>
     <div id="header-container">
@@ -46,7 +49,7 @@
                 <div class="memorial-badge">Honoring David's Legacy Through Community</div>
                 <h1>6th Annual David Benavidez Memorial Tournament</h1>
                 <p class="memorial-subtitle">Service • Community • Healing</p>
-                <p class="tournament-details-header">September 20, 2025 | Rauner Family YMCA</p>
+                <p class="tournament-details-header">October 18, 2025 | Rauner Family YMCA</p>
                 <a href="#memorial-registration" class="memorial-cta">Join the Memorial</a>
             </div>
         </div>
@@ -207,7 +210,7 @@
                 <div class="detail-card" style="padding: 1.2rem;">
                     <div class="detail-icon" style="font-size: 1.6rem; margin-bottom: 0.4rem;">📅</div>
                     <h3 style="margin-bottom: 0.4rem; font-size: 1rem;">When</h3>
-                    <p style="margin: 0; line-height: 1.3; font-size: 0.9rem;"><strong>September 20, 2025</strong><br>
+                    <p style="margin: 0; line-height: 1.3; font-size: 0.9rem;"><strong>October 18, 2025</strong><br>
                     10:00 AM - 2:00 PM<br>
                     <em>Ceremony with Benavidez family</em></p>
                 </div>
@@ -247,51 +250,54 @@
             </div>
             
             <div class="contribution-philosophy">
-                <p>"All proceeds support YMCA programs in underserved communities - continuing David's commitment to health and service"</p>
+                <p>"Every participant becomes part of David's continuing legacy of service to community health. Your participation is tremendously appreciated by the Benavidez family - we are all grateful for your support in honoring David's memory."</p>
             </div>
             
             <div class="registration-options">
+                <!-- Individual Registration -->
                 <div class="registration-card">
-                    <div class="registration-type">Individual Memorial Participation</div>
+                    <div class="registration-type">Individual Registration</div>
                     <div class="contribution-amount">$55</div>
                     <div class="contribution-includes">
                         <ul>
                             <li>Placed on available memorial team</li>
-                            <li>Official tournament jersey</li>
-                            <li>Memorial ceremony attendance</li>
-                            <li>Community lunch included</li>
+                            <li>Participation in memorial ceremony</li>
+                            <li>Tournament documentation package</li>
+                            <li>Family gratitude and recognition</li>
+                            <li>Community celebration participation</li>
                         </ul>
-                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><strong>Deadline:</strong> September 18, 2025</p>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;" data-deadline="regular"><strong>Registration Deadline:</strong> October 16, 2025</p>
                     </div>
                 </div>
                 
+                <!-- Team Registration -->
                 <div class="registration-card">
-                    <div class="registration-type">Team Memorial Entry</div>
+                    <div class="registration-type">Team Registration</div>
                     <div class="contribution-amount">$500</div>
                     <div class="contribution-includes">
                         <ul>
-                            <li>Full team entry (8-10 players)</li>
-                            <li>Team memorial jerseys</li>
-                            <li>Recognition at ceremony</li>
-                            <li>Group lunch for team</li>
+                            <li>Full team entry (8-16 players)</li>
+                            <li>Team recognition at ceremony</li>
                             <li>Team photo with Benavidez family</li>
+                            <li>Tournament documentation for all players</li>
+                            <li>Special acknowledgment from family</li>
                         </ul>
-                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><strong>Early Bird:</strong> $150 before August 15</p>
                     </div>
                 </div>
                 
+                <!-- Memorial Sponsorship -->
                 <div class="registration-card">
                     <div class="registration-type">Memorial Sponsorship</div>
-                    <div class="contribution-amount">$500+</div>
+                    <div class="contribution-amount">$250+</div>
                     <div class="contribution-includes">
                         <ul>
-                            <li>Logo recognition at memorial ceremony</li>
-                            <li>Team entry included</li>
-                            <li>Special acknowledgment of support</li>
-                            <li>Tax-deductible community contribution</li>
-                            <li>Custom memorial recognition</li>
+                            <li><strong>Community Sponsor ($250):</strong> Logo at ceremony, website recognition</li>
+                            <li><strong>Memorial Sponsor ($500):</strong> Prominent placement, family recognition</li>
+                            <li><strong>Legacy Title Sponsor ($1000+):</strong> Naming rights, exclusive family meeting</li>
+                            <li>All sponsors receive tournament documentation</li>
+                            <li>Partnership development opportunities</li>
                         </ul>
-                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><strong>Contact us</strong> for sponsorship details</p>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><strong>Contact us</strong> to discuss sponsorship details</p>
                     </div>
                 </div>
             </div>
@@ -313,10 +319,11 @@
                             <label for="registrationType">Registration Type *</label>
                             <select id="registrationType" name="registrationType" required onchange="updateMemorialPrice()">
                                 <option value="">Select Registration Type</option>
-                                <option value="early-memorial">Early Team Entry - $150</option>
-                                <option value="regular-memorial">Team Entry - $200</option>
-                                <option value="individual-memorial">Individual Memorial - $25</option>
-                                <option value="memorial-sponsorship">Memorial Sponsorship - $500+</option>
+                                <option value="individual-memorial">Individual Registration - $55</option> -->
+                                <option value="team-memorial">Team Registration - $500</option>
+                                <option value="sponsor-community">Community Sponsor - $250</option>
+                                <option value="sponsor-memorial">Memorial Sponsor - $500</option>
+                                <option value="sponsor-legacy">Legacy Title Sponsor - $1000+</option>
                             </select>
                         </div>
                     </div>
@@ -360,7 +367,7 @@
                         <button type="submit" class="memorial-submit">
                             Honor David's Legacy
                         </button>
-                        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">We will contact you within 24 hours with next steps</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">We will contact you within 48 hours with next steps</p>
                     </div>
                 </form>
             </div>
@@ -404,16 +411,32 @@
         </div>
     </footer>
 
+    <!-- EmailJS for sending emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Tournament Dynamic Content Scripts -->
+    <script src="../js/tournament-dynamic-content.js"></script>
+
     <script>
+        // Initialize EmailJS (you'll need to replace these with your actual IDs)
+        // Get these from your EmailJS dashboard after creating an account
+        const EMAILJS_PUBLIC_KEY = 'kthWdX2tmNcRrlZyF'; // Replace with your public key
+        const EMAILJS_SERVICE_ID = 'service_faus6nb'; // Replace with your service ID
+        const EMAILJS_TEMPLATE_ID = 'template_y274gam'; // Replace with your template ID
+        
+        // Initialize EmailJS
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+        
         function updateMemorialPrice() {
             const select = document.getElementById('registrationType');
             const priceDisplay = document.getElementById('memorialPriceDisplay');
             
             const prices = {
-                'early-memorial': 'Community Contribution: $150 (Early Bird)',
-                'regular-memorial': 'Community Contribution: $200', 
-                'individual-memorial': 'Community Contribution: $25',
-                'memorial-sponsorship': 'Memorial Sponsorship: $500+ (Contact for details)'
+                'individual-memorial': 'Memorial Participation: $55',
+                'team-memorial': 'Team Registration: $500',
+                'sponsor-community': 'Community Sponsorship: $250',
+                'sponsor-memorial': 'Memorial Sponsorship: $500',
+                'sponsor-legacy': 'Legacy Title Sponsorship: $1000+ (Contact for details)'
             };
             
             if (select.value && prices[select.value]) {
@@ -439,19 +462,82 @@
                 memorialMessage: formData.get('memorialMessage')
             };
             
-            // Store in localStorage (acts as simple database)
-            let registrations = JSON.parse(localStorage.getItem('memorialTournamentRegistrations') || '[]');
+            // Store in localStorage (acts as simple database) - Specific to Benavidez Tournament 2025
+            let registrations = JSON.parse(localStorage.getItem('benavidezTournament2025Registrations') || '[]');
             registrations.push(registrationData);
-            localStorage.setItem('memorialTournamentRegistrations', JSON.stringify(registrations));
+            localStorage.setItem('benavidezTournament2025Registrations', JSON.stringify(registrations));
+            
+            // Send confirmation email
+            sendConfirmationEmail(registrationData);
             
             // Show success message
-            alert('Thank you for joining David\'s memorial tournament. Your registration honors his legacy of service and community building. We will contact you within 24 hours with next steps.');
+            alert('Thank you for joining David\'s memorial tournament. Your registration honors his legacy of service and community building. You should receive a confirmation email shortly. We will contact you within 24 hours with next steps.');
             
             // Reset form
             event.target.reset();
             document.getElementById('memorialPriceDisplay').textContent = '';
             
             console.log('Memorial registration saved:', registrationData);
+        }
+        
+        function sendConfirmationEmail(registrationData) {
+            // Prepare email template parameters
+            const templateParams = {
+                to_email: registrationData.captainEmail,
+                to_name: registrationData.captainName,
+                team_name: registrationData.teamName,
+                registration_type: getRegistrationTypeLabel(registrationData.registrationType),
+                captain_name: registrationData.captainName,
+                captain_email: registrationData.captainEmail,
+                captain_phone: registrationData.captainPhone,
+                player_count: registrationData.playerCount || 'Not specified',
+                memorial_message: registrationData.memorialMessage || 'No message provided',
+                registration_date: new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                }),
+                tournament_date: 'October 18, 2025',
+                venue: 'Rauner Family YMCA, 2700 S Western Ave, Chicago, IL'
+            };
+            
+            // Send email to registrant
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                .then(function(response) {
+                    console.log('Confirmation email sent successfully!', response.status, response.text);
+                })
+                .catch(function(error) {
+                    console.error('Failed to send confirmation email:', error);
+                });
+                
+            // Send notification email to admin
+            const adminTemplateParams = {
+                ...templateParams,
+                to_email: 'nbhdsoccer@gmail.com', // Your admin email
+                to_name: 'Tournament Admin'
+            };
+            
+            // Send admin notification using the same template
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, adminTemplateParams)
+                .then(function(response) {
+                    console.log('Admin notification sent successfully!', response.status, response.text);
+                })
+                .catch(function(error) {
+                    console.error('Failed to send admin notification:', error);
+                });
+        }
+        
+        function getRegistrationTypeLabel(type) {
+            const labels = {
+                'individual-memorial': 'Individual Registration ($55)',
+                'team-memorial': 'Team Registration ($500)',
+                'sponsor-community': 'Community Sponsor ($250)',
+                'sponsor-memorial': 'Memorial Sponsor ($500)',
+                'sponsor-legacy': 'Legacy Title Sponsor ($1000+)'
+            };
+            return labels[type] || type;
         }
         
         // Add smooth scroll behavior for internal links
@@ -512,10 +598,10 @@
             });
         });
 
-        // Load memorial registration data (for admin viewing)
+        // Load Benavidez Tournament 2025 registration data (for admin viewing)
         function viewMemorialRegistrations() {
-            const registrations = JSON.parse(localStorage.getItem('memorialTournamentRegistrations') || '[]');
-            console.log('All memorial registrations:', registrations);
+            const registrations = JSON.parse(localStorage.getItem('benavidezTournament2025Registrations') || '[]');
+            console.log('All Benavidez Tournament 2025 registrations:', registrations);
             return registrations;
         }
     </script>
