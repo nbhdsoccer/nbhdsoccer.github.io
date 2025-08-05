@@ -1,4 +1,15 @@
 // Site Configuration - Easy content updates
+//
+// 🔄 USED BY MULTIPLE PAGES:
+// - index.html (root: /)
+// - events/events.html (subfolder: /events/)  
+// - events/benavidez-tournament.html (subfolder: /events/)
+// - js/tournament-dynamic-content.js (dynamic updates)
+//
+// ⚠️ IMPORTANT: All buttonLink paths must be ROOT-RELATIVE (start with /)
+// ✅ Correct: "/events/pickup.html" 
+// ❌ Wrong: "events/pickup.html" (breaks in subfolders)
+//
 const SITE_CONFIG = {
   events: [
     {
@@ -9,7 +20,7 @@ const SITE_CONFIG = {
       title: "6th Annual David Benavidez Memorial Tournament",
       description: "Community tournament honoring David's legacy with 100% of proceeds supporting local organizations and neighborhood development initiatives. Six years of bringing the community together for health, healing, and celebration.",
       buttonText: "Learn More & Tournament Info",
-      buttonLink: "events/benavidez-tournament.html",
+      buttonLink: "/events/benavidez-tournament.html", // ✅ ROOT-RELATIVE PATH
       featured: true,
       registrationStatus: "open" // This can be "open", "paused", "closed"
     },
@@ -21,7 +32,7 @@ const SITE_CONFIG = {
       title: "Chicago Pickup Soccer",
       description: "Our foundational community organizing work building cross-neighborhood connections through accessible soccer programming and volunteer infrastructure development. All skill levels welcome.",
       buttonText: "Join Pickup Games",
-      buttonLink: "events/pickup.html",
+      buttonLink: "/events/pickup.html", // ✅ ROOT-RELATIVE PATH
       buttonClass: "btn-pickup",
       showInFeatured: false // Don't show in featured - it's in weekly programming
     },
@@ -33,7 +44,7 @@ const SITE_CONFIG = {
       title: "YMCA Youth Summer League",
       description: "Free youth programming in partnership with YMCA of Metro Chicago creating opportunities for disenfranchised communities. Featured partnership developing safe spaces for youth development.",
       buttonText: "Read YMCA Feature",
-      buttonLink: "https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/",
+      buttonLink: "https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/", // ✅ EXTERNAL LINK (OK)
       external: true,
       showInFeatured: false // Don't show in featured - it's in youth programming section
     },
@@ -45,7 +56,7 @@ const SITE_CONFIG = {
       title: "REC 77: CPS After-School Programming",
       description: "Co-development partnership with Chicago Public Schools creating sustainable after-school programming for disenfranchised youth through professional soccer coaching and mentorship.",
       buttonText: "Partner With Schools",
-      buttonLink: "programs/rec_77.html",
+      buttonLink: "/programs/rec_77.html", // ✅ ROOT-RELATIVE PATH
       showInFeatured: false // Don't show in featured - it's in youth programming section
     },
     {
@@ -56,7 +67,7 @@ const SITE_CONFIG = {
       title: "CPS Alumni Fundraiser Game",
       description: "Former students vs current players fundraising event. All proceeds directly support CPS school athletic programs and equipment needs through our nonprofit youth development partnerships.",
       buttonText: "Join the Game",
-      buttonLink: "https://www.meetup.com/neighborhood-legacy/events/310221046/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link",
+      buttonLink: "https://www.meetup.com/neighborhood-legacy/events/310221046/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link", // ✅ EXTERNAL LINK (OK)
     //   disabled: true
     },
     {
@@ -67,7 +78,7 @@ const SITE_CONFIG = {
       title: "Summer Women's Tournament",
       description: "Annual celebration empowering women through competitive programming and leadership development within our community organizing work.",
       buttonText: "Learn More & Register Team",
-      buttonLink: "programs/womens.html"
+      buttonLink: "/programs/womens.html" // ✅ ROOT-RELATIVE PATH
     },
   ],
   
@@ -100,46 +111,89 @@ const SITE_CONFIG = {
         team: 500,
         sponsorshipBase: 250,
         sponsorshipPremium: 500,
-        sponsorshipTitle: 1000
+        sponsorshipTitle: 1500,
+        // Enhancement add-ons
+        enhancementTshirts: 1000,
+        enhancementDocumentation: 750,
+        enhancementKeepsakes: 500
       },
       sponsorshipTiers: {
         community: {
           name: "Community Sponsor",
           amount: 250,
           benefits: [
-            "Logo displayed at ceremony",
-            "Recognition on tournament website",
-            "Thank you acknowledgment from family",
-            "Tournament documentation package"
+            "Logo at ceremony, website recognition",
+            "Recognition on t-shirts & media if enhancement add-on sponsored"
           ]
         },
         memorial: {
           name: "Memorial Sponsor", 
           amount: 500,
           benefits: [
-            "Prominent logo placement at ceremony",
-            "Featured sponsorship on website",
-            "Special recognition by Benavidez family",
-            "Highlighted in tournament materials",
-            "Partnership discussion opportunities"
+            "Prominent placement, family recognition, media coverage",
+            "All previous tier benefits",
+            "Recognition on t-shirts & media if enhancement add-on sponsored"
           ]
         },
         legacy: {
           name: "Legacy Title Sponsor",
-          amount: 1000,
+          amount: 1500,
+          displayAmount: "$1,500",
           benefits: [
-            "Tournament naming rights recognition",
-            "Premier logo placement at all events",
-            "Dedicated website sponsorship page",
-            "Exclusive family meeting opportunity",
-            "Featured in annual impact report",
-            "Custom partnership development"
+            "Naming rights and all previous tier benefits",
+            "Recognition on t-shirts & media if enhancement add-on sponsored"
           ]
+        }
+      },
+      enhancementAddOns: {
+        tshirts: {
+          name: "Memorial T-Shirts",
+          cost: 1000,
+          description: "Custom tournament shirts for all participants and the Benavidez family",
+          sponsorBenefit: "Sponsor gets prominent logo placement on all shirts"
+        },
+        documentation: {
+          name: "Professional Documentation", 
+          cost: 750,
+          description: "Photography & videography to preserve memories for the family",
+          sponsorBenefit: "Sponsor gets prominent placement in all media content"
+        },
+        keepsakes: {
+          name: "Memorial Keepsakes",
+          cost: 500,
+          description: "Engraved keychains and tokens for lasting remembrance",
+          sponsorBenefit: "Sponsor gets prominent placement on all keepsakes"
         }
       },
       ceremony: {
         time: "Closing ceremony with Benavidez family",
         description: "Awards presentation and community remembrance"
+      }
+    },
+    womens: {
+      year: "2nd Annual",
+      date: "Sep 2025",
+      shortDate: "Sep 2025",
+      time: "TBD",
+      venue: "TBD",
+      address: "Chicago, IL",
+      registrationDeadline: "TBD",
+      registration: {
+        isOpen: true,
+        isPaused: false,
+        tournamentEmailEnabled: true,
+        communityEmailEnabled: false
+      },
+      forms: {
+        tournament: {
+          enabled: true,
+          simplified: true
+        },
+        community: {
+          enabled: true,
+          emailEnabled: false,
+          grassrootsMessage: true
+        }
       }
     }
   },

@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    EVENTS PAGE CONTENT STRUCTURE:
+    
+    ✅ DYNAMIC CONTENT (loaded from /js/site-config.js):
+    - Featured Events Section (#featured-events) - Uses SITE_CONFIG.events array
+    
+    ❌ STATIC CONTENT (hardcoded HTML):
+    - Weekly Community Programming (#recurring-programs) - All program cards
+    - Annual Events & Fundraising (#annual-events) - All timeline events  
+    - Youth Development Programming (#youth-programming) - All partnership cards
+    - Community Engagement CTA section
+    
+    TO UPDATE:
+    - Featured Events: Edit /js/site-config.js events array
+    - All Other Content: Edit this HTML file directly
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +118,8 @@
     </section>
 
     <!-- Featured Events Section -->
+    <!-- ✅ DYNAMIC CONTENT: Loaded from /js/site-config.js -->
+    <!-- To update featured events, edit the 'events' array in site-config.js -->
     <section class="events-section" id="featured-events">
         <div class="container">
             <div class="section-header">
@@ -110,13 +128,15 @@
             </div>
             
             <div class="events-grid" id="featured-events-grid">
-                <!-- Events will be dynamically loaded from site-config.js -->
+                <!-- ✅ DYNAMIC: Events will be dynamically loaded from site-config.js -->
                 <!-- To update events, edit /js/site-config.js -->
             </div>
         </div>
     </section>
 
     <!-- Recurring Programs Section -->
+    <!-- ❌ STATIC CONTENT: All content below is hardcoded HTML -->
+    <!-- To update these programs, edit this HTML file directly -->
     <section class="events-section recurring-programs" id="recurring-programs">
         <div class="container">
             <div class="section-header">
@@ -125,6 +145,7 @@
             </div>
             
             <div class="programs-grid">
+                <!-- ❌ STATIC: Chicago Pickup Soccer program card -->
                 <div class="program-card">
                     <div class="program-schedule">5 Days/Week</div>
                     <h3>Chicago Pickup Soccer</h3>
@@ -144,6 +165,7 @@
                     </div>
                 </div>
 
+                <!-- ❌ STATIC: Women's Wednesday Community program card -->
                 <div class="program-card">
                     <div class="program-schedule">Wednesdays</div>
                     <h3>Women's Wednesday Community</h3>
@@ -161,6 +183,7 @@
                     </div>
                 </div>
 
+                <!-- ❌ STATIC: REC 77 CPS After-School program card -->
                 <div class="program-card">
                     <div class="program-schedule">School Year</div>
                     <h3>REC 77: CPS After-School Partnership</h3>
@@ -182,6 +205,8 @@
     </section>
 
     <!-- Annual Events Section -->
+    <!-- ❌ STATIC CONTENT: All timeline events below are hardcoded HTML -->
+    <!-- To update annual events, edit this HTML file directly -->
     <section class="events-section annual-events" id="annual-events">
         <div class="container">
             <div class="section-header">
@@ -190,6 +215,7 @@
             </div>
             
             <div class="annual-events-timeline">
+                <!-- ❌ STATIC: CPS Alumni Fundraiser timeline event -->
                 <div class="timeline-event">
                     <div class="timeline-date">August 2025</div>
                     <div class="timeline-content">
@@ -199,7 +225,7 @@
                     </div>
                 </div>
 
-
+                <!-- ❌ STATIC: Women's Tournament timeline event -->
                 <div class="timeline-event">
                     <div class="timeline-date">September 2025</div>
                     <div class="timeline-content">
@@ -210,6 +236,7 @@
                     </div>
                 </div>
 
+                <!-- ❌ STATIC: David Benavidez Memorial Tournament timeline event -->
                 <div class="timeline-event featured">
                     <div class="timeline-date">October 2025</div>
                     <div class="timeline-content">
@@ -220,6 +247,7 @@
                     </div>
                 </div>
 
+                <!-- ❌ STATIC: Community Art Galas timeline event -->
                 <div class="timeline-event">
                     <div class="timeline-date"> 2026 </div>
                     <div class="timeline-content">
@@ -233,6 +261,8 @@
     </section>
 
     <!-- Youth Programming Events -->
+    <!-- ❌ STATIC CONTENT: All youth programming cards below are hardcoded HTML -->
+    <!-- To update youth programming, edit this HTML file directly -->
     <section class="events-section youth-programming" id="youth-programming">
         <div class="container">
             <div class="section-header">
@@ -241,6 +271,7 @@
             </div>
             
             <div class="youth-events-grid">
+                <!-- ❌ STATIC: CPS School Partnerships card -->
                 <div class="youth-event-card">
                     <div class="youth-event-header">
                         <div class="partnership-logo">🏫</div>
@@ -264,6 +295,7 @@
                     <a href="/programs/rec_77.html" class="btn-primary">Partner With Schools</a>
                 </div>
 
+                <!-- ❌ STATIC: YMCA Partnership card -->
                 <div class="youth-event-card">
                     <div class="youth-event-header">
                         <div class="partnership-logo">🤝</div>
@@ -287,6 +319,7 @@
                     <a href="https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/" target="_blank" class="btn-primary">Read YMCA Feature</a>
                 </div>
 
+                <!-- ❌ STATIC: Boys & Girls Club Programming card -->
                 <div class="youth-event-card">
                     <div class="youth-event-header">
                         <div class="partnership-logo">🎓</div>
@@ -433,11 +466,13 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
-            });
     </script>
 
+    <!-- ✅ DYNAMIC CONTENT RENDERING SCRIPTS -->
+    <!-- These scripts load content from /js/site-config.js -->
     <!-- Dynamic Events Rendering -->
     <script>
+        // ✅ DYNAMIC: Renders events from SITE_CONFIG.events array
         // Render events for the events page with more detail
         function renderEventsPage() {
             const eventsContainer = document.getElementById('featured-events-grid');
@@ -445,6 +480,7 @@
             
             eventsContainer.innerHTML = '';
             
+            // ✅ DYNAMIC: Filter events based on site-config.js properties
             // Filter to only show truly featured events (not regular programming)
             const featuredEvents = window.SITE_CONFIG.events.filter(event => {
                 // Check if event should be shown in featured section
@@ -459,6 +495,7 @@
                        (event.type === "upcoming" && !isRegularProgramming(event.id));
             });
             
+            // ✅ DYNAMIC: Create event cards from config data
             featuredEvents.forEach(event => {
                 const eventCard = createEventsPageCard(event);
                 eventsContainer.appendChild(eventCard);
@@ -475,6 +512,7 @@
             return regularProgramIds.includes(eventId);
         }
 
+        // ✅ DYNAMIC: Creates HTML event cards from config data
         function createEventsPageCard(event) {
             const card = document.createElement('div');
             card.className = `event-card${event.featured ? ' featured' : ''}`;
@@ -553,10 +591,11 @@
             return card;
         }
 
+        // ✅ DYNAMIC: Initialize events when DOM is loaded
         // Initialize events when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                renderEventsPage();
+                renderEventsPage(); // Loads events from site-config.js
             }, 100);
         });
     </script>

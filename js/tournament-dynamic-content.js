@@ -118,11 +118,11 @@ function updatePricingInfo(tournament) {
           if (tiersList) {
             const tiers = tournament.sponsorshipTiers;
             tiersList.innerHTML = `
-              <li><strong>${tiers.community.name} ($${tiers.community.amount}):</strong> Logo at ceremony, website recognition</li>
-              <li><strong>${tiers.memorial.name} ($${tiers.memorial.amount}):</strong> Prominent placement, family recognition</li>
-              <li><strong>${tiers.legacy.name} ($${tiers.legacy.amount}+):</strong> Naming rights, exclusive family meeting</li>
-              <li>All sponsors receive tournament documentation</li>
-              <li>Partnership development opportunities</li>
+              <li><strong>${tiers.community.name} ($${tiers.community.amount}):</strong> ${tiers.community.benefits[0]}</li>
+              <li><strong>${tiers.memorial.name} ($${tiers.memorial.amount}):</strong> ${tiers.memorial.benefits[0]}</li>
+              <li><strong>${tiers.legacy.name} (${tiers.legacy.displayAmount || '$' + tiers.legacy.amount + '+'}):</strong> ${tiers.legacy.benefits[0]}</li>
+              <li><em>Enhancement add-ons available for all tiers</em></li>
+              <li>Email nbhdsoccer@gmail.com to discuss sponsorship details</li>
             `;
           }
         }
@@ -150,13 +150,41 @@ function updateFormPricing(pricing, tournament) {
         option.textContent = `Team Registration - $${pricing.team}`;
         break;
       case 'sponsor-community':
-        option.textContent = `Community Sponsor - $${pricing.sponsorshipBase || 250}`;
+        option.textContent = `Community Sponsor - $${pricing.sponsorshipBase}`;
         break;
       case 'sponsor-memorial':
-        option.textContent = `Memorial Sponsor - $${pricing.sponsorshipPremium || 500}`;
+        option.textContent = `Memorial Sponsor - $${pricing.sponsorshipPremium}`;
         break;
       case 'sponsor-legacy':
-        option.textContent = `Legacy Title Sponsor - $${pricing.sponsorshipTitle || 1000}+`;
+        option.textContent = `Legacy Title Sponsor - $${pricing.sponsorshipTitle}+`;
+        break;
+      // Enhancement combinations
+      case 'sponsor-community-tshirts':
+        option.textContent = `Community Sponsor + T-Shirts - $${pricing.sponsorshipBase + pricing.enhancementTshirts}`;
+        break;
+      case 'sponsor-community-documentation':
+        option.textContent = `Community Sponsor + Documentation - $${pricing.sponsorshipBase + pricing.enhancementDocumentation}`;
+        break;
+      case 'sponsor-community-keepsakes':
+        option.textContent = `Community Sponsor + Keepsakes - $${pricing.sponsorshipBase + pricing.enhancementKeepsakes}`;
+        break;
+      case 'sponsor-memorial-tshirts':
+        option.textContent = `Memorial Sponsor + T-Shirts - $${pricing.sponsorshipPremium + pricing.enhancementTshirts}`;
+        break;
+      case 'sponsor-memorial-documentation':
+        option.textContent = `Memorial Sponsor + Documentation - $${pricing.sponsorshipPremium + pricing.enhancementDocumentation}`;
+        break;
+      case 'sponsor-memorial-keepsakes':
+        option.textContent = `Memorial Sponsor + Keepsakes - $${pricing.sponsorshipPremium + pricing.enhancementKeepsakes}`;
+        break;
+      case 'sponsor-legacy-tshirts':
+        option.textContent = `Legacy Sponsor + T-Shirts - $${pricing.sponsorshipTitle + pricing.enhancementTshirts}+`;
+        break;
+      case 'sponsor-legacy-documentation':
+        option.textContent = `Legacy Sponsor + Documentation - $${pricing.sponsorshipTitle + pricing.enhancementDocumentation}+`;
+        break;
+      case 'sponsor-legacy-keepsakes':
+        option.textContent = `Legacy Sponsor + Keepsakes - $${pricing.sponsorshipTitle + pricing.enhancementKeepsakes}+`;
         break;
     }
   });
@@ -169,9 +197,19 @@ function updateFormPricing(pricing, tournament) {
     const prices = {
       'individual-memorial': `Memorial Participation: $${pricing.individual}`,
       'team-memorial': `Team Registration: $${pricing.team}`,
-      'sponsor-community': `Community Sponsorship: $${pricing.sponsorshipBase || 250}`,
-      'sponsor-memorial': `Memorial Sponsorship: $${pricing.sponsorshipPremium || 500}`,
-      'sponsor-legacy': `Legacy Title Sponsorship: $${pricing.sponsorshipTitle || 1000}+ (Contact for details)`
+      'sponsor-community': `Community Sponsorship: $${pricing.sponsorshipBase}`,
+      'sponsor-memorial': `Memorial Sponsorship: $${pricing.sponsorshipPremium}`,
+      'sponsor-legacy': `Legacy Title Sponsorship: $${pricing.sponsorshipTitle}+ (Contact for details)`,
+      'sponsor-community-tshirts': `Community Sponsor + T-Shirts: $${pricing.sponsorshipBase + pricing.enhancementTshirts}`,
+      'sponsor-community-documentation': `Community Sponsor + Documentation: $${pricing.sponsorshipBase + pricing.enhancementDocumentation}`,
+      'sponsor-community-keepsakes': `Community Sponsor + Keepsakes: $${pricing.sponsorshipBase + pricing.enhancementKeepsakes}`,
+      'sponsor-memorial-tshirts': `Memorial Sponsor + T-Shirts: $${pricing.sponsorshipPremium + pricing.enhancementTshirts}`,
+      'sponsor-memorial-documentation': `Memorial Sponsor + Documentation: $${pricing.sponsorshipPremium + pricing.enhancementDocumentation}`,
+      'sponsor-memorial-keepsakes': `Memorial Sponsor + Keepsakes: $${pricing.sponsorshipPremium + pricing.enhancementKeepsakes}`,
+      'sponsor-legacy-tshirts': `Legacy Sponsor + T-Shirts: $${pricing.sponsorshipTitle + pricing.enhancementTshirts}+ (Contact for details)`,
+      'sponsor-legacy-documentation': `Legacy Sponsor + Documentation: $${pricing.sponsorshipTitle + pricing.enhancementDocumentation}+ (Contact for details)`,
+      'sponsor-legacy-keepsakes': `Legacy Sponsor + Keepsakes: $${pricing.sponsorshipTitle + pricing.enhancementKeepsakes}+ (Contact for details)`,
+      'sponsor-custom': 'Custom Sponsorship Package (Contact for details)'
     };
     
     if (select.value && prices[select.value]) {

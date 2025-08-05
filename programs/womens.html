@@ -394,39 +394,33 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="tournamentPhone">Phone Number *</label>
-                            <input type="tel" id="tournamentPhone" name="phone" required placeholder="(123) 456-7890">
+                            <label for="tournamentPhone">Phone Number (Optional)</label>
+                            <input type="tel" id="tournamentPhone" name="phone" placeholder="(123) 456-7890">
                         </div>
                         
                         <div class="form-group">
-                            <label for="tournamentNeighborhood">Your Neighborhood</label>
-                            <input type="text" id="tournamentNeighborhood" name="neighborhood" placeholder="e.g., Bridgeport, Pilsen">
+                            <label for="tournamentRegistrationType">Registration Type *</label>
+                            <select id="tournamentRegistrationType" name="registrationType" required onchange="toggleTeamNameField()">
+                                <option value="">Select registration type</option>
+                                <option value="individual">Individual Registration</option>
+                                <option value="team">Team Registration</option>
+                            </select>
                         </div>
                     </div>
                     
+                    <div class="form-group" id="teamNameGroup" style="display: none;">
+                        <label for="tournamentTeamName">Team Name *</label>
+                        <input type="text" id="tournamentTeamName" name="teamName" placeholder="Enter your team name">
+                        <small style="color: #831843; font-size: 0.8rem;">Required for team registration</small>
+                    </div>
+                    
                     <div class="form-group">
-                        <label for="tournamentExperienceLevel">Soccer Experience Level *</label>
-                        <select id="tournamentExperienceLevel" name="experienceLevel" required>
+                        <label for="tournamentExperienceLevel">Soccer Experience Level (Optional)</label>
+                        <select id="tournamentExperienceLevel" name="experienceLevel">
                             <option value="">Select your experience level</option>
                             <option value="recreational">Recreational - Play for fun</option>
                             <option value="intermediate">Intermediate - Some organized experience</option>
                             <option value="advanced">Advanced - Competitive experience</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tournamentTeamName">Tournament Team Name (Optional)</label>
-                        <input type="text" id="tournamentTeamName" name="teamName" placeholder="Enter your team name or leave blank to be placed on a team">
-                        <small style="color: #831843; font-size: 0.8rem;">Leave blank if you want us to help you find teammates</small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tournamentDivisionPreference">Preferred Competition Level *</label>
-                        <select id="tournamentDivisionPreference" name="divisionPreference" required>
-                            <option value="">Select preferred division</option>
-                            <option value="recreational">Recreational Division - Fun-focused</option>
-                            <option value="competitive">Competitive Division - Higher intensity</option>
-                            <option value="no-preference">No preference - Place me anywhere</option>
                         </select>
                     </div>
                     
@@ -456,7 +450,8 @@
             <div class="registration-form-container">
                 <div class="form-intro">
                     <h3>Women's Soccer Community Registration</h3>
-                    <p>Join our supportive weekly soccer community where neighbors connect through sport</p>
+                    <p>This is a grassroots form - it will only be for us to reach out once to follow up with information if you want to subscribe. You will not be subscribed to anything by filling this out.</p>
+                    <p style="font-weight: 600; color: #be185d; margin-top: 0.5rem;">If nothing else, putting your name here is like signing a petition to help us show funders our community support. And if any huge updates come along, we'll email.</p>
                 </div>
                 
                 <form id="womensRegistration" onsubmit="handleWomensRegistration(event)" class="registration-form">
@@ -479,25 +474,20 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone">Phone Number (Optional)</label>
                             <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
                         </div>
                         
                         <div class="form-group">
-                            <label for="neighborhood">Your Neighborhood</label>
-                            <input type="text" id="neighborhood" name="neighborhood" placeholder="e.g., Bridgeport, Pilsen">
+                            <label for="experienceLevel">Soccer Experience Level (Optional)</label>
+                            <select id="experienceLevel" name="experienceLevel">
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner - New to soccer</option>
+                                <option value="recreational">Recreational - Play for fun</option>
+                                <option value="intermediate">Intermediate - Some organized experience</option>
+                                <option value="advanced">Advanced - Competitive experience</option>
+                            </select>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="experienceLevel">Soccer Experience Level</label>
-                        <select id="experienceLevel" name="experienceLevel">
-                            <option value="">Select your experience level</option>
-                            <option value="beginner">Beginner - New to soccer</option>
-                            <option value="recreational">Recreational - Play for fun</option>
-                            <option value="intermediate">Intermediate - Some organized experience</option>
-                            <option value="advanced">Advanced - Competitive experience</option>
-                        </select>
                     </div>
                     
                     <div class="form-group">
@@ -536,6 +526,9 @@
             </div>
         </div>
     </section>
+
+    <!-- EmailJS for sending emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <footer>
         <div class="container">
@@ -579,8 +572,90 @@
     </footer>
 
     <script>
+        // Configuration - Set to false to disable forms
+        const TOURNAMENT_FORM_ENABLED = true;
+        const COMMUNITY_FORM_ENABLED = true;
+        const COMMUNITY_EMAIL_ENABLED = false; // Set to true to enable community registration emails
+        
+        // Initialize EmailJS (same credentials as Benavidez tournament)
+        const EMAILJS_PUBLIC_KEY = 'kthWdX2tmNcRrlZyF';
+        const EMAILJS_SERVICE_ID = 'service_faus6nb';
+        const EMAILJS_TEMPLATE_ID = 'template_y274gam';
+        
+        // Initialize EmailJS when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing EmailJS for Women\'s Soccer...');
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+            console.log('EmailJS initialized with public key:', EMAILJS_PUBLIC_KEY);
+            
+            // Check if forms should be disabled
+            if (!TOURNAMENT_FORM_ENABLED) {
+                disableForm('tournamentRegistration', 'Tournament registration is currently closed.');
+            }
+            if (!COMMUNITY_FORM_ENABLED) {
+                disableForm('womensRegistration', 'Community registration is currently closed.');
+            }
+        });
+        
+        function toggleTeamNameField() {
+            const registrationType = document.getElementById('tournamentRegistrationType').value;
+            const teamNameGroup = document.getElementById('teamNameGroup');
+            const teamNameInput = document.getElementById('tournamentTeamName');
+            
+            if (registrationType === 'team') {
+                teamNameGroup.style.display = 'block';
+                teamNameInput.required = true;
+            } else {
+                teamNameGroup.style.display = 'none';
+                teamNameInput.required = false;
+                teamNameInput.value = '';
+            }
+        }
+        
+        function disableForm(formId, message) {
+            const form = document.getElementById(formId);
+            if (form) {
+                const submitButton = form.querySelector('button[type="submit"]');
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Registration Closed';
+                    submitButton.style.background = '#6b7280';
+                    submitButton.style.cursor = 'not-allowed';
+                }
+                
+                // Add disabled message
+                const formNote = form.querySelector('.form-note');
+                if (formNote) {
+                    formNote.textContent = message;
+                    formNote.style.color = '#ef4444';
+                    formNote.style.fontWeight = '600';
+                }
+                
+                // Disable all form inputs
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.disabled = true;
+                    input.style.background = '#f3f4f6';
+                });
+            }
+        }
+        
         function handleTournamentRegistration(event) {
             event.preventDefault();
+            
+            if (!TOURNAMENT_FORM_ENABLED) {
+                alert('Tournament registration is currently closed.');
+                return;
+            }
+            
+            console.log('Tournament form submitted, processing registration...');
+            
+            // Check if EmailJS is available
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not loaded!');
+                alert('Error: Email system is not available. Please contact us directly at nbhdsoccer@gmail.com');
+                return;
+            }
             
             const formData = new FormData(event.target);
             
@@ -591,29 +666,43 @@
                 lastName: formData.get('lastName'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
-                neighborhood: formData.get('neighborhood'),
-                experienceLevel: formData.get('experienceLevel'),
+                registrationType: formData.get('registrationType'),
                 teamName: formData.get('teamName'),
-                divisionPreference: formData.get('divisionPreference'),
+                experienceLevel: formData.get('experienceLevel'),
                 message: formData.get('message')
             };
+            
+            console.log('Tournament registration data prepared:', registrationData);
             
             // Store in localStorage for tournament registrations
             let registrations = JSON.parse(localStorage.getItem('womensTournament2025Registrations') || '[]');
             registrations.push(registrationData);
             localStorage.setItem('womensTournament2025Registrations', JSON.stringify(registrations));
             
+            console.log('Tournament registration saved to localStorage');
+            
+            // Send confirmation emails
+            sendTournamentConfirmationEmail(registrationData);
+            
             // Show success message
-            alert('🏆 Tournament registration successful! We\'ll contact you soon with team details and tournament information. Thank you for joining Chicago\'s first women\'s soccer tournament!');
+            alert('🏆 Tournament registration successful!\n\nYou should receive a confirmation email shortly with your registration details. If you don\'t receive an email within 10 minutes, please check your spam folder or contact us - you may have entered an incorrect email address.\n\nWe\'ll contact you soon with team details and tournament information. Thank you for joining Chicago\'s first women\'s soccer tournament!');
             
             // Reset form
             event.target.reset();
+            toggleTeamNameField(); // Reset team name field visibility
             
-            console.log('Tournament registration saved:', registrationData);
+            console.log('Tournament registration completed successfully');
         }
         
         function handleWomensRegistration(event) {
             event.preventDefault();
+            
+            if (!COMMUNITY_FORM_ENABLED) {
+                alert('Community registration is currently closed.');
+                return;
+            }
+            
+            console.log('Community form submitted, processing registration...');
             
             const formData = new FormData(event.target);
             
@@ -629,24 +718,337 @@
                 lastName: formData.get('lastName'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
-                neighborhood: formData.get('neighborhood'),
                 experienceLevel: formData.get('experienceLevel'),
                 interests: interests,
                 message: formData.get('message')
             };
+            
+            console.log('Community registration data prepared:', registrationData);
             
             // Store in localStorage for community registrations
             let registrations = JSON.parse(localStorage.getItem('womensWeekly2025Registrations') || '[]');
             registrations.push(registrationData);
             localStorage.setItem('womensWeekly2025Registrations', JSON.stringify(registrations));
             
-            // Show success message
-            alert('Welcome to our Women\'s Soccer community! We\'ll be in touch soon with game details and community updates. Thank you for joining us!');
+            console.log('Community registration saved to localStorage');
+            
+            // Send confirmation emails only if enabled
+            if (COMMUNITY_EMAIL_ENABLED) {
+                // Check if EmailJS is available
+                if (typeof emailjs === 'undefined') {
+                    console.error('EmailJS is not loaded!');
+                    alert('Error: Email system is not available. Please contact us directly at nbhdsoccer@gmail.com');
+                    return;
+                }
+                sendCommunityConfirmationEmail(registrationData);
+                
+                // Show success message with email
+                alert('Welcome to our Women\'s Soccer community!\n\nYou should receive a confirmation email shortly with your registration details. If you don\'t receive an email within 10 minutes, please check your spam folder or contact us - you may have entered an incorrect email address.\n\nWe\'ll be in touch soon with game details and community updates. Thank you for joining us!');
+            } else {
+                // Show success message without email
+                alert('Thank you for showing your support for our Women\'s Soccer community!\n\nYour registration helps us demonstrate community interest to funders and supporters. We\'ll be in touch if there are any major updates or opportunities.\n\nThank you for being part of our grassroots movement!');
+            }
             
             // Reset form
             event.target.reset();
             
-            console.log('Community registration saved:', registrationData);
+            console.log('Community registration completed successfully');
+        }
+        
+        function sendTournamentConfirmationEmail(registrationData) {
+            console.log('=== TOURNAMENT EMAIL DEBUGGING START ===');
+            console.log('Attempting to send tournament emails for:', registrationData);
+            console.log('EmailJS Service ID:', EMAILJS_SERVICE_ID);
+            console.log('EmailJS Template ID:', EMAILJS_TEMPLATE_ID);
+            console.log('EmailJS Public Key:', EMAILJS_PUBLIC_KEY);
+            
+            // Test if EmailJS is properly initialized
+            if (typeof emailjs === 'undefined') {
+                console.error('CRITICAL: EmailJS library not loaded!');
+                alert('Email system not available - contact nbhdsoccer@gmail.com directly');
+                return;
+            }
+            
+            // Prepare email template parameters for registrant confirmation
+            const registrantTemplateParams = {
+                user_email: registrationData.email,
+                user_name: `${registrationData.firstName} ${registrationData.lastName}`,
+                from_name: 'Chicago Neighborhood Soccer',
+                reply_to: 'nbhdsoccer@gmail.com',
+                subject: 'Your Women\'s Tournament 2025 Registration Confirmation',
+                message: `Thank you for registering for Chicago's first Women's Soccer Tournament 2025!
+
+Here are your registration details:
+
+Name: ${registrationData.firstName} ${registrationData.lastName}
+Email: ${registrationData.email}
+Phone: ${registrationData.phone || 'Not provided'}
+Registration Type: ${registrationData.registrationType === 'individual' ? 'Individual Registration' : 'Team Registration'}
+${registrationData.teamName ? `Team Name: ${registrationData.teamName}` : ''}
+Experience Level: ${getExperienceLevelLabel(registrationData.experienceLevel) || 'Not specified'}
+Additional Information: ${registrationData.message || 'None provided'}
+
+Tournament Details:
+Date: September 2025 (exact date TBD)
+Location: Chicago (venue TBD)
+Format: Professional tournament setup with awards ceremony
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+What's Next:
+${registrationData.registrationType === 'team' 
+    ? '• We\'ll contact you about team details and registration completion'
+    : '• We\'ll help you find teammates and form/join a team'
+}
+• Tournament date, venue, and schedule announcements
+• Payment information and registration fee details
+• Pre-tournament meetup information
+
+Thank you for being part of Chicago's growing women's soccer community!
+
+Chicago Neighborhood Soccer
+nbhdsoccer@gmail.com`
+            };
+            
+            // Prepare email template parameters for admin notification
+            const adminTemplateParams = {
+                user_email: 'nbhdsoccer@gmail.com',
+                user_name: 'Tournament Admin',
+                from_name: 'Chicago Neighborhood Soccer Registration System',
+                reply_to: registrationData.email,
+                subject: 'New Women\'s Tournament 2025 Registration',
+                message: `New registration received for Women's Tournament 2025:
+
+Name: ${registrationData.firstName} ${registrationData.lastName}
+Email: ${registrationData.email}
+Phone: ${registrationData.phone || 'Not provided'}
+Registration Type: ${registrationData.registrationType === 'individual' ? 'Individual Registration' : 'Team Registration'}
+${registrationData.teamName ? `Team Name: ${registrationData.teamName}` : ''}
+Experience Level: ${getExperienceLevelLabel(registrationData.experienceLevel) || 'Not specified'}
+Additional Information: ${registrationData.message || 'None provided'}
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+Follow up needed:
+${registrationData.registrationType === 'team' 
+    ? '• Contact about team registration completion and payment'
+    : '• Help with team formation and teammate matching'
+}
+• Send tournament details and payment information
+• Add to tournament communication list`
+            };
+            
+            console.log('=== TOURNAMENT REGISTRANT EMAIL PARAMS ===');
+            console.log(JSON.stringify(registrantTemplateParams, null, 2));
+            console.log('=== TOURNAMENT ADMIN EMAIL PARAMS ===');
+            console.log(JSON.stringify(adminTemplateParams, null, 2));
+            
+            // Send confirmation email to registrant
+            console.log('Attempting to send tournament registrant email...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, registrantTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Tournament registrant confirmation email sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send tournament registrant confirmation email');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                    alert(`Warning: There was an issue sending your confirmation email: ${error.message || error.text || 'Unknown error'}. Please contact us at nbhdsoccer@gmail.com to confirm your registration.`);
+                });
+                
+            // Send notification email to admin
+            console.log('Attempting to send tournament admin notification...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, adminTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Tournament admin notification sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send tournament admin notification');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                });
+                
+            console.log('=== TOURNAMENT EMAIL DEBUGGING END ===');
+        }
+        
+        function sendCommunityConfirmationEmail(registrationData) {
+            console.log('=== COMMUNITY EMAIL DEBUGGING START ===');
+            console.log('Attempting to send community emails for:', registrationData);
+            console.log('EmailJS Service ID:', EMAILJS_SERVICE_ID);
+            console.log('EmailJS Template ID:', EMAILJS_TEMPLATE_ID);
+            console.log('EmailJS Public Key:', EMAILJS_PUBLIC_KEY);
+            
+            // Test if EmailJS is properly initialized
+            if (typeof emailjs === 'undefined') {
+                console.error('CRITICAL: EmailJS library not loaded!');
+                alert('Email system not available - contact nbhdsoccer@gmail.com directly');
+                return;
+            }
+            
+            // Prepare email template parameters for registrant confirmation
+            const registrantTemplateParams = {
+                user_email: registrationData.email,
+                user_name: `${registrationData.firstName} ${registrationData.lastName}`,
+                from_name: 'Chicago Neighborhood Soccer',
+                reply_to: 'nbhdsoccer@gmail.com',
+                subject: 'Thank you for supporting Chicago\'s Women\'s Soccer Community!',
+                message: `Thank you for showing your support for Chicago Neighborhood Soccer's Women's Community!
+
+Your registration helps us demonstrate community interest to funders and supporters:
+
+Name: ${registrationData.firstName} ${registrationData.lastName}
+Email: ${registrationData.email}
+Phone: ${registrationData.phone || 'Not provided'}
+Experience Level: ${getExperienceLevelLabel(registrationData.experienceLevel) || 'Not specified'}
+Interests: ${registrationData.interests && registrationData.interests.length > 0 ? registrationData.interests.map(getInterestLabel).join(', ') : 'Not specified'}
+About You: ${registrationData.message || 'No additional information provided'}
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+What This Means:
+• Your name helps us show funders our community support
+• We may reach out once with subscription information if you're interested
+• You'll only hear from us for major updates or opportunities
+• You are NOT automatically subscribed to anything
+
+Women's Wednesday Details (if you want to join):
+When: Every Wednesday Evening
+Time: 8:00 PM - 10:00 PM
+Location: YMCA Rauner, 2700 S Western Ave, Chicago, IL
+Cost: $10 per session
+What to Bring: Water, cleats (indoor or turf), shin guards
+
+Our women's soccer community is built on:
+🏘️ Safe Spaces • 🤝 Strong Community • ⚽ Soccer Excellence
+
+Questions? Reply to this email or contact us at nbhdsoccer@gmail.com
+
+Thank you for being part of our grassroots movement!
+
+Chicago Neighborhood Soccer
+Program Leaders: Nicole & Natalie
+nbhdsoccer@gmail.com`
+            };
+            
+            // Prepare email template parameters for admin notification
+            const adminTemplateParams = {
+                user_email: 'nbhdsoccer@gmail.com',
+                user_name: 'Community Admin',
+                from_name: 'Chicago Neighborhood Soccer Registration System',
+                reply_to: registrationData.email,
+                subject: 'New Women\'s Community Interest Registration',
+                message: `New interest registration received for Women's Weekly Community:
+
+Name: ${registrationData.firstName} ${registrationData.lastName}
+Email: ${registrationData.email}
+Phone: ${registrationData.phone || 'Not provided'}
+Experience Level: ${getExperienceLevelLabel(registrationData.experienceLevel) || 'Not specified'}
+Interests: ${registrationData.interests && registrationData.interests.length > 0 ? registrationData.interests.map(getInterestLabel).join(', ') : 'Not specified'}
+About Them: ${registrationData.message || 'No additional information provided'}
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+Follow up options:
+• Consider for community mailing list if they express interest
+• Potential Wednesday games participant
+• Count toward funder community support metrics`
+            };
+            
+            console.log('=== COMMUNITY REGISTRANT EMAIL PARAMS ===');
+            console.log(JSON.stringify(registrantTemplateParams, null, 2));
+            console.log('=== COMMUNITY ADMIN EMAIL PARAMS ===');
+            console.log(JSON.stringify(adminTemplateParams, null, 2));
+            
+            // Send confirmation email to registrant
+            console.log('Attempting to send community registrant email...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, registrantTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Community registrant confirmation email sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send community registrant confirmation email');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                    alert(`Warning: There was an issue sending your confirmation email: ${error.message || error.text || 'Unknown error'}. Please contact us at nbhdsoccer@gmail.com to confirm your registration.`);
+                });
+                
+            // Send notification email to admin
+            console.log('Attempting to send community admin notification...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, adminTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Community admin notification sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send community admin notification');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                });
+                
+            console.log('=== COMMUNITY EMAIL DEBUGGING END ===');
+        }
+        
+        // Helper functions for cleaner email content
+        function getExperienceLevelLabel(level) {
+            const labels = {
+                'beginner': 'Beginner - New to soccer',
+                'recreational': 'Recreational - Play for fun',
+                'intermediate': 'Intermediate - Some organized experience',
+                'advanced': 'Advanced - Competitive experience'
+            };
+            return labels[level] || level;
+        }
+        
+        function getInterestLabel(interest) {
+            const labels = {
+                'weekly-games': 'Weekly Wednesday Games',
+                'community-events': 'Community Events',
+                'volunteering': 'Volunteering/Leadership'
+            };
+            return labels[interest] || interest;
         }
         
         // Add smooth scroll behavior for internal links
