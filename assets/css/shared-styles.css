@@ -149,6 +149,13 @@ nav {
     transform: translateY(-1px);
 }
 
+/* Active nav link state */
+.nav-links a.active {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+    font-weight: 600;
+}
+
 /* Enhanced Dropdown Menu - Nonprofit Style */
 .dropdown {
     position: relative;
@@ -852,48 +859,54 @@ footer {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile menu dropdown styles */
+/* Mobile nav - 2-row always visible */
 @media (max-width: 768px) {
     .mobile-menu-toggle {
-        display: flex;
+        display: none; /* Hide hamburger - nav always visible */
     }
-    
+
+    header nav.container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .brand-section {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.25rem;
+    }
+
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, var(--primary-charcoal) 0%, var(--warm-gray-600) 100%);
-        flex-direction: column;
-        padding: 1rem 0;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-    }
-    
-    .nav-links.mobile-menu-open {
         display: flex;
-        animation: fadeInDown 0.3s ease;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem 0.75rem;
+        width: 100%;
+        order: 3;
     }
-    
+
     .nav-links li {
         margin: 0;
     }
-    
-    .nav-links > li > a {
-        display: block;
-        padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-left: none;
-        margin: 0;
+
+    .nav-links a {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.4rem;
+        border-bottom: 2px solid transparent;
     }
-    
-    .nav-links > li > a:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-bottom-color: rgba(255, 255, 255, 0.1);
-        transform: none;
-        padding-left: 2.5rem;
+
+    .nav-links a.active {
+        color: var(--primary-green);
+        border-bottom: 2px solid var(--primary-green);
+    }
+
+    .cta-button {
+        order: 2;
+        font-size: 0.65rem;
+        padding: 0.4rem 0.75rem;
+        margin-left: 0;
     }
     
     /* Mobile dropdown content */
@@ -1077,17 +1090,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Simplified mobile - can add hamburger menu later */
-    }
-    
-    .brand-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
+    /* nav-links handled in mobile nav section above */
+
     .tagline {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         margin-top: 0.2rem;
     }
     
