@@ -1,0 +1,229 @@
+/* Academic Document Style - Clean Paper-like Design */
+
+/* Reset and base styles for document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background: #f8f9fa;
+    font-size: 16px;
+}
+
+/* Document container - paper-like */
+.document-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 4rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e1e8ed;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Subtle paper texture effect */
+.document-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 79px, #e1e8ed 79px, #e1e8ed 81px, transparent 81px),
+        linear-gradient(transparent 2.9rem, #f0f3f5 2.9rem, #f0f3f5 3.1rem, transparent 3.1rem);
+    background-size: 82px 3.2rem;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Header section */
+.document-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #34495e;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.document-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.document-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.document-meta {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin-top: 1rem;
+}
+
+/* Content sections */
+.document-content {
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+.section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Lists */
+.section ul, .section ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Emphasis and quotes */
+.section em {
+    font-style: italic;
+    color: #34495e;
+}
+
+.section strong {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    font-style: italic;
+    color: #5a6c7d;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.coming-soon {
+    background: #f39c12;
+}
+
+.status-badge.draft {
+    background: #95a5a6;
+}
+
+/* Contact section */
+.contact-section {
+    background: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 3px;
+    margin: 2rem 0;
+    border-left: 4px solid #2c3e50;
+}
+
+.contact-section h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Footer */
+.document-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #bdc3c7;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .document-container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 1in;
+    }
+    
+    .document-container::before {
+        display: none;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .document-container {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .document-title {
+        font-size: 1.8rem;
+    }
+    
+    .document-container::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-container {
+        margin: 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .section ul, .section ol {
+        margin-left: 1.5rem;
+    }
+}

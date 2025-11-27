@@ -1,0 +1,30 @@
+<header class="admin-header">
+    <nav class="admin-nav">
+        <div class="admin-brand">
+            <a href="/admin/" class="admin-logo">🏠 NBHD Admin</a>
+            <span class="admin-tagline">Tournament & Program Management</span>
+        </div>
+        <ul class="admin-nav-links">
+            <li><a href="/admin/">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Tournaments</a>
+                <div class="dropdown-content">
+                    <a href="/admin/tournaments/benavidez-2025.html">🏆 Benavidez 2025</a>
+                    <a href="/admin/tournaments/womens-2025.html">⚽ Women's Soccer 2025</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Tools</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="exportAllData()">📊 Export All Data</a>
+                    <a href="#" onclick="refreshAllStats()">🔄 Refresh Stats</a>
+                    <a href="../index.html">🌐 Public Site</a>
+                </div>
+            </li>
+        </ul>
+        <div class="admin-status">
+            <span class="status-indicator" id="adminStatus">●</span>
+            <span class="status-text">Admin Mode</span>
+        </div>
+    </nav>
+</header>

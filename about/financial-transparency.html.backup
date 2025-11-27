@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <ti    <div id="org-info" class="org-info">
+        Loading organization info...
+    </div>
+
+    <div class="section-title">REVENUE & SUPPORT</div>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 60%">Revenue Source</th>
+                <th style="width: 40%" class="amount">Amount</th>
+            </tr>
+        </thead>
+        <tbody id="income-revenue">
+            <tr><td colspan="2">Loading revenue & support...</td></tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">PROGRAM EXPENSES</div>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 60%">Category</th>
+                <th style="width: 40%" class="amount">Amount</th>
+            </tr>
+        </thead>
+        <tbody id="program-expenses">
+            <tr><td colspan="2">Loading program expenses...</td></tr>
+        </tbody>
+    </table>le">Loading Financial Report...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+            color: #333;
+            line-height: 1.4;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #16a34a;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: #16a34a;
+            margin: 0 0 5px 0;
+            font-size: 24px;
+        }
+        .header .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .org-info {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .org-info strong {
+            color: #16a34a;
+        }
+        .section-title {
+            background: #16a34a;
+            color: white;
+            padding: 8px 12px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        th {
+            background: #f1f5f9;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #cbd5e1;
+            font-weight: 600;
+        }
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .amount {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+        .subtotal-row {
+            font-weight: bold;
+            background: #f8f9fa;
+        }
+        .total-row {
+            font-weight: bold;
+            background: #16a34a;
+            color: white;
+            font-size: 14px;
+        }
+        .notes {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+        .notes strong {
+            color: #92400e;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid #e2e8f0;
+            font-size: 11px;
+            color: #666;
+        }
+        .signature-section {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature-line {
+            width: 45%;
+        }
+        .signature-line p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .line {
+            border-top: 1px solid #333;
+            margin: 30px 0 5px 0;
+        }
+        .download-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #16a34a;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        .download-button:hover {
+            background: #15803d;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .download-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-button" onclick="window.print()">📄 Download PDF</button>
+    
+    <div class="header">
+        <h1 id="org-name">Loading...</h1>
+        <div class="subtitle">Statement of Expenses</div>
+        <div class="subtitle" id="fiscal-period">Loading...</div>
+    </div>
+
+    <div class="org-info" id="org-info">
+        Loading organization information...
+    </div>
+
+    <div class="section-title">PROGRAM EXPENSES</div>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 60%">Expense Category</th>
+                <th style="width: 40%" class="amount">Amount</th>
+            </tr>
+        </thead>
+        <tbody id="program-expenses">
+            <tr><td colspan="2">Loading...</td></tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">ADMINISTRATIVE EXPENSES</div>
+    <table>
+        <tbody id="admin-expenses">
+            <tr><td colspan="2">Loading...</td></tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">FUNDRAISING EXPENSES</div>
+    <table>
+        <tbody id="fundraising-expenses">
+            <tr><td colspan="2">Loading...</td></tr>
+        </tbody>
+    </table>
+
+        <table id="total-table">
+        <tbody>
+            <tr class="total-row">
+                <td id="total-label">TOTAL EXPENSES</td>
+                <td class="amount" id="total-amount">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">NET POSITION SUMMARY</div>
+    <table id="net-position-table">
+        <tbody>
+            <tr>
+                <td>Total Revenue & Support</td>
+                <td class="amount" id="total-revenue">Loading...</td>
+            </tr>
+            <tr>
+                <td>Total Expenses</td>
+                <td class="amount" id="total-expenses-summary">Loading...</td>
+            </tr>
+            <tr class="total-row">
+                <td id="net-position-label">Change in Net Assets (Revenue - Expenses)</td>
+                <td class="amount" id="net-position-amount">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="notes">
+        <strong style="color: #92400e;">📋 UNAUDITED FINANCIAL STATEMENT NOTES:</strong><br>
+        <div id="important-notes">Loading notes...</div>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #f59e0b;">
+            <strong style="color: #92400e;">Statement Basis:</strong> This unaudited Statement of Activities presents revenue and expenses for the fiscal year on an accrual basis. It provides a complete financial overview suitable for community transparency and grant reporting purposes.
+        </div>
+    </div>
+
+    <div class="section-title">BOARD PERSONAL CONTRIBUTIONS* (NOT REFLECTED ABOVE)</div>
+    <table id="board-contributions">
+        <thead>
+            <tr>
+                <th style="width: 60%">Board-Funded Expense Category</th>
+                <th style="width: 40%" class="amount">Estimated Annual Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Technology Platform (Meetup RSVP System - Annual)</td>
+                <td class="amount">$1,080.00</td>
+            </tr>
+            <tr>
+                <td>Program Insurance (Liability & Event Coverage)</td>
+                <td class="amount">$770.00</td>
+            </tr>
+            <tr>
+                <td>Nonprofit Filing & Compliance Fees (990 submissions)</td>
+                <td class="amount">$150.00</td>
+            </tr>
+            <tr>
+                <td>Fundraising & Promotional Materials</td>
+                <td class="amount">$300.00</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td>Board Personal Contributions Subtotal</td>
+                <td class="amount">$2,300.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="section-title">EXPENSE DISTRIBUTION SUMMARY</div>
+    <table id="distribution-summary">
+        <tbody>
+            <tr><td colspan="3">Loading distribution summary...</td></tr>
+        </tbody>
+    </table>
+
+    <div class="signature-section" id="signature-section">
+        Loading signature section...
+    </div>
+
+    <div class="footer">
+        <p id="footer-content">Loading footer...</p>
+    </div>
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, starting financial report loader...');
+            
+            // Show loading state
+            document.body.style.opacity = '0.7';
+            const loadingMessage = document.createElement('div');
+            loadingMessage.id = 'loading-overlay';
+            loadingMessage.innerHTML = `
+                <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                            background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                            z-index: 1000; text-align: center;">
+                    <h3 style="margin: 0 0 10px 0; color: #16a34a;">Loading Financial Report...</h3>
+                    <p style="margin: 0; color: #666;">Please wait while we load the data</p>
+                </div>`;
+            document.body.appendChild(loadingMessage);
+            
+            // Financial report loader
+            fetch('../js/financial-report-config.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(config => {
+                console.log('Config loaded successfully:', config);
+                
+                // Check if incomeRevenue exists
+                if (!config.incomeRevenue) {
+                    console.error('incomeRevenue section not found in config');
+                    throw new Error('incomeRevenue section missing from configuration');
+                }
+                // Helper function to safely update element content
+                const safeUpdateElement = (id, content) => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.textContent = content;
+                    } else {
+                        console.warn(`Element with id '${id}' not found`);
+                    }
+                };
+                
+                const safeUpdateHTML = (id, html) => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.innerHTML = html;
+                    } else {
+                        console.warn(`Element with id '${id}' not found`);
+                    }
+                };
+
+                // Update page title and header
+                safeUpdateElement('page-title', `${config.reportInfo.organizationName} - FY${config.reportInfo.fiscalYear} Financial Statement`);
+                safeUpdateElement('org-name', config.reportInfo.organizationName.toUpperCase());
+                safeUpdateElement('fiscal-period', `Unaudited Statement of Activities - FY${config.reportInfo.fiscalYear} (${config.reportInfo.reportingPeriod})`);
+
+                // Update organization info
+                safeUpdateHTML('org-info', `
+                    <strong>Organization:</strong> ${config.reportInfo.organizationName} (${config.reportInfo.shortName})<br>
+                    <strong>Tax Status:</strong> ${config.reportInfo.taxStatus}<br>
+                    <strong>EIN:</strong> ${config.reportInfo.ein}<br>
+                    <strong>Fiscal Year:</strong> ${config.reportInfo.fiscalYearType}<br>
+                    <strong>Reporting Period:</strong> FY${config.reportInfo.fiscalYear} (${config.reportInfo.reportingPeriod})
+                `);
+
+                // Helper function to format currency
+                const formatCurrency = (amount) => `$${amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
+
+                // Helper function to calculate subtotal
+                const calculateSubtotal = (items) => items.reduce((sum, item) => sum + item.amount, 0);
+
+                // Populate income/revenue section
+                const revenueSubtotal = calculateSubtotal(config.incomeRevenue);
+                safeUpdateHTML('income-revenue', 
+                    config.incomeRevenue.map(revenue => 
+                        `<tr><td>${revenue.category}</td><td class="amount">${formatCurrency(revenue.amount)}</td></tr>`
+                    ).join('') + 
+                    `<tr class="subtotal-row"><td>Total Revenue & Support</td><td class="amount">${formatCurrency(revenueSubtotal)}</td></tr>`);
+
+                // Populate program expenses
+                const programSubtotal = calculateSubtotal(config.programExpenses);
+                safeUpdateHTML('program-expenses', 
+                    config.programExpenses.map(expense => 
+                        `<tr><td>${expense.category}</td><td class="amount">${formatCurrency(expense.amount)}</td></tr>`
+                    ).join('') + 
+                    `<tr class="subtotal-row"><td>Program Expenses Subtotal</td><td class="amount">${formatCurrency(programSubtotal)}</td></tr>`);
+
+                // Populate administrative expenses
+                const adminSubtotal = calculateSubtotal(config.administrativeExpenses);
+                safeUpdateHTML('admin-expenses', 
+                    config.administrativeExpenses.map(expense => 
+                        `<tr><td>${expense.category}</td><td class="amount">${formatCurrency(expense.amount)}</td></tr>`
+                    ).join('') + 
+                    `<tr class="subtotal-row"><td>Administrative Expenses Subtotal</td><td class="amount">${formatCurrency(adminSubtotal)}</td></tr>`);
+
+                // Populate fundraising expenses
+                const fundraisingSubtotal = calculateSubtotal(config.fundraisingExpenses);
+                safeUpdateHTML('fundraising-expenses', 
+                    config.fundraisingExpenses.map(expense => 
+                        `<tr><td>${expense.category}</td><td class="amount">${formatCurrency(expense.amount)}</td></tr>`
+                    ).join('') + 
+                    `<tr class="subtotal-row"><td>Fundraising Expenses Subtotal</td><td class="amount">${formatCurrency(fundraisingSubtotal)}</td></tr>`);
+
+                // Calculate and show total expenses
+                const totalExpenses = programSubtotal + adminSubtotal + fundraisingSubtotal;
+                document.getElementById('total-label').textContent = `TOTAL EXPENSES - FY${config.reportInfo.fiscalYear}`;
+                document.getElementById('total-amount').textContent = formatCurrency(totalExpenses);
+
+                // Calculate and show net position summary
+                const netPosition = revenueSubtotal - totalExpenses;
+                document.getElementById('total-revenue').textContent = formatCurrency(revenueSubtotal);
+                document.getElementById('total-expenses-summary').textContent = formatCurrency(totalExpenses);
+                document.getElementById('net-position-amount').textContent = formatCurrency(netPosition);
+                
+                // Style net position based on positive/negative
+                const netPositionRow = document.getElementById('net-position-amount').parentElement;
+                if (netPosition >= 0) {
+                    netPositionRow.style.backgroundColor = '#16a34a';
+                    document.getElementById('net-position-label').textContent = 'Net Surplus (Revenue exceeds Expenses)';
+                } else {
+                    netPositionRow.style.backgroundColor = '#dc2626';
+                    document.getElementById('net-position-label').textContent = 'Net Deficit (Expenses exceed Revenue)';
+                }
+
+                // Populate important notes
+                document.getElementById('important-notes').innerHTML = 
+                    config.importantNotes.map(note => `• ${note}`).join('<br>');
+
+                // Calculate and populate distribution summary
+                const boardContributions = 2300.00; // Board personal contributions
+                const totalCommunityValue = totalExpenses + boardContributions;
+                
+                const programPercent = ((programSubtotal / totalExpenses) * 100).toFixed(1);
+                const adminPercent = ((adminSubtotal / totalExpenses) * 100).toFixed(1);
+                const fundraisingPercent = ((fundraisingSubtotal / totalExpenses) * 100).toFixed(1);
+
+                document.getElementById('distribution-summary').innerHTML = `
+                    <tr>
+                        <td>Program Services (Org Budget)</td>
+                        <td class="amount">${programPercent}%</td>
+                        <td class="amount">${formatCurrency(programSubtotal)}</td>
+                    </tr>
+                    <tr>
+                        <td>Administrative (Org Budget)</td>
+                        <td class="amount">${adminPercent}%</td>
+                        <td class="amount">${formatCurrency(adminSubtotal)}</td>
+                    </tr>
+                    <tr>
+                        <td>Fundraising (Org Budget)</td>
+                        <td class="amount">${fundraisingPercent}%</td>
+                        <td class="amount">${formatCurrency(fundraisingSubtotal)}</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td>Organizational Budget Total</td>
+                        <td class="amount">100.0%</td>
+                        <td class="amount">${formatCurrency(totalExpenses)}</td>
+                    </tr>
+                    <tr>
+                        <td>Board Personal Contributions*</td>
+                        <td class="amount">N/A</td>
+                        <td class="amount">${formatCurrency(boardContributions)}</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>Total Community Value Delivered</td>
+                        <td class="amount">N/A</td>
+                        <td class="amount">${formatCurrency(totalCommunityValue)}</td>
+                    </tr>
+                `;
+                
+                // Add footnote explanation after distribution summary
+                const footnoteHtml = `
+                    <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 20px 0; font-size: 13px;">
+                        <strong style="color: #92400e;">* Board Personal Contributions Explanation:</strong><br>
+                        The amounts listed under "Board Personal Contributions" represent essential services and expenses that are personally funded by board members at no cost to the organization. This includes the annual Meetup platform subscription ($1,080), program insurance coverage ($770), nonprofit compliance and filing fees ($150), and promotional materials ($300). These contributions totaling $2,300 annually demonstrate the board's personal investment in community programming beyond the organizational budget.
+                    </div>
+                `;
+                document.getElementById('distribution-summary').insertAdjacentHTML('afterend', footnoteHtml);
+
+                // Populate signature section
+                const signatureWidth = Math.floor(100 / config.signatories.length);
+                document.getElementById('signature-section').innerHTML = 
+                    config.signatories.map(signatory => `
+                        <div class="signature-line" style="width: ${signatureWidth}%;">
+                            <div class="line"></div>
+                            <p><strong>${signatory.name}</strong></p>
+                            <p>${signatory.title}</p>
+                            <p>Date: _______________</p>
+                        </div>
+                    `).join('');
+
+                // Populate footer
+                safeUpdateHTML('footer-content', `
+                    <strong>${config.reportInfo.organizationName}</strong> | ${config.reportInfo.taxStatus}<br>
+                    ${config.footerInfo.tagline}<br>
+                    Contact: ${config.footerInfo.contact} | ${config.footerInfo.location}
+                `);
+                
+                // Remove loading overlay and restore opacity
+                const loadingOverlay = document.getElementById('loading-overlay');
+                if (loadingOverlay) {
+                    loadingOverlay.remove();
+                }
+                document.body.style.opacity = '1';
+                console.log('Financial report loaded successfully!');
+            })
+            .catch(error => {
+                console.error('Error loading financial report config:', error);
+                
+                // Remove loading overlay
+                const loadingOverlay = document.getElementById('loading-overlay');
+                if (loadingOverlay) {
+                    loadingOverlay.remove();
+                }
+                document.body.style.opacity = '1';
+                
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding: 50px;">
+                        <h2 style="color: #dc2626;">Error Loading Financial Report</h2>
+                        <p><strong>Error Details:</strong> ${error.message}</p>
+                        <p>Please check the browser console for more details.</p>
+                        <p>Configuration file path: ../js/financial-report-config.json</p>
+                        <button onclick="window.location.reload()" style="margin-top: 20px; padding: 10px 20px; background: #16a34a; color: white; border: none; border-radius: 4px; cursor: pointer;">Retry Loading</button>
+                    </div>`;
+            });
+        }); // End DOMContentLoaded event listener
+    </script>
+</body>
+</html>

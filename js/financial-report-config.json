@@ -1,0 +1,122 @@
+{
+  "reportInfo": {
+    "organizationName": "Chicago Neighborhood Soccer",
+    "shortName": "NBHD Soccer",
+    "fiscalYear": "2024",
+    "reportingPeriod": "January 1, 2024 - December 31, 2024",
+    "taxStatus": "501(c)(3) Nonprofit Organization",
+    "ein": "88-3862761",
+    "fiscalYearType": "Calendar Year (January 1 - December 31)"
+  },
+  "programExpenses": [
+    {
+      "category": "Equipment & Supplies (balls, cones, jerseys, first aid)",
+      "amount": 2082.68
+    },
+    {
+      "category": "Facility Rentals (field & gym space for programs)",
+      "amount": 9645.0
+    },
+    {
+      "category": "Referee & Coaching Stipends",
+      "amount": 0
+    },
+    {
+      "category": "Event Costs (Benavidez Tournament, awards, celebrations)",
+      "amount": 1102.6200000000001
+    },
+    {
+      "category": "Program Insurance",
+      "amount": 0
+    }
+  ],
+  "administrativeExpenses": [
+    {
+      "category": "Website Hosting & Technology (Meetup, Discord, domain)",
+      "amount": 0
+    },
+    {
+      "category": "Marketing Materials & Printing",
+      "amount": 0
+    },
+    {
+      "category": "Banking & Payment Processing Fees",
+      "amount": 40.0
+    },
+    {
+      "category": "Legal & Compliance (501c3 filing, corporate filings)",
+      "amount": 0
+    },
+    {
+      "category": "Office Supplies & Communications",
+      "amount": 0
+    }
+  ],
+  "fundraisingExpenses": [
+    {
+      "category": "Tournament & Event Promotion",
+      "amount": 0
+    },
+    {
+      "category": "Donor Communications & Materials",
+      "amount": 0
+    }
+  ],
+  "importantNotes": [
+    "Chicago Neighborhood Soccer operates primarily through volunteer leadership, with no paid staff positions in FY2024.",
+    "All fundraising proceeds (100%) are redirected to community causes and program operations.",
+    "The organization received 501(c)(3) tax-exempt status in 2024.",
+    "As a small nonprofit with gross receipts under $50,000, NBHD Soccer files Form 990-N (e-Postcard) annually.",
+    "Program expenses reflect direct community impact through youth programming, pickup games, and charitable events.",
+    "* Board Personal Contributions: Technology services ($1,080 annual Meetup platform), insurance premiums ($770), nonprofit filing fees ($150), and promotional materials ($300) are personally funded by board members and not reflected in organizational expenses. This represents $2,300 in additional annual value contributed to the community at no cost to the organization."
+  ],
+  "signatories": [
+    {
+      "name": "Andre Daniel Paredes, PhD",
+      "title": "Co-Founder & Board President"
+    },
+    {
+      "name": "Diego Moreno",
+      "title": "Co-Founder & Board Vice President"
+    },
+    {
+      "name": "Julian da Silva",
+      "title": "Co-Founder & Board Treasurer"
+    },
+    {
+      "name": "Jordan da Silva",
+      "title": "Co-Founder & Board Secretary"
+    }
+  ],
+  "footerInfo": {
+    "tagline": "Building Stronger Communities Through Soccer | From Pickup to Purpose\u2014Stronger Together",
+    "contact": "nbhdsoccer@gmail.com",
+    "location": "Based in Chicago's South & West Side Neighborhoods"
+  },
+  "incomeRevenue": [
+    {
+      "category": "Program Fees & Community Donations",
+      "amount": 5739.5
+    },
+    {
+      "category": "Tournament Registration Fees",
+      "amount": 5250.0
+    },
+    {
+      "category": "Grants & Sponsorships",
+      "amount": 50.0
+    },
+    {
+      "category": "Cash Deposits - Community Collections",
+      "amount": 8480.0
+    },
+    {
+      "category": "Board Member Contributions/Reimbursements",
+      "amount": 0
+    },
+    {
+      "category": "Other Income & Transfers",
+      "amount": 0
+    }
+  ]
+}

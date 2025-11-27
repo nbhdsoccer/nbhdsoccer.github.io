@@ -1,0 +1,120 @@
+<!-- EmailJS Template for Tournament Registration Confirmation -->
+<!-- Copy this content into your EmailJS template -->
+
+<div style="font-family: 'Open Sans', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: white; color: #374151;">
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #10b981 0%, #16a34a 100%); color: white; padding: 2rem; text-align: center;">
+        <h1 style="margin: 0; font-family: 'Poppins', sans-serif;">🏆 Registration Confirmed</h1>
+        <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">David Benavidez Memorial Tournament</p>
+    </div>
+    
+    <!-- Main Content -->
+    <div style="padding: 2rem;">
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Hello <strong>{{to_name}}</strong>,</p>
+        
+        <p style="line-height: 1.6; margin-bottom: 1.5rem;">Thank you for registering for the David Benavidez Memorial Tournament! Your participation honors David's legacy of service and community building.</p>
+        
+        <!-- Registration Details Card -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+            <h3 style="color: #16a34a; margin-top: 0; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">📋 Registration Details</h3>
+            
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Team Name:</td>
+                    <td style="padding: 0.5rem 0;">{{team_name}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Registration Type:</td>
+                    <td style="padding: 0.5rem 0;">{{registration_type}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Captain:</td>
+                    <td style="padding: 0.5rem 0;">{{captain_name}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Email:</td>
+                    <td style="padding: 0.5rem 0;">{{captain_email}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Phone:</td>
+                    <td style="padding: 0.5rem 0;">{{captain_phone}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Players:</td>
+                    <td style="padding: 0.5rem 0;">{{player_count}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #374151;">Registered:</td>
+                    <td style="padding: 0.5rem 0;">{{registration_date}}</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Memorial Message (if provided) -->
+        {{#memorial_message}}
+        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid #f59e0b; border-radius: 8px; padding: 1rem; margin: 1.5rem 0;">
+            <h4 style="color: #92400e; margin-top: 0; margin-bottom: 0.5rem;">💝 Your Memorial Message</h4>
+            <p style="color: #78350f; font-style: italic; margin: 0; line-height: 1.5;">"{{memorial_message}}"</p>
+        </div>
+        {{/memorial_message}}
+        
+        <!-- Tournament Information -->
+        <div style="background: #dbeafe; border: 1px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+            <h3 style="color: #1e40af; margin-top: 0; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">🏆 Tournament Information</h3>
+            
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #1e40af;">📅 Date:</td>
+                    <td style="padding: 0.5rem 0; color: #1e40af;">{{tournament_date}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #1e40af;">📍 Venue:</td>
+                    <td style="padding: 0.5rem 0; color: #1e40af;">{{venue}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #1e40af;">⚽ Format:</td>
+                    <td style="padding: 0.5rem 0; color: #1e40af;">8v8 Soccer Tournament</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem 0; font-weight: 600; color: #1e40af;">🕐 Time:</td>
+                    <td style="padding: 0.5rem 0; color: #1e40af;">10:00 AM - 2:00 PM</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Next Steps -->
+        <div style="background: #ecfdf5; border: 1px solid #10b981; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+            <h3 style="color: #16a34a; margin-top: 0; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">📋 Next Steps</h3>
+            <p style="margin: 0; color: #065f46; line-height: 1.6;">We will contact you within 24-48 hours with additional details including:</p>
+            <ul style="color: #065f46; line-height: 1.6; margin: 1rem 0;">
+                <li>Payment instructions</li>
+                <li>Tournament schedule</li>
+                <li>Team logistics</li>
+                <li>Parking information</li>
+            </ul>
+        </div>
+        
+        <p style="line-height: 1.6; margin: 1.5rem 0;">The Benavidez family and our entire organization are grateful for your participation in honoring David's memory.</p>
+        
+        <p style="line-height: 1.6; margin: 1.5rem 0;"><strong>Questions?</strong> Reply to this email or contact us at <a href="mailto:nbhdsoccer@gmail.com" style="color: #16a34a;">nbhdsoccer@gmail.com</a></p>
+    </div>
+    
+    <!-- Footer -->
+    <div style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 2rem; text-align: center;">
+        <p style="margin: 0; color: #6b7280; font-size: 0.9rem; line-height: 1.5;">
+            <strong>In service and soccer,</strong><br>
+            Chicago Neighborhood Soccer<br>
+            David Benavidez Memorial Tournament Committee
+        </p>
+        
+        <div style="margin: 1.5rem 0; padding: 1rem; background: white; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <p style="margin: 0; color: #6b7280; font-size: 0.85rem; font-style: italic;">
+                This tournament supports community health initiatives and honors the legacy of David Benavidez, who dedicated his life to serving others.
+            </p>
+        </div>
+        
+        <p style="margin: 0; color: #9ca3af; font-size: 0.8rem;">
+            Visit us at <a href="https://nbhdsoccer.org" style="color: #16a34a;">nbhdsoccer.org</a>
+        </p>
+    </div>
+</div>
