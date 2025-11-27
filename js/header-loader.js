@@ -160,8 +160,9 @@ async function loadHeader() {
             headerContainer.innerHTML = headerHTML;
             console.log('Header loaded successfully');
             
-            // Initialize mobile menu after header is inserted
+            // Initialize navigation after header is inserted
             initializeMobileMenu();
+            setActiveNavLink();
         } else {
             console.error('Header container not found');
         }
@@ -172,56 +173,53 @@ async function loadHeader() {
 }
 
 function initializeMobileMenu() {
-    console.log('Initializing mobile menu...');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    console.log('Mobile menu toggle:', mobileMenuToggle);
-    console.log('Nav links:', navLinks);
-    
-    if (mobileMenuToggle && navLinks) {
-        console.log('Setting up mobile menu event listeners...');
-        
-        mobileMenuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Mobile menu toggle clicked!');
-            
-            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle menu visibility
-            navLinks.classList.toggle('mobile-menu-open');
-            
-            // Update aria-expanded for accessibility
-            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
-            
-            // Toggle hamburger animation
-            mobileMenuToggle.classList.toggle('active');
-            
-            console.log('Menu toggled, open:', !isExpanded);
-        });
-        
-        // Close mobile menu when clicking on a link
-        navLinks.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A') {
-                console.log('Menu link clicked, closing menu');
-                navLinks.classList.remove('mobile-menu-open');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                mobileMenuToggle.classList.remove('active');
+    // Mobile menu no longer needed - nav is always visible
+    // But we keep this function for potential future use
+}
+
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // Define which paths belong to which nav section
+    const navSections = {
+        'index.html': 'Home',
+        'about/': 'About',
+        'community-soccer/': 'Community',
+        'youth-programs/': 'Youth',
+        'events/': 'Events',
+        'support/': 'Support'
+    };
+
+    // Find which section we're in
+    let activeSection = null;
+
+    // Check for home page
+    if (currentPath === '/' || currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
+        // Only mark Home active if we're actually on the root index
+        const pathParts = currentPath.split('/').filter(p => p);
+        if (pathParts.length === 0 || (pathParts.length === 1 && pathParts[0] === 'index.html')) {
+            activeSection = 'Home';
+        }
+    }
+
+    // Check for section pages
+    if (!activeSection) {
+        for (const [pathPart, section] of Object.entries(navSections)) {
+            if (pathPart !== 'index.html' && currentPath.includes(pathPart)) {
+                activeSection = section;
+                break;
+            }
+        }
+    }
+
+    // Apply active class to matching nav link
+    if (activeSection) {
+        navLinks.forEach(link => {
+            if (link.textContent.trim() === activeSection) {
+                link.classList.add('active');
             }
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                navLinks.classList.remove('mobile-menu-open');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                mobileMenuToggle.classList.remove('active');
-            }
-        });
-        
-        console.log('Mobile menu initialized successfully');
-    } else {
-        console.error('Mobile menu elements not found!');
     }
 }
 
