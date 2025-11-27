@@ -6,7 +6,7 @@
 
 ## About
 
-Chicago Neighborhood Soccer (NBHD Soccer) is a 501(c)(3) nonprofit organization building inclusive communities through soccer across Chicago's South and West Side neighborhoods. Founded in 2022 by community leaders with 10+ years of organizing experience, we've grown to over 6,500 members through authentic relationships and word-of-mouth.
+Chicago Neighborhood Soccer (NBHD Soccer) is a 501(c)(3) nonprofit organization building inclusive communities through soccer across Chicago's South and West Side neighborhoods. Founded in 2012 as pickup games, incorporated in 2022, and achieving 501(c)(3) status in 2025, we've grown to over 7,000 members through authentic relationships and word-of-mouth.
 
 ## Our Mission
 

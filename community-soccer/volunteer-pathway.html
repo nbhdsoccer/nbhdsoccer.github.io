@@ -3,170 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From Player to Volunteer - Community Leadership Development | NBHD Soccer</title>
-    <meta name="description" content="Leadership pathway for community soccer players transitioning to volunteer roles through phased development and tech contributions.">
-    
-    <!-- Academic document styling -->
+    <title>Volunteer | NBHD Soccer</title>
+    <meta name="description" content="Volunteer opportunities with Chicago Neighborhood Soccer. 501(c)(3) nonprofit, 100% volunteer-powered.">
+
     <link rel="stylesheet" href="../assets/css/shared-styles.css">
-    <link rel="stylesheet" href="../assets/css/academic-document.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-    
+
     <!-- Google Analytics -->
     <script src="../js/analytics.js"></script>
+
+    <style>
+        .volunteer-hero {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 2rem 0 1.5rem;
+            text-align: center;
+        }
+        .volunteer-hero h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .volunteer-hero p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        .volunteer-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .volunteer-section {
+            margin-bottom: 2rem;
+        }
+        .volunteer-section h2 {
+            font-size: 1.1rem;
+            color: #16a34a;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        .volunteer-section p, .volunteer-section li {
+            font-size: 0.85rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        .volunteer-section ul {
+            padding-left: 1.25rem;
+            margin: 0.5rem 0;
+        }
+        .volunteer-section li {
+            margin-bottom: 0.4rem;
+        }
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .role-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .role-card h3 {
+            font-size: 0.9rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .role-card p {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin: 0;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 0.95rem;
+            color: #0c4a6e;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p {
+            font-size: 0.8rem;
+            color: #0369a1;
+            margin: 0;
+        }
+        .tbd-badge {
+            background: #fbbf24;
+            color: #374151;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .coming-badge {
+            background: #6b7280;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .contact-box {
+            background: #16a34a;
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .contact-box h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-box p {
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+        }
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div id="header-container"></div>
     <script src="../js/header-loader.js"></script>
-    
-    <main>
-        <div class="document-container">
-            <header class="document-header">
-                <h1 class="document-title">From Player to Volunteer</h1>
-                <p class="document-subtitle">Leadership Development Through Community Soccer</p>
-                <div class="document-meta">
-                    <span class="status-badge">Active Program</span><br>
-                    Chicago Neighborhood Soccer | 501(c)(3) Tax-Exempt<br>
-                    Current Status: 100% Volunteer-Led | 6-7 Days/Week Programming
+
+    <!-- Community Soccer Tab Navigation -->
+    <nav class="section-tabs">
+        <div class="container">
+            <a href="overview.html" class="tab-link">Overview</a>
+            <a href="pickup.html" class="tab-link">Weekly Pickup</a>
+            <a href="womens.html" class="tab-link">Women's Soccer</a>
+            <a href="volunteer-pathway.html" class="tab-link active">Volunteer</a>
+            <a href="https://openfutbol.github.io" class="tab-link" target="_blank">OpenFutbol</a>
+        </div>
+    </nav>
+
+    <section class="volunteer-hero">
+        <div class="container">
+            <h1>Volunteer With Us</h1>
+            <p>501(c)(3) Nonprofit | 100% Volunteer-Powered</p>
+        </div>
+    </section>
+
+    <div class="volunteer-content">
+
+        <div class="volunteer-section">
+            <h2>What We Need</h2>
+            <div class="role-grid">
+                <div class="role-card">
+                    <h3>Game Hosts</h3>
+                    <p>Lead weekly pickup sessions</p>
                 </div>
-            </header>
-
-            <div class="document-content">
-                <section class="section">
-                    <h2>Program Overview</h2>
-                    <p>Our volunteer pathway demonstrates how pickup soccer players naturally evolve into community leaders. What started as Friday programming has grown to 6-7 days per week through developed volunteer leadership. This is a 100% volunteer-driven initiative where you join a close-knit group that meets biweekly, with board meetings weekly. We grow as friends while building community infrastructure.</p>
-                </section>
-
-                <section class="section">
-                    <h2>Phased Leadership Development</h2>
-                    
-                    <h3>Phase 1: Player Engagement</h3>
-                    <ul>
-                        <li>Regular participation in community soccer programming</li>
-                        <li>Understanding of group culture and community values</li>
-                        <li>Basic commitment to consistent involvement</li>
-                    </ul>
-
-                    <h3>Phase 2: Event Support</h3>
-                    <ul>
-                        <li>Assist with game setup and coordination</li>
-                        <li>Support community events and tournaments</li>
-                        <li>Join Discord communication channels</li>
-                    </ul>
-
-                    <h3>Phase 3: Leadership Responsibilities</h3>
-                    <ul>
-                        <li>Stand up and lead programming for specific days</li>
-                        <li>Coordinate with existing leaders on expansion</li>
-                        <li>Participate in biweekly volunteer meetings</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h2>Technical Contribution Opportunities</h2>
-                    <p>For technically inclined volunteers, we maintain open-source projects that support grassroots sports organizations:</p>
-                    
-                    <h3>Open Source Web Applications</h3>
-                    <ul>
-                        <li><strong>Registration System:</strong> Web app for tournament and event registration</li>
-                        <li><strong>Community Management Tools:</strong> Designed for grassroots groups</li>
-                        <li><strong>GitHub Repository:</strong> <a href="https://openfutbol.github.io" target="_blank">openfutbol.github.io</a></li>
-                        <li><strong>Development Focus:</strong> Transitioning web apps to Flask/React framework architecture</li>
-                    </ul>
-
-                    <h3>Basic Dev Requirements</h3>
-                    <ul>
-                        <li>Basic proficiency in web development (HTML/CSS/JavaScript)</li>
-                        <li>Understanding of Git version control</li>
-                        <li>Ability to work collaboratively on open-source projects</li>
-                        <li>Commitment to community-centered development principles</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h2>Community Structure</h2>
-                    <p>Our volunteer community operates with transparent, collaborative governance:</p>
-                    
-                    <ul>
-                        <li><strong>Volunteer Meetings:</strong> Biweekly community coordination</li>
-                        <li><strong>Board Meetings:</strong> Weekly operational planning</li>
-                        <li><strong>Communication:</strong> Active Discord community for real-time coordination</li>
-                        <li><strong>Growth Philosophy:</strong> Personal relationships and community friendship as foundation</li>
-                    </ul>
-
-                    <blockquote>
-                        "We are close and grow as friends while building sustainable community infrastructure that serves Chicago neighborhoods."
-                    </blockquote>
-                </section>
-
-                <div class="contact-section">
-                    <h3>Join Our Volunteer Community</h3>
-                    <p>Ready to transition from player to community leader? Connect with us through our established channels:</p>
-                    
-                    <p><strong>Discord Community:</strong> <a href="https://discord.gg/WWvEbbvg3V" target="_blank">Join Community Discord</a><br>
-                    <strong>Email Contact:</strong> <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer Leadership Interest">nbhdsoccer@gmail.com</a><br>
-                    <strong>GitHub Projects:</strong> <a href="https://openfutbol.github.io" target="_blank">openfutbol.github.io</a></p>
-                    
-                    <p><em>Include your current involvement level, specific interests (event coordination, tech contributions, program leadership), and availability for biweekly meetings.</em></p>
+                <div class="role-card">
+                    <h3>Coaches</h3>
+                    <p>Youth and community programs</p>
                 </div>
-
-                <section class="section">
-                    <h2>Current Leadership Needs</h2>
-                    <p>We actively seek volunteers ready to stand up programming for additional days and expand our 6-7 day weekly schedule. Priority areas include:</p>
-                    
-                    <ul>
-                        <li>Weekend morning programming coordination</li>
-                        <li>Technical project management and development</li>
-                        <li>Partnership liaison and business development coordination</li>
-                        <li>Event planning and tournament organization</li>
-                        <li>Grant writing and application support</li>
-                    </ul>
-
-                    <p>All positions are currently volunteer-based with opportunities for significant community impact and personal leadership development. For business development and account management roles, we may open paid positions soon—volunteering is an excellent way to get started in these areas.</p>
-                    
-                    <p><em>Note: We are actively applying for grants to support program expansion and potential staff positions.</em></p>
-                </section>
+                <div class="role-card">
+                    <h3>After-School Staff</h3>
+                    <p>REC 77 school partnerships</p>
+                </div>
+                <div class="role-card">
+                    <h3>Co-Host New Day</h3>
+                    <p>Help launch new programming</p>
+                </div>
             </div>
         </div>
-    </main>
+
+        <div class="volunteer-section">
+            <h2>Tech Volunteers</h2>
+            <p>We need developers to help build open-source tools for grassroots sports communities.</p>
+            <ul>
+                <li>Web development (HTML/CSS/JS, React, Flask)</li>
+                <li>GitHub collaboration</li>
+                <li>Registration and event management tools</li>
+            </ul>
+            <p style="margin-top: 0.5rem;"><a href="https://openfutbol.github.io" target="_blank" style="color: #16a34a; font-weight: 600;">View OpenFutbol Projects →</a></p>
+        </div>
+
+        <div class="volunteer-section">
+            <h2>The Pipeline</h2>
+            <p>Player → Event Support → Leadership Role</p>
+            <ul>
+                <li>Start by attending games regularly</li>
+                <li>Help with setup and coordination</li>
+                <li>Join Discord and biweekly meetings</li>
+                <li>Lead programming for a day or project</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>2026 Summer Youth League <span class="coming-badge">Coming 2026</span></h3>
+            <p>Our biggest volunteer project yet. Help us launch Chicago's community-driven summer youth soccer league.</p>
+        </div>
+
+        <div class="volunteer-section">
+            <h2>Leadership</h2>
+            <p><strong>Director of Volunteers:</strong> <span class="tbd-badge">TBD</span></p>
+            <p style="margin-top: 0.5rem;">Formal volunteer program launching 2026. Currently coordinated through board and community leads.</p>
+        </div>
+
+        <div class="volunteer-section">
+            <h2>Other Ways to Help</h2>
+            <ul>
+                <li><strong>Grant Writing:</strong> We actively apply for grants</li>
+                <li><strong>Partnerships:</strong> Connect us with venues, sponsors, schools</li>
+                <li><strong>Spread the Word:</strong> Share our programs with your network</li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h3>Get Involved</h3>
+            <p>Email us with your interests and availability</p>
+            <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer Interest">nbhdsoccer@gmail.com</a>
+            <p style="margin-top: 0.75rem;"><a href="https://discord.gg/WWvEbbvg3V" target="_blank">Join Discord</a></p>
+        </div>
+
+    </div>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Youth & School Programs</h4>
-                    <a href="../youth-programs/rec77.html">REC 77 School Partnerships</a>
-                    <a href="../community-soccer/womens.html">Women's Community Soccer</a>
-                    <a href="../events/benavidez-tournament.html">Community Health Fundraising</a>
-                    <a href="../support/support.html">Partner With Us</a>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">501(c)(3) Tax-Exempt Organization</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Community Development</h4>
-                    <a href="../youth-programs/impact.html">Youth Development Programs</a>
-                    <a href="../support/support.html">Support Local Health Initiatives</a>
-                    <a href="../about/about.html">Community Leadership</a>
-                    <a href="../support/partnerships.html">Community Partnerships</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Community Engagement</h4>
-                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">Weekly Programming</a>
-                    <a href="https://discord.gg/WWvEbbvg3V" target="_blank">Join Community Discord</a>
-                    <a href="https://www.instagram.com/nbhdsoccer/" target="_blank">Follow @nbhdsoccer</a>
-                    <a href="../community-soccer/volunteer-pathway.html">Volunteer Opportunities</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Our Nonprofit</h4>
-                    <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
-                    <a href="../about/leadership.html">Board of Directors</a>
-                    <a href="../connect/connect.html">Get Involved</a>
-                    <a href="../support/support.html">Donate</a>
-                </div>
+            <div style="text-align: center; padding: 1.5rem 0;">
+                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
+                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
+                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
             </div>
-            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
-            <p style="font-family: 'Open Sans', sans-serif; text-align: center;">&copy; 2025 Chicago Neighborhood Soccer | Illinois Nonprofit Corporation | From Pickup to Purpose—Stronger Together</p>
         </div>
     </footer>
 </body>

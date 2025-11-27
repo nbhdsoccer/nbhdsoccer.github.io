@@ -3,448 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story: From Pickup to Purpose | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="Learn the story of Chicago Neighborhood Soccer (NBHD Soccer) - from grassroots pickup games to nonprofit community development. Founded by neighbors, for neighbors on Chicago's South & West sides since 2012.">
-    <meta name="keywords" content="Chicago neighborhood soccer story, NBHD Soccer history, nonprofit mission vision, community development Chicago, South Side West Side soccer, grassroots organization Chicago, pickup soccer community">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nbhdsoccer.org/about/about.html">
-    <meta property="og:title" content="Our Story: From Pickup to Purpose | Chicago Neighborhood Soccer">
-    <meta property="og:description" content="Learn the story of Chicago Neighborhood Soccer - from grassroots pickup games to nonprofit community development across Chicago's South & West sides.">
-    <meta property="og:image" content="https://nbhdsoccer.org/assets/gallery_slideshow/aboutus_1.jpg">
+    <title>About | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Chicago Neighborhood Soccer - From Pickup to Purpose. 501(c)(3) nonprofit building stronger communities through soccer since 2012.">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nbhdsoccer.org/about/about.html">
-    <meta property="twitter:title" content="Our Story: From Pickup to Purpose | Chicago Neighborhood Soccer">
-    <meta property="twitter:description" content="Learn the story of Chicago Neighborhood Soccer - from grassroots pickup games to nonprofit community development across Chicago's South & West sides.">
-    <meta property="twitter:image" content="https://nbhdsoccer.org/assets/gallery_slideshow/aboutus_1.jpg">
-    
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
-    
-    <!-- Google Analytics (GA4) - Centralized -->
+
+    <!-- Google Analytics -->
     <script src="../js/analytics.js"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
-    <link rel="stylesheet" href="../assets/css/about-section.css">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NonprofitOrganization",
-      "name": "Chicago Neighborhood Soccer",
-      "alternateName": "NBHD Soccer",
-      "url": "https://nbhdsoccer.org",
-      "logo": "https://nbhdsoccer.org/assets/nbhd_simple_logo_2025-07.png",
-      "description": "Illinois nonprofit organization building stronger communities through soccer programming across Chicago's South & West sides since 2012.",
-      "foundingDate": "2012",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chicago",
-        "addressRegion": "IL",
-        "addressCountry": "US"
-      },
-      "areaServed": "Chicago South Side and West Side",
-      "mission": "To cultivate inclusive communities through elevated and welcoming soccer experiences - one person and one event at a time."
-    }
-    </script>
+
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            padding: 1.5rem 0 1rem;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+        .about-hero p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+        .about-section {
+            margin-bottom: 1.5rem;
+        }
+        .about-section h2 {
+            font-size: 1rem;
+            color: #16a34a;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.4rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.3rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #16a34a;
+        }
+        .timeline-year {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #16a34a;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item h3 {
+            font-size: 0.85rem;
+            color: #374151;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item p {
+            font-size: 0.75rem;
+            color: #6b7280;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Mission/Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 0.75rem 0;
+        }
+        .mv-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #16a34a;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .mv-box h3 {
+            font-size: 0.85rem;
+            color: #16a34a;
+            margin-bottom: 0.4rem;
+        }
+        .mv-box p {
+            font-size: 0.7rem;
+            color: #374151;
+            line-height: 1.4;
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .value-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        .value-card h4 {
+            font-size: 0.75rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .value-card p {
+            font-size: 0.65rem;
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .stat-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.6rem;
+            text-align: center;
+        }
+        .stat-card .num {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #16a34a;
+        }
+        .stat-card .label {
+            font-size: 0.6rem;
+            color: #6b7280;
+            text-transform: uppercase;
+        }
+
+        /* Partners */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .partner-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.6rem;
+            text-align: center;
+        }
+        .partner-card strong {
+            font-size: 0.7rem;
+            color: #374151;
+            display: block;
+        }
+        .partner-card span {
+            font-size: 0.6rem;
+            color: #9ca3af;
+        }
+
+        /* Quote */
+        .quote-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 3px solid #16a34a;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .quote-box blockquote {
+            font-size: 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-style: italic;
+        }
+        .quote-box cite {
+            font-size: 0.7rem;
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        /* Navigation Links */
+        .nav-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .nav-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+        }
+        .nav-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-2px);
+        }
+        .nav-card h4 {
+            font-size: 0.85rem;
+            color: #16a34a;
+            margin-bottom: 0.25rem;
+        }
+        .nav-card p {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .mission-vision,
+            .values-grid,
+            .stats-grid,
+            .partners-grid,
+            .nav-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header-container">
-        <!-- Header will be loaded here -->
-    </div>   
+    <div id="header-container"></div>
     <script src="../js/header-loader.js"></script>
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb">
+    <!-- About Tab Navigation -->
+    <nav class="section-tabs">
         <div class="container">
-            <a href="../index.html">Home</a> / <span>Our Nonprofit Story</span>
+            <a href="about.html" class="tab-link active">About</a>
+            <a href="leadership.html" class="tab-link">Leadership</a>
+            <a href="impact.html" class="tab-link">Impact</a>
+            <a href="media.html" class="tab-link">Media</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="page-header">
+    <section class="about-hero">
         <div class="container">
-            <div class="page-header-content">
-                <div class="page-badge">Illinois Nonprofit Corporation • 501(c)(3) Tax-Exempt</div>
-                <h1>Our Nonprofit Story</h1>
-                <p class="page-subtitle">From Pickup to Purpose—Stronger Together</p>
-                <p class="page-description">We're Chicago Neighborhood Soccer (NBHD Soccer) — a community-driven nonprofit organization building stronger neighborhoods through soccer programming, local partnerships, fundraising, and special events across Chicago's South & West sides.</p>
-            </div>
+            <h1>Our Nonprofit Story</h1>
+            <p>From Pickup to Purpose | Community Organizing Since 2012</p>
         </div>
     </section>
 
-    <!-- Our Story: Journey from Pickup to Purpose -->
-    <section class="story-journey" style="background: white; padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>The NBHD Soccer Story</h2>
-                <p class="section-subtitle">How neighborhood pickup games became a community development nonprofit</p>
+    <div class="about-content">
+
+        <!-- Mission & Vision -->
+        <div class="about-section">
+            <h2>Mission & Vision</h2>
+            <div class="mission-vision">
+                <div class="mv-box">
+                    <h3>Mission</h3>
+                    <p>"To cultivate inclusive communities through elevated and welcoming soccer experiences—one person and one event at a time."</p>
+                </div>
+                <div class="mv-box">
+                    <h3>Vision</h3>
+                    <p>"To build meaningful connections that give our communities a sense of belonging while using soccer as a catalyst for positive neighborhood change."</p>
+                </div>
             </div>
-            
-            <div class="story-timeline">
+        </div>
+
+        <!-- Timeline -->
+        <div class="about-section">
+            <h2>Our Journey</h2>
+            <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">2012</div>
-                    <div class="timeline-content">
-                        <h3>The Beginning: Just Neighbors Playing Soccer</h3>
-                        <p>Four friends—Andre, Diego, Julian, and Jordan—started organizing pickup games in their neighborhoods. No grand plan, just a love for soccer and a belief that sports bring people together.</p>
-                    </div>
+                    <h3>The Beginning</h3>
+                    <p>Four friends—Andre, Diego, Julian, and Jordan—started organizing pickup games in their neighborhoods.</p>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-year">2015-2020</div>
-                    <div class="timeline-content">
-                        <h3>Growing Through Word of Mouth</h3>
-                        <p>Our games grew organically. Neighbors brought neighbors. Word spread across communities. We learned that consistency, quality, and genuine welcome create lasting bonds.</p>
-                    </div>
+                    <h3>Growing Through Word of Mouth</h3>
+                    <p>Games grew organically. Neighbors brought neighbors. We learned consistency and genuine welcome create lasting bonds.</p>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-year">2021</div>
-                    <div class="timeline-content">
-                        <h3>Recognizing Our Impact</h3>
-                        <p>With 6,500+ community members and 400+ weekly participants, we realized we weren't just organizing games—we were building community infrastructure. It was time to formalize our work.</p>
-                    </div>
+                    <h3>Recognizing Our Impact</h3>
+                    <p>With 7,000+ community members, we realized we weren't just organizing games—we were building community infrastructure.</p>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-year">2022</div>
-                    <div class="timeline-content">
-                        <h3>Becoming a Nonprofit</h3>
-                        <p>We incorporated as an Illinois nonprofit, bringing structure to our community development work while keeping our grassroots values. Our mission became clear: cultivate inclusive communities through soccer.</p>
-                    </div>
+                    <h3>Incorporating as Nonprofit</h3>
+                    <p>Incorporated as an Illinois nonprofit corporation, bringing organizational structure while keeping grassroots values.</p>
                 </div>
-                
                 <div class="timeline-item">
-                    <div class="timeline-year">2023-2025</div>
-                    <div class="timeline-content">
-                        <h3>Comprehensive Community Development</h3>
-                        <p>Today we're partnering with CPS schools on youth programming, running memorial tournaments that fund community causes, supporting local artists, and maintaining accessible community soccer. We've proven that celebrating differences and focusing neighbors' energy creates lasting change across Chicago's diverse communities.</p>
-                    </div>
+                    <div class="timeline-year">2023-2024</div>
+                    <h3>Expanding Partnerships</h3>
+                    <p>Partnering with CPS schools, running memorial tournaments, supporting local artists, and expanding accessible programming.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <h3>Achieving 501(c)(3) Status</h3>
+                    <p>Received federal 501(c)(3) tax-exempt status, enabling tax-deductible donations and expanded community development work.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Mission & Vision Highlighted -->
-    <section class="mission-vision-hero" style="background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); color: white; padding: 100px 0;">
-        <div class="container">
-            <div class="mission-vision-content">
-                <div class="mission-box">
-                    <div class="mv-icon">🎯</div>
-                    <h2>Our Mission</h2>
-                    <p class="mission-statement">"To cultivate inclusive communities through elevated and welcoming soccer experiences—one person and one event at a time."</p>
-                </div>
-                
-                <div class="vision-box">
-                    <div class="mv-icon">🌟</div>
-                    <h2>Our Vision</h2>
-                    <p class="vision-statement">"To build meaningful connections that give our communities a sense of belonging while using soccer as a catalyst for positive neighborhood change."</p>
-                </div>
-            </div>
-            
-            <div class="mission-vision-explanation">
-                <p>These aren't corporate statements—they're commitments born from over a decade of community organizing. Every game, program, and partnership reflects these values in action.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Core Values in Action -->
-    <section class="values-in-action" style="background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%); padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Values in Action</h2>
-                <p class="section-subtitle">These aren't just words—they guide every decision, program, and partnership</p>
-            </div>
-            
+        <!-- Values -->
+        <div class="about-section">
+            <h2>Our Values</h2>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">🏘️</div>
-                    <h3>Neighborhood Enrichment</h3>
-                    <p>Elevating local communities through active engagement and creating positive spaces where neighbors connect and thrive together.</p>
-                    <div class="value-example">
-                        <strong>In Action:</strong> Our pickup games become community gathering spaces where neighbors meet neighbors, building social infrastructure that extends beyond soccer.
-                    </div>
+                    <h4>Neighborhood Enrichment</h4>
+                    <p>Elevating local communities through active engagement</p>
                 </div>
-                
                 <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Community Integrity</h3>
-                    <p>Reflecting strong values in how we organize soccer and build community, earning trust through consistent action and transparent governance.</p>
-                    <div class="value-example">
-                        <strong>In Action:</strong> 100% volunteer leadership, transparent finances, and decisions made with community input—not boardroom politics.
-                    </div>
+                    <h4>Community Integrity</h4>
+                    <p>Earning trust through consistent action and transparency</p>
                 </div>
-                
                 <div class="value-card">
-                    <div class="value-icon">✨</div>
-                    <h3>Grassroots Inspiration</h3>
-                    <p>Encouraging neighbors to take part and make a difference, showing that positive change starts with local action and authentic leadership.</p>
-                    <div class="value-example">
-                        <strong>In Action:</strong> Our Community Directors started as players who stepped up to help. Leadership comes from within our community.
-                    </div>
+                    <h4>Grassroots Inspiration</h4>
+                    <p>Encouraging neighbors to take part and make a difference</p>
                 </div>
-                
                 <div class="value-card">
-                    <div class="value-icon">📈</div>
-                    <h3>Measurable Progress</h3>
-                    <p>Tracking continuous improvement in soccer experiences and documenting real community impact across our neighborhoods.</p>
-                    <div class="value-example">
-                        <strong>In Action:</strong> We measure everything—from game quality to community connections to program outcomes—and share results openly.
-                    </div>
+                    <h4>Measurable Progress</h4>
+                    <p>Tracking improvement and sharing results openly</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Why We Do This Work -->
-    <section class="why-we-do-this" style="background: white; padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why This Work Matters</h2>
-                <p class="section-subtitle">Soccer is the vehicle, but community development is the destination</p>
-            </div>
-            
-            <div class="why-content">
-                <div class="why-main">
-                    <p class="why-lead">We're talking about helping South and West side communities that don't have as much programming, engagement, or even awareness of available fields. These communities deserve access and development as much as any other spaces in Chicago. We're one of the largest cities in the country—let's give some love to the communities we grew up in and live in, communities that are south and west of downtown. It just takes a connector and incubator. That's part of what we're doing.</p>
-                    
-                    <div class="why-examples">
-                        <div class="why-example">
-                            <h4>Bridging the Gap</h4>
-                            <p>Connecting North side resources with South and West side communities that have been overlooked despite being right downtown.</p>
-                        </div>
-                        
-                        <div class="why-example">
-                            <h4>Community Incubator</h4>
-                            <p>Creating programming and engagement where there wasn't much before—building what these neighborhoods deserve.</p>
-                        </div>
-                        
-                        <div class="why-example">
-                            <h4>Local Leadership</h4>
-                            <p>Growing leaders from within these communities who know what their neighborhoods need.</p>
-                        </div>
-                        
-                        <div class="why-example">
-                            <h4>Equal Access</h4>
-                            <p>Making sure kids and families have the same opportunities regardless of which side of the city they're from.</p>
-                        </div>
-                    </div>
+        <!-- Quote -->
+        <div class="quote-box">
+            <blockquote>"What started as friends organizing pickup games has become something none of us expected. We're now partnering with CPS schools, raising funds for community causes, and running youth programs—but it all traces back to those early games where we learned that celebrating differences makes communities stronger."</blockquote>
+            <cite>— Andre Daniel, Co-founder</cite>
+        </div>
+
+        <!-- Partners -->
+        <div class="about-section">
+            <h2>Partners & Recognition</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <strong>Chicago Red Stars</strong>
+                    <span>Community Partner</span>
                 </div>
-                
-                <div class="why-sidebar">
-                    <div class="quote-box">
-                        <blockquote>
-                            "What started as friends organizing pickup games has become something none of us expected. We're now partnering with CPS schools, raising funds for community causes, and running youth programs—but it all traces back to those early games where we learned that celebrating differences makes communities stronger. Everyone has energy to help, we just focus that energy. Soccer was the entry point. What keeps people coming back is that we build each other up instead of tearing each other down over a game we'll forget next week. People feel the difference—this isn't transactional. When you create authentic connection, it grows into something bigger. Now we're working with schools, supporting local artists, and showing that neighbors organizing together create lasting change."
-                        </blockquote>
-                        <cite>— Andre Daniel, Co-founder & Community Leader</cite>
-                    </div>
+                <div class="partner-card">
+                    <strong>Rauner Family YMCA</strong>
+                    <span>Program Partner</span>
+                </div>
+                <div class="partner-card">
+                    <strong>Boys & Girls Club</strong>
+                    <span>Youth Development</span>
+                </div>
+                <div class="partner-card">
+                    <strong>CPS Schools</strong>
+                    <span>REC 77 Partners</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- External Recognition & Impact -->
-    <section class="recognition-partnerships" style="background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); color: white; padding: 80px 0;">
-        <div class="container">
-            <div class="recognition-header" style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">External Recognition & Impact</h2>
-                <p style="font-size: 1.2rem; opacity: 0.9;">Third-party validation of our nonprofit's community development work</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                <div>
-                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                        <h3 style="color: #fbbf24; font-size: 1.6rem; font-weight: 600; margin-bottom: 1rem;">Featured by YMCA of Metro Chicago</h3>
-                        <p style="opacity: 0.9; margin-bottom: 1.5rem;">"Creating Space to Play, Grow, and Belong: Youth Soccer League Launches at Rauner Family YMCA"</p>
-                        <a href="https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/" target="_blank" style="background: #fbbf24; color: #374151; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600;">Read YMCA Feature →</a>
-                    </div>
-                </div>
-                <div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <strong style="display: block; margin-bottom: 0.5rem;">Chicago Red Stars</strong>
-                            <span style="font-size: 0.9rem; opacity: 0.9;">Official Community Partner</span>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <strong style="display: block; margin-bottom: 0.5rem;">Rauner Family YMCA</strong>
-                            <span style="font-size: 0.9rem; opacity: 0.9;">Program Partner</span>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <strong style="display: block; margin-bottom: 0.5rem;">Boys & Girls Club</strong>
-                            <span style="font-size: 0.9rem; opacity: 0.9;">Youth Development</span>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <strong style="display: block; margin-bottom: 0.5rem;">2 CPS Schools</strong>
-                            <span style="font-size: 0.9rem; opacity: 0.9;">REC 77 Partners</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Summary -->
-    <section class="impact-summary">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Community Impact</h2>
-                <p class="section-subtitle">Over a decade of authentic community development through soccer programming</p>
-            </div>
-            
-            <div class="impact-stats-grid">
-                <div class="impact-stat">
-                    <span class="impact-stat-number">6,500+</span>
-                    <span class="impact-stat-label">Neighbors Served</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="impact-stat-number">400</span>
-                    <span class="impact-stat-label">Weekly Engagement</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="impact-stat-number">$25K+</span>
-                    <span class="impact-stat-label">Community Investment</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="impact-stat-number">2</span>
-                    <span class="impact-stat-label">CPS School Partners</span>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="impact.html" class="cta-button">View Full Impact & Transparency Report</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learn More Navigation -->
-    <section class="learn-more-nav" style="background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%); padding: 60px 0;">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="font-family: 'Poppins', sans-serif; color: #374151; font-size: 2rem; margin-bottom: 1rem;">Learn More About Our Nonprofit</h2>
-                <p style="font-family: 'Open Sans', sans-serif; color: #6b7280; font-size: 1.1rem;">Transparent governance and measurable community impact</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;">
-                <a href="impact.html" style="background: white; padding: 2.5rem; border-radius: 15px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-decoration: none; border: 2px solid #e5e7eb; transition: all 0.3s ease;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
-                    <h3 style="font-family: 'Poppins', sans-serif; color: #16a34a; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">Impact & Transparency</h3>
-                    <p style="font-family: 'Open Sans', sans-serif; color: #6b7280; margin: 0;">Community metrics, financial transparency, and detailed accountability reporting</p>
+        <!-- Navigation Links -->
+        <div class="about-section">
+            <h2>Learn More</h2>
+            <div class="nav-cards">
+                <a href="leadership.html" class="nav-card">
+                    <h4>Board & Leadership</h4>
+                    <p>Meet our volunteer leadership team</p>
                 </a>
-                
-                <a href="leadership.html" style="background: white; padding: 2.5rem; border-radius: 15px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-decoration: none; border: 2px solid #e5e7eb; transition: all 0.3s ease;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
-                    <h3 style="font-family: 'Poppins', sans-serif; color: #16a34a; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">Board & Leadership</h3>
-                    <p style="font-family: 'Open Sans', sans-serif; color: #6b7280; margin: 0;">Meet our board of directors, community leaders, and volunteer-powered governance structure</p>
+                <a href="impact.html" class="nav-card">
+                    <h4>Impact & Transparency</h4>
+                    <p>Community metrics and accountability</p>
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Get Involved / Contact -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Be Part of Our Story</h2>
-                <p>We're neighbors who care about our communities and are committed to long-term neighborhood development. Whether you want to play, volunteer, or support our work—there's a place for you in the NBHD Soccer story.</p>
-                
-                <div class="cta-buttons">
-                    <a href="../events/pickup.html" class="cta-button">Join a Game</a>
-                    <a href="../support/support.html" class="cta-button secondary">Support Our Mission</a>
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer Interest" class="cta-button">Volunteer With Us</a>
-                </div>
-                
-                <div class="contact-info">
-                    <p><strong>Connect with us:</strong> nbhdsoccer@gmail.com | @nbhdsoccer | Meetup: NBHD Soccer</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Our Story</h4>
-                    <a href="#mission-vision">Mission & Vision</a>
-                    <a href="leadership.html">Board of Directors</a>
-                    <a href="impact.html">Community Impact</a>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">From Pickup to Purpose—Stronger Together</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Get Involved</h4>
-                    <a href="../events/pickup.html">Join Pickup Games</a>
-                    <a href="../programs/womens.html">Women's Programming</a>
-                    <a href="../programs/rec_77.html">Youth Programs</a>
-                    <a href="../support/support.html">Support Our Work</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Our Programs</h4>
-                    <a href="../index.html#programs">Community Programming</a>
-                    <a href="../events/benavidez-tournament.html">Memorial Tournament</a>
-                    <a href="../support/partnerships.html">Strategic Partnerships</a>
-                    <a href="impact.html">Transparency Report</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <a href="https://www.instagram.com/nbhdsoccer/" target="_blank">@nbhdsoccer</a>
-                    <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
-                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">Meetup Group</a>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Illinois Nonprofit Corporation</p>
-                </div>
+            <div style="text-align: center; padding: 1.5rem 0;">
+                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
+                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
+                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
             </div>
-            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
-            <p style="font-family: 'Open Sans', sans-serif; text-align: center;">&copy; 2025 Chicago Neighborhood Soccer (NBHD Soccer) | Illinois Nonprofit Corporation | Building Community Through Soccer Since 2012</p>
         </div>
     </footer>
-
-    <script>
-        // Add smooth scroll behavior for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animation on scroll for timeline and cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Animate timeline items, value cards, and impact stats
-        document.querySelectorAll('.timeline-item, .value-card, .impact-stat').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
