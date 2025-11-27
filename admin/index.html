@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBHD Soccer Admin Dashboard</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body>
+    <div id="admin-header-container"></div>
+    
+    <main class="admin-main">
+        <div class="dashboard-container">
+            <section class="welcome-section">
+                <h1>🏠 NBHD Soccer Admin Dashboard</h1>
+                <p>Manage tournaments, registrations, and community programs from your central command center.</p>
+            </section>
+
+            <section class="quick-stats">
+                <h2>📊 Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalTournamentRegs">-</div>
+                        <div class="stat-label">Total Tournament Registrations</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="activeTournaments">2</div>
+                        <div class="stat-label">Active Tournaments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalRevenue">-</div>
+                        <div class="stat-label">Estimated Revenue</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="admin-tools">
+                <h2>🛠️ Admin Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🏆</div>
+                        <h3>Benavidez Tournament 2025</h3>
+                        <p>Manage registrations, view participants, and export data for the 6th Annual David Benavidez Memorial Tournament.</p>
+                        <div class="tool-actions">
+                            <a href="tournaments/benavidez-2025.html" class="btn btn-primary">View Registrations</a>
+                            <a href="../events/benavidez-tournament.html" class="btn btn-secondary">Public Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">⚽</div>
+                        <h3>Women's Soccer 2025</h3>
+                        <p>Manage women's tournament and community program registrations with comprehensive participant tracking.</p>
+                        <div class="tool-actions">
+                            <a href="tournaments/womens-2025.html" class="btn btn-primary">View Registrations</a>
+                            <a href="../community-soccer/womens.html" class="btn btn-secondary">Public Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card coming-soon">
+                        <div class="tool-icon">👥</div>
+                        <h3>Community Analytics</h3>
+                        <p>Track community engagement, pickup game attendance, and volunteer participation across all programs.</p>
+                        <div class="tool-actions">
+                            <button class="btn btn-disabled" disabled>Coming Soon</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card coming-soon">
+                        <div class="tool-icon">📧</div>
+                        <h3>Communication Hub</h3>
+                        <p>Send updates to participants, manage email lists, and coordinate volunteer communications.</p>
+                        <div class="tool-actions">
+                            <button class="btn btn-disabled" disabled>Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <h2>⚡ Quick Actions</h2>
+                <div class="actions-row">
+                    <button onclick="refreshAllStats()" class="btn btn-primary">🔄 Refresh All Stats</button>
+                    <button onclick="exportAllData()" class="btn btn-secondary">📊 Export All Data</button>
+                    <a href="../index.html" class="btn btn-secondary">🌐 View Public Site</a>
+                    <button onclick="clearAllData()" class="btn btn-danger">🗑️ Clear All Data</button>
+                </div>
+            </section>
+
+            <section class="system-status">
+                <h2>⚙️ System Status</h2>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="status-label">Registration Storage:</span>
+                        <span class="status-value" id="storageStatus">✅ Local Browser Storage Active</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Data Backup:</span>
+                        <span class="status-value">⚠️ Manual Export Recommended</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Site Analytics:</span>
+                        <span class="status-value">✅ Google Analytics Active</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/admin-core.js"></script>
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAdminHeader();
+            refreshAllStats();
+        });
+
+        function refreshAllStats() {
+            // This will be implemented when admin-core.js is created
+            console.log('Refreshing all stats...');
+        }
+
+        function exportAllData() {
+            // Export all tournament data
+            const allData = {
+                benavidez: JSON.parse(localStorage.getItem('benavidezTournament2025Registrations') || '[]'),
+                womensTournament: JSON.parse(localStorage.getItem('womensTournament2025Registrations') || '[]'),
+                womensCommunity: JSON.parse(localStorage.getItem('womensWeekly2025Registrations') || '[]')
+            };
+            
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `nbhd-soccer-all-data-${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function clearAllData() {
+            if (confirm('⚠️ Are you sure you want to clear ALL registration data from ALL tournaments? This cannot be undone!')) {
+                if (confirm('🚨 FINAL WARNING: This will permanently delete all Benavidez Tournament and Women\'s Soccer registrations. Are you absolutely sure?')) {
+                    localStorage.removeItem('benavidezTournament2025Registrations');
+                    localStorage.removeItem('womensTournament2025Registrations');
+                    localStorage.removeItem('womensWeekly2025Registrations');
+                    refreshAllStats();
+                    alert('All registration data has been cleared.');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

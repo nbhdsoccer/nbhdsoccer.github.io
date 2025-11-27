@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Andre",
+    "title": "Co-Founder & Board Member",
+    "bio": "Community organizer with 10+ years building neighborhood connections through soccer. PhD holder with expertise in community development and nonprofit governance.",
+    "image": "/assets/bio/andre.jpg"
+  },
+  {
+    "name": "Diego Moreno",
+    "title": "Co-Founder & Board Member",
+    "bio": "South Side resident and longtime community leader. Brings over 15 years of hands-on experience working in Chicago Communities, combining operational leadership with a deep commitment to youth development. As the architect behind multiple school-based and recreational programs, he excels at building sustainable systems that serve youth year round. With a track record of managing budgets, partnerships, and teams.",
+    "image": "/assets/bio/diego.jpeg"
+  },
+  {
+    "name": "Julian da Silva",
+    "title": "Co-Founder & Board Member",
+    "bio": "Experienced in community programming and youth development. Focuses on creating inclusive spaces and sustainable community partnerships.",
+    "image": "/assets/bio/julian.jpeg"
+  },
+  {
+    "name": "Jordan da Silva",
+    "title": "Co-Founder & Board Member",
+    "bio": "Dedicated to neighborhood empowerment and authentic community building. Brings operational expertise and commitment to neighbor-led programming.",
+    "image": "/assets/bio/jordan.jpeg"
+  },
+  {
+    "name": "Alex Alvizo",
+    "title": "Community Director",
+    "bio": "Born and raised on the South Side of Chicago. Passion for community. Engineer by trade. I leverage these qualities to help deliver a safe and fun environment for our players in the most efficient and refined way possible.",
+    "image": "/assets/bio/alex.jpg"
+  },
+  {
+    "name": "Marcos Beltran",
+    "title": "Community Director",
+    "bio": "Southside resident.  Video game and soccer fanatic.  With a background in education, youth development and professional growth I try to make the most out of our members to grow and better our communities.",
+    "image": "/assets/bio/marcos.jpg"
+  },
+  {
+    "name": "Michael Wang",
+    "title": "Community Director",
+    "bio": "I only started playing soccer in my late teens but loved the team aspect of the game. Enjoy meeting new people and learning about backgrounds and building a community here in the suburbs that, in my opinion, lacked pickup options. Currently work in the data engineering space with a side hobby of selling/trading pokemon cards. I have two cats and moved to Illinois in 2022 when my wife started her residency here.",
+    "image": "/assets/bio/michael.jpg"
+  },
+  {
+    "name": "Nicole",
+    "title": "Community Director",
+    "bio": "Strategic leader directing women's programming and creating empowering community spaces for female soccer players.",
+    "image": "/assets/bio/nicole.jpg"
+  },
+  {
+    "name": "Natalie",
+    "title": "Community Director",
+    "bio": "Dedicated community leader focused on building inclusive women's soccer programming and neighborhood connections.",
+    "image": "/assets/bio/natalie.jpg"
+  }
+]

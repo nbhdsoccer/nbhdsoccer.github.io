@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board of Directors & Leadership | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Meet the board of directors and community leadership team of Chicago Neighborhood Soccer. Transparent nonprofit governance dedicated to South & West Side community development.">
+    <meta name="keywords" content="Chicago nonprofit board of directors, community leadership, nonprofit governance, board members Chicago, neighborhood leadership">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/about/leadership.html">
+    <meta property="og:title" content="Board of Directors & Leadership | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Meet the board of directors and community leadership team of Chicago Neighborhood Soccer. Transparent nonprofit governance dedicated to South & West Side community development.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/nbhd_simple_logo_2025-07.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nbhdsoccer.org/about/leadership.html">
+    <meta property="twitter:title" content="Board of Directors & Leadership | Chicago Neighborhood Soccer">
+    <meta property="twitter:description" content="Meet our nonprofit board and community leadership team dedicated to South & West Side community development.">
+    <meta property="twitter:image" content="https://nbhdsoccer.org/assets/nbhd_simple_logo_2025-07.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
+    
+    <!-- Google Analytics (GA4) - Centralized -->
+    <script src="../js/analytics.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/about-section.css">
+    
+    <style>
+        /* Leadership Page Specific Styles - Extending base about-section.css */
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .board-member {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .board-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-color: var(--about-primary);
+        }
+        
+        .board-member.cofounder {
+            border-color: var(--about-primary);
+            background: linear-gradient(135deg, var(--about-green-50) 0%, var(--about-green-100) 100%);
+        }
+        
+        .board-member.cofounder::before {
+            content: "CO-FOUNDER";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--about-primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--about-primary) 0%, #15803d 100%);
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+        }
+        
+        .member-name {
+            font-family: 'Poppins', sans-serif;
+            color: var(--about-gray-700);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-title {
+            color: var(--about-primary);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .member-bio {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--about-gray-600);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .leadership-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+        }
+        
+        .leadership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            border-color: var(--about-primary);
+        }
+        
+        .leadership-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--about-accent) 0%, #ea580c 100%);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .leadership-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--about-gray-700);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .leadership-card p {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--about-gray-600);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .governance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .governance-card {
+            background: linear-gradient(135deg, var(--about-gray-50) 0%, var(--about-gray-100) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid var(--about-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .governance-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .governance-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--about-primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .governance-card p {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--about-gray-600);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .board-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .board-member {
+                padding: 2rem;
+            }
+            
+            .member-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+            
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .governance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container">
+        <!-- Header will be loaded here -->
+    </div>   
+    <script src="../js/header-loader.js"></script>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="about.html">Our Story</a> / <span>Leadership</span>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-badge">Transparent Nonprofit Governance</div>
+                <h1>Board of Directors & Leadership</h1>
+                <p class="page-subtitle">Community-led governance dedicated to authentic neighborhood development and transparent nonprofit operations across Chicago's South & West sides</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board of Directors & Community Directors -->
+
+        <section class="board-section" style="background: white; padding: 100px 0;">
+                <div class="container">
+                        <div class="section-header">
+                                <h2>Board of Directors & Community Directors</h2>
+                                <p class="section-subtitle">Co-founders and Community Directors with 10+ years of leadership experience. Our Community Directors take initiative, lead programs, and drive strategic community development initiatives across Chicago's neighborhoods</p>
+                        </div>
+                        <link rel="stylesheet" href="../assets/css/leadership-bios.css">
+                        <div id="leadership-bios" class="leadership-bios-grid"></div>
+                </div>
+        </section>
+
+        <script>
+        // Leadership bios grid loader
+        fetch('../js/leadership-bios.json')
+            .then(response => response.json())
+            .then(bios => {
+                const grid = document.getElementById('leadership-bios');
+                grid.innerHTML = bios.map(bio => {
+                    let avatarHtml = bio.image && bio.image.trim() !== ''
+                        ? `<img src="${bio.image}" alt="${bio.name} headshot" class="leadership-bio-avatar">`
+                        : `<div class="leadership-bio-avatar">${bio.name.split(' ').map(n => n[0]).join('')}</div>`;
+                    return `
+                        <div class="leadership-bio-card">
+                            ${avatarHtml}
+                            <div class="leadership-bio-name">${bio.name}</div>
+                            <div class="leadership-bio-title">${bio.title || ''}</div>
+                            <div class="leadership-bio-desc">${bio.bio || ''}</div>
+                        </div>
+                    `;
+                }).join('');
+            });
+        </script>
+
+    <!-- Hall of Fame -->
+    <section class="hall-of-fame" style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%); color: white; padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Community Hall of Fame</h2>
+                <p class="section-subtitle" style="color: #e5e7eb;">Honoring those who have made lasting impact on our community</p>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); position: relative;">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--about-primary); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">CO-FOUNDER</div>
+                    <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 2rem; overflow: hidden; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);">
+                        <img src="../assets/bio/david.jpg" alt="David Benavidez" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">David Benavidez</h3>
+                    <p style="font-family: 'Open Sans', sans-serif; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; opacity: 0.9;">Co-founder of NBHD Soccer whose vision and leadership helped establish our organization's commitment to authentic community development. The annual David Benavidez Memorial Tournament honors his legacy while supporting local health initiatives.</p>
+                    <a href="../events/benavidez-tournament.html" style="background: var(--about-accent); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; transition: all 0.3s ease;">Learn More About David's Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Structure -->
+    <section class="organizational-structure" id="organizational-structure" style="background: linear-gradient(135deg, var(--about-gray-50) 0%, var(--about-gray-100) 100%); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We're Organized</h2>
+                <p class="section-subtitle">A lean, effective structure that maximizes community impact while maintaining authentic neighborhood connections</p>
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="leadership-icon">🏛️</div>
+                    <h4>Board of Directors</h4>
+                    <p><strong>Strategic Governance:</strong> Four co-founders who provide organizational oversight, set strategic direction, and ensure accountability to our community mission. All positions are unpaid and volunteer-based.</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <div class="leadership-icon">⭐</div>
+                    <h4>Community Directors</h4>
+                    <p><strong>Program Leadership:</strong> Experienced leaders who take initiative in directing specific programs and community development initiatives. They drive strategy and manage day-to-day operations across our programming.</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <div class="leadership-icon">🙋</div>
+                    <h4>Program Volunteers</h4>
+                    <p><strong>Community Support:</strong> Dedicated neighbors who contribute their time and skills to specific programs. This includes event coordinators, youth programming assistants, and community outreach supporters.</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <div class="leadership-icon">🤝</div>
+                    <h4>Community Partners</h4>
+                    <p><strong>Strategic Alliances:</strong> Established organizations like CPS schools, YMCA, Boys & Girls Club, and local nonprofits who collaborate with us to amplify community impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="impact-summary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leadership Impact</h2>
+                <p class="section-subtitle">Results of community-led nonprofit governance and volunteer-powered operations</p>
+            </div>
+            
+            <div class="impact-stats-grid">
+                <div class="impact-stat">
+                    <span class="impact-stat-number">15+</span>
+                    <span class="impact-stat-label">Volunteer Leaders</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">100%</span>
+                    <span class="impact-stat-label">Volunteer Board</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">10+</span>
+                    <span class="impact-stat-label">Years Experience</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-stat-number">0</span>
+                    <span class="impact-stat-label">Executive Salaries</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="impact.html" class="cta-button">View Full Transparency Report</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nonprofit Governance -->
+    <section class="governance-section" style="background: white; padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Organizational Governance & Transparency</h2>
+                <p class="section-subtitle">Our commitment to transparent, accountable nonprofit operations that serve our community's authentic needs</p>
+            </div>
+            
+            <div class="governance-grid">
+                <div class="governance-card">
+                    <h4>Legal Structure</h4>
+                    <p>Illinois Not-For-Profit Corporation with EIN. 501(c)(3) federal tax-exempt organization. All governance documents available for community review.</p>
+                </div>
+                
+                <div class="governance-card">
+                    <h4>Volunteer-Powered Model</h4>
+                    <p>100% volunteer-powered organization. All leadership positions are unpaid community members passionate about neighborhood development. No executive salaries or administrative overhead.</p>
+                </div>
+                
+                <div class="governance-card">
+                    <h4>Financial Transparency</h4>
+                    <p>Transparent community investment model with all financial decisions made by board of directors and shared with community. Annual financial reports available to all members.</p>
+                    <a href="financial-transparency.html" style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #16a34a; color: white; text-decoration: none; border-radius: 5px; font-size: 14px;">View FY2024 Financial Report</a>
+                </div>
+                
+                <div class="governance-card">
+                    <h4>Community Accountability</h4>
+                    <p>Regular community meetings, open communication channels, and commitment to neighbor-led decision making. Community feedback directly shapes our programming and priorities.</p>
+                </div>
+                
+                <div class="governance-card">
+                    <h4>Conflict of Interest Policy</h4>
+                    <p>Clear policies ensuring board decisions prioritize community benefit over personal gain. All potential conflicts disclosed publicly and managed through transparent processes.</p>
+                </div>
+                
+                <div class="governance-card">
+                    <h4>Democratic Leadership</h4>
+                    <p>Consensus-based decision making for major initiatives. Community input actively sought for program development, partnership decisions, and organizational direction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Philosophy -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <h2>Why We're All Volunteers</h2>
+                <div class="quote-box">
+                    <p class="quote-text">"We believe the best community development comes from neighbors who care about their neighborhoods, not people collecting paychecks. Every hour our leadership team donates goes directly to strengthening our communities because this work matters to us personally - we live here, our families are here, and we're building something for all of us together."</p>
+                </div>
+                <p style="font-family: 'Open Sans', sans-serif; font-size: 1.1rem; opacity: 0.9; margin-top: 2rem;">This isn't just about keeping costs low - it's about authentic community leadership. When neighbors lead neighbors, the work stays true to what our communities actually need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Leadership CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Community Leadership</h2>
+                <p>We're always looking for neighbors who want to make a difference in our communities. Whether you have 2 hours a month or 10 hours a week, there's a meaningful way to contribute to our nonprofit's mission.</p>
+                <p>From organizing events to supporting youth programming to helping with administrative tasks - your skills and passion can help strengthen our neighborhoods.</p>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Leadership Interest" class="cta-button">Volunteer With Us</a>
+                    <a href="../support/support.html" class="cta-button secondary">Support Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Board of Directors</h4>
+                    <a href="#board">Andre Daniel</a>
+                    <a href="#board">Diego Moreno</a>
+                    <a href="#board">Julian Da Silva</a>
+                    <a href="#board">Jordan Da Silva</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Community-led nonprofit governance</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Community Leadership</h4>
+                    <a href="#community-leaders">Program Leaders</a>
+                    <a href="#community-leaders">Women's Program</a>
+                    <a href="#community-leaders">Youth Programming</a>
+                    <a href="#community-leaders">Event Coordination</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Leadership Interest">Volunteer Opportunities</a>
+                    <a href="../support/support.html">Support Our Mission</a>
+                    <a href="../programs/rec_77.html">School Partnerships</a>
+                    <a href="../index.html#programs">Community Programs</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Nonprofit Resources</h4>
+                    <a href="about.html">Our Story</a>
+                    <a href="impact.html">Community Impact</a>
+                    <a href="../support/partnerships.html">Strategic Partnerships</a>
+                    <a href="mailto:nbhdsoccer@gmail.com">Contact Board</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">501(c)(3) Tax-Exempt Organization</p>
+                </div>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid #4b5563; opacity: 0.3;">
+            <p style="font-family: 'Open Sans', sans-serif; text-align: center;">&copy; 2025 Chicago Neighborhood Soccer | Illinois Nonprofit Corporation | Community-Led Governance</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.board-member, .leadership-card, .governance-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                
+                dropdown.addEventListener('mouseenter', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
