@@ -90,13 +90,13 @@
             line-height: 1.4;
         }
 
-        /* Youth Programs Section */
+        /* Youth Programs Section - Matching Connect styling */
         .youth-section {
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 10px;
             padding: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .youth-header {
             text-align: center;
@@ -113,47 +113,51 @@
         }
         .youth-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 0.75rem;
         }
         .youth-card {
             background: white;
-            border: 1px solid #e5e7eb;
+            border: 2px solid #0ea5e9;
             border-radius: 8px;
-            padding: 1rem;
+            padding: 0.85rem;
             text-align: center;
             text-decoration: none;
             color: inherit;
             transition: all 0.25s ease;
+            position: relative;
         }
         .youth-card:hover {
-            border-color: #0ea5e9;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+        }
+        .youth-card .status-badge {
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            background: #0ea5e9;
+            color: white;
+            font-size: 0.55rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .youth-card .status-badge.coming {
+            background: #d97706;
         }
         .youth-card h4 {
             font-size: 0.85rem;
-            color: #374151;
-            margin-bottom: 0.25rem;
+            color: #0ea5e9;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
         }
         .youth-card p {
             font-size: 0.7rem;
-            color: #9ca3af;
+            color: #6b7280;
             margin: 0;
-        }
-        .youth-card .status {
-            font-size: 0.6rem;
-            padding: 0.15rem 0.4rem;
-            border-radius: 3px;
-            display: inline-block;
-            margin-top: 0.5rem;
-        }
-        .status.active {
-            background: #dcfce7;
-            color: #16a34a;
-        }
-        .status.coming {
-            background: #fef3c7;
-            color: #d97706;
+            line-height: 1.4;
         }
 
         /* Philosophy Section */
@@ -205,12 +209,50 @@
 
     <section class="overview-hero">
         <div class="container">
-            <h1>NBHD Youth</h1>
+            <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 28px; height: 28px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">NBHD Youth</h1>
             <p>School partnerships and youth development | 150+ youth served</p>
         </div>
     </section>
 
+    <!-- Philosophy & Funding Model - Top Banner -->
+    <section class="model-banner" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-bottom: 2px solid #0ea5e9; padding: 1rem 0;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 0.9rem; font-style: italic; color: #374151; margin-bottom: 0.5rem;">"Great programming exists in South & West side neighborhoods—it's just hard to find."</p>
+            <p style="font-size: 0.8rem; color: #0ea5e9; margin: 0;"><strong>Community Funds Youth:</strong> Revenue from NBHD Connect and Events funds this programming. <strong>The more you participate, the more we give back.</strong></p>
+        </div>
+    </section>
+
     <div class="overview-content">
+
+        <!-- Youth Programs Initiatives -->
+        <div class="youth-section">
+            <div class="youth-header">
+                <h2>NBHD Youth Initiatives</h2>
+                <p>Co-development approach: Built With You, Not For You</p>
+            </div>
+            <div class="youth-grid">
+                <a href="rec77.html" class="youth-card">
+                    <span class="status-badge">Active</span>
+                    <h4>REC 77 Schools</h4>
+                    <p>CPS elementary school partnerships. 2 schools currently active.</p>
+                </a>
+                <a href="https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/" class="youth-card" target="_blank">
+                    <span class="status-badge">Active</span>
+                    <h4>YMCA Partnership</h4>
+                    <p>Rauner Family YMCA programming and summer leagues.</p>
+                </a>
+                <a href="partnerships.html" class="youth-card">
+                    <span class="status-badge coming">Coming</span>
+                    <h4>Partner Framework</h4>
+                    <p>How schools and orgs can collaborate with us.</p>
+                </a>
+                <a href="../about/impact.html" class="youth-card">
+                    <span class="status-badge">Active</span>
+                    <h4>Impact Metrics</h4>
+                    <p>Transparent nonprofit reporting and outcomes.</p>
+                </a>
+            </div>
+        </div>
 
         <!-- Three Programs -->
         <div class="programs-intro">
@@ -220,59 +262,17 @@
 
         <div class="program-cards">
             <a href="../community-soccer/overview.html" class="program-card community">
-                <h3>NBHD Connect</h3>
+                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Connect</h3>
                 <p>Weekly pickup games, women's soccer, and volunteer pathways building cross-neighborhood connections</p>
             </a>
             <div class="program-card youth active">
-                <h3>NBHD Youth</h3>
+                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Youth</h3>
                 <p>School partnerships and youth development through REC 77 and YMCA collaborations</p>
             </div>
             <a href="../events/overview.html" class="program-card impact">
-                <h3>NBHD Events</h3>
+                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Events</h3>
                 <p>Community special events and fundraising</p>
             </a>
-        </div>
-
-        <!-- Youth Programs -->
-        <div class="youth-section">
-            <div class="youth-header">
-                <h2>Youth Programming</h2>
-                <p>Co-development approach: Built With You, Not For You</p>
-            </div>
-            <div class="youth-grid">
-                <a href="rec77.html" class="youth-card">
-                    <h4>REC 77 Schools</h4>
-                    <p>CPS elementary school partnerships</p>
-                    <span class="status active">2 Schools Active</span>
-                </a>
-                <a href="https://www.ymcachicago.org/news-events/creating-space-to-play,-grow,-and-belong-youth-soccer-league-launches-at-rauner-family-ymca/" class="youth-card" target="_blank">
-                    <h4>YMCA Partnership</h4>
-                    <p>Rauner Family YMCA programming</p>
-                    <span class="status active">Active</span>
-                </a>
-                <a href="partnerships.html" class="youth-card">
-                    <h4>Partner Framework</h4>
-                    <p>How to collaborate with us</p>
-                    <span class="status coming">Q1 2026</span>
-                </a>
-                <a href="../about/impact.html" class="youth-card">
-                    <h4>Impact Metrics</h4>
-                    <p>Transparent nonprofit reporting</p>
-                    <span class="status active">Active</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Philosophy -->
-        <div class="philosophy-section">
-            <h3>Our Philosophy</h3>
-            <p class="philosophy-quote">"Great programming exists in South & West side neighborhoods—it's just hard to find."</p>
-            <p class="philosophy-text">We bridge communities and amplify existing resources, reducing barriers and making neighborhood programming more accessible.</p>
-        </div>
-
-        <!-- Funding Model -->
-        <div class="funding-model-callout" style="background: linear-gradient(135deg, #e0f2fe 0%, white 100%); border: 2px solid #0ea5e9; border-radius: 10px; padding: 1.25rem; margin-top: 1.5rem; text-align: center;">
-            <p style="font-size: 0.85rem; color: #374151; margin: 0; line-height: 1.5;"><strong style="color: #0ea5e9;">Community Funds Youth:</strong> Revenue from NBHD Connect and NBHD Events funds youth programming at CPS schools, YMCA, and Boys & Girls Club. <strong style="color: #0ea5e9;">The more you participate, the more we give back.</strong></p>
         </div>
 
     </div>
@@ -281,6 +281,7 @@
     <footer id="contact">
         <div class="container">
             <div style="text-align: center; padding: 1.5rem 0;">
+                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
                 <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
                 <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
                 <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
