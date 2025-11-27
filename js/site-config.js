@@ -17,8 +17,8 @@ const SITE_CONFIG = {
       date: "Oct 18, 2025",
       type: "featured",
       typeLabel: "Featured Event",
-      title: "6th Annual David Benavidez Memorial Tournament",
-      description: "Community tournament honoring David's legacy with 100% of proceeds supporting local organizations and neighborhood development initiatives. Six years of bringing the community together for health, healing, and celebration.",
+      title: "Annual David Benavidez Memorial Tournament",
+      description: "Community tournament honoring David's legacy with 100% of proceeds supporting local organizations and neighborhood development initiatives. Bringing the community together for health, healing, and celebration.",
       buttonText: "Learn More & Tournament Info",
       buttonLink: "/events/benavidez-tournament.html", // ✅ ROOT-RELATIVE PATH
       featured: true,
@@ -84,7 +84,7 @@ const SITE_CONFIG = {
   
   // Other configurable content
   heroStats: {
-    communityMembers: "6,500+",
+    communityMembers: "7,000+",
     cpsSchools: "2",
     fundsRaised: "$25K+"
   },
@@ -92,7 +92,7 @@ const SITE_CONFIG = {
   // Tournament-specific configurations
   tournaments: {
     benavidez: {
-      year: "6th Annual",
+      year: "Annual",
       date: "Oct 18, 2025",
       shortDate: "Oct 18",
       time: "10:00 AM - 2:00 PM",

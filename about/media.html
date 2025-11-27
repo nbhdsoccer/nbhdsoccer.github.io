@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Media resources, press kit, and contact information for Chicago Neighborhood Soccer - 501(c)(3) nonprofit.">
+
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+
+    <!-- Google Analytics -->
+    <script src="../js/analytics.js"></script>
+
+    <style>
+        .media-hero {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            padding: 1.5rem 0 1rem;
+            text-align: center;
+        }
+        .media-hero h1 {
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+        .media-hero p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        .media-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+        .media-section {
+            margin-bottom: 1.5rem;
+        }
+        .media-section h2 {
+            font-size: 1rem;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.4rem;
+        }
+
+        /* Quick Facts */
+        .quick-facts {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .quick-facts h3 {
+            font-size: 0.85rem;
+            color: #16a34a;
+            margin-bottom: 0.5rem;
+        }
+        .quick-facts ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .quick-facts li {
+            font-size: 0.75rem;
+            color: #374151;
+            margin-bottom: 0.3rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .quick-facts li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 0.75rem 0;
+        }
+        .resource-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+        .resource-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-2px);
+        }
+        .resource-card h4 {
+            font-size: 0.85rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .resource-card p {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .resource-link {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 0.65rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Story Angles */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .story-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-left: 3px solid #16a34a;
+            border-radius: 0 6px 6px 0;
+            padding: 0.75rem 1rem;
+        }
+        .story-card h4 {
+            font-size: 0.8rem;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .story-card p {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Contact Box */
+        .media-contact {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .media-contact h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .media-contact p {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+        }
+        .media-contact a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .contact-option {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+        .contact-option .label {
+            font-size: 0.6rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+        .contact-option .value {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Social Links */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+        .social-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.6rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+        }
+        .social-card:hover {
+            border-color: #16a34a;
+            transform: translateY(-1px);
+        }
+        .social-card strong {
+            font-size: 0.7rem;
+            color: #374151;
+            display: block;
+        }
+        .social-card span {
+            font-size: 0.6rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 600px) {
+            .resources-grid,
+            .social-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script src="../js/header-loader.js"></script>
+
+    <!-- About Tab Navigation -->
+    <nav class="section-tabs">
+        <div class="container">
+            <a href="about.html" class="tab-link">About</a>
+            <a href="leadership.html" class="tab-link">Leadership</a>
+            <a href="impact.html" class="tab-link">Impact</a>
+            <a href="media.html" class="tab-link active">Media</a>
+        </div>
+    </nav>
+
+    <section class="media-hero">
+        <div class="container">
+            <h1>Media & Press</h1>
+            <p>Resources for journalists and partners</p>
+        </div>
+    </section>
+
+    <div class="media-content">
+
+        <!-- Quick Facts -->
+        <div class="quick-facts">
+            <h3>Quick Facts</h3>
+            <ul>
+                <li><strong>Organization:</strong> Chicago Neighborhood Soccer (NBHD Soccer)</li>
+                <li><strong>Status:</strong> 501(c)(3) nonprofit since 2025</li>
+                <li><strong>Founded:</strong> 2012 as pickup games, incorporated 2022</li>
+                <li><strong>Community:</strong> 7,000+ members across Chicago</li>
+                <li><strong>Mission:</strong> Building community through accessible soccer</li>
+                <li><strong>Leadership:</strong> 100% volunteer-powered, no paid staff</li>
+            </ul>
+        </div>
+
+        <!-- Story Angles -->
+        <div class="media-section">
+            <h2>Story Angles</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <h4>Grassroots to Nonprofit</h4>
+                    <p>Four friends started pickup games in 2012. Today: 7,000+ members, CPS partnerships, and $25K+ raised for community causes.</p>
+                </div>
+                <div class="story-card">
+                    <h4>Youth Development</h4>
+                    <p>REC 77 partnership brings free soccer programming to underserved CPS schools. YMCA collaboration expands reach.</p>
+                </div>
+                <div class="story-card">
+                    <h4>Memorial Tournament</h4>
+                    <p>Annual David Benavidez Memorial Tournament honors community member while raising funds for health causes.</p>
+                </div>
+                <div class="story-card">
+                    <h4>Inclusive Community</h4>
+                    <p>Women's programming, all-skill-level games, and immigrant-welcoming spaces build bridges across neighborhoods.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Resources -->
+        <div class="media-section">
+            <h2>Media Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>Logo & Branding</h4>
+                    <p>Official logos, colors, and usage guidelines</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Logo Request" class="resource-link">Request</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Photos & Video</h4>
+                    <p>High-resolution event photos and video clips</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Media Assets Request" class="resource-link">Request</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Impact Data</h4>
+                    <p>Statistics, metrics, and annual reports</p>
+                    <a href="impact.html" class="resource-link">View Impact</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Interview Request</h4>
+                    <p>Schedule interview with leadership</p>
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Interview Request" class="resource-link">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="media-section">
+            <h2>Official Channels</h2>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" class="social-card">
+                    <strong>Instagram</strong>
+                    <span>@nbhdsoccer</span>
+                </a>
+                <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" class="social-card">
+                    <strong>YouTube</strong>
+                    <span>@nbhdsoccer</span>
+                </a>
+                <a href="https://discord.gg/WWvEbbvg3V" target="_blank" class="social-card">
+                    <strong>Discord</strong>
+                    <span>Community</span>
+                </a>
+                <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" class="social-card">
+                    <strong>Meetup</strong>
+                    <span>Events</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Media Contact -->
+        <div class="media-contact">
+            <h3>Media Inquiries</h3>
+            <p>For press inquiries, interview requests, or additional information, please contact us directly. We respond within 24-48 hours.</p>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <div class="label">Email</div>
+                    <div class="value"><a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a></div>
+                </div>
+                <div class="contact-option">
+                    <div class="label">Subject Line</div>
+                    <div class="value">Media Inquiry</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="text-align: center; padding: 1.5rem 0;">
+                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
+                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
+                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
