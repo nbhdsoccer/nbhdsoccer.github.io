@@ -59,13 +59,6 @@
         <priority>0.8</priority>
     </url>
     
-    <url>
-        <loc>https://nbhdsoccer.org/youth-programs/partnerships.html</loc>
-        <lastmod>2025-08-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
     <!-- Events (10% emphasis) -->
     <url>
         <loc>https://nbhdsoccer.org/events/benavidez-tournament.html</loc>
@@ -74,12 +67,6 @@
         <priority>0.85</priority>
     </url>
     
-    <url>
-        <loc>https://nbhdsoccer.org/events/events.html</loc>
-        <lastmod>2025-08-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
     
     <!-- About (5% emphasis) -->
     <url>
@@ -104,12 +91,6 @@
         <priority>0.8</priority>
     </url>
     
-    <url>
-        <loc>https://nbhdsoccer.org/support/partnerships.html</loc>
-        <lastmod>2025-08-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
     
     <url>
         <loc>https://nbhdsoccer.org/connect/connect.html</loc>

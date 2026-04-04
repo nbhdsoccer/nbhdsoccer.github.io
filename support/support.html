@@ -4,443 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="Support Chicago Neighborhood Soccer - Ways to give, volunteer, and partner with our 501(c)(3) nonprofit.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <meta name="description" content="Support Chicago Neighborhood Soccer - Every contribution goes directly back to the community. Volunteer-powered 501(c)(3) nonprofit.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
 
     <!-- Google Analytics -->
     <script src="../js/analytics.js"></script>
 
-    <style>
-        .support-hero {
-            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
-            color: #374151;
-            padding: 1.5rem 0 1rem;
-            text-align: center;
-        }
-        .support-hero h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-        .support-hero p {
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-        .support-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        .support-section {
-            margin-bottom: 1.5rem;
-        }
-        .support-section h2 {
-            font-size: 1rem;
-            color: #ca8a04;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.4rem;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Gratitude */
-        .gratitude-box {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            border-radius: 10px;
-            padding: 1.25rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .gratitude-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-        .gratitude-box p {
-            font-size: 0.75rem;
-            line-height: 1.5;
-            margin: 0;
-            opacity: 0.95;
-        }
-
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .stat-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.6rem;
-            text-align: center;
-        }
-        .stat-card .num {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .stat-card .label {
-            font-size: 0.6rem;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-
-        /* Breakdown */
-        .breakdown-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .breakdown-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.6rem;
-            text-align: center;
-        }
-        .breakdown-card .pct {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .breakdown-card .cat {
-            font-size: 0.65rem;
-            color: #374151;
-            font-weight: 600;
-        }
-        .breakdown-card .desc {
-            font-size: 0.55rem;
-            color: #9ca3af;
-        }
-
-        /* Ways to Help */
-        .ways-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-            margin: 0.75rem 0;
-        }
-        .way-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            transition: all 0.25s ease;
-        }
-        .way-card:hover {
-            border-color: #16a34a;
-            transform: translateY(-2px);
-        }
-        .way-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .way-card h4 {
-            font-size: 0.8rem;
-            color: #374151;
-            margin-bottom: 0.25rem;
-        }
-        .way-card p {
-            font-size: 0.65rem;
-            color: #6b7280;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        .way-link {
-            display: inline-block;
-            background: #16a34a;
-            color: white;
-            font-size: 0.65rem;
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Major Giving */
-        .giving-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem;
-            margin: 0.75rem 0;
-        }
-        .giving-card {
-            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-            color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .giving-card.featured {
-            border: 2px solid #eab308;
-        }
-        .giving-card .amount {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #fbbf24;
-            margin-bottom: 0.25rem;
-        }
-        .giving-card .title {
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .giving-card ul {
-            text-align: left;
-            padding-left: 1rem;
-            margin: 0;
-            font-size: 0.6rem;
-            line-height: 1.4;
-        }
-        .giving-card li {
-            margin-bottom: 0.2rem;
-        }
-
-        /* Partnerships Section */
-        .partnerships-box {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1.25rem;
-            text-align: center;
-        }
-        .partnerships-box h3 {
-            font-size: 0.9rem;
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-        .partnerships-box p {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-        .partner-levels {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 0.75rem;
-            flex-wrap: wrap;
-        }
-        .partner-level {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.5rem 0.75rem;
-            text-align: center;
-        }
-        .partner-level .amount {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .partner-level .name {
-            font-size: 0.6rem;
-            color: #6b7280;
-        }
-        .partnerships-link {
-            display: inline-block;
-            background: #16a34a;
-            color: white;
-            font-size: 0.75rem;
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Contact */
-        .contact-box {
-            background: #16a34a;
-            color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .contact-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-        .contact-box p {
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        .contact-box a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .ways-grid,
-            .giving-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-grid,
-            .breakdown-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    <!-- Shared + narrative styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/rec_77.css">
 </head>
 <body>
     <div id="header-container"></div>
     <script src="../js/header-loader.js"></script>
 
-    <!-- Support Tab Navigation -->
-    <nav class="section-tabs">
+    <!-- HERO -->
+    <section class="page-header">
         <div class="container">
-            <a href="support.html" class="tab-link active">Support</a>
-            <a href="partnerships.html" class="tab-link">Partnerships</a>
-        </div>
-    </nav>
-
-    <section class="support-hero">
-        <div class="container">
-            <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 28px; height: 28px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">Support Our Community</h1>
-            <p>Every contribution strengthens our neighborhoods</p>
+            <div class="page-header-content">
+                <div class="program-badge">501(c)(3) Nonprofit</div>
+                <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 32px; height: 32px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">Support NBHD Soccer</h1>
+                <p class="program-tagline">Every contribution goes directly back to the community.</p>
+            </div>
         </div>
     </section>
 
-    <div class="support-content">
+    <!-- THE STORY -->
+    <section class="narrative-section">
+        <div class="container narrative-container">
 
-        <!-- Gratitude -->
-        <div class="gratitude-box">
-            <h3>Thank You for Believing in Us</h3>
-            <p>For over 10 years, our community has grown through the generosity of neighbors like you. From our first pickup games to today's 7,000+ member community, every dollar and volunteer hour has helped us create something beautiful in our neighborhoods.</p>
-        </div>
-
-        <!-- How Funds Are Used -->
-        <div class="support-section">
-            <h2>How Your Support Is Used</h2>
-            <div class="breakdown-grid">
-                <div class="breakdown-card">
-                    <div class="pct">65%</div>
-                    <div class="cat">Programming</div>
-                    <div class="desc">Equipment, venues, referees</div>
-                </div>
-                <div class="breakdown-card">
-                    <div class="pct">20%</div>
-                    <div class="cat">Charity</div>
-                    <div class="desc">Community health causes</div>
-                </div>
-                <div class="breakdown-card">
-                    <div class="pct">10%</div>
-                    <div class="cat">Operations</div>
-                    <div class="desc">Insurance, legal, admin</div>
-                </div>
-                <div class="breakdown-card">
-                    <div class="pct">5%</div>
-                    <div class="cat">Growth</div>
-                    <div class="desc">Expanding to new areas</div>
-                </div>
+            <div class="narrative-block">
+                <p>We are a volunteer-powered 501(c)(3) nonprofit. That means no executive salaries, no overhead bloat. What comes in goes back out into programming, equipment, and the kids we're trying to reach.</p>
             </div>
-        </div>
 
-        <!-- Ways to Help -->
-        <div class="support-section">
-            <h2>Ways to Help</h2>
-            <div class="ways-grid">
-                <div class="way-card">
-                    <div class="way-icon">💚</div>
-                    <h4>Monthly Support</h4>
-                    <p>Join our community champions with steady monthly funding. Even $10/month helps us plan sustainably.</p>
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Monthly Support" class="way-link">Become a Champion</a>
-                </div>
-                <div class="way-card">
-                    <div class="way-icon">⚽</div>
-                    <h4>Equipment Donations</h4>
-                    <p>Soccer balls, cones, jerseys, cleats help us outfit new players and expand programs.</p>
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Equipment Donation" class="way-link">Donate Equipment</a>
-                </div>
-                <div class="way-card">
-                    <div class="way-icon">🤝</div>
-                    <h4>Volunteer Your Time</h4>
-                    <p>Help with events, coach youth programs, or share professional skills with our community.</p>
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer Interest" class="way-link">Join Volunteer Team</a>
-                </div>
-                <div class="way-card">
-                    <div class="way-icon">📢</div>
-                    <h4>Spread the Word</h4>
-                    <p>Share our story, bring friends to games, help us connect with schools and organizations.</p>
-                    <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" class="way-link">Follow & Share</a>
-                </div>
-            </div>
-        </div>
+            <hr class="narrative-divider">
 
-        <!-- Major Giving -->
-        <div class="support-section">
-            <h2>Major Giving</h2>
-            <div class="giving-grid">
-                <div class="giving-card">
-                    <div class="amount">$500</div>
-                    <div class="title">Community Builder</div>
-                    <ul>
-                        <li>Fund one youth program</li>
-                        <li>Newsletter recognition</li>
-                        <li>Quarterly impact updates</li>
-                    </ul>
-                </div>
-                <div class="giving-card featured">
-                    <div class="amount">$1,500</div>
-                    <div class="title">Neighborhood Champion</div>
-                    <ul>
-                        <li>Sponsor school program</li>
-                        <li>Event name recognition</li>
-                        <li>Custom impact report</li>
-                    </ul>
-                </div>
-                <div class="giving-card">
-                    <div class="amount">$5,000+</div>
-                    <div class="title">Community Cornerstone</div>
-                    <ul>
-                        <li>Transform multiple schools</li>
-                        <li>Legacy naming options</li>
-                        <li>Board advisory access</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Corporate Partnerships -->
-        <div class="support-section">
-            <h2>Corporate & Foundation</h2>
-            <div class="partnerships-box">
-                <h3>Strategic Community Partnerships</h3>
-                <p>For corporations, foundations, and major donors seeking measurable community development impact with CSR alignment, employee engagement, and brand association.</p>
-                <div class="partner-levels">
-                    <div class="partner-level">
-                        <div class="amount">$1K</div>
-                        <div class="name">Supporter</div>
+            <div class="narrative-block">
+                <h2>Where your support goes.</h2>
+                <div class="split-card">
+                    <div class="split-card-side split-card--we">
+                        <h3>65% -- Programming</h3>
+                        <p style="font-size: 0.85rem; color: #4b5563;">Coaches, referees, equipment, and everything it takes to run a league.</p>
                     </div>
-                    <div class="partner-level">
-                        <div class="amount">$5K</div>
-                        <div class="name">Champion</div>
-                    </div>
-                    <div class="partner-level">
-                        <div class="amount">$15K+</div>
-                        <div class="name">Legacy</div>
+                    <div class="split-card-side split-card--you">
+                        <h3>20% -- Charitable Giving</h3>
+                        <p style="font-size: 0.85rem; color: #4b5563;">A portion of everything we raise goes back to local health and community causes.</p>
                     </div>
                 </div>
-                <a href="partnerships.html" class="partnerships-link">Explore Partnerships</a>
+                <div class="split-card" style="margin-top: 1rem;">
+                    <div class="split-card-side" style="background: #f9fafb; border-color: #e5e7eb; border-left: 3px solid #6b7280;">
+                        <h3 style="color: #374151;">10% -- Operations</h3>
+                        <p style="font-size: 0.85rem; color: #4b5563;">Insurance, legal, and the basics that keep us legitimate and accountable.</p>
+                    </div>
+                    <div class="split-card-side" style="background: #f9fafb; border-color: #e5e7eb; border-left: 3px solid #6b7280;">
+                        <h3 style="color: #374151;">5% -- Growth</h3>
+                        <p style="font-size: 0.85rem; color: #4b5563;">Expanding to new schools and neighborhoods.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Contact -->
-        <div class="contact-box">
-            <h3>Let's Talk About How You Can Help</h3>
-            <p>We'll work with you to find the perfect way to get involved that matches your interests and goals.</p>
-            <a href="mailto:nbhdsoccer@gmail.com?subject=Support Inquiry">nbhdsoccer@gmail.com</a>
-        </div>
+            <hr class="narrative-divider">
 
-    </div>
+            <div class="narrative-block">
+                <h2>Ways to help.</h2>
+
+                <p><strong>Donate directly.</strong><br>
+                Contributions go straight to REC 77 and NBHD Youth programming. Every dollar helps keep the cost barrier low for schools and families.</p>
+                <a href="https://ko-fi.com/nbhdsoccer" target="_blank" class="btn-primary btn-large" style="display: inline-block; margin-bottom: 1.5rem;">Support us on Ko-fi</a>
+
+                <p><strong>Donate equipment.</strong><br>
+                Soccer balls, cones, jerseys, and cleats are always needed. Reach out and we'll figure out the logistics.</p>
+
+                <p><strong>Volunteer your time.</strong><br>
+                We run on volunteer hours. If you want to help with events, coach youth programs, or contribute a professional skill, we want to hear from you.</p>
+
+                <p><strong>Spread the word.</strong><br>
+                Share our story. Bring someone to a game. Connect us with a school or a company that cares about this work.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CORPORATE + CTA -->
+    <section class="closing-section">
+        <div class="container narrative-container">
+
+            <div class="narrative-block">
+                <h2>For companies and foundations.</h2>
+                <p>If you are looking for a direct, tangible way to invest in Chicago's South and West Side communities, we are a straightforward partner. No complicated tiers, no naming rights packages. Just a conversation about what you care about and how we can make something work together.</p>
+            </div>
+
+            <hr class="narrative-divider narrative-divider--light">
+
+            <div class="narrative-block closing-cta">
+                <a href="mailto:nbhdsoccer@gmail.com?subject=Support NBHD Soccer" class="btn-primary btn-large">Get In Touch</a>
+                <div class="closing-email">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Support NBHD Soccer">nbhdsoccer@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -453,5 +125,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.narrative-block, .split-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

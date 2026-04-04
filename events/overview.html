@@ -4,276 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBHD Events | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="NBHD Events - Community special events and fundraising from Chicago Neighborhood Soccer.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <meta name="description" content="NBHD Events - Community fundraising and special events. Benavidez Memorial Tournament, Art Gala, World Cup watch parties, and more.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
 
     <!-- Google Analytics -->
     <script src="../js/analytics.js"></script>
 
-    <style>
-        .overview-hero {
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            color: white;
-            padding: 2rem 0 1.5rem;
-            text-align: center;
-        }
-        .overview-hero h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .overview-hero p {
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
-        .overview-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Three Programs Section */
-        .programs-intro {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .programs-intro h2 {
-            font-size: 1.1rem;
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-        .programs-intro p {
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-        .program-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .program-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1.25rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-            text-align: center;
-        }
-        .program-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-        .program-card.active {
-            border: 2px solid #f97316;
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-        }
-        .program-card.community { border-top: 3px solid #16a34a; }
-        .program-card.youth { border-top: 3px solid #0ea5e9; }
-        .program-card.impact { border-top: 3px solid #f97316; }
-        .program-card h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.25rem;
-        }
-        .program-card.community h3 { color: #16a34a; }
-        .program-card.youth h3 { color: #0ea5e9; }
-        .program-card.impact h3 { color: #f97316; }
-        .program-card p {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Events Section - Matching Connect/Youth styling */
-        .events-section {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .events-header {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .events-header h2 {
-            font-size: 1.1rem;
-            color: #f97316;
-            margin-bottom: 0.25rem;
-        }
-        .events-header p {
-            font-size: 0.75rem;
-            color: #6b7280;
-        }
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.75rem;
-        }
-        .event-card {
-            background: white;
-            border: 2px solid #f97316;
-            border-radius: 8px;
-            padding: 0.85rem;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-        .event-card:hover {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
-        }
-        .event-card .status-badge {
-            position: absolute;
-            top: -8px;
-            right: 10px;
-            background: #f97316;
-            color: white;
-            font-size: 0.55rem;
-            padding: 0.15rem 0.4rem;
-            border-radius: 3px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .event-card .status-badge.featured {
-            background: #dc2626;
-        }
-        .event-card h4 {
-            font-size: 0.85rem;
-            color: #f97316;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-        .event-card p {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Philosophy Section */
-        .philosophy-section {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-            border: 1px solid #f97316;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .philosophy-section h3 {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6b7280;
-            margin-bottom: 0.75rem;
-        }
-        .philosophy-quote {
-            font-size: 1rem;
-            font-style: italic;
-            color: #374151;
-            margin-bottom: 0.75rem;
-            line-height: 1.5;
-        }
-        .philosophy-text {
-            font-size: 0.8rem;
-            color: #ea580c;
-        }
-
-        @media (max-width: 600px) {
-            .program-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Shared + narrative styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/rec_77.css">
 </head>
 <body>
     <div id="header-container"></div>
     <script src="../js/header-loader.js"></script>
 
-    <!-- Events Tab Navigation -->
-    <nav class="section-tabs">
+    <!-- HERO -->
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(249, 115, 22, 0.85) 50%, rgba(234, 88, 12, 0.8) 100%), url('../assets/hero/boys_city_play_daytime.jpg'); background-size: cover; background-position: center;">
         <div class="container">
-            <a href="overview.html" class="tab-link active">Overview</a>
-            <a href="events.html" class="tab-link">Events</a>
-            <a href="special-events.html" class="tab-link">NBHD Special Events</a>
-        </div>
-    </nav>
-
-    <section class="overview-hero">
-        <div class="container">
-            <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 28px; height: 28px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">NBHD Events</h1>
-            <p>Community special events & fundraising | $25K+ raised</p>
+            <div class="page-header-content">
+                <div class="program-badge">501(c)(3) Nonprofit Events</div>
+                <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 32px; height: 32px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">NBHD Events</h1>
+                <p class="program-tagline">Community fundraising and special events -- 100% volunteer powered</p>
+            </div>
         </div>
     </section>
 
-    <!-- Philosophy & Funding Model - Top Banner -->
-    <section class="model-banner" style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border-bottom: 2px solid #f97316; padding: 1rem 0;">
-        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 0.9rem; font-style: italic; color: #374151; margin-bottom: 0.5rem;">"Great programming exists in South & West side neighborhoods—it's just hard to find."</p>
-            <p style="font-size: 0.8rem; color: #f97316; margin: 0;"><strong>Community Funds Youth:</strong> Every event directly supports youth programming. <strong>The more you participate, the more we give back.</strong></p>
+    <!-- THE STORY -->
+    <section class="narrative-section">
+        <div class="container narrative-container">
+
+            <div class="narrative-block">
+                <p>Every event we run serves two purposes. It brings the community together and it generates resources that go directly back into youth programming and neighborhood causes. That's the model and it's been working for over ten years.</p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <!-- Interactive Calendar -->
+            <div class="narrative-block">
+                <h2>2026 Calendar.</h2>
+            </div>
+            <div id="nbhd-calendar"></div>
+            <div id="nbhd-calendar-events"></div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>Annual events.</h2>
+
+                <p><strong>David Benavidez Memorial Tournament</strong><br>
+                Our flagship annual event honoring David Benavidez, a community leader and soccer organizer whose passing in 2018 brought Chicago's soccer communities together. Every year the Benavidez family travels to Chicago to participate. 100% of proceeds support local health initiatives. This year's tournament is September 10 at the Rauner Family YMCA.</p>
+                <p><a href="benavidez-tournament.html" style="color: #16a34a; font-weight: 600;">Learn more about the tournament and David's story →</a></p>
+
+                <p><strong>South and West Side Art Gala</strong><br>
+                An evening celebrating local artists from Chicago's South and West sides. Proceeds support emerging artists and creative programming in our neighborhoods. This year's gala is June 10.</p>
+
+                <p><strong>Women's Tournament</strong><br>
+                Our annual women's soccer tournament celebrating the <a href="../community-soccer/womens.html#community-registration" style="color: #16a34a; font-weight: 600;">Women's Wednesday community</a>. We held our first Women's Tournament in September 2025. 2026 details coming soon.</p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>Summer programming.</h2>
+
+                <p><strong>World Cup Watch Parties</strong><br>
+                The 2026 FIFA World Cup runs June 11 through July 19. We are hosting watch parties at Ambassador in Little Italy for the biggest matches of the summer -- Mexico's opener on June 11, USA vs Paraguay on June 12, and the Final on July 19. Come watch with the community.</p>
+
+                <p><strong>Beach Soccer</strong><br>
+                Free community beach soccer at North Avenue Beach. Small fee of $2 to $5 to cover water and food. Running two periods -- May 15 to June 15 and July 15 to August 15 -- with a community social outing at the end of each period.</p>
+
+                <p><strong>Friday Socials</strong><br>
+                Every other Friday after pickup, we head out together. Ambassador in Little Italy, 10PM. Running both beach soccer periods.</p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>Weekly programming.</h2>
+                <p>For weekly pickup games, Women's Wednesday, and the full schedule visit our Meetup page.</p>
+                <p><a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #16a34a; font-weight: 600;">meetup.com/nbhdsoccer →</a></p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>Where the money goes.</h2>
+                <p>All the money we raise -- outside of covering costs -- goes to fundraising for our CPS school partnerships. In 2026, we are growing our impact into the schools and neighborhoods that are lacking these resources the most.</p>
+                <p>See more on the <a href="../youth-programs/rec77.html" style="color: #16a34a; font-weight: 600;">REC 77 page →</a></p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <!-- How it all connects -->
+            <div class="narrative-block" style="text-align: center;">
+                <h2>How it all connects.</h2>
+                <p>Events is one piece of a larger model.</p>
+            </div>
+            <div class="program-cards">
+                <a href="../community-soccer/overview.html" class="program-card program-card--connect">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Connect</h3>
+                    <p>Weekly pickup games, women's soccer, and volunteer pathways across neighborhoods</p>
+                </a>
+                <a href="../youth-programs/overview.html" class="program-card program-card--youth">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Youth</h3>
+                    <p>School partnerships and in-school leagues through REC 77</p>
+                </a>
+                <div class="program-card program-card--events program-card--active">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Events</h3>
+                    <p>Community tournaments and fundraising that directly fund youth programming</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <div class="overview-content">
+    <!-- CTA -->
+    <section class="closing-section">
+        <div class="container narrative-container">
 
-        <!-- Events Initiatives -->
-        <div class="events-section">
-            <div class="events-header">
-                <h2>NBHD Events Initiatives</h2>
-                <p>100% volunteer-powered, accountable to community</p>
+            <div class="narrative-block closing-cta">
+                <h2>Get involved.</h2>
+                <p>Want to sponsor an event, volunteer, or bring an idea to us? We want to hear from you.</p>
+                <a href="mailto:nbhdsoccer@gmail.com?subject=NBHD Events" class="btn-primary btn-large">Get In Touch</a>
+                <div class="closing-email">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=NBHD Events">nbhdsoccer@gmail.com</a>
+                </div>
             </div>
-            <div class="events-grid">
-                <a href="benavidez-tournament.html" class="event-card">
-                    <span class="status-badge featured">Annual</span>
-                    <h4>Benavidez Tournament</h4>
-                    <p>Annual memorial fundraiser honoring David's legacy.</p>
-                </a>
-                <a href="events.html" class="event-card">
-                    <span class="status-badge">Active</span>
-                    <h4>Events & Calendar</h4>
-                    <p>Tournaments, community gatherings, and weekly programming.</p>
-                </a>
-                <a href="../about/impact.html" class="event-card">
-                    <span class="status-badge">Active</span>
-                    <h4>Impact Metrics</h4>
-                    <p>Community outcomes and transparent reporting.</p>
-                </a>
-            </div>
-        </div>
 
-        <!-- Three Programs -->
-        <div class="programs-intro">
-            <h2>Three Programs of NBHD Soccer</h2>
-            <p>501(c)(3) nonprofit operating community development through soccer</p>
         </div>
-
-        <div class="program-cards">
-            <a href="../community-soccer/overview.html" class="program-card community">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Connect</h3>
-                <p>Weekly pickup games, women's soccer, and volunteer pathways building cross-neighborhood connections</p>
-            </a>
-            <a href="../youth-programs/overview.html" class="program-card youth">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Youth</h3>
-                <p>School partnerships and youth development through REC 77 and YMCA collaborations</p>
-            </a>
-            <div class="program-card impact active">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Events</h3>
-                <p>Community special events and fundraising</p>
-            </div>
-        </div>
-
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div style="text-align: center; padding: 1.5rem 0;">
                 <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
@@ -283,5 +153,294 @@
             </div>
         </div>
     </footer>
+
+    <style>
+        /* Calendar */
+        .cal { font-family: 'Poppins', sans-serif; margin: 0 auto; max-width: 100%; }
+        .cal-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .cal-nav button { background: none; border: 1px solid #e5e7eb; border-radius: 6px; padding: 0.4rem 0.8rem; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.8rem; color: #374151; transition: all 0.2s; }
+        .cal-nav button:hover { border-color: #16a34a; color: #16a34a; }
+        .cal-nav h3 { font-size: 1.05rem; font-weight: 600; color: #1f2937; margin: 0; }
+        .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+        .cal-header { text-align: center; font-size: 0.7rem; font-weight: 600; color: #9ca3af; padding: 0.4rem 0; text-transform: uppercase; }
+        .cal-day { position: relative; text-align: center; padding: 0.5rem 0.25rem; font-size: 0.8rem; color: #374151; border-radius: 6px; cursor: default; min-height: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+        .cal-day.has-events { cursor: pointer; font-weight: 600; }
+        .cal-day.has-events:hover { background: #f0fdf4; }
+        .cal-day.selected { background: #16a34a; color: white; border-radius: 6px; }
+        .cal-day.selected:hover { background: #15803d; }
+        .cal-day.empty { color: transparent; }
+        .cal-day.today { box-shadow: inset 0 0 0 2px #16a34a; border-radius: 6px; }
+        .cal-dots { display: flex; gap: 2px; margin-top: 3px; justify-content: center; flex-wrap: wrap; }
+        .cal-dot { width: 5px; height: 5px; border-radius: 50%; }
+        .cal-dot.community { background: #16a34a; }
+        .cal-dot.youth { background: #0ea5e9; }
+        .cal-dot.special { background: #f97316; }
+        .cal-dot.social { background: #a855f7; }
+
+        /* Event list */
+        .cal-events { margin-top: 1rem; }
+        .cal-event { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid #f3f4f6; }
+        .cal-event:last-child { border-bottom: none; }
+        .cal-event-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 0.35rem; flex-shrink: 0; }
+        .cal-event-info { flex: 1; }
+        .cal-event-name { font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; color: #1f2937; }
+        .cal-event-time { font-family: 'Open Sans', sans-serif; font-size: 0.75rem; color: #6b7280; }
+        .cal-event-tag { display: inline-block; font-size: 0.6rem; font-weight: 600; padding: 0.15rem 0.4rem; border-radius: 3px; text-transform: uppercase; margin-left: 0.5rem; }
+        .cal-event-tag.special { background: #fff7ed; color: #ea580c; }
+        .cal-event-tag.youth { background: #f0f9ff; color: #0284c7; }
+
+        /* Legend */
+        .cal-legend { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+        .cal-legend-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.7rem; color: #6b7280; font-family: 'Open Sans', sans-serif; }
+
+        @media (max-width: 480px) {
+            .cal-day { font-size: 0.7rem; min-height: 2.2rem; padding: 0.35rem 0.15rem; }
+            .cal-dot { width: 4px; height: 4px; }
+            .cal-nav h3 { font-size: 0.9rem; }
+        }
+    </style>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.narrative-block').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // === NBHD Calendar ===
+        (function() {
+            const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+            // Helper: last Sunday of a given month/year
+            function lastSunday(year, month) {
+                const d = new Date(year, month + 1, 0);
+                d.setDate(d.getDate() - d.getDay());
+                return d.getDate();
+            }
+
+            // Helper: is date in beach soccer range
+            function inBeachRange(m, d) {
+                if (m === 4) return d >= 15; // May 15+
+                if (m === 5) return d <= 15; // through Jun 15
+                if (m === 6) return d >= 15; // Jul 15+
+                if (m === 7) return d <= 15; // through Aug 15
+                return false;
+            }
+
+            // Helper: is date in summer range (May 15 - Aug 15)
+            function inSummer(m, d) {
+                if (m === 4) return d >= 15;
+                if (m >= 5 && m <= 6) return true;
+                if (m === 7) return d <= 15;
+                return false;
+            }
+
+            // Generate events for a specific date
+            function getEvents(year, month, day) {
+                const date = new Date(year, month, day);
+                const dow = date.getDay(); // 0=Sun
+                const events = [];
+
+                // --- RECURRING WEEKLY (May 15 - Aug 15) ---
+                if (inSummer(month, day)) {
+                    // Tuesday: YMCA Pickup
+                    if (dow === 2) {
+                        events.push({ name: 'Tuesday Pickup', time: '8:00 PM', cat: 'community' });
+                    }
+                    // Friday: Friday Pickup
+                    if (dow === 5) {
+                        events.push({ name: 'Friday Pickup', time: '8:00 PM', cat: 'community' });
+                    }
+                    // Friday Socials: every other Friday in beach ranges
+                    if (dow === 5 && inBeachRange(month, day) && year === 2026) {
+                        // Every other Fri starting May 15: May 15, 29, Jun 12, Jul 17, 31, Aug 14
+                        var fridaySocials = [[4,15],[4,29],[5,12],[6,17],[6,31],[7,14]];
+                        for (var fi = 0; fi < fridaySocials.length; fi++) {
+                            if (month === fridaySocials[fi][0] && day === fridaySocials[fi][1]) {
+                                events.push({ name: 'Friday Social Outing', time: '10:00 PM', cat: 'social' });
+                                break;
+                            }
+                        }
+                    }
+                    // Saturday: Morning with Mo
+                    if (dow === 6) {
+                        events.push({ name: 'Morning with Mo', time: '9:30 AM', cat: 'community' });
+                    }
+                    // Saturday: Beach Soccer (every Sat in beach ranges)
+                    if (dow === 6 && inBeachRange(month, day)) {
+                        events.push({ name: 'Beach Soccer', time: '10:30 AM – 12:00 PM', cat: 'community' });
+                        events.push({ name: 'Beach Social (food & beer)', time: '12:00 – 1:30 PM', cat: 'social' });
+                    }
+                }
+
+                // --- YMCA Youth Soccer League: every Wed, May 20 - Jul 8 ---
+                if (dow === 3 && year === 2026) {
+                    const dt = new Date(2026, month, day);
+                    const start = new Date(2026, 4, 20); // May 20
+                    const end = new Date(2026, 6, 8);    // Jul 8
+                    if (dt >= start && dt <= end) {
+                        events.push({ name: 'YMCA Youth Soccer League', time: '3:00 – 7:00 PM', cat: 'youth' });
+                    }
+                }
+
+                // --- NBHD Soccer Tournament: last Sunday of month (May-Aug) ---
+                if (dow === 0 && month >= 4 && month <= 7 && year === 2026) {
+                    if (day === lastSunday(year, month)) {
+                        events.push({ name: 'NBHD Soccer Tournament', time: '11:00 AM', cat: 'special' });
+                    }
+                }
+
+                // --- ONE-TIME EVENTS ---
+                if (year === 2026) {
+                    if (month === 5 && day === 10) {
+                        events.push({ name: 'South & West Side Art Gala', time: 'Evening', cat: 'special' });
+                    }
+                    // World Cup Watch Parties
+                    if (month === 5 && day === 11) {
+                        events.push({ name: 'World Cup Watch Party — Mexico Opener', time: 'Match Time', cat: 'special' });
+                    }
+                    if (month === 5 && day === 12) {
+                        events.push({ name: 'World Cup Watch Party — USA vs Paraguay', time: 'Match Time', cat: 'special' });
+                    }
+                    if (month === 6 && day === 19) {
+                        events.push({ name: 'World Cup Watch Party — Final', time: 'Match Time', cat: 'special' });
+                    }
+                    if (month === 7 && day === 14) {
+                        events.push({ name: 'Benavidez Memorial Tournament', time: 'All Day', cat: 'special' });
+                    }
+                    if (month === 10 && day === 15) {
+                        events.push({ name: 'Indoor Season Starts', time: 'TBD', cat: 'community' });
+                    }
+                }
+
+                return events;
+            }
+
+            let currentMonth = 4; // May (0-indexed)
+            let currentYear = 2026;
+            let selectedDate = null;
+
+            function render() {
+                const cal = document.getElementById('nbhd-calendar');
+                const eventsDiv = document.getElementById('nbhd-calendar-events');
+                if (!cal) return;
+
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+                let html = '<div class="cal">';
+                // Nav
+                html += '<div class="cal-nav">';
+                html += '<button onclick="nbhdCalPrev()">← ' + (currentMonth === 0 ? MONTHS[11] : MONTHS[currentMonth - 1]) + '</button>';
+                html += '<h3>' + MONTHS[currentMonth] + ' ' + currentYear + '</h3>';
+                html += '<button onclick="nbhdCalNext()">' + (currentMonth === 11 ? MONTHS[0] : MONTHS[currentMonth + 1]) + ' →</button>';
+                html += '</div>';
+
+                // Grid
+                html += '<div class="cal-grid">';
+                DAYS.forEach(d => { html += '<div class="cal-header">' + d + '</div>'; });
+
+                // Empty cells
+                for (let i = 0; i < firstDay; i++) {
+                    html += '<div class="cal-day empty"></div>';
+                }
+
+                // Days
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const evts = getEvents(currentYear, currentMonth, d);
+                    const hasEvents = evts.length > 0;
+                    const isSelected = selectedDate && selectedDate.m === currentMonth && selectedDate.d === d && selectedDate.y === currentYear;
+
+                    let cls = 'cal-day';
+                    if (hasEvents) cls += ' has-events';
+                    if (isSelected) cls += ' selected';
+
+                    const onclick = hasEvents ? ' onclick="nbhdCalSelect(' + currentYear + ',' + currentMonth + ',' + d + ')"' : '';
+
+                    html += '<div class="' + cls + '"' + onclick + '>';
+                    html += d;
+                    if (hasEvents) {
+                        html += '<div class="cal-dots">';
+                        const cats = [...new Set(evts.map(e => e.cat))];
+                        cats.forEach(c => { html += '<div class="cal-dot ' + c + '"></div>'; });
+                        html += '</div>';
+                    }
+                    html += '</div>';
+                }
+
+                html += '</div>';
+
+                // Legend
+                html += '<div class="cal-legend">';
+                html += '<div class="cal-legend-item"><div class="cal-dot community" style="width:8px;height:8px;"></div> Community</div>';
+                html += '<div class="cal-legend-item"><div class="cal-dot youth" style="width:8px;height:8px;"></div> Youth</div>';
+                html += '<div class="cal-legend-item"><div class="cal-dot special" style="width:8px;height:8px;"></div> Special Event</div>';
+                html += '<div class="cal-legend-item"><div class="cal-dot social" style="width:8px;height:8px;"></div> Social</div>';
+                html += '</div>';
+
+                html += '</div>';
+                cal.innerHTML = html;
+
+                // Render selected day events
+                if (selectedDate && selectedDate.m === currentMonth && selectedDate.y === currentYear) {
+                    const evts = getEvents(selectedDate.y, selectedDate.m, selectedDate.d);
+                    if (evts.length > 0) {
+                        const dateStr = MONTHS[selectedDate.m] + ' ' + selectedDate.d + ', ' + selectedDate.y;
+                        let ehtml = '<div class="cal-events">';
+                        ehtml += '<p style="font-family:Poppins,sans-serif;font-size:0.85rem;font-weight:600;color:#1f2937;margin-bottom:0.5rem;">' + dateStr + '</p>';
+                        evts.forEach(e => {
+                            const tag = (e.cat === 'special') ? '<span class="cal-event-tag special">Special</span>' :
+                                        (e.cat === 'youth') ? '<span class="cal-event-tag youth">Youth</span>' : '';
+                            ehtml += '<div class="cal-event">';
+                            ehtml += '<div class="cal-event-dot ' + e.cat + '"></div>';
+                            ehtml += '<div class="cal-event-info">';
+                            ehtml += '<div class="cal-event-name">' + e.name + tag + '</div>';
+                            ehtml += '<div class="cal-event-time">' + e.time + '</div>';
+                            ehtml += '</div></div>';
+                        });
+                        ehtml += '</div>';
+                        eventsDiv.innerHTML = ehtml;
+                    }
+                } else {
+                    eventsDiv.innerHTML = '';
+                }
+            }
+
+            window.nbhdCalPrev = function() {
+                currentMonth--;
+                if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+                selectedDate = null;
+                render();
+            };
+            window.nbhdCalNext = function() {
+                currentMonth++;
+                if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+                selectedDate = null;
+                render();
+            };
+            window.nbhdCalSelect = function(y, m, d) {
+                if (selectedDate && selectedDate.y === y && selectedDate.m === m && selectedDate.d === d) {
+                    selectedDate = null;
+                } else {
+                    selectedDate = { y: y, m: m, d: d };
+                }
+                render();
+            };
+
+            document.addEventListener('DOMContentLoaded', render);
+        })();
+    </script>
 </body>
 </html>
