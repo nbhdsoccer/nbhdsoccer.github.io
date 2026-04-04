@@ -4,192 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBHD Connect | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="NBHD Connect - Building community through soccer. Weekly pickup games, women's soccer, volunteer opportunities across Chicago.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <meta name="description" content="NBHD Connect - Chicago's community soccer network on the South and West sides. Weekly pickup games, women's soccer, volunteer pathways, and more.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="../assets/nbhd_simple_logo_2025-07.png">
 
     <!-- Google Analytics -->
     <script src="../js/analytics.js"></script>
 
-    <style>
-        .overview-hero {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 2rem 0 1.5rem;
-            text-align: center;
-        }
-        .overview-hero h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .overview-hero p {
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
-        .overview-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Three Programs Section */
-        .programs-intro {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .programs-intro h2 {
-            font-size: 1.1rem;
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-        .programs-intro p {
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-        .program-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .program-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1.25rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-            text-align: center;
-        }
-        .program-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-        .program-card.active {
-            border: 2px solid #16a34a;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        .program-card.community { border-top: 3px solid #16a34a; }
-        .program-card.youth { border-top: 3px solid #0ea5e9; }
-        .program-card.impact { border-top: 3px solid #f97316; }
-        .program-card h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.25rem;
-        }
-        .program-card.community h3 { color: #16a34a; }
-        .program-card.youth h3 { color: #0ea5e9; }
-        .program-card.impact h3 { color: #f97316; }
-        .program-card p {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* NBHD Connect Section */
-        .connect-section {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .connect-header {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .connect-header h2 {
-            font-size: 1.1rem;
-            color: #16a34a;
-            margin-bottom: 0.25rem;
-        }
-        .connect-header p {
-            font-size: 0.75rem;
-            color: #6b7280;
-        }
-        .initiative-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.75rem;
-        }
-        .initiative-card {
-            background: white;
-            border: 2px solid #16a34a;
-            border-radius: 8px;
-            padding: 0.85rem;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-        .initiative-card:hover {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
-        }
-        .initiative-card .status-badge {
-            position: absolute;
-            top: -8px;
-            right: 10px;
-            background: #16a34a;
-            color: white;
-            font-size: 0.55rem;
-            padding: 0.15rem 0.4rem;
-            border-radius: 3px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .initiative-card h4 {
-            font-size: 0.85rem;
-            color: #16a34a;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-        .initiative-card p {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Philosophy Section */
-        .philosophy-section {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #16a34a;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .philosophy-section h3 {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6b7280;
-            margin-bottom: 0.75rem;
-        }
-        .philosophy-quote {
-            font-size: 1rem;
-            font-style: italic;
-            color: #374151;
-            margin-bottom: 0.75rem;
-            line-height: 1.5;
-        }
-        .philosophy-text {
-            font-size: 0.8rem;
-            color: #16a34a;
-        }
-
-        @media (max-width: 600px) {
-            .program-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Shared + narrative styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <link rel="stylesheet" href="../assets/css/rec_77.css">
 </head>
 <body>
     <div id="header-container"></div>
@@ -206,80 +37,92 @@
         </div>
     </nav>
 
-    <section class="overview-hero">
+    <!-- HERO -->
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(22, 163, 74, 0.85) 50%, rgba(21, 128, 61, 0.8) 100%), url('../assets/hero/boys_city_play_daytime.jpg'); background-size: cover; background-position: center;">
         <div class="container">
-            <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 28px; height: 28px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">NBHD Connect</h1>
-            <p>Building stronger neighborhoods through soccer | 7,000+ members</p>
+            <div class="page-header-content">
+                <div class="program-badge">Community Soccer Network</div>
+                <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 32px; height: 32px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">NBHD Connect</h1>
+                <p class="program-tagline">Chicago's community soccer network -- South and West sides</p>
+            </div>
         </div>
     </section>
 
-    <!-- Philosophy & Funding Model - Top Banner -->
-    <section class="model-banner" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-bottom: 2px solid #16a34a; padding: 1rem 0;">
-        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 0.9rem; font-style: italic; color: #374151; margin-bottom: 0.5rem;">"Great programming exists in South & West side neighborhoods—it's just hard to find."</p>
-            <p style="font-size: 0.8rem; color: #16a34a; margin: 0;"><strong>Community Funds Youth:</strong> Every pickup game directly supports youth programming. <strong>The more you participate, the more we give back.</strong></p>
+    <!-- THE STORY -->
+    <section class="narrative-section">
+        <div class="container narrative-container">
+
+            <div class="narrative-block">
+                <p>We have been running pickup games in these neighborhoods for over ten years. What started as a few friends organizing weekly soccer has grown into a community of 7,000 people across Chicago's South and West sides.</p>
+                <p>We are intentional about who feels welcome here. Our games bring together players from every corner of Chicago -- different backgrounds, different skill levels, different ages. That mix is not accidental. It's what we've been building toward since the beginning.</p>
+                <p class="narrative-emphasis">No tryouts. No memberships. No barriers. Just good soccer and people who genuinely want to be here.</p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>What we run.</h2>
+
+                <p><strong>Weekly Pickup</strong> -- Coed games five to six days a week across Chicago neighborhoods. All skill levels, all backgrounds, $5 to $10 a session. This is where most people start. <a href="pickup.html" style="color: #16a34a; font-weight: 600;">Learn more →</a></p>
+
+                <p><strong>Women's Wednesday</strong> -- A dedicated space for women every Wednesday at the Rauner Family YMCA. Led by women, for women, all skill levels welcome. <a href="womens.html" style="color: #16a34a; font-weight: 600;">Learn more →</a></p>
+
+                <p><strong>Volunteering</strong> -- If you want to do more than play, there's a path for that. Game hosts, coaches, event support. Most of our leadership started as players. <a href="volunteer-pathway.html" style="color: #16a34a; font-weight: 600;">Learn more →</a></p>
+
+                <p><strong>Discord</strong> -- Where we're building the community hub between games. Game updates, coordination, conversation. Still growing -- we're investing more here. <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #16a34a; font-weight: 600;">Join →</a></p>
+
+                <p><strong>OpenFutbol</strong> -- Our open source tool for finding pickup soccer across Chicago. Built by the community, for the community. <a href="https://openfutbol.github.io" target="_blank" style="color: #16a34a; font-weight: 600;">Explore →</a></p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <div class="narrative-block">
+                <h2>How it works.</h2>
+                <p>Show up to a game on Meetup. Meet some people. Come back the following week. That's it. Nobody is going to quiz you on your skill level or ask how long you've been playing.</p>
+                <p>If you have ever felt like pickup soccer wasn't for you, this community was built with you in mind.</p>
+                <p>The community builds itself when the right conditions exist. We've been creating those conditions for ten years.</p>
+            </div>
+
+            <hr class="narrative-divider">
+
+            <!-- How it all connects -->
+            <div class="narrative-block" style="text-align: center;">
+                <h2>How it all connects.</h2>
+                <p>Connect is one piece of a larger model.</p>
+            </div>
+            <div class="program-cards">
+                <div class="program-card program-card--connect program-card--active">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Connect</h3>
+                    <p>Weekly pickup games, women's soccer, and volunteer pathways across neighborhoods</p>
+                </div>
+                <a href="../youth-programs/overview.html" class="program-card program-card--youth">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Youth</h3>
+                    <p>School partnerships and in-school leagues through REC 77</p>
+                </a>
+                <a href="../events/overview.html" class="program-card program-card--events">
+                    <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle; margin-right: 0.25rem;">NBHD Events</h3>
+                    <p>Community tournaments and fundraising that directly fund youth programming</p>
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <div class="overview-content">
+    <!-- CTA -->
+    <section class="closing-section">
+        <div class="container narrative-container">
 
-        <!-- NBHD Connect Initiatives -->
-        <div class="connect-section" style="margin-bottom: 1.5rem;">
-            <div class="connect-header">
-                <h2>NBHD Connect Initiatives</h2>
-                <p>Community Programming | All Active</p>
+            <div class="narrative-block closing-cta">
+                <h2>Ready to play?</h2>
+                <p>Find your first game on Meetup and we'll see you on the pitch.</p>
+                <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" class="btn-primary btn-large">Find a Game</a>
+                <div class="closing-email">
+                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank">meetup.com/nbhdsoccer</a>
+                </div>
             </div>
-            <div class="initiative-grid">
-                <a href="pickup.html" class="initiative-card">
-                    <span class="status-badge">Active</span>
-                    <h4>Weekly Pickup</h4>
-                    <p>5-6 days/week coed games across Chicago neighborhoods. All skill levels welcome.</p>
-                </a>
-                <a href="womens.html" class="initiative-card">
-                    <span class="status-badge">Active</span>
-                    <h4>Women's Soccer</h4>
-                    <p>Safe, supportive space every Wednesday. Building community for women players.</p>
-                </a>
-                <a href="volunteer-pathway.html" class="initiative-card">
-                    <span class="status-badge">Active</span>
-                    <h4>Volunteering</h4>
-                    <p>Player to leader pathway. Help organize games and build community infrastructure.</p>
-                </a>
-                <a href="https://discord.gg/WWvEbbvg3V" class="initiative-card" target="_blank">
-                    <span class="status-badge">Active</span>
-                    <h4>Discord</h4>
-                    <p>Join 500+ members in conversation. Game updates, community chat, and organizing.</p>
-                </a>
-                <a href="https://openfutbol.github.io" class="initiative-card" target="_blank">
-                    <span class="status-badge">Active</span>
-                    <h4>OpenFutbol</h4>
-                    <p>Open source soccer tools. Find games, connect with players, share resources.</p>
-                </a>
-            </div>
-        </div>
 
-        <!-- Three Programs -->
-        <div class="programs-intro">
-            <h2>Three Programs of NBHD Soccer</h2>
-            <p>501(c)(3) nonprofit operating community development through soccer</p>
         </div>
-
-        <div class="program-cards">
-            <div class="program-card community active">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Connect</h3>
-                <p>Weekly pickup games, women's soccer, and volunteer pathways building cross-neighborhood connections</p>
-            </div>
-            <a href="../youth-programs/overview.html" class="program-card youth">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Youth</h3>
-                <p>School partnerships and youth development through REC 77 and YMCA collaborations</p>
-            </a>
-            <a href="../events/overview.html" class="program-card impact">
-                <h3><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 18px; height: 18px; border-radius: 3px; vertical-align: middle;"> NBHD Events</h3>
-                <p>Community special events and fundraising</p>
-            </a>
-        </div>
-
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
@@ -292,5 +135,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.narrative-block').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
