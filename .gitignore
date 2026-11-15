@@ -208,10 +208,11 @@ __marimo__/
 
 # Financial Data Files
 # CSV files (financial records, expense reports, donor data)
-*.csv
+*.[cC][sS][vV]
 
 # Excel files (financial spreadsheets, budgets, reports)
 *.xls
-*.xlsx
+*.[xX][lL][sS][xX]
+*.[xX][lL][sS]
 *.xlsm
 *.xlsb
