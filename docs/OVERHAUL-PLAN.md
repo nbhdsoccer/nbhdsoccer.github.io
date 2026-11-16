@@ -76,7 +76,7 @@ Old URLs get small redirect stubs so links on Instagram, Meetup and in emails ke
 
 ## Decisions needed from Andre
 
-1. **Donation platform:** keep Ko-fi, or switch to Zeffy (free) / Givebutter?
+1. ~~Donation platform~~ **Decided: Zeffy** (form `donate-to-change-lives-29447`, embedded on the Support page)
 2. **Programs:** one page with sections, or one short page per program?
 3. **Sponsorship levels:** the current copy says "no complicated tiers." Keep that, or move to 3 named levels?
 4. **EIN and mailing address** to show in the footer

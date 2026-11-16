@@ -21,7 +21,7 @@ const pageConfigs = {
     // Impact page moved to youth-programs
     '/youth-programs/impact.html': {
         ctaText: 'Donate',
-        ctaHref: 'https://ko-fi.com/nbhdsoccer',
+        ctaHref: '../support/support.html#donate',
         rootPath: '../'
     },
     '/about/leadership.html': {
@@ -40,7 +40,7 @@ const pageConfigs = {
     // Support pages
     '/support/support.html': {
         ctaText: 'Donate',
-        ctaHref: 'https://ko-fi.com/nbhdsoccer',
+        ctaHref: '../support/support.html#donate',
         rootPath: '../'
     },
 
@@ -60,12 +60,12 @@ const pageConfigs = {
     // Youth Programs pages (40% emphasis)
     '/youth-programs/overview.html': {
         ctaText: 'Donate',
-        ctaHref: 'https://ko-fi.com/nbhdsoccer',
+        ctaHref: '../support/support.html#donate',
         rootPath: '../'
     },
     '/youth-programs/rec77.html': {
         ctaText: 'Donate',
-        ctaHref: 'https://ko-fi.com/nbhdsoccer',
+        ctaHref: '../support/support.html#donate',
         rootPath: '../'
     },
     
