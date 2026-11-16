@@ -1,24 +1,3 @@
-<!-- Google Analytics (GA4) - Initialize if not already loaded -->
-<script>
-if (!window.gtag) {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
-  
-  // Load GA4 script
-  const gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0EHE4YERHW';
-  document.head.appendChild(gaScript);
-  
-  // Configure when loaded
-  gaScript.onload = function() {
-    gtag('js', new Date());
-    gtag('config', 'G-0EHE4YERHW');
-  };
-}
-</script>
-
 <header>
     <nav class="container">
         <div class="brand-section">
@@ -26,27 +5,17 @@ if (!window.gtag) {
                 <img src="{{ROOT_PATH}}assets/nbhd_simple_logo_2025-07.png" alt="NBHD Soccer Logo" class="logo-img">
                 <span class="logo-text">NBHD Soccer</span>
             </a>
-            <span class="tagline">Chicago | Nonprofit Community Development</span>
+            <span class="tagline">Chicago | 501(c)(3) Nonprofit</span>
         </div>
-        
-        <!-- Mobile menu button -->
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-        
+
         <ul class="nav-links">
-            <li><a href="{{ROOT_PATH}}index.html">Home</a></li>
-            <li><a href="{{ROOT_PATH}}about/about.html">About</a></li>
-            <li><a href="{{ROOT_PATH}}community-soccer/overview.html">Community</a></li>
-            <li><a href="{{ROOT_PATH}}youth-programs/overview.html">Youth</a></li>
-            <li><a href="{{ROOT_PATH}}events/overview.html">Events</a></li>
-            <li><a href="{{ROOT_PATH}}support/support.html">Support</a></li>
+            <li><a href="{{ROOT_PATH}}community-soccer/overview.html" data-section="programs">Programs</a></li>
+            <li><a href="{{ROOT_PATH}}events/overview.html" data-section="events">Events</a></li>
+            <li><a href="{{ROOT_PATH}}about/about.html" data-section="about">About</a></li>
+            <li><a href="{{ROOT_PATH}}support/partner.html" data-section="partner">Partner</a></li>
         </ul>
         <div class="header-ctas">
             <a href="{{ROOT_PATH}}support/support.html#donate" class="cta-button cta-donate">Donate</a>
         </div>
     </nav>
 </header>
-
