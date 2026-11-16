@@ -247,6 +247,26 @@ nav {
     background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
 }
 
+/* Header: two calls to action, Play (outline) + Donate (solid) */
+.header-ctas {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cta-button.cta-play {
+    background: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+    box-shadow: none;
+}
+
+.cta-button.cta-play:hover {
+    background: #16a34a;
+    color: white;
+}
+
 /* ENHANCED BUTTON SYSTEM - Nonprofit Focused */
 .btn-primary, .btn-secondary, .btn-tertiary {
     padding: 8px 16px;
@@ -915,6 +935,11 @@ footer {
     .nav-links a.active {
         color: var(--primary-green);
         border-bottom: 2px solid var(--primary-green);
+    }
+
+    .header-ctas {
+        order: 2;
+        gap: 0.4rem;
     }
 
     .cta-button {
