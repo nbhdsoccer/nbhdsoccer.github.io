@@ -3,421 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the volunteer board and community directors who run Chicago Neighborhood Soccer.">
     <title>Leadership | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="Meet the board of directors and community leadership of Chicago Neighborhood Soccer. 100% volunteer-powered nonprofit governance.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-
-    <!-- Google Analytics -->
-    <script src="../js/analytics.js"></script>
-
-    <style>
-        .leadership-hero {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 1.5rem 0 1rem;
-            text-align: center;
-        }
-        .leadership-hero h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-        .leadership-hero p {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        .leadership-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        .leadership-section {
-            margin-bottom: 2rem;
-        }
-        .leadership-section h2 {
-            font-size: 1rem;
-            color: #16a34a;
-            margin-bottom: 0.75rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.4rem;
-        }
-
-        /* Bio Cards Grid - Board (2x2) */
-        .bios-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-            margin: 1rem 0;
-        }
-        .bio-card {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 1.25rem;
-            text-align: center;
-            transition: all 0.25s ease;
-        }
-        .bio-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-color: #16a34a;
-        }
-        .bio-card.cofounder {
-            border: 2px solid #16a34a;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        .bio-avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 0.75rem;
-            border: 3px solid #16a34a;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
-        }
-        .bio-card h3 {
-            font-size: 1rem;
-            color: #374151;
-            margin-bottom: 0.25rem;
-        }
-        .bio-card .title {
-            font-size: 0.7rem;
-            color: #16a34a;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-        }
-        .bio-card p {
-            font-size: 0.75rem;
-            color: #6b7280;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        /* Hall of Fame */
-        .hof-section {
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-        .hof-card {
-            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 1.5rem 2rem;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .hof-card .badge {
-            display: inline-block;
-            background: #f97316;
-            color: white;
-            font-size: 0.6rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .hof-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 0.75rem;
-            border: 3px solid #f97316;
-        }
-        .hof-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .hof-card p {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        .hof-link {
-            display: inline-block;
-            background: #f97316;
-            color: white;
-            font-size: 0.75rem;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .stat-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.6rem;
-            text-align: center;
-        }
-        .stat-card .num {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .stat-card .label {
-            font-size: 0.6rem;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-
-        /* Governance */
-        .governance-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .governance-card {
-            background: #f9fafb;
-            border-left: 3px solid #16a34a;
-            border-radius: 0 6px 6px 0;
-            padding: 0.75rem;
-        }
-        .governance-card h4 {
-            font-size: 0.8rem;
-            color: #16a34a;
-            margin-bottom: 0.25rem;
-        }
-        .governance-card p {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* CTA */
-        .cta-box {
-            background: #16a34a;
-            color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .cta-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-        .cta-box p {
-            font-size: 0.75rem;
-            margin-bottom: 0.75rem;
-            opacity: 0.9;
-        }
-        .cta-box a {
-            display: inline-block;
-            background: white;
-            color: #16a34a;
-            font-size: 0.75rem;
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 0.25rem;
-        }
-
-        @media (max-width: 600px) {
-            .bios-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .governance-grid {
-                grid-template-columns: 1fr;
-            }
-            .hof-card {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/about/leadership.html">
+    <meta property="og:title" content="Leadership | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Meet the volunteer board and community directors who run Chicago Neighborhood Soccer.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/web/about-team-2.jpg">
+    <link rel="icon" type="image/png" href="/assets/nbhd_simple_logo_2025-07.png">
+    <script src="/js/analytics.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared-styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
     <div id="header-container"></div>
-    <script src="../js/header-loader.js"></script>
-
-    <!-- About Tab Navigation -->
-    <nav class="section-tabs">
-        <div class="container">
-            <a href="about.html" class="tab-link">About</a>
-            <a href="leadership.html" class="tab-link active">Leadership</a>
-            <a href="impact.html" class="tab-link">Impact</a>
-            <a href="media.html" class="tab-link">Media</a>
-        </div>
-    </nav>
-
-    <section class="leadership-hero">
-        <div class="container">
-            <h1>Board & Leadership</h1>
-            <p>100% Volunteer-Powered | Community-Led Governance</p>
-        </div>
-    </section>
-
-    <div class="leadership-content">
-
-        <!-- Board of Directors -->
-        <div class="leadership-section">
-            <h2>Board of Directors</h2>
-            <div class="bios-grid">
-                <div class="bio-card cofounder">
-                    <img src="../assets/bio/andre.jpg" alt="Andre" class="bio-avatar">
-                    <h3>Andre</h3>
-                    <div class="title">Co-Founder & Board Member</div>
-                    <p>Community organizer with 10+ years building neighborhood connections through soccer. PhD holder with expertise in community development and nonprofit governance.</p>
-                </div>
-                <div class="bio-card cofounder">
-                    <img src="../assets/bio/diego.jpeg" alt="Diego Moreno" class="bio-avatar">
-                    <h3>Diego Moreno</h3>
-                    <div class="title">Co-Founder & Board Member</div>
-                    <p>South Side resident and longtime community leader. Brings over 15 years of hands-on experience working in Chicago Communities, combining operational leadership with a deep commitment to youth development.</p>
-                </div>
-                <div class="bio-card cofounder">
-                    <img src="../assets/bio/julian.jpeg" alt="Julian da Silva" class="bio-avatar">
-                    <h3>Julian da Silva</h3>
-                    <div class="title">Co-Founder & Board Member</div>
-                    <p>Experienced in community programming and youth development. Focuses on creating inclusive spaces and sustainable community partnerships.</p>
-                </div>
-                <div class="bio-card cofounder">
-                    <img src="../assets/bio/jordan.jpeg" alt="Jordan da Silva" class="bio-avatar">
-                    <h3>Jordan da Silva</h3>
-                    <div class="title">Co-Founder & Board Member</div>
-                    <p>Dedicated to neighborhood empowerment and authentic community building. Brings operational expertise and commitment to neighbor-led programming.</p>
+    <main>
+        <!-- 1. Hero -->
+        <section class="nb-page-hero" style="--hero-img:url('/assets/web/about-team-2.jpg')">
+            <div class="nb-inner">
+                <div class="nb-breadcrumb"><a href="/about/about.html">About</a></div>
+                <h1>Leadership</h1>
+                <p>Everyone here is a volunteer. Nobody draws a salary.</p>
+                <div class="nb-hero-ctas nb-btn-row">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer%20Interest" class="nb-btn nb-btn-play">Volunteer With Us</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Community Directors -->
-        <div class="leadership-section">
-            <h2>Community Directors</h2>
-            <div class="bios-grid">
-                <div class="bio-card">
-                    <img src="../assets/bio/alex.jpg" alt="Alex Alvizo" class="bio-avatar">
-                    <h3>Alex Alvizo</h3>
-                    <div class="title">Community Director</div>
-                    <p>Born and raised on the South Side of Chicago. Engineer by trade. Leverages these qualities to help deliver a safe and fun environment for players in the most efficient way possible.</p>
-                </div>
-                <div class="bio-card">
-                    <img src="../assets/bio/marcos.jpg" alt="Marcos Beltran" class="bio-avatar">
-                    <h3>Marcos Beltran</h3>
-                    <div class="title">Community Director</div>
-                    <p>Southside resident. Video game and soccer fanatic. With a background in education and youth development, works to help members grow and better our communities.</p>
-                </div>
-                <div class="bio-card">
-                    <img src="../assets/bio/michael.jpg" alt="Michael Wang" class="bio-avatar">
-                    <h3>Michael Wang</h3>
-                    <div class="title">Community Director</div>
-                    <p>Started playing soccer in late teens but loved the team aspect. Enjoys meeting new people and building community in the suburbs. Works in data engineering.</p>
-                </div>
-                <div class="bio-card">
-                    <img src="../assets/bio/nicole.jpg" alt="Nicole" class="bio-avatar">
-                    <h3>Nicole</h3>
-                    <div class="title">Community Director</div>
-                    <p>Strategic leader directing women's programming and creating empowering community spaces for female soccer players.</p>
-                </div>
-                <div class="bio-card">
-                    <img src="../assets/bio/natalie.jpg" alt="Natalie" class="bio-avatar">
-                    <h3>Natalie</h3>
-                    <div class="title">Community Director</div>
-                    <p>Dedicated community leader focused on building inclusive women's soccer programming and neighborhood connections.</p>
+        <!-- 2. Board -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Board of Directors</p>
+                <h2 class="nb-h2">The co-founders</h2>
+                <p class="nb-lede">The four friends who started the first pickup games in 2012 now serve as the board.</p>
+                <div class="nb-people">
+                    <div class="nb-person">
+                        <img src="/assets/web/about-andre.jpg" alt="Andre Daniel Paredes" loading="lazy">
+                        <h3>Andre Daniel Paredes</h3>
+                        <p class="nb-role">Co-Founder &amp; Board Member</p>
+                        <p>Community organizer with 10+ years building neighborhood connections through soccer. PhD, with experience in community development and nonprofit governance.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/bio/diego.jpeg" alt="Diego Moreno" loading="lazy">
+                        <h3>Diego Moreno</h3>
+                        <p class="nb-role">Co-Founder &amp; Board Member</p>
+                        <p>South Side resident. 15+ years working in Chicago communities, focused on youth development. Has built several school-based and recreational youth programs.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/bio/julian.jpeg" alt="Julian da Silva" loading="lazy">
+                        <h3>Julian da Silva</h3>
+                        <p class="nb-role">Co-Founder &amp; Board Member</p>
+                        <p>Works in community programming and youth development. Focuses on inclusive spaces and lasting community partnerships.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/web/about-jordan.jpg" alt="Jordan da Silva" loading="lazy">
+                        <h3>Jordan da Silva</h3>
+                        <p class="nb-role">Co-Founder &amp; Board Member</p>
+                        <p>Brings operations experience and a commitment to programs run by and for neighbors.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Hall of Fame -->
-        <div class="leadership-section">
-            <h2>Community Hall of Fame</h2>
-            <div class="hof-section">
-                <div class="hof-card">
-                    <span class="badge">CO-FOUNDER • IN MEMORIAM</span>
-                    <img src="../assets/bio/david.jpg" alt="David Benavidez" class="hof-avatar">
-                    <h3>David Benavidez</h3>
-                    <p>Co-founder whose vision helped establish our commitment to authentic community development. The annual David Benavidez Memorial Tournament honors his legacy while supporting local health initiatives.</p>
-                    <a href="../events/benavidez-tournament.html" class="hof-link">Learn About David's Story</a>
+        <!-- 3. Community directors -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Community Directors</p>
+                <h2 class="nb-h2">Who runs the games</h2>
+                <p class="nb-lede">Our directors organize the weekly games and programs.</p>
+                <div class="nb-people">
+                    <div class="nb-person">
+                        <img src="/assets/bio/alex.jpg" alt="Alex Alvizo" loading="lazy">
+                        <h3>Alex Alvizo</h3>
+                        <p class="nb-role">Community Director</p>
+                        <p>Born and raised on the South Side. Engineer by trade. Works to keep games safe, fun and well run.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/bio/marcos.jpg" alt="Marcos Beltran" loading="lazy">
+                        <h3>Marcos Beltran</h3>
+                        <p class="nb-role">Community Director</p>
+                        <p>South Side resident. Video game and soccer fan. Background in education and youth development.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/web/about-michael.jpg" alt="Michael Wang" loading="lazy">
+                        <h3>Michael Wang</h3>
+                        <p class="nb-role">Community Director</p>
+                        <p>Started playing in his late teens and loved the team side of the game. Building pickup in the suburbs, where there weren't many options. Works in data engineering.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/nbhd_simple_logo_2025-07.png" alt="NBHD Soccer logo (photo coming soon)" loading="lazy">
+                        <h3>Nicole</h3>
+                        <p class="nb-role">Community Director</p>
+                        <p>Leads our women's programming.</p>
+                    </div>
+                    <div class="nb-person">
+                        <img src="/assets/nbhd_simple_logo_2025-07.png" alt="NBHD Soccer logo (photo coming soon)" loading="lazy">
+                        <h3>Natalie</h3>
+                        <p class="nb-role">Community Director</p>
+                        <p>Helps build women's soccer programming and neighborhood connections.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Leadership Stats -->
-        <div class="leadership-section">
-            <h2>Leadership Impact</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="num">15+</div>
-                    <div class="label">Volunteers</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">100%</div>
-                    <div class="label">Volunteer Board</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">10+</div>
-                    <div class="label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">$0</div>
-                    <div class="label">Executive Salaries</div>
+        <!-- 4. In memoriam -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">In Memoriam</p>
+                <h2 class="nb-h2">David Benavidez</h2>
+                <div class="nb-people">
+                    <div class="nb-person">
+                        <img src="/assets/bio/david.jpg" alt="David Benavidez" loading="lazy">
+                        <h3>David Benavidez</h3>
+                        <p class="nb-role">Co-founder</p>
+                        <p>David helped shape what NBHD Soccer is. The annual David Benavidez Memorial Tournament honors him and raises money for local health causes.</p>
+                        <p><a class="nb-link" href="/events/benavidez-tournament.html">David's story &rarr;</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Governance -->
-        <div class="leadership-section">
-            <h2>Governance & Transparency</h2>
-            <div class="governance-grid">
-                <div class="governance-card">
-                    <h4>Legal Structure</h4>
-                    <p>Illinois Nonprofit Corporation with 501(c)(3) federal tax-exempt status</p>
-                </div>
-                <div class="governance-card">
-                    <h4>Volunteer-Powered</h4>
-                    <p>100% volunteer leadership. No executive salaries or overhead</p>
-                </div>
-                <div class="governance-card">
-                    <h4>Financial Transparency</h4>
-                    <p>All financial decisions shared with community. Annual reports available</p>
-                </div>
-                <div class="governance-card">
-                    <h4>Community Accountability</h4>
-                    <p>Open meetings and neighbor-led decision making</p>
+        <!-- 5. How we're run -->
+        <section class="nb-stats" aria-label="Leadership by the numbers">
+            <div class="nb-inner">
+                <div><span class="nb-stat-num">15+</span><span class="nb-stat-label">Volunteers</span></div>
+                <div><span class="nb-stat-num">100%</span><span class="nb-stat-label">Volunteer board</span></div>
+                <div><span class="nb-stat-num">10+</span><span class="nb-stat-label">Years organizing</span></div>
+                <div><span class="nb-stat-num">$0</span><span class="nb-stat-label">Executive salaries</span></div>
+            </div>
+        </section>
+
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Governance</p>
+                <h2 class="nb-h2">How we're run</h2>
+                <dl class="nb-info">
+                    <div><dt>Legal structure</dt><dd>Illinois nonprofit corporation with federal 501(c)(3) status</dd></div>
+                    <div><dt>Staff</dt><dd>All volunteers. No salaries.</dd></div>
+                    <div><dt>Money</dt><dd>Annual financial report published on this site</dd></div>
+                    <div><dt>Decisions</dt><dd>Open meetings. Big decisions go to the community.</dd></div>
+                </dl>
+                <a class="nb-link" href="/about/financial-transparency.html">See the 2024 financial report &rarr;</a>
+            </div>
+        </section>
+
+        <!-- 6. Next step -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner nb-center">
+                <h2 class="nb-h2">Want to help run things?</h2>
+                <p class="nb-lede">Two hours a month or ten hours a week. There's a way to help either way.</p>
+                <div class="nb-btn-row" style="justify-content:center">
+                    <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer%20Interest" class="nb-btn nb-btn-donate">Volunteer With Us</a>
+                    <a href="/community-soccer/volunteer-pathway.html" class="nb-btn nb-btn-outline">How volunteering works</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Join Leadership CTA -->
-        <div class="cta-box">
-            <h3>Join Our Community Leadership</h3>
-            <p>Whether you have 2 hours a month or 10 hours a week, there's a meaningful way to contribute.</p>
-            <a href="mailto:nbhdsoccer@gmail.com?subject=Volunteer Interest">Volunteer With Us</a>
-            <a href="../support/support.html">Support Our Work</a>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div style="text-align: center; padding: 1.5rem 0;">
-                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
-                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
-                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
-                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="/js/header-loader.js"></script>
 </body>
 </html>

@@ -3,254 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact | NBHD Soccer</title>
-    <meta name="description" content="Community impact metrics and transparency from Chicago Neighborhood Soccer.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-
-    <!-- Google Analytics -->
-    <script src="../js/analytics.js"></script>
-
-    <style>
-        .impact-hero {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 1.5rem 0 1rem;
-            text-align: center;
-        }
-        .impact-hero h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-        .impact-hero p {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        .impact-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        .impact-section {
-            margin-bottom: 1.5rem;
-        }
-        .impact-section h2 {
-            font-size: 1rem;
-            color: #16a34a;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.4rem;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .stat-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.75rem;
-            text-align: center;
-        }
-        .stat-card .num {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .stat-card .label {
-            font-size: 0.65rem;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.75rem;
-            margin: 0.75rem 0;
-        }
-        .program-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.75rem;
-        }
-        .program-card h3 {
-            font-size: 0.85rem;
-            color: #374151;
-            margin-bottom: 0.4rem;
-        }
-        .program-card p {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-        .transparency-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #16a34a;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-        .transparency-box h3 {
-            font-size: 0.9rem;
-            color: #166534;
-            margin-bottom: 0.5rem;
-        }
-        .transparency-box ul {
-            padding-left: 1rem;
-            margin: 0;
-        }
-        .transparency-box li {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-bottom: 0.25rem;
-        }
-        .contact-box {
-            background: #16a34a;
-            color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .contact-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-        .contact-box p {
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        .contact-box a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
+    <meta name="description" content="What Chicago Neighborhood Soccer has done so far: members, youth programs, events and money raised.">
+    <title>Our Impact | Chicago Neighborhood Soccer</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/about/impact.html">
+    <meta property="og:title" content="Our Impact | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="What Chicago Neighborhood Soccer has done so far: members, youth programs, events and money raised.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/web/about-skyline.jpg">
+    <link rel="icon" type="image/png" href="/assets/nbhd_simple_logo_2025-07.png">
+    <script src="/js/analytics.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared-styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
     <div id="header-container"></div>
-    <script src="../js/header-loader.js"></script>
-
-    <!-- About Tab Navigation -->
-    <nav class="section-tabs">
-        <div class="container">
-            <a href="about.html" class="tab-link">About</a>
-            <a href="leadership.html" class="tab-link">Leadership</a>
-            <a href="impact.html" class="tab-link active">Impact</a>
-            <a href="media.html" class="tab-link">Media</a>
-        </div>
-    </nav>
-
-    <section class="impact-hero">
-        <div class="container">
-            <h1>Community Impact</h1>
-            <p>Transparent Nonprofit | 100% Volunteer-Powered</p>
-        </div>
-    </section>
-
-    <div class="impact-content">
-
-        <div class="impact-section">
-            <h2>By The Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="num">7,000+</div>
-                    <div class="label">Members</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">300+</div>
-                    <div class="label">Weekly</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">150+</div>
-                    <div class="label">Youth</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">$25K</div>
-                    <div class="label">Raised</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">10+</div>
-                    <div class="label">Partners</div>
-                </div>
-                <div class="stat-card">
-                    <div class="num">10+</div>
-                    <div class="label">Years</div>
+    <main>
+        <!-- 1. Hero -->
+        <section class="nb-page-hero" style="--hero-img:url('/assets/web/about-skyline.jpg')">
+            <div class="nb-inner">
+                <div class="nb-breadcrumb"><a href="/about/about.html">About</a></div>
+                <h1>Our impact</h1>
+                <p>What we've done so far, in plain numbers.</p>
+                <div class="nb-hero-ctas nb-btn-row">
+                    <a href="/support/support.html#donate" class="nb-btn nb-btn-donate">Donate</a>
+                    <a href="/youth-programs/impact.html" class="nb-btn nb-btn-play">Youth impact</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="impact-section">
-            <h2>Program Impact</h2>
-            <div class="program-grid">
-                <div class="program-card">
-                    <h3>Youth</h3>
-                    <p>2 CPS schools, YMCA partnership, 150+ youth served through REC 77 and community programs</p>
-                </div>
-                <div class="program-card">
-                    <h3>Community</h3>
-                    <p>300+ weekly participants, 10+ volunteers, women's programming, 5 park district locations</p>
-                </div>
-                <div class="program-card">
-                    <h3>Events</h3>
-                    <p>7 Benavidez tournaments, $1K+ to local artists, 10+ fundraising events hosted</p>
+        <!-- 2. Numbers -->
+        <section class="nb-stats" aria-label="NBHD Soccer impact in numbers">
+            <div class="nb-inner">
+                <div><span class="nb-stat-num">7,000+</span><span class="nb-stat-label">Members</span></div>
+                <div><span class="nb-stat-num">150+</span><span class="nb-stat-label">Youth served</span></div>
+                <div><span class="nb-stat-num">$25K</span><span class="nb-stat-label">Raised for community causes</span></div>
+                <div><span class="nb-stat-num">10+</span><span class="nb-stat-label">Partners</span></div>
+            </div>
+        </section>
+
+        <!-- 3. By program -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">By program</p>
+                <h2 class="nb-h2">Where it adds up</h2>
+                <div class="nb-cards">
+                    <a class="nb-card" href="/youth-programs/impact.html">
+                        <img src="/assets/home/youth.jpg" alt="Indoor soccer at the Rauner Family YMCA" loading="lazy">
+                        <div class="nb-card-body">
+                            <span class="nb-card-tag">Youth</span>
+                            <h3>150+ kids</h3>
+                            <p>REC 77 leagues at 2 CPS schools, plus programs with the Rauner Family YMCA and Boys &amp; Girls Club.</p>
+                            <span class="nb-link">Youth impact</span>
+                        </div>
+                    </a>
+                    <a class="nb-card" href="/community-soccer/overview.html">
+                        <img src="/assets/home/pickup.jpg" alt="Players competing for the ball at an outdoor pickup game" loading="lazy">
+                        <div class="nb-card-body">
+                            <span class="nb-card-tag">Community</span>
+                            <h3>400 players a week</h3>
+                            <p>Weekly pickup and Women's Wednesday, 5 park district locations, and 10+ volunteers who run it all.</p>
+                            <span class="nb-link">Community soccer</span>
+                        </div>
+                    </a>
+                    <a class="nb-card" href="/events/overview.html">
+                        <img src="/assets/home/benavidez.jpg" alt="First place team at the David Benavidez Memorial Tournament" loading="lazy">
+                        <div class="nb-card-body">
+                            <span class="nb-card-tag">Events</span>
+                            <h3>7 memorial tournaments</h3>
+                            <p>Seven David Benavidez Memorial Tournaments, 10+ fundraising events, and $1,000+ to local artists through the Art Gala.</p>
+                            <span class="nb-link">Events</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="transparency-box">
-            <h3>Our Accountability</h3>
-            <ul>
-                <li><strong>100% Volunteer:</strong> No executive salaries</li>
-                <li><strong>Community Input:</strong> Open meetings</li>
-                <li><strong>Financial Openness:</strong> Reports available</li>
-                <li><strong>Partner Validation:</strong> CPS, YMCA verify work</li>
-            </ul>
-        </div>
-
-        <!-- Financial Transparency -->
-        <div class="impact-section">
-            <h2>Financial Transparency</h2>
-            <div class="program-grid">
-                <div class="program-card" style="border-left: 3px solid #f97316;">
-                    <h3>Fund Allocation</h3>
-                    <p><strong>65%</strong> Programming (equipment, venues, referees)<br>
-                    <strong>20%</strong> Charity (community health causes)<br>
-                    <strong>10%</strong> Operations (insurance, legal)<br>
-                    <strong>5%</strong> Growth (new areas)</p>
-                </div>
-                <div class="program-card" style="border-left: 3px solid #16a34a;">
-                    <h3>Annual Reports</h3>
-                    <p>Full financial statements, program outcomes, and community metrics available upon request. 501(c)(3) filings are public record.</p>
-                    <a href="mailto:nbhdsoccer@gmail.com?subject=Annual Report Request" style="font-size: 0.7rem; color: #16a34a; font-weight: 600;">Request Annual Report →</a>
+        <!-- 4. Accountability -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <div class="nb-split">
+                    <img src="/assets/web/about-team.jpg" alt="A group of pickup players posing on a turf field" loading="lazy">
+                    <div>
+                        <p class="nb-eyebrow">Accountability</p>
+                        <h2 class="nb-h2">How you can check our work</h2>
+                        <p>Everyone is a volunteer. Nobody draws a salary. We publish our finances, and partners like Chicago Public Schools and the YMCA see our work up close.</p>
+                        <p>Our 501(c)(3) filings are public record.</p>
+                        <div class="nb-btn-row">
+                            <a href="/about/financial-transparency.html" class="nb-btn nb-btn-outline">2024 financial report</a>
+                            <a href="mailto:nbhdsoccer@gmail.com?subject=Impact%20Report%20Request" class="nb-btn nb-btn-outline">Ask for more detail</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-box">
-            <h3>Request Detailed Reports</h3>
-            <p>We share program outcomes, finances, and metrics with supporters</p>
-            <a href="mailto:nbhdsoccer@gmail.com?subject=Impact Report Request">nbhdsoccer@gmail.com</a>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div style="text-align: center; padding: 1.5rem 0;">
-                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
-                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
-                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
-                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
+        <!-- 5. Donate -->
+        <section class="nb-section nb-donate" id="donate">
+            <div class="nb-inner">
+                <h2 class="nb-h2">Help keep the game going</h2>
+                <p>None of us get paid. Your gift goes to fields, equipment, insurance, and more youth programs in the neighborhoods that need them most.</p>
+                <a href="/support/support.html#donate" class="nb-btn nb-btn-donate">Donate</a>
+                <p class="nb-donate-note">Tax-deductible. You'll get your receipt by email.</p>
             </div>
-        </div>
-    </footer>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="/js/header-loader.js"></script>
 </body>
 </html>

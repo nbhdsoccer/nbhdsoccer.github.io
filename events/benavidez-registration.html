@@ -3,252 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration | David Benavidez Memorial Tournament</title>
-    <meta name="description" content="Registration information for the Annual David Benavidez Memorial Tournament.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-
-    <!-- Google Analytics -->
-    <script src="../js/analytics.js"></script>
-
-    <style>
-        .registration-hero {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 1.5rem 0 1rem;
-            text-align: center;
-        }
-        .registration-hero h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-        .registration-hero p {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        .registration-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-
-        /* Completed Notice */
-        .completed-notice {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            border: 2px solid #f59e0b;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .completed-notice h2 {
-            font-size: 1.2rem;
-            color: #92400e;
-            margin-bottom: 0.5rem;
-        }
-        .completed-notice p {
-            font-size: 0.85rem;
-            color: #78350f;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        .completed-notice .year-badge {
-            display: inline-block;
-            background: #f59e0b;
-            color: white;
-            font-size: 0.75rem;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* Next Year Section */
-        .next-year {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #16a34a;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .next-year h3 {
-            font-size: 1rem;
-            color: #16a34a;
-            margin-bottom: 0.5rem;
-        }
-        .next-year p {
-            font-size: 0.8rem;
-            color: #374151;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        .notify-btn {
-            display: inline-block;
-            background: #16a34a;
-            color: white;
-            font-size: 0.8rem;
-            padding: 0.6rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .notify-btn:hover {
-            background: #15803d;
-            transform: translateY(-2px);
-        }
-
-        /* Past Results */
-        .past-section {
-            margin-bottom: 1.5rem;
-        }
-        .past-section h2 {
-            font-size: 1rem;
-            color: #16a34a;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.4rem;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .stat-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.75rem;
-            text-align: center;
-        }
-        .stat-card .num {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .stat-card .label {
-            font-size: 0.65rem;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-
-        /* CTA Box */
-        .cta-box {
-            background: #16a34a;
-            color: white;
-            border-radius: 10px;
-            padding: 1.25rem;
-            text-align: center;
-        }
-        .cta-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-        .cta-box p {
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        .cta-box a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="Register a team or yourself, or sign up as a sponsor, for the David Benavidez Memorial Tournament.">
+    <title>Tournament Registration | Chicago Neighborhood Soccer</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/events/benavidez-registration.html">
+    <meta property="og:title" content="Tournament Registration | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Register a team or yourself, or sign up as a sponsor, for the David Benavidez Memorial Tournament.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/home/benavidez.jpg">
+    <link rel="icon" type="image/png" href="/assets/nbhd_simple_logo_2025-07.png">
+    <link rel="apple-touch-icon" href="/assets/nbhd_simple_logo_2025-07.png">
+    <script src="/js/analytics.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared-styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
     <div id="header-container"></div>
-    <script src="../js/header-loader.js"></script>
 
-    <!-- Events Tab Navigation -->
-    <nav class="section-tabs">
-        <div class="container">
-            <a href="overview.html" class="tab-link">Overview</a>
-            <a href="events.html" class="tab-link">Events</a>
-            <a href="special-events.html" class="tab-link">NBHD Special Events</a>
-        </div>
-    </nav>
-
-    <!-- Benavidez Sub-Navigation -->
-    <nav class="section-tabs" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-bottom: 2px solid #16a34a;">
-        <div class="container">
-            <a href="benavidez-tournament.html" class="tab-link" style="color: #16a34a;">Tournament</a>
-            <a href="benavidez-registration.html" class="tab-link active" style="color: #16a34a; border-bottom-color: #16a34a;">Registration</a>
-        </div>
-    </nav>
-
-    <section class="registration-hero">
-        <div class="container">
+    <main>
+    <!-- Hero -->
+    <section class="nb-page-hero" style="--hero-img:url('/assets/web/events-benavidez-4.jpg')">
+        <div class="nb-inner">
+            <div class="nb-breadcrumb"><a href="/events/overview.html">Events</a> / <a href="/events/benavidez-tournament.html">Benavidez Tournament</a></div>
             <h1>Tournament Registration</h1>
-            <p>David Benavidez Memorial Tournament</p>
+            <p>Sign up to play or sponsor the David Benavidez Memorial Tournament. We reply within 48 hours with payment details and next steps.</p>
         </div>
     </section>
 
-    <div class="registration-content">
+    <!-- Options -->
+    <section class="nb-section nb-bg-white" id="memorial-registration">
+        <div class="nb-inner">
+            <div class="nb-callout">
+                <p><strong>This year's tournament is over.</strong> Thank you to everyone who played, sponsored and showed up for David. Registration for the next tournament usually opens in summer. Check back here or follow us on <a class="nb-link" href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" rel="noopener">Meetup</a>. You can still send the form below and we'll get in touch.</p>
+            </div>
 
-        <!-- Completed Notice -->
-        <div class="completed-notice">
-            <div class="year-badge">7th Annual Tournament</div>
-            <h2>The 7th Annual Tournament Has Concluded</h2>
-            <p>Thank you to everyone who participated in and supported the 7th Annual David Benavidez Memorial Tournament. Your presence helped honor David's legacy and support community health causes.</p>
-            <a href="benavidez-tournament.html" style="color: #92400e; font-weight: 600; text-decoration: underline;">View Tournament Highlights</a>
-        </div>
+            <p class="nb-eyebrow">How to take part</p>
+            <h2 class="nb-h2">Play or sponsor</h2>
+            <p class="nb-lede">Prices below are from the last tournament. Proceeds support local health initiatives in David's name.</p>
 
-        <!-- Next Year -->
-        <div class="next-year">
-            <h3>8th Annual Tournament Coming 2026</h3>
-            <p>Registration for the 8th Annual David Benavidez Memorial Tournament will open in Summer 2026. Sign up to be notified when registration opens.</p>
-            <a href="mailto:nbhdsoccer@gmail.com?subject=Notify Me - 8th Benavidez Tournament" class="notify-btn">Get Notified for 2026</a>
-        </div>
-
-        <!-- Past Tournament Stats -->
-        <div class="past-section">
-            <h2>7th Tournament Impact</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="num">7</div>
-                    <div class="label">Years Running</div>
+            <div class="nb-cards" id="player-registration">
+                <div class="nb-card nb-card-text">
+                    <div class="nb-card-body">
+                        <span class="nb-card-tag">Individual</span>
+                        <h3>$55</h3>
+                        <p>We place you on a team. You take part in the closing ceremony with the Benavidez family.</p>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="num">$25K+</div>
-                    <div class="label">Total Raised</div>
+                <div class="nb-card nb-card-text">
+                    <div class="nb-card-body">
+                        <span class="nb-card-tag">Team</span>
+                        <h3>$500</h3>
+                        <p>Full team entry, 8 to 16 players. Your team is recognized at the ceremony.</p>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="num">100%</div>
-                    <div class="label">To Community</div>
+                <div class="nb-card nb-card-text">
+                    <div class="nb-card-body">
+                        <span class="nb-card-tag">Sponsor</span>
+                        <h3>$250+</h3>
+                        <p>Community, Memorial and Legacy Title tiers, plus optional add-ons. <a class="nb-link" href="/events/benavidez-tournament.html#memorial-sponsorship">See sponsor tiers</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Contact -->
-        <div class="cta-box">
-            <h3>Questions About Future Tournaments?</h3>
-            <p>Interested in sponsoring, volunteering, or participating in future events?</p>
-            <a href="mailto:nbhdsoccer@gmail.com?subject=Benavidez Tournament Inquiry">nbhdsoccer@gmail.com</a>
-        </div>
+    <!-- Form -->
+    <section class="nb-section nb-bg-soft">
+        <div class="nb-inner">
+            <p class="nb-eyebrow">Registration form</p>
+            <h2 class="nb-h2">Sign up</h2>
+            <p class="nb-lede">Fill this out and we'll email you to confirm. Questions? <a class="nb-link" href="mailto:nbhdsoccer@gmail.com?subject=Benavidez%20Tournament%20Inquiry">nbhdsoccer@gmail.com</a></p>
 
-    </div>
+            <div class="registration-form">
+                <form id="memorialRegistration" class="nb-form" onsubmit="handleMemorialRegistration(event)">
+                    <label for="teamName">Team Name *</label>
+                    <input type="text" id="teamName" name="teamName" required placeholder="Enter your team name">
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div style="text-align: center; padding: 1.5rem 0;">
-                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
-                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
-                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
-                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
+                    <label for="registrationType">Registration Type *</label>
+                    <select id="registrationType" name="registrationType" required onchange="updateMemorialPrice()">
+                        <option value="">Select Registration Type</option>
+                        <option value="individual-memorial">Individual Registration - $55</option>
+                        <option value="team-memorial">Team Registration - $500</option>
+                        <option value="sponsor-community">Community Sponsor - $250</option>
+                        <option value="sponsor-memorial">Memorial Sponsor - $500</option>
+                        <option value="sponsor-legacy">Legacy Title Sponsor - $1500+</option>
+                        <option value="sponsor-community-tshirts">Community Sponsor + T-Shirts - $1,250</option>
+                        <option value="sponsor-community-documentation">Community Sponsor + Documentation - $1,000</option>
+                        <option value="sponsor-community-keepsakes">Community Sponsor + Keepsakes - $750</option>
+                        <option value="sponsor-memorial-tshirts">Memorial Sponsor + T-Shirts - $1,500</option>
+                        <option value="sponsor-memorial-documentation">Memorial Sponsor + Documentation - $1,250</option>
+                        <option value="sponsor-memorial-keepsakes">Memorial Sponsor + Keepsakes - $1,000</option>
+                        <option value="sponsor-legacy-tshirts">Legacy Sponsor + T-Shirts - $2,500+</option>
+                        <option value="sponsor-legacy-documentation">Legacy Sponsor + Documentation - $2,250+</option>
+                        <option value="sponsor-legacy-keepsakes">Legacy Sponsor + Keepsakes - $2,000+</option>
+                        <option value="sponsor-custom">Custom Sponsorship Package</option>
+                    </select>
+
+                    <label for="captainName">Team Captain Name *</label>
+                    <input type="text" id="captainName" name="captainName" required placeholder="Captain's full name">
+
+                    <label for="captainEmail">Captain Email *</label>
+                    <input type="email" id="captainEmail" name="captainEmail" required placeholder="captain@email.com">
+
+                    <label for="captainPhone">Captain Phone *</label>
+                    <input type="tel" id="captainPhone" name="captainPhone" required placeholder="(123) 456-7890">
+
+                    <label for="playerCount">Number of Players</label>
+                    <select id="playerCount" name="playerCount">
+                        <option value="">Select Player Count</option>
+                        <option value="8-10">8-10 players</option>
+                        <option value="11-15">11-15 players</option>
+                        <option value="16+">16+ players</option>
+                    </select>
+
+                    <label for="memorialMessage">Memorial Message (Optional)</label>
+                    <textarea id="memorialMessage" name="memorialMessage" rows="3" placeholder="Share a message about why you're participating in David's memorial tournament..."></textarea>
+
+                    <p id="memorialPriceDisplay" style="font-weight:600;margin:1.25rem 0 0"></p>
+                    <button type="submit" class="nb-btn nb-btn-donate memorial-submit">Submit registration</button>
+                    <p style="font-size:0.9rem;margin-top:1rem">We'll contact you within 48 hours with next steps.</p>
+                </form>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Next step -->
+    <section class="nb-section nb-bg-white">
+        <div class="nb-inner">
+            <p class="nb-eyebrow">Sponsors</p>
+            <h2 class="nb-h2">Want to sponsor instead?</h2>
+            <p class="nb-lede">Businesses and families can sponsor the tournament. We'll work out a package with you.</p>
+            <div class="nb-btn-row">
+                <a href="/support/partner.html" class="nb-btn nb-btn-donate">Become a sponsor</a>
+                <a href="/events/benavidez-tournament.html" class="nb-btn nb-btn-outline">About the tournament</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="/js/header-loader.js"></script>
+
+    <!-- EmailJS for sending emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Tournament Dynamic Content Scripts -->
+    <script src="../js/tournament-dynamic-content.js"></script>
+
+    <script>
+        // Initialize EmailJS (you'll need to replace these with your actual IDs)
+        // Get these from your EmailJS dashboard after creating an account
+        const EMAILJS_PUBLIC_KEY = 'kthWdX2tmNcRrlZyF'; // Replace with your public key
+        const EMAILJS_SERVICE_ID = 'service_faus6nb'; // Replace with your service ID
+        const EMAILJS_TEMPLATE_ID = 'template_y274gam'; // Replace with your template ID
+        
+        // Initialize EmailJS when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing EmailJS...');
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+            console.log('EmailJS initialized with public key:', EMAILJS_PUBLIC_KEY);
+        });
+        
+        function updateMemorialPrice() {
+            const select = document.getElementById('registrationType');
+            const priceDisplay = document.getElementById('memorialPriceDisplay');
+            
+            const prices = {
+                'individual-memorial': 'Memorial Participation: $55',
+                'team-memorial': 'Team Registration: $500',
+                'sponsor-community': 'Community Sponsorship: $250',
+                'sponsor-memorial': 'Memorial Sponsorship: $500',
+                'sponsor-legacy': 'Legacy Title Sponsorship: $1,500+ (Contact for details)',
+                'sponsor-community-tshirts': 'Community Sponsor + T-Shirts: $1,250',
+                'sponsor-community-documentation': 'Community Sponsor + Documentation: $1,000',
+                'sponsor-community-keepsakes': 'Community Sponsor + Keepsakes: $750',
+                'sponsor-memorial-tshirts': 'Memorial Sponsor + T-Shirts: $1,500',
+                'sponsor-memorial-documentation': 'Memorial Sponsor + Documentation: $1,250',
+                'sponsor-memorial-keepsakes': 'Memorial Sponsor + Keepsakes: $1,000',
+                'sponsor-legacy-tshirts': 'Legacy Sponsor + T-Shirts: $2,500+ (Contact for details)',
+                'sponsor-legacy-documentation': 'Legacy Sponsor + Documentation: $2,250+ (Contact for details)',
+                'sponsor-legacy-keepsakes': 'Legacy Sponsor + Keepsakes: $2,000+ (Contact for details)',
+                'sponsor-custom': 'Custom Sponsorship Package (Contact for details)'
+            };
+            
+            if (select.value && prices[select.value]) {
+                priceDisplay.textContent = prices[select.value];
+            } else {
+                priceDisplay.textContent = '';
+            }
+        }
+        
+        function handleMemorialRegistration(event) {
+            event.preventDefault();
+            
+            console.log('Form submitted, processing registration...');
+            
+            // Check if EmailJS is available
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not loaded!');
+                alert('Error: Email system is not available. Please contact us directly at nbhdsoccer@gmail.com');
+                return;
+            }
+            
+            const formData = new FormData(event.target);
+            const registrationData = {
+                timestamp: new Date().toISOString(),
+                tournamentType: 'David Benavidez Memorial',
+                teamName: formData.get('teamName'),
+                registrationType: formData.get('registrationType'),
+                captainName: formData.get('captainName'),
+                captainEmail: formData.get('captainEmail'),
+                captainPhone: formData.get('captainPhone'),
+                playerCount: formData.get('playerCount'),
+                memorialMessage: formData.get('memorialMessage')
+            };
+            
+            console.log('Registration data prepared:', registrationData);
+            
+            // Store in localStorage (acts as simple database) - Specific to Benavidez Tournament 2025
+            let registrations = JSON.parse(localStorage.getItem('benavidezTournament2025Registrations') || '[]');
+            registrations.push(registrationData);
+            localStorage.setItem('benavidezTournament2025Registrations', JSON.stringify(registrations));
+            
+            console.log('Registration saved to localStorage');
+            
+            // Send confirmation email
+            sendConfirmationEmail(registrationData);
+            
+            // Show success message
+            alert('Thank you for joining David\'s memorial tournament! Your registration honors his legacy of service and community building.\n\nYou should receive a confirmation email shortly with your registration details. If you don\'t receive an email within 10 minutes, please check your spam folder or contact us - you may have entered an incorrect email address.\n\nWe will contact you within 48 hours with payment instructions and next steps.');
+            
+            // Reset form
+            event.target.reset();
+            document.getElementById('memorialPriceDisplay').textContent = '';
+            
+            console.log('Memorial registration completed successfully');
+        }
+        
+        function sendConfirmationEmail(registrationData) {
+            console.log('=== EMAIL DEBUGGING START ===');
+            console.log('Attempting to send emails for:', registrationData);
+            console.log('EmailJS Service ID:', EMAILJS_SERVICE_ID);
+            console.log('EmailJS Template ID:', EMAILJS_TEMPLATE_ID);
+            console.log('EmailJS Public Key:', EMAILJS_PUBLIC_KEY);
+            
+            // Test if EmailJS is properly initialized
+            if (typeof emailjs === 'undefined') {
+                console.error('CRITICAL: EmailJS library not loaded!');
+                alert('Email system not available - contact nbhdsoccer@gmail.com directly');
+                return;
+            }
+            
+            // Prepare email template parameters for registrant confirmation
+            const registrantTemplateParams = {
+                user_email: registrationData.captainEmail,
+                user_name: registrationData.captainName,
+                from_name: 'Chicago Neighborhood Soccer',
+                reply_to: 'nbhdsoccer@gmail.com',
+                subject: 'Your David Benavidez Memorial Tournament Registration Confirmation',
+                message: `Thank you for registering for the Annual David Benavidez Memorial Tournament!
+
+Here are your registration details:
+
+Team Name: ${registrationData.teamName}
+Registration Type: ${getRegistrationTypeLabel(registrationData.registrationType)}
+Captain Name: ${registrationData.captainName}
+Captain Email: ${registrationData.captainEmail}
+Captain Phone: ${registrationData.captainPhone}
+Number of Players: ${registrationData.playerCount || 'Not specified'}
+Memorial Message: ${registrationData.memorialMessage || 'No message provided'}
+
+Tournament Details:
+Date: October 18, 2025
+Time: 10:00 AM - 2:00 PM
+Venue: Rauner Family YMCA, 2700 S Western Ave, Chicago, IL
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+We will contact you within 48 hours with payment instructions and next steps.
+
+Thank you for honoring David's legacy!
+
+Chicago Neighborhood Soccer
+nbhdsoccer@gmail.com`
+            };
+            
+            // Prepare email template parameters for admin notification
+            const adminTemplateParams = {
+                user_email: 'nbhdsoccer@gmail.com',
+                user_name: 'Tournament Admin',
+                from_name: 'Chicago Neighborhood Soccer Registration System',
+                reply_to: registrationData.captainEmail,
+                subject: 'New David Benavidez Memorial Tournament Registration',
+                message: `New registration received for the Annual David Benavidez Memorial Tournament:
+
+Team Name: ${registrationData.teamName}
+Registration Type: ${getRegistrationTypeLabel(registrationData.registrationType)}
+Captain Name: ${registrationData.captainName}
+Captain Email: ${registrationData.captainEmail}
+Captain Phone: ${registrationData.captainPhone}
+Number of Players: ${registrationData.playerCount || 'Not specified'}
+Memorial Message: ${registrationData.memorialMessage || 'No message provided'}
+
+Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })}
+
+Follow up with payment instructions and tournament details.`
+            };
+            
+            console.log('=== REGISTRANT EMAIL PARAMS ===');
+            console.log(JSON.stringify(registrantTemplateParams, null, 2));
+            console.log('=== ADMIN EMAIL PARAMS ===');
+            console.log(JSON.stringify(adminTemplateParams, null, 2));
+            
+            // Send confirmation email to registrant
+            console.log('Attempting to send registrant email...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, registrantTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Registrant confirmation email sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send registrant confirmation email');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                    alert(`Warning: There was an issue sending your confirmation email: ${error.message || error.text || 'Unknown error'}. Please contact us at nbhdsoccer@gmail.com to confirm your registration.`);
+                });
+                
+            // Send notification email to admin
+            console.log('Attempting to send admin notification...');
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, adminTemplateParams)
+                .then(function(response) {
+                    console.log('✅ SUCCESS: Admin notification sent!');
+                    console.log('Response status:', response.status);
+                    console.log('Response text:', response.text);
+                    console.log('Full response:', response);
+                })
+                .catch(function(error) {
+                    console.error('❌ ERROR: Failed to send admin notification');
+                    console.error('Error object:', error);
+                    console.error('Error message:', error.message || 'Unknown error');
+                    console.error('Error status:', error.status || 'No status');
+                    console.error('Error text:', error.text || 'No text');
+                });
+                
+            console.log('=== EMAIL DEBUGGING END ===');
+        }
+        
+        function getRegistrationTypeLabel(type) {
+            const labels = {
+                'individual-memorial': 'Individual Registration ($55)',
+                'team-memorial': 'Team Registration ($500)',
+                'sponsor-community': 'Community Sponsor ($250)',
+                'sponsor-memorial': 'Memorial Sponsor ($500)',
+                'sponsor-legacy': 'Legacy Title Sponsor ($1500+)',
+                'sponsor-community-tshirts': 'Community Sponsor + T-Shirts ($1,250)',
+                'sponsor-community-documentation': 'Community Sponsor + Documentation ($1,000)',
+                'sponsor-community-keepsakes': 'Community Sponsor + Keepsakes ($750)',
+                'sponsor-memorial-tshirts': 'Memorial Sponsor + T-Shirts ($1,500)',
+                'sponsor-memorial-documentation': 'Memorial Sponsor + Documentation ($1,250)',
+                'sponsor-memorial-keepsakes': 'Memorial Sponsor + Keepsakes ($1,000)',
+                'sponsor-legacy-tshirts': 'Legacy Sponsor + T-Shirts ($2,500+)',
+                'sponsor-legacy-documentation': 'Legacy Sponsor + Documentation ($2,250+)',
+                'sponsor-legacy-keepsakes': 'Legacy Sponsor + Keepsakes ($2,000+)',
+                'sponsor-custom': 'Custom Sponsorship Package'
+            };
+            return labels[type] || type;
+        }
+        
+        // Add smooth scroll behavior for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.impact-card, .detail-card, .registration-card, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                
+                dropdown.addEventListener('mouseenter', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    if (dropdownContent) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Load Benavidez Tournament 2025 registration data (for admin viewing)
+        function viewMemorialRegistrations() {
+            const registrations = JSON.parse(localStorage.getItem('benavidezTournament2025Registrations') || '[]');
+            console.log('All Benavidez Tournament 2025 registrations:', registrations);
+            return registrations;
+        }
+    </script>
 </body>
 </html>

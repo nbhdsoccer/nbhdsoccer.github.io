@@ -3,276 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBHD Soccer - 2024 Financial Report</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            max-width: 8.5in;
-            margin: 0 auto;
-            padding: 0.5in;
-            background: white;
-            color: #333;
-            line-height: 1.6;
-        }
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #16a34a;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        .header h1 {
-            color: #16a34a;
-            margin: 0 0 10px 0;
-            font-size: 28px;
-        }
-        .header .subtitle {
-            color: #666;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        .org-info {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 25px;
-            font-size: 14px;
-        }
-        .section-title {
-            background: #16a34a;
-            color: white;
-            padding: 12px 15px;
-            margin: 25px 0 15px 0;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        th {
-            background: #f1f5f9;
-            padding: 12px;
-            text-align: left;
-            border-bottom: 2px solid #cbd5e1;
-            font-weight: 600;
-        }
-        td {
-            padding: 10px 12px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .amount {
-            text-align: right;
-            font-family: 'Courier New', monospace;
-            font-weight: 500;
-        }
-        .subtotal-row {
-            font-weight: bold;
-            background: #f8f9fa;
-            border-top: 2px solid #cbd5e1;
-        }
-        .total-row {
-            font-weight: bold;
-            background: #16a34a;
-            color: white;
-            font-size: 15px;
-        }
-        .notes-section {
-            background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 14px;
-        }
-        .notes-section h3 {
-            color: #92400e;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e2e8f0;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-        }
-        .export-btn {
-            background: #16a34a;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .export-btn:hover {
-            background: #15803d;
-        }
-        @media print {
-            .export-buttons {
-                display: none !important;
-            }
-        }
-    </style>
+    <meta name="description" content="Chicago Neighborhood Soccer's unaudited financial report for 2024: where the money came from and where it went.">
+    <title>2024 Financial Report | Chicago Neighborhood Soccer</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/about/financial-transparency.html">
+    <meta property="og:title" content="2024 Financial Report | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Chicago Neighborhood Soccer's unaudited financial report for 2024: where the money came from and where it went.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/web/about-ymca.jpg">
+    <link rel="icon" type="image/png" href="/assets/nbhd_simple_logo_2025-07.png">
+    <script src="/js/analytics.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared-styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-    <div class="header">
-        <h1>CHICAGO NEIGHBORHOOD SOCCER</h1>
-        <div class="subtitle">Unaudited Financial Report - Fiscal Year 2024</div>
-        <div class="subtitle">January 1, 2024 - December 31, 2024</div>
-        
-        <div class="export-buttons" style="margin-top: 20px;">
-            <button onclick="exportToPDF()" class="export-btn">📄 Export PDF</button>
-        </div>
-    </div>
+    <div id="header-container"></div>
+    <main>
+        <!-- 1. Hero -->
+        <section class="nb-page-hero" style="--hero-img:url('/assets/web/about-ymca.jpg')">
+            <div class="nb-inner">
+                <div class="nb-breadcrumb"><a href="/about/about.html">About</a></div>
+                <h1>2024 Financial Report</h1>
+                <p>Where our money came from and where it went, January 1 to December 31, 2024.</p>
+                <div class="nb-hero-ctas nb-btn-row">
+                    <button type="button" class="nb-btn nb-btn-play" onclick="window.print()">Print or save as PDF</button>
+                </div>
+            </div>
+        </section>
 
-    <div class="org-info">
-        <strong>Organization:</strong> Chicago Neighborhood Soccer (NBHD Soccer)<br>
-        <strong>Tax Status:</strong> 501(c)(3) Nonprofit Organization<br>
-        <strong>EIN:</strong> 88-3862761<br>
-        <strong>Report Type:</strong> Unaudited Statement of Activities
-    </div>
+        <!-- 2. Summary -->
+        <section class="nb-stats" aria-label="2024 totals">
+            <div class="nb-inner">
+                <div><span class="nb-stat-num">$19.5K</span><span class="nb-stat-label">Revenue</span></div>
+                <div><span class="nb-stat-num">$12.9K</span><span class="nb-stat-label">Expenses</span></div>
+                <div><span class="nb-stat-num">$6.6K</span><span class="nb-stat-label">Net surplus</span></div>
+                <div><span class="nb-stat-num">$0</span><span class="nb-stat-label">Paid staff</span></div>
+            </div>
+        </section>
 
-    <div class="section-title">REVENUE & SUPPORT</div>
-    <table>
-        <thead>
-            <tr>
-                <th style="width: 70%">Revenue Source</th>
-                <th style="width: 30%" class="amount">Amount</th>
-            </tr>
-        </thead>
-        <tbody id="revenue-table">
-            <!-- Revenue data will be loaded here -->
-        </tbody>
-    </table>
+        <!-- 3. Report -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Statement of Activities</p>
+                <h2 class="nb-h2">The numbers</h2>
+                <dl class="nb-info">
+                    <div><dt>Organization</dt><dd>Chicago Neighborhood Soccer (NBHD Soccer)</dd></div>
+                    <div><dt>Tax status</dt><dd>501(c)(3) nonprofit</dd></div>
+                    <div><dt>EIN</dt><dd>88-3862761</dd></div>
+                    <div><dt>Report type</dt><dd>Unaudited statement of activities</dd></div>
+                </dl>
 
-    <div class="section-title">EXPENSES</div>
-    <table>
-        <thead>
-            <tr>
-                <th style="width: 70%">Expense Category</th>
-                <th style="width: 30%" class="amount">Amount</th>
-            </tr>
-        </thead>
-        <tbody id="expense-table">
-            <!-- Expense data will be loaded here -->
-        </tbody>
-    </table>
+                <h3>Revenue and support</h3>
+                <div class="nb-table-wrap">
+                    <table class="nb-table">
+                        <thead><tr><th>Source</th><th class="nb-num">Amount</th></tr></thead>
+                        <tbody>
+                            <tr><td>Weekly pickup game fees</td><td class="nb-num">$5,739.50</td></tr>
+                            <tr><td>Tournament registration fees</td><td class="nb-num">$5,250.00</td></tr>
+                            <tr><td>Community event collections</td><td class="nb-num">$8,480.00</td></tr>
+                            <tr><td>Sponsorships and community support</td><td class="nb-num">$50.00</td></tr>
+                            <tr><th>Total revenue and support</th><th class="nb-num">$19,519.50</th></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-    <div class="section-title">NET POSITION</div>
-    <table>
-        <tbody id="net-position-table">
-            <!-- Net position will be calculated here -->
-        </tbody>
-    </table>
+                <h3 style="margin-top:2.5rem">Expenses</h3>
+                <div class="nb-table-wrap">
+                    <table class="nb-table">
+                        <thead><tr><th>Category</th><th class="nb-num">Amount</th></tr></thead>
+                        <tbody>
+                            <tr><td>Facility rentals (YMCA, Chicago Parks)</td><td class="nb-num">$9,645.00</td></tr>
+                            <tr><td>Equipment and supplies (balls, cones, jerseys)</td><td class="nb-num">$2,082.68</td></tr>
+                            <tr><td>Event costs (tournaments, awards, celebrations)</td><td class="nb-num">$1,102.62</td></tr>
+                            <tr><td>Banking and payment processing fees</td><td class="nb-num">$40.00</td></tr>
+                            <tr><th>Total expenses</th><th class="nb-num">$12,870.30</th></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-    <div class="notes-section">
-        <h3>📋 FINANCIAL REPORT NOTES</h3>
-        <div id="report-notes">
-            <!-- Notes will be loaded here -->
-        </div>
-    </div>
+                <h3 style="margin-top:2.5rem">Net position</h3>
+                <div class="nb-table-wrap">
+                    <table class="nb-table">
+                        <tbody>
+                            <tr><td>Total revenue and support</td><td class="nb-num">$19,519.50</td></tr>
+                            <tr><td>Total expenses</td><td class="nb-num">$12,870.30</td></tr>
+                            <tr><th>Net surplus</th><th class="nb-num">$6,649.20</th></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-        <strong>Chicago Neighborhood Soccer</strong> | 501(c)(3) Nonprofit Organization<br>
-        Building Stronger Communities Through Soccer | From Pickup to Purpose—Stronger Together<br>
-        Contact: nbhdsoccer@gmail.com | Based in Chicago's South & West Side Neighborhoods
-    </div>
+        <!-- 4. Notes -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Notes</p>
+                <h2 class="nb-h2">What the numbers mean</h2>
+                <div class="nb-prose">
+                    <h3>Revenue</h3>
+                    <ul>
+                        <li><strong>Pickup game fees</strong> are $5 to $10 payments from players at our weekly games.</li>
+                        <li><strong>Tournament registration fees</strong> are entry fees for organized tournaments, including the David Benavidez Memorial Tournament.</li>
+                        <li><strong>Community event collections</strong> are cash collected at tournaments and special events.</li>
+                        <li><strong>Sponsorships</strong> include support from Chicago Fire FC.</li>
+                    </ul>
 
-    <script>
-        // Simple configuration - easy to edit
-        const financialData = {
-            revenue: [
-                { category: "Weekly Pickup Game Fees", amount: 5739.50 },
-                { category: "Tournament Registration Fees", amount: 5250.00 },
-                { category: "Community Event Collections", amount: 8480.00 },
-                { category: "Sponsorships & Community Support", amount: 50.00 }
-            ],
-            expenses: [
-                { category: "Facility Rentals (YMCA, Chicago Parks)", amount: 9645.00 },
-                { category: "Equipment & Supplies (balls, cones, jerseys)", amount: 2082.68 },
-                { category: "Event Costs (tournaments, awards, celebrations)", amount: 1102.62 },
-                { category: "Banking & Payment Processing Fees", amount: 40.00 }
-            ],
-            notes: [
-                "FROM PICKUP TO PURPOSE: Despite operating on just $19,000 annually, NBHD Soccer has grown into meaningful partnerships with the YMCA, Boys and Girls Club, and is expanding into after-school programming with Chicago Public Schools (CPS). Our mission is 'Pickup to Purpose' - transforming casual community soccer into structured youth development and community building.",
-                "REVENUE BREAKDOWN: Weekly Pickup Game Fees ($5,739.50) are individual $5-$10 Zelle payments from community members attending regular soccer sessions. Tournament Registration Fees ($5,250.00) are official entry fees for organized competitions including our signature Benavidez Memorial Tournament. Community Event Collections ($8,480.00) represent cash gathered at tournaments and special events. Sponsorships ($50.00) include support from local organizations like Chicago Fire FC.",
-                "PROGRAM IMPACT: With tight budgets, we maximize every dollar through strategic partnerships. Our facility rentals ($9,645) provide quality venues at the YMCA and Chicago Parks for consistent programming. Equipment purchases ($2,082.68) ensure safe, accessible play for all participants regardless of economic background. Event costs ($1,102.62) support community celebrations like our annual Benavidez Memorial Tournament that brings together local families.",
-                "YOUTH PROGRAMMING EXPANSION: Through partnerships with YMCA and community organizations, we're developing summer leagues specifically for underserved South & West Side communities. Our after-school CPS programming aims to provide structured soccer opportunities where youth development intersects with academic support.",
-                "Chicago Neighborhood Soccer operates through volunteer leadership with no paid staff positions in 2024. All revenue (100%) is redirected to community programming and operations - no funds go to personal compensation.",
-                "The organization received 501(c)(3) tax-exempt status in 2025, meaning all donations are tax-deductible for supporters investing in community-driven soccer programming.",
-                "Board members personally contribute an estimated $2,300 annually in technology services (Meetup platform), insurance premiums, filing fees, and promotional materials at no cost to the organization - demonstrating our commitment to maximizing community impact.",
-                "As a small nonprofit with gross receipts under $50,000, NBHD Soccer files Form 990-N (e-Postcard) annually with the IRS, maintaining full compliance and transparency."
-            ]
-        };
+                    <h3>Expenses</h3>
+                    <ul>
+                        <li>Most of our spending is field and gym rental at the YMCA and Chicago Parks.</li>
+                        <li>Equipment keeps games safe and open to everyone, whatever they can afford.</li>
+                        <li>Event costs cover things like the annual Benavidez Memorial Tournament.</li>
+                        <li>All but $40 in bank and payment fees went straight to programs.</li>
+                    </ul>
 
-        // Helper function to format currency
-        function formatMoney(amount) {
-            return '$' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-        }
+                    <h3>Costs the board covers</h3>
+                    <p>Board members personally paid about $2,300 a year in costs that are not in the numbers above:</p>
+                    <div class="nb-table-wrap">
+                        <table class="nb-table">
+                            <tbody>
+                                <tr><td>Meetup platform</td><td class="nb-num">$1,080</td></tr>
+                                <tr><td>Insurance premiums</td><td class="nb-num">$770</td></tr>
+                                <tr><td>Promotional materials</td><td class="nb-num">$300</td></tr>
+                                <tr><td>Nonprofit filing fees</td><td class="nb-num">$150</td></tr>
+                                <tr><th>Total</th><th class="nb-num">$2,300</th></tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-        // Load the financial report
-        function loadReport() {
-            // Load revenue
-            let revenueHTML = '';
-            let totalRevenue = 0;
-            
-            financialData.revenue.forEach(item => {
-                revenueHTML += `<tr><td>${item.category}</td><td class="amount">${formatMoney(item.amount)}</td></tr>`;
-                totalRevenue += item.amount;
-            });
-            revenueHTML += `<tr class="subtotal-row"><td>Total Revenue & Support</td><td class="amount">${formatMoney(totalRevenue)}</td></tr>`;
-            
-            document.getElementById('revenue-table').innerHTML = revenueHTML;
+                    <h3>Good to know</h3>
+                    <ul>
+                        <li>We had no paid staff in 2024. No revenue went to personal pay.</li>
+                        <li>We received 501(c)(3) status in 2025. Donations are tax-deductible.</li>
+                        <li>Our gross receipts are under $50,000, so we file Form 990-N (e-Postcard) with the IRS each year.</li>
+                        <li>We are working with the YMCA and community partners on summer leagues for South and West Side kids, and on after-school soccer with Chicago Public Schools.</li>
+                    </ul>
+                </div>
+                <div class="nb-callout">
+                    <p>Questions about our finances? Email <a href="mailto:nbhdsoccer@gmail.com?subject=Financial%20Report%20Question">nbhdsoccer@gmail.com</a>.</p>
+                </div>
+            </div>
+        </section>
 
-            // Load expenses
-            let expenseHTML = '';
-            let totalExpenses = 0;
-            
-            financialData.expenses.forEach(item => {
-                expenseHTML += `<tr><td>${item.category}</td><td class="amount">${formatMoney(item.amount)}</td></tr>`;
-                totalExpenses += item.amount;
-            });
-            expenseHTML += `<tr class="subtotal-row"><td>Total Expenses</td><td class="amount">${formatMoney(totalExpenses)}</td></tr>`;
-            
-            document.getElementById('expense-table').innerHTML = expenseHTML;
-
-            // Calculate net position
-            const netPosition = totalRevenue - totalExpenses;
-            const netPositionLabel = netPosition >= 0 ? 'Net Surplus (Revenue exceeds Expenses)' : 'Net Deficit (Expenses exceed Revenue)';
-            const netPositionColor = netPosition >= 0 ? '#16a34a' : '#dc2626';
-            
-            const netPositionHTML = `
-                <tr><td>Total Revenue & Support</td><td class="amount">${formatMoney(totalRevenue)}</td></tr>
-                <tr><td>Total Expenses</td><td class="amount">${formatMoney(totalExpenses)}</td></tr>
-                <tr class="total-row" style="background-color: ${netPositionColor}">
-                    <td>${netPositionLabel}</td>
-                    <td class="amount">${formatMoney(netPosition)}</td>
-                </tr>
-            `;
-            
-            document.getElementById('net-position-table').innerHTML = netPositionHTML;
-
-            // Load notes
-            let notesHTML = '';
-            financialData.notes.forEach(note => {
-                notesHTML += `• ${note}<br><br>`;
-            });
-            
-            document.getElementById('report-notes').innerHTML = notesHTML;
-        }
-
-        // Export to PDF function
-        function exportToPDF() {
-            window.print();
-        }
-
-        // Load when page is ready
-        document.addEventListener('DOMContentLoaded', loadReport);
-    </script>
+        <!-- 5. Donate -->
+        <section class="nb-section nb-donate" id="donate">
+            <div class="nb-inner">
+                <h2 class="nb-h2">Help keep the game going</h2>
+                <p>None of us get paid. Your gift goes to fields, equipment, insurance, and more youth programs in the neighborhoods that need them most.</p>
+                <a href="/support/support.html#donate" class="nb-btn nb-btn-donate">Donate</a>
+                <p class="nb-donate-note">Tax-deductible. You'll get your receipt by email.</p>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="/js/header-loader.js"></script>
 </body>
 </html>

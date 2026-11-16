@@ -79,5 +79,5 @@ Old URLs get small redirect stubs so links on Instagram, Meetup and in emails ke
 1. ~~Donation platform~~ **Decided: Zeffy** (form `donate-to-change-lives-29447`, embedded on the Support page)
 2. **Programs:** one page with sections, or one short page per program?
 3. **Sponsorship levels:** the current copy says "no complicated tiers." Keep that, or move to 3 named levels?
-4. **EIN and mailing address** to show in the footer
+4. ~~EIN~~ **Decided: 88-3862761** (footer, Donate, Partner). Mailing address still open
 5. **Board sign-off:** does anyone else need to approve the redesign before launch?

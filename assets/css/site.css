@@ -277,11 +277,11 @@
 }
 .nb-donate .nb-btn-donate:hover { background: var(--primary-green); color: #fff; }
 
-.nb-donate-note {
-    margin-top: 1.25rem !important;
-    margin-bottom: 0 !important;
-    font-size: 0.9rem !important;
-    color: rgba(255, 255, 255, 0.75) !important;
+.nb-donate .nb-donate-note {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* 6. Partners */
@@ -611,4 +611,41 @@ div.nb-card:hover { transform: none; box-shadow: none; }
 @media (max-width: 640px) {
     .nb-page-hero { min-height: 40vh; padding: 4rem 1rem 2.25rem; }
     .nb-cards.nb-cols-2, .nb-cards.nb-cols-4 { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   Fixes and helpers from the page rebuild
+   ========================================================= */
+.nb-center .nb-btn-row, .nb-btn-row.nb-center { justify-content: center; }
+.nb-bg-dark .nb-eyebrow, .nb-donate .nb-eyebrow { color: var(--primary-green); }
+
+.nb-h3 {
+    font-family: var(--font-family-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--warm-gray-800);
+    margin: 2.5rem 0 0.75rem;
+}
+.nb-bg-dark .nb-h3 { color: #fff; }
+
+.nb-card-body ul, .nb-card-body ol { margin: 0 0 1rem; padding-left: 1.15rem; color: var(--warm-gray-600); line-height: 1.6; }
+.nb-card-body li { margin-bottom: 0.35rem; }
+.nb-price { font-family: var(--font-family-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-green-dark); margin: 0 0 0.75rem; }
+.nb-card.nb-card-accent { border-top: 4px solid var(--primary-green-dark); }
+
+.nb-form input[type="checkbox"], .nb-form input[type="radio"] { width: auto; margin-right: 0.5rem; }
+.nb-form fieldset { border: 1px solid var(--warm-gray-200); border-radius: 10px; padding: 0.75rem 1.25rem 1.25rem; margin: 1rem 0; }
+.nb-form legend { font-family: var(--font-family-heading); font-weight: 600; padding: 0 0.4rem; }
+.nb-form .nb-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+
+.nb-embed.nb-portrait { aspect-ratio: 9 / 16; max-width: 360px; }
+.nb-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.nb-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block; }
+
+.nb-mt-1 { margin-top: 1rem; }
+.nb-mt-2 { margin-top: 2rem; }
+.nb-mt-3 { margin-top: 3rem; }
+
+@media (max-width: 640px) {
+    .nb-form .nb-form-row { grid-template-columns: 1fr; }
 }

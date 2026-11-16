@@ -3,400 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Chicago Neighborhood Soccer</title>
-    <meta name="description" content="Chicago Neighborhood Soccer - From Pickup to Purpose. 501(c)(3) nonprofit building stronger communities through soccer since 2012.">
-
-    <link rel="stylesheet" href="../assets/css/shared-styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/nbhd_simple_logo_2025-07.png">
-
-    <!-- Google Analytics -->
-    <script src="../js/analytics.js"></script>
-
-    <style>
-        .about-hero {
-            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            padding: 1.5rem 0 1rem;
-            text-align: center;
-        }
-        .about-hero h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-        .about-hero p {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        .about-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        .about-section {
-            margin-bottom: 1.5rem;
-        }
-        .about-section h2 {
-            font-size: 1rem;
-            color: #16a34a;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.4rem;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #e5e7eb;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -1.5rem;
-            top: 0.3rem;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #16a34a;
-        }
-        .timeline-year {
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #16a34a;
-            margin-bottom: 0.2rem;
-        }
-        .timeline-item h3 {
-            font-size: 0.85rem;
-            color: #374151;
-            margin-bottom: 0.2rem;
-        }
-        .timeline-item p {
-            font-size: 0.75rem;
-            color: #6b7280;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        /* Mission/Vision */
-        .mission-vision {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin: 0.75rem 0;
-        }
-        .mv-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #16a34a;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .mv-box h3 {
-            font-size: 0.85rem;
-            color: #16a34a;
-            margin-bottom: 0.4rem;
-        }
-        .mv-box p {
-            font-size: 0.7rem;
-            color: #374151;
-            line-height: 1.4;
-            margin: 0;
-            font-style: italic;
-        }
-
-        /* Values */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .value-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.75rem;
-            text-align: center;
-        }
-        .value-card h4 {
-            font-size: 0.75rem;
-            color: #374151;
-            margin-bottom: 0.25rem;
-        }
-        .value-card p {
-            font-size: 0.65rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.3;
-        }
-
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .stat-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.6rem;
-            text-align: center;
-        }
-        .stat-card .num {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #16a34a;
-        }
-        .stat-card .label {
-            font-size: 0.6rem;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-
-        /* Partners */
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin: 0.75rem 0;
-        }
-        .partner-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 0.6rem;
-            text-align: center;
-        }
-        .partner-card strong {
-            font-size: 0.7rem;
-            color: #374151;
-            display: block;
-        }
-        .partner-card span {
-            font-size: 0.6rem;
-            color: #9ca3af;
-        }
-
-        /* Quote */
-        .quote-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border-left: 3px solid #16a34a;
-            border-radius: 0 8px 8px 0;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-        .quote-box blockquote {
-            font-size: 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            margin: 0 0 0.5rem 0;
-            font-style: italic;
-        }
-        .quote-box cite {
-            font-size: 0.7rem;
-            color: #16a34a;
-            font-weight: 600;
-        }
-
-        /* Navigation Links */
-        .nav-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin: 1rem 0;
-        }
-        .nav-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-        }
-        .nav-card:hover {
-            border-color: #16a34a;
-            transform: translateY(-2px);
-        }
-        .nav-card h4 {
-            font-size: 0.85rem;
-            color: #16a34a;
-            margin-bottom: 0.25rem;
-        }
-        .nav-card p {
-            font-size: 0.7rem;
-            color: #6b7280;
-            margin: 0;
-        }
-
-        @media (max-width: 600px) {
-            .mission-vision,
-            .values-grid,
-            .stats-grid,
-            .partners-grid,
-            .nav-cards {
-                grid-template-columns: 1fr 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    <meta name="description" content="Chicago Neighborhood Soccer started as pickup games between four friends in 2012. Today it is a volunteer-run 501(c)(3) nonprofit.">
+    <title>About Us | Chicago Neighborhood Soccer</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbhdsoccer.org/about/about.html">
+    <meta property="og:title" content="About Us | Chicago Neighborhood Soccer">
+    <meta property="og:description" content="Chicago Neighborhood Soccer started as pickup games between four friends in 2012. Today it is a volunteer-run 501(c)(3) nonprofit.">
+    <meta property="og:image" content="https://nbhdsoccer.org/assets/web/about-hero.jpg">
+    <link rel="icon" type="image/png" href="/assets/nbhd_simple_logo_2025-07.png">
+    <script src="/js/analytics.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared-styles.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
     <div id="header-container"></div>
-    <script src="../js/header-loader.js"></script>
-
-    <!-- About Tab Navigation -->
-    <nav class="section-tabs">
-        <div class="container">
-            <a href="about.html" class="tab-link active">About</a>
-            <a href="leadership.html" class="tab-link">Leadership</a>
-            <a href="impact.html" class="tab-link">Impact</a>
-            <a href="media.html" class="tab-link">Media</a>
-        </div>
-    </nav>
-
-    <section class="about-hero">
-        <div class="container">
-            <h1><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 28px; height: 28px; border-radius: 4px; vertical-align: middle; margin-right: 0.4rem;">Our Nonprofit Story</h1>
-            <p>From Pickup to Purpose | Community Organizing Since 2012</p>
-        </div>
-    </section>
-
-    <div class="about-content">
-
-        <!-- Mission & Vision -->
-        <div class="about-section">
-            <h2>Mission & Vision</h2>
-            <div class="mission-vision">
-                <div class="mv-box">
-                    <h3>Mission</h3>
-                    <p>"To cultivate inclusive communities through elevated and welcoming soccer experiences—one person and one event at a time."</p>
-                </div>
-                <div class="mv-box">
-                    <h3>Vision</h3>
-                    <p>"To build meaningful connections that give our communities a sense of belonging while using soccer as a catalyst for positive neighborhood change."</p>
+    <main>
+        <!-- 1. Hero -->
+        <section class="nb-page-hero" style="--hero-img:url('/assets/web/about-hero.jpg')">
+            <div class="nb-inner">
+                <div class="nb-breadcrumb"><a href="/about/about.html">About</a></div>
+                <h1>From pickup to purpose</h1>
+                <p>Four friends started a pickup game in 2012. Today we are a volunteer-run 501(c)(3) nonprofit with 7,000+ members.</p>
+                <div class="nb-hero-ctas nb-btn-row">
+                    <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" rel="noopener" class="nb-btn nb-btn-play">Play With Us</a>
+                    <a href="/support/support.html#donate" class="nb-btn nb-btn-donate">Donate</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Timeline -->
-        <div class="about-section">
-            <h2>Our Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2012</div>
-                    <h3>The Beginning</h3>
-                    <p>Four friends—Andre, Diego, Julian, and Jordan—started organizing pickup games in their neighborhoods. We are a Latino-led organization founded by neighbors who grew up on Chicago's South and West sides.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2015-2020</div>
-                    <h3>Growing Through Word of Mouth</h3>
-                    <p>Games grew organically. Neighbors brought neighbors. We learned consistency and genuine welcome create lasting bonds.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2021</div>
-                    <h3>Recognizing Our Impact</h3>
-                    <p>With 7,000+ community members, we realized we weren't just organizing games—we were building community infrastructure.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2022</div>
-                    <h3>Incorporating as Nonprofit</h3>
-                    <p>Incorporated as an Illinois nonprofit corporation, bringing organizational structure while keeping grassroots values.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2023-2024</div>
-                    <h3>Expanding Partnerships</h3>
-                    <p>Partnering with CPS schools, running memorial tournaments, supporting local artists, and expanding accessible programming.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2025</div>
-                    <h3>Achieving 501(c)(3) Status</h3>
-                    <p>Received federal 501(c)(3) tax-exempt status, enabling tax-deductible donations and expanded community development work.</p>
+        <!-- 2. Numbers -->
+        <section class="nb-stats" aria-label="NBHD Soccer by the numbers">
+            <div class="nb-inner">
+                <div><span class="nb-stat-num">7,000+</span><span class="nb-stat-label">Members</span></div>
+                <div><span class="nb-stat-num">400</span><span class="nb-stat-label">Players every week</span></div>
+                <div><span class="nb-stat-num">100+</span><span class="nb-stat-label">Events a year</span></div>
+                <div><span class="nb-stat-num">2012</span><span class="nb-stat-label">Playing since</span></div>
+            </div>
+        </section>
+
+        <!-- 3. Story -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <div class="nb-split">
+                    <img src="/assets/web/about-founders.jpg" alt="Co-founders Andre, Diego, Julian and Jordan on a turf field" loading="lazy">
+                    <div>
+                        <p class="nb-eyebrow">Our story</p>
+                        <h2 class="nb-h2">Started by neighbors</h2>
+                        <p>In 2012, four friends, Andre, Diego, Julian and Jordan, started organizing pickup games in their neighborhoods. Neighbors brought neighbors, and the games kept growing.</p>
+                        <p>We are Latino-led, founded by people who grew up on Chicago's South and West Sides. In 2022 we incorporated as an Illinois nonprofit. In 2025 we received federal 501(c)(3) status, so donations are tax-deductible.</p>
+                        <p>Good programs already exist in South and West Side neighborhoods. They're just hard to find. We try to connect people to them and build on what's there.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Philosophy -->
-        <div class="quote-box">
-            <blockquote>"Great programming exists in South & West side neighborhoods—it's just hard to find." We bridge the gap by enhancing what already exists.</blockquote>
-        </div>
-
-        <!-- Quote -->
-        <div class="quote-box">
-            <blockquote>"What started as friends organizing pickup games has become something none of us expected. We're now partnering with CPS schools, raising funds for community causes, and running youth programs—but it all traces back to those early games where we learned that celebrating differences makes communities stronger."</blockquote>
-            <cite>— Andre Daniel, Co-founder</cite>
-        </div>
-
-        <!-- Partners -->
-        <div class="about-section">
-            <h2>Partners & Recognition</h2>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <strong>Chicago Red Stars</strong>
-                    <span>Community Partner</span>
-                </div>
-                <div class="partner-card">
-                    <strong>Rauner Family YMCA</strong>
-                    <span>Program Partner</span>
-                </div>
-                <div class="partner-card">
-                    <strong>Boys & Girls Club</strong>
-                    <span>Youth Development</span>
-                </div>
-                <div class="partner-card">
-                    <strong>CPS Schools</strong>
-                    <span>REC 77 Partners</span>
+        <!-- 4. Mission -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Mission</p>
+                <h2 class="nb-h2">Why we do this</h2>
+                <div class="nb-cards nb-cols-2">
+                    <div class="nb-card nb-card-text">
+                        <div class="nb-card-body">
+                            <span class="nb-card-tag">Mission</span>
+                            <p>To cultivate inclusive communities through elevated and welcoming soccer experiences, one person and one event at a time.</p>
+                        </div>
+                    </div>
+                    <div class="nb-card nb-card-text">
+                        <div class="nb-card-body">
+                            <span class="nb-card-tag">Vision</span>
+                            <p>To build meaningful connections that give our communities a sense of belonging while using soccer as a catalyst for positive neighborhood change.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Navigation Links -->
-        <div class="about-section">
-            <h2>Learn More</h2>
-            <div class="nav-cards">
-                <a href="leadership.html" class="nav-card">
-                    <h4>Board & Leadership</h4>
-                    <p>Meet our volunteer leadership team</p>
-                </a>
-                <a href="impact.html" class="nav-card">
-                    <h4>Impact & Transparency</h4>
-                    <p>Community metrics and accountability</p>
-                </a>
+        <!-- 5. Timeline -->
+        <section class="nb-section nb-bg-white">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">Timeline</p>
+                <h2 class="nb-h2">How we got here</h2>
+                <div class="nb-cards">
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2012</span>
+                        <h3>The first games</h3>
+                        <p>Andre, Diego, Julian and Jordan start organizing pickup games in their neighborhoods.</p>
+                    </div></div>
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2015 to 2020</span>
+                        <h3>Word of mouth</h3>
+                        <p>The games grow on their own. Neighbors bring neighbors. Showing up every week is what makes it stick.</p>
+                    </div></div>
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2021</span>
+                        <h3>7,000+ members</h3>
+                        <p>With this many people involved, we see it's more than a weekly game. It's a community.</p>
+                    </div></div>
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2022</span>
+                        <h3>Illinois nonprofit</h3>
+                        <p>We incorporate as an Illinois nonprofit corporation.</p>
+                    </div></div>
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2023 to 2024</span>
+                        <h3>Partnerships</h3>
+                        <p>We start working with CPS schools, run memorial tournaments and support local artists.</p>
+                    </div></div>
+                    <div class="nb-card nb-card-text"><div class="nb-card-body">
+                        <span class="nb-card-tag">2025</span>
+                        <h3>501(c)(3) status</h3>
+                        <p>We receive federal tax-exempt status. Donations are now tax-deductible.</p>
+                    </div></div>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div style="text-align: center; padding: 1.5rem 0;">
-                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600; color: #10b981;"><img src="../assets/nbhd_simple_logo_2025-07.png" alt="" style="width: 20px; height: 20px; border-radius: 3px; vertical-align: middle; margin-right: 0.3rem;">NBHD Soccer</p>
-                <p style="margin-bottom: 0.75rem; font-size: 0.85rem;"><a href="../index.html" style="color: #10b981;">Home</a> • <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" style="color: #10b981;">Instagram</a> • <a href="https://www.youtube.com/@chicagoneighborhoodsoccer4644" target="_blank" style="color: #10b981;">YouTube</a> • <a href="https://discord.gg/WWvEbbvg3V" target="_blank" style="color: #10b981;">Discord</a> • <a href="https://www.meetup.com/nbhdsoccer/events/" target="_blank" style="color: #10b981;">Meetup</a> • <a href="https://openfutbol.github.io" target="_blank" style="color: #10b981;">OpenFutbol</a> • <a href="mailto:nbhdsoccer@gmail.com" style="color: #10b981;">Contact</a></p>
-                <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">&copy; 2025 Chicago Neighborhood Soccer | 501(c)(3) | From Pickup to Purpose</p>
-                <p style="font-size: 0.7rem; opacity: 0.6;">Built by <a href="https://github.com/ADParedes" target="_blank" style="color: #9ca3af;">ADParedes</a></p>
+        <!-- 6. Interview -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <div class="nb-split">
+                    <div class="nb-embed">
+                        <iframe src="https://www.youtube.com/embed/JjlsnwRHQH0" title="Interview with co-founder Diego Moreno" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <p class="nb-eyebrow">Interview</p>
+                        <h2 class="nb-h2">Hear it from Diego</h2>
+                        <p>Co-founder Diego sat down with community member Mo to talk about how we went from pickup games to a nonprofit. About 30 minutes.</p>
+                        <a class="nb-link" href="https://www.youtube.com/watch?v=JjlsnwRHQH0" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- 7. Partners -->
+        <section class="nb-section nb-partners">
+            <div class="nb-inner nb-partner-grid">
+                <div>
+                    <p class="nb-eyebrow">Partners</p>
+                    <h2 class="nb-h2">Who we work with</h2>
+                    <ul class="nb-partner-list">
+                        <li>Chicago Public Schools (REC 77)</li>
+                        <li>Rauner Family YMCA</li>
+                        <li>Boys &amp; Girls Club</li>
+                        <li>Chicago Red Stars</li>
+                    </ul>
+                    <a href="/support/partner.html" class="nb-btn nb-btn-donate">Become a Partner</a>
+                </div>
+                <figure class="nb-quote">
+                    <blockquote>&ldquo;What started as friends organizing pickup games has become something none of us expected. We're now partnering with CPS schools, raising funds for community causes, and running youth programs, but it all traces back to those early games where we learned that celebrating differences makes communities stronger.&rdquo;</blockquote>
+                    <figcaption>Andre Daniel, Co-founder</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 8. More about us -->
+        <section class="nb-section nb-bg-soft">
+            <div class="nb-inner">
+                <p class="nb-eyebrow">More</p>
+                <h2 class="nb-h2">Get to know us</h2>
+                <div class="nb-cards nb-cols-4">
+                    <a class="nb-card" href="/about/leadership.html">
+                        <img src="/assets/web/about-team.jpg" alt="A group of pickup players posing on a turf field" loading="lazy">
+                        <div class="nb-card-body">
+                            <h3>Leadership</h3>
+                            <p>Our volunteer board and community directors.</p>
+                            <span class="nb-link">Meet the team</span>
+                        </div>
+                    </a>
+                    <a class="nb-card" href="/about/financial-transparency.html">
+                        <img src="/assets/web/about-ymca.jpg" alt="Indoor pickup game at the Rauner Family YMCA" loading="lazy">
+                        <div class="nb-card-body">
+                            <h3>Financials</h3>
+                            <p>Where the money came from and where it went in 2024.</p>
+                            <span class="nb-link">See the report</span>
+                        </div>
+                    </a>
+                    <a class="nb-card" href="/about/impact.html">
+                        <img src="/assets/home/youth.jpg" alt="Indoor soccer at the Rauner Family YMCA" loading="lazy">
+                        <div class="nb-card-body">
+                            <h3>Impact</h3>
+                            <p>What we've done so far, in numbers.</p>
+                            <span class="nb-link">See our impact</span>
+                        </div>
+                    </a>
+                    <a class="nb-card" href="/about/media.html">
+                        <img src="/assets/web/about-gala.jpg" alt="Guests cheering at the South and West Side Art Gala" loading="lazy">
+                        <div class="nb-card-body">
+                            <h3>Media</h3>
+                            <p>Press, video, photos and our social channels.</p>
+                            <span class="nb-link">Go to media</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Donate -->
+        <section class="nb-section nb-donate" id="donate">
+            <div class="nb-inner">
+                <h2 class="nb-h2">Help keep the game going</h2>
+                <p>None of us get paid. Your gift goes to fields, equipment, insurance, and more youth programs in the neighborhoods that need them most.</p>
+                <a href="/support/support.html#donate" class="nb-btn nb-btn-donate">Donate</a>
+                <p class="nb-donate-note">Tax-deductible. You'll get your receipt by email.</p>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="/js/header-loader.js"></script>
 </body>
 </html>
