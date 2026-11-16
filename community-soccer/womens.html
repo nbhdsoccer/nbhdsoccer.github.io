@@ -154,49 +154,17 @@
         </div>
     </section>
 
-    <!-- 6. Interest form (saves to this browser only; see script below) -->
+    <!-- 6. Stay in touch -->
     <section class="nb-section nb-bg-white" id="community-registration">
         <div class="nb-inner">
             <p class="nb-eyebrow">Stay in touch</p>
-            <h2 class="nb-h2">Add your name</h2>
-            <p class="nb-lede">This is a grassroots form. We'll reach out once with information if you want it. You won't be subscribed to anything.</p>
-            <div class="nb-callout"><p>Your name also helps us show funders that the community supports this. If big news comes up, we'll email.</p></div>
-
-            <form id="womensRegistration" onsubmit="handleWomensRegistration(event)" class="nb-form">
-                <label for="firstName">First name *</label>
-                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
-
-                <label for="lastName">Last name *</label>
-                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
-
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-
-                <label for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
-
-                <label for="experienceLevel">Soccer experience (optional)</label>
-                <select id="experienceLevel" name="experienceLevel">
-                    <option value="">Choose one</option>
-                    <option value="beginner">Beginner: new to soccer</option>
-                    <option value="recreational">Recreational: play for fun</option>
-                    <option value="intermediate">Intermediate: some organized experience</option>
-                    <option value="advanced">Advanced: competitive experience</option>
-                </select>
-
-                <fieldset style="border:0;padding:0;margin:1rem 0 0">
-                    <legend>What interests you? (optional)</legend>
-                    <label><input type="checkbox" name="interests" value="weekly-games" style="width:auto"> Weekly Wednesday games</label>
-                    <label><input type="checkbox" name="interests" value="community-events" style="width:auto"> Community events</label>
-                    <label><input type="checkbox" name="interests" value="volunteering" style="width:auto"> Volunteering and leadership</label>
-                </fieldset>
-
-                <label for="message">Anything else? (optional)</label>
-                <textarea id="message" name="message" rows="3"></textarea>
-
-                <button type="submit" class="nb-btn nb-btn-donate">Add my name</button>
-                <p class="form-note"></p>
-            </form>
+            <h2 class="nb-h2">Get updates</h2>
+            <p class="nb-lede">Join our Meetup group. That's where every Wednesday game, the women's tournament, and anything new gets posted first.</p>
+            <div class="nb-btn-row">
+                <a href="https://www.meetup.com/nbhdsoccer/" target="_blank" rel="noopener" class="nb-btn nb-btn-donate">Join on Meetup</a>
+                <a href="https://www.instagram.com/nbhdsoccer/" target="_blank" rel="noopener" class="nb-btn nb-btn-outline">Follow on Instagram</a>
+                <a href="mailto:nbhdsoccer@gmail.com?subject=Women%27s%20Wednesday" class="nb-btn nb-btn-outline">Email us</a>
+            </div>
         </div>
     </section>
 
@@ -246,125 +214,5 @@
     <div id="footer-container"></div>
     <script src="/js/header-loader.js"></script>
 
-    <!-- EmailJS is only used if COMMUNITY_EMAIL_ENABLED is true -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        // Women's Wednesday interest form.
-        // Saves each submission to localStorage key 'womensWeekly2025Registrations'
-        // (read by /admin/index.html, /admin/js/admin-core.js and /admin/tournaments/womens-2025.html).
-        // Nothing is sent to a server unless COMMUNITY_EMAIL_ENABLED is set to true.
-        const COMMUNITY_FORM_ENABLED = true;
-        const COMMUNITY_EMAIL_ENABLED = false;
-
-        const EMAILJS_PUBLIC_KEY = 'kthWdX2tmNcRrlZyF';
-        const EMAILJS_SERVICE_ID = 'service_faus6nb';
-        const EMAILJS_TEMPLATE_ID = 'template_y274gam';
-
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof emailjs !== 'undefined') emailjs.init(EMAILJS_PUBLIC_KEY);
-            if (!COMMUNITY_FORM_ENABLED) {
-                const form = document.getElementById('womensRegistration');
-                form.querySelectorAll('input, select, textarea, button').forEach(el => { el.disabled = true; });
-                form.querySelector('.form-note').textContent = 'This form is closed right now.';
-            }
-        });
-
-        function handleWomensRegistration(event) {
-            event.preventDefault();
-            if (!COMMUNITY_FORM_ENABLED) {
-                alert('This form is closed right now.');
-                return;
-            }
-
-            const formData = new FormData(event.target);
-            const interests = Array.from(
-                document.querySelectorAll('#womensRegistration input[name="interests"]:checked')
-            ).map(box => box.value);
-
-            const registrationData = {
-                timestamp: new Date().toISOString(),
-                program: 'Women\'s Weekly Community',
-                firstName: formData.get('firstName'),
-                lastName: formData.get('lastName'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                experienceLevel: formData.get('experienceLevel'),
-                interests: interests,
-                message: formData.get('message')
-            };
-
-            const registrations = JSON.parse(localStorage.getItem('womensWeekly2025Registrations') || '[]');
-            registrations.push(registrationData);
-            localStorage.setItem('womensWeekly2025Registrations', JSON.stringify(registrations));
-
-            if (COMMUNITY_EMAIL_ENABLED && typeof emailjs !== 'undefined') {
-                sendCommunityEmails(registrationData);
-                alert('Thanks for adding your name. You should get a confirmation email soon. If not, check your spam folder or email nbhdsoccer@gmail.com.');
-            } else {
-                alert('Thanks for adding your name. It helps us show funders that the community supports Women\'s Wednesday. We\'ll be in touch if there\'s big news.');
-            }
-            event.target.reset();
-        }
-
-        function sendCommunityEmails(d) {
-            const summary =
-                'Name: ' + d.firstName + ' ' + d.lastName + '\n' +
-                'Email: ' + d.email + '\n' +
-                'Phone: ' + (d.phone || 'Not provided') + '\n' +
-                'Experience: ' + (getExperienceLevelLabel(d.experienceLevel) || 'Not specified') + '\n' +
-                'Interests: ' + (d.interests.length ? d.interests.map(getInterestLabel).join(', ') : 'Not specified') + '\n' +
-                'Message: ' + (d.message || 'None');
-
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-                user_email: d.email,
-                user_name: d.firstName + ' ' + d.lastName,
-                from_name: 'Chicago Neighborhood Soccer',
-                reply_to: 'nbhdsoccer@gmail.com',
-                subject: 'Thanks for supporting Women\'s Wednesday',
-                message: 'Thanks for adding your name to the Women\'s Wednesday list.\n\n' + summary +
-                    '\n\nYou are not subscribed to anything. We will only reach out for big news.\n\n' +
-                    'Women\'s Wednesday: every Wednesday, 8 to 10 PM, Rauner Family YMCA, 2700 S Western Ave, Chicago. $10.\n' +
-                    'Bring water, cleats for indoor or turf, and shin guards.\n\n' +
-                    'Chicago Neighborhood Soccer\nnbhdsoccer@gmail.com'
-            }).catch(function () {
-                alert('We saved your name, but the confirmation email did not send. Email nbhdsoccer@gmail.com if you want a confirmation.');
-            });
-
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-                user_email: 'nbhdsoccer@gmail.com',
-                user_name: 'Community Admin',
-                from_name: 'Chicago Neighborhood Soccer Registration System',
-                reply_to: d.email,
-                subject: 'New Women\'s Community Interest Registration',
-                message: 'New interest registration for Women\'s Wednesday:\n\n' + summary + '\n\nDate: ' + d.timestamp
-            }).catch(function (err) { console.error('Admin notification failed', err); });
-        }
-
-        function getExperienceLevelLabel(level) {
-            const labels = {
-                beginner: 'Beginner - New to soccer',
-                recreational: 'Recreational - Play for fun',
-                intermediate: 'Intermediate - Some organized experience',
-                advanced: 'Advanced - Competitive experience'
-            };
-            return labels[level] || level;
-        }
-
-        function getInterestLabel(interest) {
-            const labels = {
-                'weekly-games': 'Weekly Wednesday Games',
-                'community-events': 'Community Events',
-                'volunteering': 'Volunteering/Leadership'
-            };
-            return labels[interest] || interest;
-        }
-
-        // For admins: run viewCommunityRegistrations() in the browser console.
-        function viewCommunityRegistrations() {
-            const registrations = JSON.parse(localStorage.getItem('womensWeekly2025Registrations') || '[]');
-            console.log('Women\'s weekly community registrations:', registrations);
-            return registrations;
-        }
-    </script>
 </body>
 </html>
