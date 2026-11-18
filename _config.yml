@@ -1,0 +1,14 @@
+# GitHub Pages (Jekyll) build settings.
+# Internal/working files stay in the repo but are NOT published to nbhdsoccer.org.
+exclude:
+  - docs/
+  - admin/
+  - python3/
+  - templates/
+  - archive/
+  - index-journey.html
+  - business-outreach-email-template.html
+  - donation-receipt-template.html
+  - donation-receipt-instructions.md
+  - README.md
+  - LICENSE
