@@ -649,3 +649,157 @@ div.nb-card:hover { transform: none; box-shadow: none; }
 @media (max-width: 640px) {
     .nb-form .nb-form-row { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   Header: sticky everywhere, hamburger menu on phones
+   (overrides the old mobile rules in shared-styles.css)
+   ========================================================= */
+#header-container { position: sticky; top: 0; z-index: 1000; }
+.nb-menu-toggle, .nb-menu-only { display: none; }
+
+@media (max-width: 768px) {
+    header nav.container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.75rem 0.45rem 1rem;
+        position: relative;
+    }
+    .brand-section { width: auto; margin: 0; align-items: flex-start; }
+    .tagline { display: none; }
+    .logo-text { font-size: 1.1rem; }
+    .header-ctas { order: 0; margin-left: auto; gap: 0; }
+    header .cta-button { font-size: 0.9rem; padding: 0.6rem 1.1rem; }
+
+    .nb-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .nb-menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .nb-menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nb-menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nb-menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: auto;
+        order: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 0.25rem 0 1.25rem;
+        background: #1f2937;
+        border-bottom: 2px solid var(--primary-green);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+    .nav-links.nb-open { display: flex; }
+    .nav-links li { margin: 0; }
+    .nav-links a {
+        display: block;
+        font-size: 1.1rem;
+        font-family: var(--font-family-heading);
+        padding: 0.95rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nav-links a:hover { transform: none; border-bottom-color: rgba(255, 255, 255, 0.08); }
+    .nav-links a.active { border-bottom: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 4px 0 0 var(--primary-green); }
+    .nb-menu-only { display: block; padding: 1rem 1.5rem 0; }
+    .nav-links a.nb-menu-play {
+        text-align: center;
+        background: #fff;
+        color: var(--primary-green-darker);
+        border-radius: 999px;
+        border: 0;
+        font-weight: 600;
+    }
+}
+
+/* =========================================================
+   Phone polish
+   ========================================================= */
+/* Tables that turn into cards on phones: <table class="nb-table nb-table-stack"> with data-label on each td */
+@media (max-width: 640px) {
+    .nb-table-stack thead { display: none; }
+    .nb-table-stack, .nb-table-stack tbody, .nb-table-stack tr, .nb-table-stack td { display: block; width: 100%; }
+    .nb-table-stack tr {
+        background: #fff;
+        border: 1px solid var(--warm-gray-200);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.75rem;
+        box-sizing: border-box;
+    }
+    .nb-table-stack td,
+    .nb-table-stack td.nb-num {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        text-align: right;
+        border: 0;
+        padding: 0.45rem 0;
+        box-sizing: border-box;
+    }
+    .nb-table-stack td + td { border-top: 1px solid var(--warm-gray-100); }
+    .nb-table-stack td::before {
+        content: attr(data-label);
+        flex: 0 0 38%;
+        text-align: left;
+        font-family: var(--font-family-heading);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--warm-gray-500);
+        padding-top: 0.15rem;
+    }
+
+    /* Full-width hero buttons */
+    .nb-page-hero .nb-btn-row .nb-btn { flex: 1 1 100%; text-align: center; }
+
+    /* Footer: two columns, then legal */
+    .nb-footer-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .nb-footer-grid > div:first-child { grid-column: 1 / -1; }
+    .nb-footer-legal { flex-direction: column; }
+
+    /* Mobile-only Zeffy button */
+    .nb-mobile-only { display: block !important; }
+}
+.nb-mobile-only { display: none; }
+
+/* Stop iOS zooming into form fields */
+.nb-form input, .nb-form select, .nb-form textarea { font-size: 16px; }
+@media (max-width: 640px) { .nb-zeffy { height: 1650px !important; } }
+
+/* Smaller hero photos on phones */
+@media (max-width: 640px) {
+    .nb-hero { background-image: url('../home/hero-sm.jpg'); }
+    .nb-page-hero { background-image: var(--hero-img-sm, var(--hero-img, none)); }
+}
+@media (max-width: 640px) {
+    .nb-footer li { margin: 0; }
+    .nb-footer li a, .nb-footer p a { display: inline-block; padding: 0.6rem 0; }
+}
+.nb-table a, .nb-prose a, .nb-lede a, .nb-callout a { color: var(--primary-green-darker); }

@@ -38,12 +38,31 @@
         }
     }
 
+    // Phone menu: the hamburger button opens and closes the nav links
+    function initMenu() {
+        const btn = document.querySelector('.nb-menu-toggle');
+        const menu = document.getElementById('nb-menu');
+        if (!btn || !menu) return;
+        const setOpen = (open) => {
+            menu.classList.toggle('nb-open', open);
+            btn.setAttribute('aria-expanded', String(open));
+            btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        btn.addEventListener('click', () => setOpen(!menu.classList.contains('nb-open')));
+        menu.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+        document.addEventListener('click', (e) => {
+            if (menu.classList.contains('nb-open') && !e.target.closest('header')) setOpen(false);
+        });
+    }
+
     async function load() {
         const root = rootPath();
         await Promise.all([
             inject('header-container', 'header.html', root),
             inject('footer-container', 'footer.html', root),
         ]);
+        initMenu();
         const section = activeSection();
         if (section) {
             document.querySelectorAll('.nav-links a[data-section="' + section + '"]')
