@@ -803,3 +803,4 @@ div.nb-card:hover { transform: none; box-shadow: none; }
     .nb-footer li a, .nb-footer p a { display: inline-block; padding: 0.6rem 0; }
 }
 .nb-table a, .nb-prose a, .nb-lede a, .nb-callout a { color: var(--primary-green-darker); }
+@media (min-width: 769px) { .nav-links a { font-size: 0.95rem; } .nav-links { gap: 1.75rem; } }
