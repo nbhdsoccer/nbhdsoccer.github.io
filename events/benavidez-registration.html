@@ -155,6 +155,10 @@
     <script>
         // Initialize EmailJS (you'll need to replace these with your actual IDs)
         // Get these from your EmailJS dashboard after creating an account
+        // Next tournament date/time, used in the confirmation email. Update these when the date is set.
+        const TOURNAMENT_DATE = 'To be announced. We will email you as soon as it is set.';
+        const TOURNAMENT_TIME = 'To be announced';
+
         const EMAILJS_PUBLIC_KEY = 'kthWdX2tmNcRrlZyF'; // Replace with your public key
         const EMAILJS_SERVICE_ID = 'service_faus6nb'; // Replace with your service ID
         const EMAILJS_TEMPLATE_ID = 'template_y274gam'; // Replace with your template ID
@@ -276,8 +280,8 @@ Number of Players: ${registrationData.playerCount || 'Not specified'}
 Memorial Message: ${registrationData.memorialMessage || 'No message provided'}
 
 Tournament Details:
-Date: October 18, 2025
-Time: 10:00 AM - 2:00 PM
+Date: ${TOURNAMENT_DATE}
+Time: ${TOURNAMENT_TIME}
 Venue: Rauner Family YMCA, 2700 S Western Ave, Chicago, IL
 
 Registration Date: ${new Date(registrationData.timestamp).toLocaleDateString('en-US', {
